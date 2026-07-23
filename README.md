@@ -1,4 +1,4 @@
-<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/0a919581-9606-487a-8b5a-e714468e8d80" />
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/9274af74-4e82-4784-96e0-28c0ea5bb8b4" />
 
 
 # topological-mapper
