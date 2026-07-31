@@ -1,1 +1,24 @@
    
+[
+  "It is required that you submit the form.",
+  "The report, which was long, is done.",
+  "The report that I wrote is done.",
+  
+  "Thought was strange.",
+  "Thought it was strange apparently.",
+  "Required further investigation.",
+  "Failed despite the effort.",
+  "Succeeded because you helped.",
+  
+  "He succeeded because I helped.",
+  "I succeeded because you helped.",
+  "I'm stressed due to the project.",
+  "I was told by him.",
+  
+  "I have a car.",
+  "I am having a party.",
+  
+  "I want to apply for leave without telling my boss.", // Constraint
+  "I submitted the report with my team.",              // with whom
+  "The system crashed due to a memory error."          // Entity = System
+]
