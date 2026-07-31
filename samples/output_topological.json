@@ -1,1 +1,325 @@
-  
+[
+  {
+    "input": "It is required that you submit the form.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "It is required that you submit the form.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "The report, which was long, is done.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "The report, which was long, is done.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "The report that I wrote is done.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "The report that I wrote is done.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "Thought was strange.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "Thought was strange.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "Thought it was strange apparently.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "Thought it was strange apparently.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "Required further investigation.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "Required further investigation.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "Failed despite the effort.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "Failed despite the effort.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "Succeeded because you helped.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "Succeeded because you helped.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "He succeeded because I helped.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "He succeeded because I helped.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "I succeeded because you helped.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "I succeeded because you helped.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "I'm stressed due to the project.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "I'm stressed due to the project.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "I was told by him.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "I was told by him.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "I have a car.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "I have a car.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "I am having a party.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "I am having a party.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "I want to apply for leave without telling my boss.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "I want to apply for leave without telling my boss.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "I submitted the report with my team.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "I submitted the report with my team.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  },
+  {
+    "input": "The system crashed due to a memory error.",
+    "topological_mapping": {
+      "status": "Incomplete",
+      "category_of_entities": {
+        "subject": "Unknown",
+        "with_whom": null
+      },
+      "category_of_events": {
+        "what": "The system crashed due to a memory error.",
+        "when": "unspecified",
+        "why": "unspecified"
+      },
+      "morphism": {
+        "relation": "Subject(Unknown) -> Event",
+        "constraint": "none"
+      }
+    }
+  }
+]
