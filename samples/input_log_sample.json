@@ -14,7 +14,7 @@
     },
     {
         "timestamp": "2026-07-07T11:28:50.131912",
-        "input": "I succeeded because you helped.",u
+        "input": "I succeeded because you helped.",
             "agent": "I",
             "resolved_agent": "I"
     },
@@ -46,7 +46,7 @@
         "timestamp": "2026-07-07T11:29:03.805095",
         "input": "I succeeded because you helped.",
             "agent": "I"
-            "resolved_agent": "I
+            "resolved_agent": "I"
     },
     {
         "timestamp": "2026-07-07T11:29:03.805918",
