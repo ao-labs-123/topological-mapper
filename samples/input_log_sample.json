@@ -18,7 +18,7 @@
   "I have a car.",
   "I am having a party.",
   
-  "I want to apply for leave without telling my boss.", // Constraint
-  "I submitted the report with my team.",              // with whom
-  "The system crashed due to a memory error."          // Entity = System
+  "I want to apply for leave without telling my boss.",
+  "I submitted the report with my team.",           
+  "The system crashed due to a memory error." 
 ]
