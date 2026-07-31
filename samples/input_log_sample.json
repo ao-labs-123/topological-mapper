@@ -29,7 +29,6 @@
     "agent": "I",
     "resolved_agent": "I"
   },
-  // ★ ここから下は新しく足した例文（timestampなし、あるいは適当な日時でOK！）
   {
     "input": "I want to apply for leave without telling my boss.",
     "agent": "I",
