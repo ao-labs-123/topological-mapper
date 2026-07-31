@@ -1,329 +1,93 @@
    
 [
-   "timestamp": "2026-07-07T11:28:50.129376",
+    {
+        "timestamp": "2026-07-07T11:28:50.129376",
         "input": "It is required that you submit the form.",
             "agent": "you",
             "resolved_agent": "you"
-       
     },
     {
         "timestamp": "2026-07-07T11:28:50.131088",
         "input": "Required further investigation.",
-        "stage1": {
-            "process": "Standard",
-            "decision": "None",
-            "agent": "Unknown"
-        },
-        "stage2": {
-            "process": "[Stage 2] Explicit Context Clear",
-            "decision": "Proceed",
+            "agent": "Unknown",
             "resolved_agent": "Unknown"
-        },
-        "stage3": null,
-        "stage4": null,
-        "stage5": {
-            "process": "[Morphology: Base] → [Category: Action]",
-            "result": "General action statement."
-        }
     },
     {
         "timestamp": "2026-07-07T11:28:50.131912",
-        "input": "I succeeded because you helped.",
-        "stage1": {
-            "process": "Explicit Subject Present",
-            "decision": "Priority: Explicit Subject",
-            "agent": "I"
-        },
-        "stage2": {
-            "process": "[Stage 2] Explicit Context Clear",
-            "decision": "Proceed",
+        "input": "I succeeded because you helped.",u
+            "agent": "I",
             "resolved_agent": "I"
-        },
-        "stage3": {
-            "process": "Agent: I + Marker: because",
-            "mapping": "you helped -> Causes -> i succeeded",
-            "structure": {
-                "cause": "you helped",
-                "effect": "i succeeded"
-            }
-        },
-        "stage4": null,
-        "stage5": {
-            "process": "[Morphology: Base] → [Category: Action]",
-            "result": "General action statement."
-        }
     },
     {
         "timestamp": "2026-07-07T11:28:50.132711",
         "input": "The report that I wrote is done.",
-        "stage1": {
-            "process": "Explicit Subject Present",
-            "decision": "Priority: Explicit Subject",
-            "agent": "The report"
-        },
-        "stage2": {
-            "process": "[Stage 2] Explicit Context Clear",
-            "decision": "Proceed",
+            "agent": "The report",
             "resolved_agent": "The report"
-        },
-        "stage3": null,
-        "stage4": null,
-        "stage5": {
-            "process": "[Morphology: Base] → [Category: Action]",
-            "result": "General action statement."
-        }
     },
     {
         "timestamp": "2026-07-07T11:28:50.133523",
         "input": "I was told by him.",
-        "stage1": {
-            "process": "Explicit Subject Present",
-            "decision": "Priority: Explicit Subject",
-            "agent": "I"
-        },
-        "stage2": {
-            "process": "[Stage 2] Explicit Context Clear",
-            "decision": "Proceed",
+            "agent": "I",
             "resolved_agent": "I"
-        },
-        "stage3": null,
-        "stage4": null,
-        "stage5": {
-            "process": "[Passive: be + V-en + by]",
-            "result": "Actor: him / Receiver: I."
-        }
     },
     {
         "timestamp": "2026-07-07T11:29:03.803146",
         "input": "It is required that you submit the form.",
-        "stage1": {
-            "process": "Formal Subject Detected (It ... that)",
-            "decision": "Priority: True Subject in Clause",
             "agent": "you",
-            "structure": "It is [required] that [you submit the form]"
-        },
-        "stage2": {
-            "process": "[Stage 2] Structural Subject Verified",
-            "decision": "Proceed with True Subject",
             "resolved_agent": "you"
-        },
-        "stage3": null,
-        "stage4": null,
-        "stage5": {
-            "process": "[Morphology: Base] → [Category: Action]",
-            "result": "General action statement."
-        }
     },
     {
         "timestamp": "2026-07-07T11:29:03.804320",
         "input": "Required further investigation.",
-        "stage1": {
-            "process": "Standard",
-            "decision": "None",
             "agent": "Unknown"
-        },
-        "stage2": {
-            "process": "[Stage 2] Explicit Context Clear",
-            "decision": "Proceed",
             "resolved_agent": "Unknown"
-        },
-        "stage3": null,
-        "stage4": null,
-        "stage5": {
-            "process": "[Morphology: Base] → [Category: Action]",
-            "result": "General action statement."
-        }
     },
     {
         "timestamp": "2026-07-07T11:29:03.805095",
         "input": "I succeeded because you helped.",
-        "stage1": {
-            "process": "Explicit Subject Present",
-            "decision": "Priority: Explicit Subject",
             "agent": "I"
-        },
-        "stage2": {
-            "process": "[Stage 2] Explicit Context Clear",
-            "decision": "Proceed",
-            "resolved_agent": "I"
-        },
-        "stage3": {
-            "process": "Agent: I + Marker: because",
-            "mapping": "you helped -> Causes -> i succeeded",
-            "structure": {
-                "cause": "you helped",
-                "effect": "i succeeded"
-            }
-        },
-        "stage4": null,
-        "stage5": {
-            "process": "[Morphology: Base] → [Category: Action]",
-            "result": "General action statement."
-        }
+            "resolved_agent": "I
     },
     {
         "timestamp": "2026-07-07T11:29:03.805918",
         "input": "The report that I wrote is done.",
-        "stage1": {
-            "process": "Explicit Subject Present",
-            "decision": "Priority: Explicit Subject",
             "agent": "The report"
-        },
-        "stage2": {
-            "process": "[Stage 2] Explicit Context Clear",
-            "decision": "Proceed",
             "resolved_agent": "The report"
-        },
-        "stage3": null,
-        "stage4": null,
-        "stage5": {
-            "process": "[Morphology: Base] → [Category: Action]",
-            "result": "General action statement."
-        }
     },
     {
         "timestamp": "2026-07-07T11:29:03.806894",
         "input": "I was told by him.",
-        "stage1": {
-            "process": "Explicit Subject Present",
-            "decision": "Priority: Explicit Subject",
             "agent": "I"
-        },
-        "stage2": {
-            "process": "[Stage 2] Explicit Context Clear",
-            "decision": "Proceed",
             "resolved_agent": "I"
-        },
-        "stage3": null,
-        "stage4": null,
-        "stage5": {
-            "process": "[Passive: be + V-en + by]",
-            "result": "Actor: him / Receiver: I."
-        }
     },
     {
         "timestamp": "2026-07-07T14:18:35.311662",
         "input": "It is required that you submit the form.",
-        "stage1": {
-            "process": "Formal Subject Detected (It ... that)",
-            "decision": "Priority: True Subject in Clause",
             "agent": "you",
-            "structure": "It is [required] that [you submit the form]"
-        },
-        "stage2": {
-            "process": "[Stage 2] Structural Subject Verified",
-            "decision": "Proceed with True Subject",
             "resolved_agent": "you"
-        },
-        "stage3": null,
-        "stage4": {
-            "process": "Defining clause",
-            "decision": "Essential",
-            "result": "AI defines the primary identity of 'It is required'."
-        },
-        "stage5": null
     },
     {
         "timestamp": "2026-07-07T14:18:35.313310",
         "input": "Required further investigation.",
-        "stage1": {
-            "process": "Standard",
-            "decision": "None",
             "agent": "Unknown"
-        },
-        "stage2": {
-            "process": "[Stage 2] Explicit Context Clear",
-            "decision": "Proceed",
             "resolved_agent": "Unknown"
-        },
-        "stage3": null,
-        "stage4": {
-            "process": "Standard",
-            "decision": "None",
-            "structure": "No relative clause found"
-        },
-        "stage5": {
-            "process": "Standard",
-            "decision": "None",
-            "result": "Could not analyze semantic structure."
-        }
     },
     {
         "timestamp": "2026-07-07T14:18:35.314236",
         "input": "I succeeded because you helped.",
-        "stage1": {
-            "process": "Explicit Subject Present",
-            "decision": "Priority: Explicit Subject",
             "agent": "I"
-        },
-        "stage2": {
-            "process": "[Stage 2] Explicit Context Clear",
-            "decision": "Proceed",
             "resolved_agent": "I"
-        },
-        "stage3": {
-            "process": "Agent: I + Marker: because",
-            "mapping": "you helped -> Causes -> i succeeded",
-            "structure": {
-                "cause": "you helped",
-                "effect": "i succeeded"
-            }
-        },
-        "stage4": {
-            "process": "Standard",
-            "decision": "None",
-            "structure": "No relative clause found"
-        },
-        "stage5": {
-            "process": "Standard",
-            "decision": "None",
-            "result": "Could not analyze semantic structure."
-        }
     },
     {
         "timestamp": "2026-07-07T14:18:35.315236",
         "input": "The report that I wrote is done.",
-        "stage1": {
-            "process": "Explicit Subject Present",
-            "decision": "Priority: Explicit Subject",
             "agent": "The report"
-        },
-        "stage2": {
-            "process": "[Stage 2] Explicit Context Clear",
-            "decision": "Proceed",
             "resolved_agent": "The report"
-        },
-        "stage3": null,
-        "stage4": {
-            "process": "Defining clause",
-            "decision": "Essential",
-            "result": "AI links 'The report' (Agent) to the specific the report as a defining marker."
-        },
-        "stage5": null
     },
     {
         "timestamp": "2026-07-07T14:18:35.316276",
         "input": "I was told by him.",
-        "stage1": {
-            "process": "Explicit Subject Present",
-            "decision": "Priority: Explicit Subject",
             "agent": "I"
-        },
-        "stage2": {
-            "process": "[Stage 2] Explicit Context Clear",
-            "decision": "Proceed",
             "resolved_agent": "I"
-        },
-        "stage3": null,
-        "stage4": {
-            "process": "Standard",
-            "decision": "None",
-            "structure": "No relative clause found"
-        },
-        "stage5": {
-            "process": "Standard",
-            "decision": "None",
-            "result": "Could not analyze semantic structure."
-        }
     }
 ]
