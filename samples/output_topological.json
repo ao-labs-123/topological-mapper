@@ -1,6 +1,9 @@
 [
   {
+    "timestamp": "2026-07-07T11:28:50.129376",
     "input": "It is required that you submit the form.",
+    "agent": "you",
+    "resolved_agent": "you",
     "topological_mapping": {
       "status": "Incomplete",
       "category_of_entities": {
@@ -19,83 +22,10 @@
     }
   },
   {
-    "input": "The report, which was long, is done.",
-    "topological_mapping": {
-      "status": "Incomplete",
-      "category_of_entities": {
-        "subject": "Unknown",
-        "with_whom": null
-      },
-      "category_of_events": {
-        "what": "The report, which was long, is done.",
-        "when": "unspecified",
-        "why": "unspecified"
-      },
-      "morphism": {
-        "relation": "Subject(Unknown) -> Event",
-        "constraint": "none"
-      }
-    }
-  },
-  {
-    "input": "The report that I wrote is done.",
-    "topological_mapping": {
-      "status": "Incomplete",
-      "category_of_entities": {
-        "subject": "Unknown",
-        "with_whom": null
-      },
-      "category_of_events": {
-        "what": "The report that I wrote is done.",
-        "when": "unspecified",
-        "why": "unspecified"
-      },
-      "morphism": {
-        "relation": "Subject(Unknown) -> Event",
-        "constraint": "none"
-      }
-    }
-  },
-  {
-    "input": "Thought was strange.",
-    "topological_mapping": {
-      "status": "Incomplete",
-      "category_of_entities": {
-        "subject": "Unknown",
-        "with_whom": null
-      },
-      "category_of_events": {
-        "what": "Thought was strange.",
-        "when": "unspecified",
-        "why": "unspecified"
-      },
-      "morphism": {
-        "relation": "Subject(Unknown) -> Event",
-        "constraint": "none"
-      }
-    }
-  },
-  {
-    "input": "Thought it was strange apparently.",
-    "topological_mapping": {
-      "status": "Incomplete",
-      "category_of_entities": {
-        "subject": "Unknown",
-        "with_whom": null
-      },
-      "category_of_events": {
-        "what": "Thought it was strange apparently.",
-        "when": "unspecified",
-        "why": "unspecified"
-      },
-      "morphism": {
-        "relation": "Subject(Unknown) -> Event",
-        "constraint": "none"
-      }
-    }
-  },
-  {
+    "timestamp": "2026-07-07T11:28:50.131088",
     "input": "Required further investigation.",
+    "agent": "Unknown",
+    "resolved_agent": "Unknown",
     "topological_mapping": {
       "status": "Incomplete",
       "category_of_entities": {
@@ -114,64 +44,10 @@
     }
   },
   {
-    "input": "Failed despite the effort.",
-    "topological_mapping": {
-      "status": "Incomplete",
-      "category_of_entities": {
-        "subject": "Unknown",
-        "with_whom": null
-      },
-      "category_of_events": {
-        "what": "Failed despite the effort.",
-        "when": "unspecified",
-        "why": "unspecified"
-      },
-      "morphism": {
-        "relation": "Subject(Unknown) -> Event",
-        "constraint": "none"
-      }
-    }
-  },
-  {
-    "input": "Succeeded because you helped.",
-    "topological_mapping": {
-      "status": "Incomplete",
-      "category_of_entities": {
-        "subject": "Unknown",
-        "with_whom": null
-      },
-      "category_of_events": {
-        "what": "Succeeded because you helped.",
-        "when": "unspecified",
-        "why": "unspecified"
-      },
-      "morphism": {
-        "relation": "Subject(Unknown) -> Event",
-        "constraint": "none"
-      }
-    }
-  },
-  {
-    "input": "He succeeded because I helped.",
-    "topological_mapping": {
-      "status": "Incomplete",
-      "category_of_entities": {
-        "subject": "Unknown",
-        "with_whom": null
-      },
-      "category_of_events": {
-        "what": "He succeeded because I helped.",
-        "when": "unspecified",
-        "why": "unspecified"
-      },
-      "morphism": {
-        "relation": "Subject(Unknown) -> Event",
-        "constraint": "none"
-      }
-    }
-  },
-  {
+    "timestamp": "2026-07-07T11:28:50.131912",
     "input": "I succeeded because you helped.",
+    "agent": "I",
+    "resolved_agent": "I",
     "topological_mapping": {
       "status": "Incomplete",
       "category_of_entities": {
@@ -190,7 +66,10 @@
     }
   },
   {
-    "input": "I'm stressed due to the project.",
+    "timestamp": "2026-07-07T11:28:50.132711",
+    "input": "The report that I wrote is done.",
+    "agent": "The report",
+    "resolved_agent": "The report",
     "topological_mapping": {
       "status": "Incomplete",
       "category_of_entities": {
@@ -198,7 +77,7 @@
         "with_whom": null
       },
       "category_of_events": {
-        "what": "I'm stressed due to the project.",
+        "what": "The report that I wrote is done.",
         "when": "unspecified",
         "why": "unspecified"
       },
@@ -209,7 +88,10 @@
     }
   },
   {
+    "timestamp": "2026-07-07T11:28:50.133523",
     "input": "I was told by him.",
+    "agent": "I",
+    "resolved_agent": "I",
     "topological_mapping": {
       "status": "Incomplete",
       "category_of_entities": {
@@ -228,45 +110,9 @@
     }
   },
   {
-    "input": "I have a car.",
-    "topological_mapping": {
-      "status": "Incomplete",
-      "category_of_entities": {
-        "subject": "Unknown",
-        "with_whom": null
-      },
-      "category_of_events": {
-        "what": "I have a car.",
-        "when": "unspecified",
-        "why": "unspecified"
-      },
-      "morphism": {
-        "relation": "Subject(Unknown) -> Event",
-        "constraint": "none"
-      }
-    }
-  },
-  {
-    "input": "I am having a party.",
-    "topological_mapping": {
-      "status": "Incomplete",
-      "category_of_entities": {
-        "subject": "Unknown",
-        "with_whom": null
-      },
-      "category_of_events": {
-        "what": "I am having a party.",
-        "when": "unspecified",
-        "why": "unspecified"
-      },
-      "morphism": {
-        "relation": "Subject(Unknown) -> Event",
-        "constraint": "none"
-      }
-    }
-  },
-  {
     "input": "I want to apply for leave without telling my boss.",
+    "agent": "I",
+    "resolved_agent": "I",
     "topological_mapping": {
       "status": "Incomplete",
       "category_of_entities": {
@@ -286,6 +132,8 @@
   },
   {
     "input": "I submitted the report with my team.",
+    "agent": "I",
+    "resolved_agent": "I",
     "topological_mapping": {
       "status": "Incomplete",
       "category_of_entities": {
@@ -305,6 +153,8 @@
   },
   {
     "input": "The system crashed due to a memory error.",
+    "agent": "The system",
+    "resolved_agent": "The system",
     "topological_mapping": {
       "status": "Incomplete",
       "category_of_entities": {
