@@ -1,25 +1,39 @@
    
 [
    "timestamp": "2026-07-07T11:28:50.129376",
-  "It is required that you submit the form.",
-  "The report, which was long, is done.",
-  "The report that I wrote is done.",
-  
-  "Thought was strange.",
-  "Thought it was strange apparently.",
-  "Required further investigation.",
-  "Failed despite the effort.",
-  "Succeeded because you helped.",
-  
-  "He succeeded because I helped.",
-  "I succeeded because you helped.",
-  "I'm stressed due to the project.",
-  "I was told by him.",
-  
-  "I have a car.",
-  "I am having a party.",
-  
-  "I want to apply for leave without telling my boss.",
-  "I submitted the report with my team.",           
-  "The system crashed due to a memory error." 
+   "input": "It is required that you submit the form.",
+   
+   
+   "input": "The report, which was long, is done.",
+
+   
+   "input": "The report that I wrote is done.",
+   
+   "input": "Thought was strange.",
+   
+   "input": "Thought it was strange apparently.",
+   
+   "input": "Required further investigation.",
+   
+   "input": "Failed despite the effort.",
+   
+   "input": "Succeeded because you helped.",
+   
+   "input": "He succeeded because I helped.",
+   
+   "input": "I succeeded because you helped.",
+   
+   "input": "I'm stressed due to the project.",
+   
+   "input": "I was told by him.",
+   
+   "input": "I have a car.",
+   
+   "input": "I am having a party.",
+   
+   "input": "I want to apply for leave without telling my boss.",
+   
+   "input": "I submitted the report with my team.",
+   
+   "input": "The system crashed due to a memory error." 
 ]
