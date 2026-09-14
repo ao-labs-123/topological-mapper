@@ -1,5 +1,5 @@
 # Current Phase: topological-mapper
-"A lightweight, rule-based library that maps structured inputs into categorical topologies (person/event relationships) for explainable AI reasoning."
+Stage 2 of Cognitive OS: Generates topological graph networks from particle objects.⁠
 
 <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/4f05a191-cefe-45bd-8b2b-ca36afca9018" />
 
