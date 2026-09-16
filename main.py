@@ -5,13 +5,13 @@ import urllib.request
 from src.graph import GraphBuilder
 
 # particle-encapsulation リポジトリの particles.json の Raw URL
-URL = "https://raw.githubusercontent.com/ao-labs-123/particle-encapsulation/main/data/particles.json"
+URL = "https://raw.githubusercontent.com/ao-labs-123/particle-encapsulation/main/particles.json"
 LOCAL_FILE = "particles.json"
 
 def main():
     print("Fetching particles.json from GitHub...")
     with urllib.request.urlopen(URL) as response:
-        particle_data = json.loads(response.read().decode())
+        particle_data = json.loads(response.read().decode())["particles"]
     
     with open(LOCAL_FILE, "w", encoding="utf-8") as f:
         json.dump(particle_data, f, ensure_ascii=False, indent=2)

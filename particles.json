@@ -1,0 +1,250 @@
+[
+  {
+    "id": "p_agent_d27d95",
+    "label": "He",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_cause_90339b",
+    "label": "i helped",
+    "entity_type": "Cause",
+    "state": "determined",
+    "constraints": [
+      "Agent: He + Marker: because"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_effect_fd4b08",
+    "label": "he succeeded",
+    "entity_type": "Effect",
+    "state": "determined",
+    "constraints": [
+      "Agent: He + Marker: because"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_agent_4b8ee5",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Psychological Verb + Null Subject"
+    ],
+    "properties": {
+      "decision": "Default: Speaker"
+    }
+  },
+  {
+    "id": "p_agent_7a7c95",
+    "label": "He/She/They",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Psychological Verb + Null Subject + Evidential Marker"
+    ],
+    "properties": {
+      "decision": "Override: 3rd Party"
+    }
+  },
+  {
+    "id": "p_agent_0f9472",
+    "label": "you",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Formal Subject Detected (It ... that)"
+    ],
+    "properties": {
+      "decision": "Priority: True Subject in Clause"
+    }
+  },
+  {
+    "id": "p_agent_2ebecb",
+    "label": "Unknown",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Standard"
+    ],
+    "properties": {
+      "decision": "None"
+    }
+  },
+  {
+    "id": "p_cause_3f4a11",
+    "label": "you helped",
+    "entity_type": "Cause",
+    "state": "determined",
+    "constraints": [
+      "Agent: Unknown + Marker: because"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_effect_f02a01",
+    "label": "succeeded",
+    "entity_type": "Effect",
+    "state": "determined",
+    "constraints": [
+      "Agent: Unknown + Marker: because"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_agent_1b350d",
+    "label": "Unknown",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Standard"
+    ],
+    "properties": {
+      "decision": "None"
+    }
+  },
+  {
+    "id": "p_agent_8d93a3",
+    "label": "Unknown",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Standard"
+    ],
+    "properties": {
+      "decision": "None"
+    }
+  },
+  {
+    "id": "p_agent_57a6cb",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_cause_36cd7d",
+    "label": "the project",
+    "entity_type": "Cause",
+    "state": "determined",
+    "constraints": [
+      "Agent: I + Marker: due to"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_effect_e7bb22",
+    "label": "i'm stressed",
+    "entity_type": "Effect",
+    "state": "determined",
+    "constraints": [
+      "Agent: I + Marker: due to"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_agent_f538ab",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_cause_f95532",
+    "label": "you helped",
+    "entity_type": "Cause",
+    "state": "determined",
+    "constraints": [
+      "Agent: I + Marker: because"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_effect_844b17",
+    "label": "i succeeded",
+    "entity_type": "Effect",
+    "state": "determined",
+    "constraints": [
+      "Agent: I + Marker: because"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_agent_0be9be",
+    "label": "The report",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_agent_698fc2",
+    "label": "The report",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_agent_8be9d2",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_agent_b480d6",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_agent_a54af8",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  }
+]
