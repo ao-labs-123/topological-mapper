@@ -2,9 +2,21 @@
 
 <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/4f05a191-cefe-45bd-8b2b-ca36afca9018" />
 
-## Stage 2 of Cognitive OS:
-Generates topological graph networks from particle objects.⁠
+## Stage 2 of the Cognitive OS Pipeline
+Constructs category-theoretic graph networks (`topological_graph.json`) from encapsulated particle objects (`particle.json`).
 
+---
+
+## Overview
+
+This repository handles the **Topological Mapping** phase of the deterministic Cognitive OS.
+It ingests discrete `Particle` objects, maps them into **Entities** or **Events**, and automatically wires category-theoretic morphisms (**Cause**, **Action**, **Relation**, **Constraint**) between them.
+
+### Pipeline Position
+
+```text
+(Particle Encapsulation) ──> [ particle.json ] ──> [ Topological Mapping ] ──> [ topological_graph.json ]
+```
 
 <img width="1543" height="637" alt="image" src="https://github.com/user-attachments/assets/01787f0a-d91e-4967-a691-46d3b9ff40d8" />
 
