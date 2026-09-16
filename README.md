@@ -48,6 +48,31 @@ Ingest ⁠particle.json⁠ (local or via automated fetch) and generate the topol
 python main.py
 ```
 
+2. Output Example (⁠topological_graph.json⁠)
+```text
+{
+  "nodes": [
+    {
+      "id": "p_cause_90339b",
+      "label": "i helped",
+      "category": "Event"
+    },
+    {
+      "id": "p_effect_fd4b08",
+      "label": "he succeeded",
+      "category": "Event"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_cause_p_cause_90339b_p_effect_fd4b08",
+      "source": "p_cause_90339b",
+      "target": "p_effect_fd4b08",
+      "morphism_type": "Cause"
+    }
+  ]
+}
+```
 
 
 ## Repository Structure
