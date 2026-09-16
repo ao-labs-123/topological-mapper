@@ -51,11 +51,11 @@ python main.py
 2. Output Example (⁠topological_graph.json⁠)
 ```topological_graph.json
 {
-  "nodes": [
+  "nodes": [  
     {
-      "id": "p_cause_90339b",
-      "label": "i helped",
-      "category": "Event"
+      "id": "p_agent_d27d95",
+      "label": "He",
+      "category": "Entity"
     },
     {
       "id": "p_effect_fd4b08",
