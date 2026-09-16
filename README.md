@@ -18,6 +18,15 @@ It ingests discrete `Particle` objects, maps them into **Entities** or **Events*
 (Particle Encapsulation) ──> [ particle.json ] ──> [ Topological Mapping ] ──> [ topological_graph.json ]
 ```
 
-<img width="1543" height="637" alt="image" src="https://github.com/user-attachments/assets/01787f0a-d91e-4967-a691-46d3b9ff40d8" />
+## Category-Theoretic Mapping Model
+The engine structures the cognitive space into two primary object categories connected by functional morphisms
+
+```text
+  [ Category of Entities ]                  [ Category of Events ]
+  ( Who / Subject / Agent )                 ( What / Cause / Effect )
+              │                                         │
+              └─────────────── [ Morphisms ] ───────────┘
+                       ( Action / Cause / Constraint )
+```
 
 <img width="1583" height="1134" alt="image" src="https://github.com/user-attachments/assets/0db76574-fef5-428a-aebb-bc49252954ba" />
