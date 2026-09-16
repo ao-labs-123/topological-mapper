@@ -28,4 +28,17 @@ The engine structures the cognitive space into two primary object categories con
                        ( Action / Cause / Constraint )
 ```
 
-<img width="1583" height="1134" alt="image" src="https://github.com/user-attachments/assets/0db76574-fef5-428a-aebb-bc49252954ba" />
+1. Nodes (Objects)
+
+ ⁠**Entity⁠:** Agents, Subjects, and Nouns (⁠He⁠, ⁠I⁠, ⁠you⁠, etc.)
+ ⁠**Event⁠:** Actions, Causes, and Contextual Events (⁠i helped⁠, ⁠he succeeded⁠, etc.)
+2. Edges (Morphism / Wires)
+
+ ⁠**source⁠:** Domain object ID
+ ⁠**target⁠:** Codomain object ID
+ ⁠**morphism_type⁠:** Functional relation classification (⁠Cause⁠, ⁠Action⁠, ⁠Relation⁠, ⁠Constraint⁠)
+
+## Quick Start
+1. Execution
+
+Ingest ⁠particle.json⁠ (local or via automated fetch) and generate the topological graph network:
