@@ -30,14 +30,14 @@ The engine structures the cognitive space into two primary object categories con
 
 1. Nodes (Objects)
 
-- **Entity⁠:** Agents, Subjects, and Nouns (⁠He⁠, ⁠I⁠, ⁠you⁠, etc.)
-- **Event⁠:** Actions, Causes, and Contextual Events (⁠i helped⁠, ⁠he succeeded⁠, etc.)
+- **Entity⁠:** Agents, Subjects, and Nouns (`⁠He`⁠, `⁠I⁠`, `⁠you`⁠, etc.)
+- **Event⁠:** Actions, Causes, and Contextual Events (`⁠i helped⁠`, `⁠he succeeded⁠`, etc.)
 
 2. Edges (Morphism / Wires)
 
 - ⁠**source⁠:** Domain object ID
 - ⁠**target⁠:** Codomain object ID
-- ⁠**morphism_type⁠:** Functional relation classification (⁠Cause⁠, ⁠Action⁠, ⁠Relation⁠, ⁠Constraint⁠)
+- ⁠**morphism_type⁠:** Functional relation classification (⁠`Cause⁠`, ⁠`Action`⁠, ⁠`Relation⁠`, ⁠`Constraint`⁠)
 
 ## Quick Start
 1. Execution
