@@ -42,7 +42,7 @@ The engine structures the cognitive space into two primary object categories con
 ## Quick Start
 1. Execution
 
-Ingest ⁠particle.json⁠ (local or via automated fetch) and generate the topological graph network:
+Ingest ⁠`particle.json⁠` (local or via automated fetch) and generate the topological graph network:
 
 ```bash
 python main.py
