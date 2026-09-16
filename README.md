@@ -47,3 +47,17 @@ Ingest ⁠particle.json⁠ (local or via automated fetch) and generate the topol
 ```bash
 python main.py
 ```
+
+
+
+## Repository Structure
+
+```text
+topological-mapping/
+├── README.md               # Project documentation
+├── particle.json           # Ingested particle objects
+├── topological_graph.json  # Exported topological network graph
+├── main.py                 # Pipeline execution script
+└── src/
+    └── graph.py            # Graph data structures and GraphBuilder logic
+```
