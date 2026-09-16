@@ -49,7 +49,7 @@ python main.py
 ```
 
 2. Output Example (⁠topological_graph.json⁠)
-```text
+```topological_graph.json
 {
   "nodes": [
     {
