@@ -28,19 +28,19 @@ The engine structures the cognitive space into two primary object categories con
                        ( Action / Cause / Constraint )
 ```
 
-1. Nodes (Objects)
+### 1. Nodes (Objects)
 
 - **Entity⁠:** Agents, Subjects, and Nouns (`⁠He`⁠, `⁠I⁠`, `⁠you`⁠, etc.)
 - **Event⁠:** Actions, Causes, and Contextual Events (`⁠i helped⁠`, `⁠he succeeded⁠`, etc.)
 
-2. Edges (Morphism / Wires)
+### 2. Edges (Morphism / Wires)
 
 - ⁠**source⁠:** Domain object ID
 - ⁠**target⁠:** Codomain object ID
 - ⁠**morphism_type⁠:** Functional relation classification (⁠`Cause⁠`, ⁠`Action`⁠, ⁠`Relation⁠`, ⁠`Constraint`⁠)
 
 ## Quick Start
-1. Execution
+### 1. Execution
 
 Ingest ⁠`particle.json⁠` (local or via automated fetch) and generate the topological graph network:
 
@@ -48,7 +48,7 @@ Ingest ⁠`particle.json⁠` (local or via automated fetch) and generate the top
 python main.py
 ```
 
-2. Output Example (⁠topological_graph.json⁠)
+### 2. Output Example (⁠topological_graph.json⁠)
 ```topological_graph.json
 {
   "nodes": [  
