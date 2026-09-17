@@ -4,8 +4,8 @@ import json
 import urllib.request
 from src.graph import GraphBuilder
 
-LOG_URL = "https://raw.githubusercontent.com/<ユーザー名>/particle-encapsulation/main/log.json"
-PARTICLE_URL = "https://raw.githubusercontent.com/<ユーザー名>/particle-encapsulation/main/particle.json"
+LOG_URL = "https://raw.githubusercontent.com/ao-labs-123/input-parser/main/log.json"
+PARTICLE_URL = "https://raw.githubusercontent.com/ao-labs-123/particle-encapsulation/main/particles.json"
 
 def main():
     # 1. 粒子データと元のログデータの両方を取得
