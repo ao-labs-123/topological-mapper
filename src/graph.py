@@ -27,19 +27,19 @@ class TopologicalGraph:
 
 class GraphBuilder:
     @classmethod
-    def build_graph(cls, particle_data: List[Dict[str, Any]]) -> TopologicalGraph:
+    def build_graph(cls, particle_data: List[Dict[str, Any]], log_data: Any = None) -> TopologicalGraph:
         graph = TopologicalGraph()
-        
+
         cause_nodes = []
         effect_nodes = []
 
         # 1. 粒子を Node (Entity / Event) として展開
         for p in particle_data:
             p_type = p.get("entity_type", "")
-            
+
             # Agent は Entity 圏、Cause/Effect は Event 圏へ分類
             category = "Entity" if p_type == "Agent" else "Event"
-            
+
             node = Node(
                 id=p["id"],
                 label=p["label"],
@@ -64,5 +64,9 @@ class GraphBuilder:
                     morphism_type="Cause"
                 )
                 graph.edges.append(edge)
+
+        # 3. ログデータが存在する場合は将来の拡張用に保持しておく
+        if log_data is not None:
+            _ = log_data
 
         return graph
