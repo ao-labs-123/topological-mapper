@@ -9,13 +9,13 @@ else:
 
 # スクリプト（main.py）が存在するディレクトリの絶対パスを取得
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
+DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 
 # 保存先のパスを絶対パスで組み立てる
-LOG_LOCAL_PATH = os.path.join(BASE_DIR, "log.json")
-PARTICLES_LOCAL_PATH = os.path.join(BASE_DIR, "particles.json")
-# プロジェクトルート（ひとつ上の階層）に出力したい場合はこちら:
-# OUTPUT_LOCAL_PATH = os.path.join(BASE_DIR, "..", "topological_graph.json")
-OUTPUT_LOCAL_PATH = os.path.join(BASE_DIR, "topological_graph.json")
+LOG_LOCAL_PATH = os.path.join(DATA_DIR, "log.json")
+PARTICLES_LOCAL_PATH = os.path.join(DATA_DIR, "particles.json")
+OUTPUT_LOCAL_PATH = os.path.join(PROJECT_ROOT, "topological_graph.json")
 
 # Raw URL 設定
 LOG_URL = "https://raw.githubusercontent.com/ao-labs-123/input-parser/main/data/log.json"
@@ -39,7 +39,7 @@ def main():
     particle_data = fetch_and_save_json(PARTICLES_URL, PARTICLES_LOCAL_PATH)
 
     # 2. グラフの構築
-    graph = GraphBuilder.build_graph(particle_data)
+    graph = GraphBuilder.build_graph(particle_data, log_data)
 
     print("\n--- Generated Topological Graph ---")
     print(f"Nodes: {len(graph.nodes)}, Edges: {len(graph.edges)}")

@@ -3,7 +3,7 @@
 <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/4f05a191-cefe-45bd-8b2b-ca36afca9018" />
 
 ## Stage 2 of the Cognitive OS Pipeline
-Constructs category-theoretic graph networks [topological_graph.json](https://github.com/ao-labs-123/topological-mapper/blob/main/topological_graph.json) from encapsulated particle objects [particles.json](https://github.com/ao-labs-123/topological-mapper/blob/main/particles.json).
+Constructs category-theoretic graph networks [topological_graph.json](https://github.com/ao-labs-123/topological-mapper/blob/main/topological_graph.json) from encapsulated particle objects [data/particles.json](https://github.com/ao-labs-123/topological-mapper/blob/main/data/particles.json).
 
 
 ## Overview
@@ -45,7 +45,7 @@ The engine structures the cognitive space into two primary object categories con
 Ingest ⁠`particle.json⁠` (local or via automated fetch) and generate the topological graph network:
 
 ```bash
-python main.py
+python -m src.main
 ```
 
 ### 2. Output Example (⁠topological_graph.json⁠)
@@ -80,9 +80,11 @@ python main.py
 ```text
 topological-mapping/
 ├── README.md               # Project documentation
-├── particle.json           # Ingested particle objects
+├── data/
+│   ├── log.json            # Input log data
+│   └── particles.json      # Ingested particle objects
 ├── topological_graph.json  # Exported topological network graph
-├── main.py                 # Pipeline execution script
 └── src/
+  ├── main.py             # Pipeline execution script
     └── graph.py            # Graph data structures and GraphBuilder logic
 ```

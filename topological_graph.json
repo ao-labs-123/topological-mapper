@@ -3,163 +3,196 @@
     {
       "id": "p_agent_6ed29f",
       "label": "He",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_d9d641",
       "label": "I",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_f40c3e",
       "label": "He/She/They",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_229f5f",
       "label": "you",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_78b77f",
       "label": "I",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {
+        "when": "yesterday"
+      },
+      "resolution_state": "Determined"
     },
     {
       "id": "p_agent_28e944",
       "label": "I",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_26859d",
       "label": "Unknown",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_49a5ed",
       "label": "Unknown",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_0747e9",
       "label": "Unknown",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_2da619",
       "label": "Unknown",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {
+        "when": "yesterday"
+      },
+      "resolution_state": "Determined"
     },
     {
       "id": "p_agent_cf19a5",
       "label": "Unknown",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_8d750b",
       "label": "I",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_cause_5211ee",
       "label": "the project",
-      "category": "Event"
+      "category": "Event",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_effect_caf9ed",
       "label": "i'm stressed",
-      "category": "Event"
+      "category": "Event",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_8cbd89",
       "label": "I",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_cause_cfd51e",
       "label": "you helped",
-      "category": "Event"
+      "category": "Event",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_effect_bf7f72",
       "label": "i succeeded",
-      "category": "Event"
+      "category": "Event",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_312345",
       "label": "He",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_bb0ef5",
       "label": "I",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_081721",
       "label": "The report",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_320057",
       "label": "The report",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_1365dc",
       "label": "The office",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_287f18",
       "label": "The day",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_bf813f",
       "label": "I",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_3d4d56",
       "label": "I",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_2cea06",
       "label": "I",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     },
     {
       "id": "p_agent_e0bf68",
       "label": "The report",
-      "category": "Entity"
+      "category": "Entity",
+      "w5h1_attributes": {},
+      "resolution_state": null
     }
   ],
-  "edges": [
-    {
-      "id": "e_cause_p_cause_5211ee_p_effect_caf9ed",
-      "source": "p_cause_5211ee",
-      "target": "p_effect_caf9ed",
-      "morphism_type": "Cause"
-    },
-    {
-      "id": "e_cause_p_cause_5211ee_p_effect_bf7f72",
-      "source": "p_cause_5211ee",
-      "target": "p_effect_bf7f72",
-      "morphism_type": "Cause"
-    },
-    {
-      "id": "e_cause_p_cause_cfd51e_p_effect_caf9ed",
-      "source": "p_cause_cfd51e",
-      "target": "p_effect_caf9ed",
-      "morphism_type": "Cause"
-    },
-    {
-      "id": "e_cause_p_cause_cfd51e_p_effect_bf7f72",
-      "source": "p_cause_cfd51e",
-      "target": "p_effect_bf7f72",
-      "morphism_type": "Cause"
-    }
-  ]
+  "edges": []
 }
