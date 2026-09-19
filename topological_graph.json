@@ -4,195 +4,913 @@
       "id": "p_agent_6ed29f",
       "label": "He",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "He",
+        "what": "Unspecified",
+        "when": "after",
+        "where": "in the meeting",
+        "why": "Unspecified",
+        "how": "by working hard"
+      }
     },
     {
       "id": "p_agent_d9d641",
       "label": "I",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "I",
+        "what": "Unspecified",
+        "when": "after",
+        "where": "in the meeting",
+        "why": "Unspecified",
+        "how": "by him"
+      }
     },
     {
       "id": "p_agent_f40c3e",
       "label": "He/She/They",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "He/She/They",
+        "what": "Unspecified",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_agent_229f5f",
       "label": "you",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "you",
+        "what": "Unspecified",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_agent_78b77f",
       "label": "I",
       "category": "Entity",
-      "w5h1_attributes": {
-        "when": "yesterday"
-      },
-      "resolution_state": "Determined"
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "I",
+        "what": "Unspecified",
+        "when": "after",
+        "where": "in the meeting",
+        "why": "Unspecified",
+        "how": "by him"
+      }
     },
     {
       "id": "p_agent_28e944",
       "label": "I",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "I",
+        "what": "Unspecified",
+        "when": "after",
+        "where": "in the meeting",
+        "why": "Unspecified",
+        "how": "by him"
+      }
     },
     {
       "id": "p_agent_26859d",
       "label": "Unknown",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Unspecified",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "Unspecified",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_agent_49a5ed",
       "label": "Unknown",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Unspecified",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "Unspecified",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_agent_0747e9",
       "label": "Unknown",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Unspecified",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "Unspecified",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_agent_2da619",
       "label": "Unknown",
       "category": "Entity",
-      "w5h1_attributes": {
-        "when": "yesterday"
-      },
-      "resolution_state": "Determined"
+      "resolution_state": "Unspecified",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "Unspecified",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_agent_cf19a5",
       "label": "Unknown",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Unspecified",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "Unspecified",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_agent_8d750b",
       "label": "I",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "I",
+        "what": "Unspecified",
+        "when": "after",
+        "where": "in the meeting",
+        "why": "Unspecified",
+        "how": "by him"
+      }
     },
     {
       "id": "p_cause_5211ee",
       "label": "the project",
       "category": "Event",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "the project",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_effect_caf9ed",
       "label": "i'm stressed",
       "category": "Event",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "i'm stressed",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_agent_8cbd89",
       "label": "I",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "I",
+        "what": "Unspecified",
+        "when": "after",
+        "where": "in the meeting",
+        "why": "Unspecified",
+        "how": "by him"
+      }
     },
     {
       "id": "p_cause_cfd51e",
       "label": "you helped",
       "category": "Event",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "you helped",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_effect_bf7f72",
       "label": "i succeeded",
       "category": "Event",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "i succeeded",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_agent_312345",
       "label": "He",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "He",
+        "what": "Unspecified",
+        "when": "after",
+        "where": "in the meeting",
+        "why": "Unspecified",
+        "how": "by working hard"
+      }
     },
     {
       "id": "p_agent_bb0ef5",
       "label": "I",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "I",
+        "what": "Unspecified",
+        "when": "after",
+        "where": "in the meeting",
+        "why": "Unspecified",
+        "how": "by him"
+      }
     },
     {
       "id": "p_agent_081721",
       "label": "The report",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "The report",
+        "what": "Unspecified",
+        "when": "Unspecified",
+        "where": "at the office",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_agent_320057",
       "label": "The report",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "The report",
+        "what": "Unspecified",
+        "when": "Unspecified",
+        "where": "at the office",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_agent_1365dc",
       "label": "The office",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "The office",
+        "what": "Unspecified",
+        "when": "Unspecified",
+        "where": "at the office",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_agent_287f18",
       "label": "The day",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "The day",
+        "what": "Unspecified",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
     {
       "id": "p_agent_bf813f",
       "label": "I",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "I",
+        "what": "Unspecified",
+        "when": "after",
+        "where": "in the meeting",
+        "why": "Unspecified",
+        "how": "by him"
+      }
     },
     {
       "id": "p_agent_3d4d56",
       "label": "I",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "I",
+        "what": "Unspecified",
+        "when": "after",
+        "where": "in the meeting",
+        "why": "Unspecified",
+        "how": "by him"
+      }
     },
     {
       "id": "p_agent_2cea06",
       "label": "I",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "I",
+        "what": "Unspecified",
+        "when": "after",
+        "where": "in the meeting",
+        "why": "Unspecified",
+        "how": "by him"
+      }
     },
     {
       "id": "p_agent_e0bf68",
       "label": "The report",
       "category": "Entity",
-      "w5h1_attributes": {},
-      "resolution_state": null
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "The report",
+        "what": "Unspecified",
+        "when": "Unspecified",
+        "where": "at the office",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     }
   ],
-  "edges": []
+  "edges": [
+    {
+      "id": "e_action_p_agent_6ed29f_p_cause_5211ee",
+      "source": "p_agent_6ed29f",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_6ed29f_p_effect_caf9ed",
+      "source": "p_agent_6ed29f",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_6ed29f_p_cause_cfd51e",
+      "source": "p_agent_6ed29f",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_6ed29f_p_effect_bf7f72",
+      "source": "p_agent_6ed29f",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_d9d641_p_cause_5211ee",
+      "source": "p_agent_d9d641",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_d9d641_p_effect_caf9ed",
+      "source": "p_agent_d9d641",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_d9d641_p_cause_cfd51e",
+      "source": "p_agent_d9d641",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_d9d641_p_effect_bf7f72",
+      "source": "p_agent_d9d641",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_f40c3e_p_cause_5211ee",
+      "source": "p_agent_f40c3e",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_f40c3e_p_effect_caf9ed",
+      "source": "p_agent_f40c3e",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_f40c3e_p_cause_cfd51e",
+      "source": "p_agent_f40c3e",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_f40c3e_p_effect_bf7f72",
+      "source": "p_agent_f40c3e",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_229f5f_p_cause_5211ee",
+      "source": "p_agent_229f5f",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_229f5f_p_effect_caf9ed",
+      "source": "p_agent_229f5f",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_229f5f_p_cause_cfd51e",
+      "source": "p_agent_229f5f",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_229f5f_p_effect_bf7f72",
+      "source": "p_agent_229f5f",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_78b77f_p_cause_5211ee",
+      "source": "p_agent_78b77f",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_78b77f_p_effect_caf9ed",
+      "source": "p_agent_78b77f",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_78b77f_p_cause_cfd51e",
+      "source": "p_agent_78b77f",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_78b77f_p_effect_bf7f72",
+      "source": "p_agent_78b77f",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_28e944_p_cause_5211ee",
+      "source": "p_agent_28e944",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_28e944_p_effect_caf9ed",
+      "source": "p_agent_28e944",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_28e944_p_cause_cfd51e",
+      "source": "p_agent_28e944",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_28e944_p_effect_bf7f72",
+      "source": "p_agent_28e944",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_8d750b_p_cause_5211ee",
+      "source": "p_agent_8d750b",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_8d750b_p_effect_caf9ed",
+      "source": "p_agent_8d750b",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_8d750b_p_cause_cfd51e",
+      "source": "p_agent_8d750b",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_8d750b_p_effect_bf7f72",
+      "source": "p_agent_8d750b",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_8cbd89_p_cause_5211ee",
+      "source": "p_agent_8cbd89",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_8cbd89_p_effect_caf9ed",
+      "source": "p_agent_8cbd89",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_8cbd89_p_cause_cfd51e",
+      "source": "p_agent_8cbd89",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_8cbd89_p_effect_bf7f72",
+      "source": "p_agent_8cbd89",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_312345_p_cause_5211ee",
+      "source": "p_agent_312345",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_312345_p_effect_caf9ed",
+      "source": "p_agent_312345",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_312345_p_cause_cfd51e",
+      "source": "p_agent_312345",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_312345_p_effect_bf7f72",
+      "source": "p_agent_312345",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_bb0ef5_p_cause_5211ee",
+      "source": "p_agent_bb0ef5",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_bb0ef5_p_effect_caf9ed",
+      "source": "p_agent_bb0ef5",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_bb0ef5_p_cause_cfd51e",
+      "source": "p_agent_bb0ef5",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_bb0ef5_p_effect_bf7f72",
+      "source": "p_agent_bb0ef5",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_081721_p_cause_5211ee",
+      "source": "p_agent_081721",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_081721_p_effect_caf9ed",
+      "source": "p_agent_081721",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_081721_p_cause_cfd51e",
+      "source": "p_agent_081721",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_081721_p_effect_bf7f72",
+      "source": "p_agent_081721",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_320057_p_cause_5211ee",
+      "source": "p_agent_320057",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_320057_p_effect_caf9ed",
+      "source": "p_agent_320057",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_320057_p_cause_cfd51e",
+      "source": "p_agent_320057",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_320057_p_effect_bf7f72",
+      "source": "p_agent_320057",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_1365dc_p_cause_5211ee",
+      "source": "p_agent_1365dc",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_1365dc_p_effect_caf9ed",
+      "source": "p_agent_1365dc",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_1365dc_p_cause_cfd51e",
+      "source": "p_agent_1365dc",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_1365dc_p_effect_bf7f72",
+      "source": "p_agent_1365dc",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_287f18_p_cause_5211ee",
+      "source": "p_agent_287f18",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_287f18_p_effect_caf9ed",
+      "source": "p_agent_287f18",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_287f18_p_cause_cfd51e",
+      "source": "p_agent_287f18",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_287f18_p_effect_bf7f72",
+      "source": "p_agent_287f18",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_bf813f_p_cause_5211ee",
+      "source": "p_agent_bf813f",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_bf813f_p_effect_caf9ed",
+      "source": "p_agent_bf813f",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_bf813f_p_cause_cfd51e",
+      "source": "p_agent_bf813f",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_bf813f_p_effect_bf7f72",
+      "source": "p_agent_bf813f",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_3d4d56_p_cause_5211ee",
+      "source": "p_agent_3d4d56",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_3d4d56_p_effect_caf9ed",
+      "source": "p_agent_3d4d56",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_3d4d56_p_cause_cfd51e",
+      "source": "p_agent_3d4d56",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_3d4d56_p_effect_bf7f72",
+      "source": "p_agent_3d4d56",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_2cea06_p_cause_5211ee",
+      "source": "p_agent_2cea06",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_2cea06_p_effect_caf9ed",
+      "source": "p_agent_2cea06",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_2cea06_p_cause_cfd51e",
+      "source": "p_agent_2cea06",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_2cea06_p_effect_bf7f72",
+      "source": "p_agent_2cea06",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_e0bf68_p_cause_5211ee",
+      "source": "p_agent_e0bf68",
+      "target": "p_cause_5211ee",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_e0bf68_p_effect_caf9ed",
+      "source": "p_agent_e0bf68",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_e0bf68_p_cause_cfd51e",
+      "source": "p_agent_e0bf68",
+      "target": "p_cause_cfd51e",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_action_p_agent_e0bf68_p_effect_bf7f72",
+      "source": "p_agent_e0bf68",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Action",
+      "detail": "Agent of Action"
+    },
+    {
+      "id": "e_cause_p_cause_5211ee_p_effect_caf9ed",
+      "source": "p_cause_5211ee",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Cause",
+      "detail": "Primary Cause"
+    },
+    {
+      "id": "e_cause_p_cause_cfd51e_p_effect_bf7f72",
+      "source": "p_cause_cfd51e",
+      "target": "p_effect_bf7f72",
+      "morphism_type": "Cause",
+      "detail": "Primary Cause"
+    },
+    {
+      "id": "e_constraint_defining_p_agent_081721",
+      "source": "p_agent_081721",
+      "target": "p_agent_081721",
+      "morphism_type": "Constraint",
+      "detail": "Defining Relative Clause (Essential)"
+    },
+    {
+      "id": "e_constraint_passive_p_agent_d9d641",
+      "source": "p_agent_d9d641",
+      "target": "p_agent_d9d641",
+      "morphism_type": "Constraint",
+      "detail": "Passive Receiver Constraint"
+    }
+  ]
 }
