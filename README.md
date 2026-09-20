@@ -86,5 +86,5 @@ topological-mapping/
 ├── topological_graph.json  # Exported topological network graph
 └── src/
   ├── main.py             # Pipeline execution script
-    └── graph.py            # Graph data structures and GraphBuilder logic
+  └── graph.py            # Graph data structures and GraphBuilder logic
 ```
