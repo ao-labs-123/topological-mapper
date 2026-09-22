@@ -11,7 +11,7 @@
         "when": "after",
         "where": "in the meeting",
         "why": "Unspecified",
-        "how": "by working hard"
+        "how": "quickly"
       }
     },
     {
@@ -25,7 +25,7 @@
         "when": "after",
         "where": "in the meeting",
         "why": "Unspecified",
-        "how": "by him"
+        "how": "quickly"
       }
     },
     {
@@ -67,7 +67,7 @@
         "when": "after",
         "where": "in the meeting",
         "why": "Unspecified",
-        "how": "by him"
+        "how": "quickly"
       }
     },
     {
@@ -81,7 +81,7 @@
         "when": "after",
         "where": "in the meeting",
         "why": "Unspecified",
-        "how": "by him"
+        "how": "quickly"
       }
     },
     {
@@ -165,7 +165,7 @@
         "when": "after",
         "where": "in the meeting",
         "why": "Unspecified",
-        "how": "by him"
+        "how": "quickly"
       }
     },
     {
@@ -207,7 +207,7 @@
         "when": "after",
         "where": "in the meeting",
         "why": "Unspecified",
-        "how": "by him"
+        "how": "quickly"
       }
     },
     {
@@ -249,7 +249,7 @@
         "when": "after",
         "where": "in the meeting",
         "why": "Unspecified",
-        "how": "by working hard"
+        "how": "quickly"
       }
     },
     {
@@ -263,7 +263,7 @@
         "when": "after",
         "where": "in the meeting",
         "why": "Unspecified",
-        "how": "by him"
+        "how": "quickly"
       }
     },
     {
@@ -277,7 +277,7 @@
         "when": "Unspecified",
         "where": "at the office",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "quickly"
       }
     },
     {
@@ -291,7 +291,7 @@
         "when": "Unspecified",
         "where": "at the office",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "quickly"
       }
     },
     {
@@ -333,7 +333,7 @@
         "when": "after",
         "where": "in the meeting",
         "why": "Unspecified",
-        "how": "by him"
+        "how": "quickly"
       }
     },
     {
@@ -347,7 +347,7 @@
         "when": "after",
         "where": "in the meeting",
         "why": "Unspecified",
-        "how": "by him"
+        "how": "quickly"
       }
     },
     {
@@ -361,7 +361,7 @@
         "when": "after",
         "where": "in the meeting",
         "why": "Unspecified",
-        "how": "by him"
+        "how": "quickly"
       }
     },
     {
@@ -375,7 +375,7 @@
         "when": "Unspecified",
         "where": "at the office",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "quickly"
       }
     }
   ],
@@ -899,14 +899,28 @@
       "detail": "Primary Cause"
     },
     {
-      "id": "e_constraint_defining_p_agent_081721",
+      "id": "e_constraint_p_agent_081721",
       "source": "p_agent_081721",
       "target": "p_agent_081721",
       "morphism_type": "Constraint",
-      "detail": "Defining Relative Clause (Essential)"
+      "detail": "Defining Clause Constraint"
     },
     {
-      "id": "e_constraint_passive_p_agent_d9d641",
+      "id": "e_constraint_p_agent_1365dc",
+      "source": "p_agent_1365dc",
+      "target": "p_agent_1365dc",
+      "morphism_type": "Constraint",
+      "detail": "Spatial/Temporal Constraint"
+    },
+    {
+      "id": "e_constraint_p_agent_287f18",
+      "source": "p_agent_287f18",
+      "target": "p_agent_287f18",
+      "morphism_type": "Constraint",
+      "detail": "Spatial/Temporal Constraint"
+    },
+    {
+      "id": "e_passive_p_agent_d9d641",
       "source": "p_agent_d9d641",
       "target": "p_agent_d9d641",
       "morphism_type": "Constraint",
