@@ -1,4 +1,6 @@
 # Current Phase: topological-mapper
+![alt text](image.jpeg)
+
 ## "ACT-R at a Micro-Scale"
 ### What makes this different from standard ACT-R?
 Standard ACT-R operates on a macro level with production rules. This project zooms into the micro-level of cognitive processing.
