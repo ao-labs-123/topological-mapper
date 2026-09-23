@@ -51,24 +51,43 @@ python -m src.main
 ### 2. Output Example (⁠topological_graph.json⁠)
 ```topological_graph.json
 {
-  "nodes": [  
+   "nodes": [
     {
-      "id": "p_agent_d27d95",
+      "id": "p_agent_6ed29f",
       "label": "He",
-      "category": "Entity"
+      "category": "Entity",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "He",
+        "what": "Unspecified",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     },
-    {
-      "id": "p_effect_fd4b08",
-      "label": "he succeeded",
-      "category": "Event"
+       {
+      "id": "p_cause_5211ee",
+      "label": "the project",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "the project",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
     }
   ],
   "edges": [
     {
-      "id": "e_cause_p_cause_90339b_p_effect_fd4b08",
-      "source": "p_cause_90339b",
-      "target": "p_effect_fd4b08",
-      "morphism_type": "Cause"
+      "id": "e_cause_p_cause_5211ee_p_effect_caf9ed",
+      "source": "p_cause_5211ee",
+      "target": "p_effect_caf9ed",
+      "morphism_type": "Cause",
+      "detail": "Primary Cause"
     }
   ]
 }
