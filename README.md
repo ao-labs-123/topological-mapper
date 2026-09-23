@@ -21,11 +21,16 @@ It ingests discrete `Particle` objects, maps them into **Entities** or **Events*
 The engine structures the cognitive space into two primary object categories connected by functional morphisms
 
 ```text
-  [ Category of Entities ]                  [ Category of Events ]
-  ( Who / Subject / Agent )                 ( What / Cause / Effect )
+       [ Category of Entities ]                  [ Category of Events ]
+      ( Who / Subject / Agent )                 ( What / Cause / Effect )
+       [ 5W1H: Who ]                             [ 5W1H: What ]
               │                                         │
-              └─────────────── [ Morphisms ] ───────────┘
-                       ( Action / Cause / Constraint )
+              ├─────────────── [ Morphisms ] ───────────┤
+              │        ( Action / Cause / Constraint )  │
+              │                                         │
+              └───────── [ Context Attributes ] ────────┘
+                      ( When / Where / Why / How )
+
 ```
 
 ### 1. Nodes (Objects)
