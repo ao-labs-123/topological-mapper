@@ -16,14 +16,13 @@ It ingests discrete `Particle` objects, maps them into **Entities** or **Events*
 ```text
 (Particle Encapsulation) ──> [ particle.json ] ──> [ Topological Mapping ] ──> [ topological_graph.json ]
 ```
+## Topology & Graph Design
 
-## Category-Theoretic Mapping Model
-The engine structures the cognitive space into two primary object categories connected by functional morphisms
-
+### 1. Architectural Diagram
 ```text
-       [ Category of Entities ]                  [ Category of Events ]
-      ( Who / Subject / Agent )                 ( What / Cause / Effect )
-       [ 5W1H: Who ]                             [ 5W1H: What ]
+  [ Category of Entities ]                  [ Category of Events ]
+  ( Who / Subject / Agent )                 ( What / Cause / Effect )
+   └── 5W1H: Who                             └── 5W1H: What
               │                                         │
               ├─────────────── [ Morphisms ] ───────────┤
               │        ( Action / Cause / Constraint )  │
@@ -33,16 +32,21 @@ The engine structures the cognitive space into two primary object categories con
 
 ```
 
-### 1. Nodes (Objects)
+### 2. Node & Edge Definitions
 
-- **Entity⁠:** Agents, Subjects, and Nouns (`⁠He`⁠, `⁠I⁠`, `⁠you`⁠, etc.)
-- **Event⁠:** Actions, Causes, and Contextual Events (`⁠i helped⁠`, `⁠he succeeded⁠`, etc.)
+#### Nodes (Objects)
+* **Entity**: Agents, Subjects, and Nouns (`He`, `I`, `you`, etc.)  
+  * *Primary 5W1H Role*: `Who`
+* **Event**: Actions, Causes, and Contextual Events (`the project`, `i succeeded`, etc.)  
+  * *Primary 5W1H Role*: `What` (and contextual occurrences)
 
-### 2. Edges (Morphism / Wires)
+#### Edges (Morphisms / Wires)
+* **`source`**: Domain object ID (始点オブジェクト)
+* **`target`**: Codomain object ID (終点オブジェクト)
+* **`morphism_type`**: Functional relation classification (`Action`, `Cause`, `Constraint`, `Relation`)
+* **`attributes` / `detail`**: Contextual bound conditions (`When`, `Where`, `Why`, `How`)
 
-- ⁠**source⁠:** Domain object ID
-- ⁠**target⁠:** Codomain object ID
-- ⁠**morphism_type⁠:** Functional relation classification (⁠`Cause⁠`, ⁠`Action`⁠, ⁠`Relation⁠`, ⁠`Constraint`⁠)
+
 
 ## Quick Start
 ### 1. Execution
