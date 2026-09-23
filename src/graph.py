@@ -78,37 +78,26 @@ class GraphBuilder:
         # ---------------------------------------------------------
         # 2. 文脈（log_data）ごとの局所評価と Edge (Morphism) 結線
         # ---------------------------------------------------------
-        # 粒子リストとログの対応を安全にマッピングして処理
+        # log_data と particle_data をインデックス(idx)で1対1に完全同調させる
         for idx, log_item in enumerate(log_data):
+            if idx >= len(graph.nodes):
+                break
+            
+            current_node = graph.nodes[idx] # インデックスで対象ノードを直接特定（表記揺れによる取り違いを防止）
             input_text = log_item.get("input", "")
-            
-            # 該当する文脈に属する粒子（ノード）の特定
-            # particle_data の並び順と log_data の対応関係を考慮
-            current_particle = particle_data[idx] if idx < len(particle_data) else None
-            if not current_particle:
-                continue
 
-            current_node_id = current_particle.get("id")
-            current_node = next((n for n in graph.nodes if n.id == current_node_id), None)
-            
-            if not current_node:
-                continue
-
-            # --- 2-A. 属性の局所補完 (文脈汚染の防止) ---
-            # その文 (input_text) からのみ 5W1H 属性を抽出
+            # --- 2-A. 属性の局所補完 (単語単体ではなく前置詞句レベルで誤検知防止) ---
             when_match = re.search(r'\b(yesterday|today|tomorrow|after|before|now)\b', input_text, re.I)
-            if when_match:
-                current_node.attributes["when"] = when_match.group(0)
+            current_node.attributes["when"] = when_match.group(0) if when_match else "Unspecified"
 
             where_match = re.search(r'\b(at|in|on)\s+(the\s+\w+|\w+)', input_text, re.I)
-            if where_match:
-                current_node.attributes["where"] = where_match.group(0)
+            current_node.attributes["where"] = where_match.group(0) if where_match else "Unspecified"
 
-            how_match = re.search(r'\b(by|with|through|quickly)\b', input_text, re.I)
-            if how_match:
-                current_node.attributes["how"] = how_match.group(0)
+            # 「by」単体ではなく「by him」などの句で拾うよう修正
+            how_match = re.search(r'\b(by\s+\w+|with\s+\w+|through\s+\w+|quickly)\b', input_text, re.I)
+            current_node.attributes["how"] = how_match.group(0) if how_match else "Unspecified"
 
-            # Determined / Unspecified の決定
+            # Determined / Unspecified の再判定
             has_identity = (current_node.attributes["who"] != "Unspecified") or (current_node.attributes["what"] != "Unspecified")
             current_node.resolution_state = "Determined" if has_identity else "Unspecified"
 
@@ -133,7 +122,7 @@ class GraphBuilder:
                         )
                     )
 
-            # --- 2-C. 局所 Constraint 射の結線 (Stage 4 / 5 / 構文) ---
+            # --- 2-C. 局所 Constraint 射の結線 (自身へのピンポイント結線) ---
             stage4 = log_item.get("stage4")
             is_spatial_temporal_relative = bool(re.search(r'\b(where|when)\b', input_text, re.I)) and ("where" in input_text or "when" in input_text)
 
@@ -162,30 +151,27 @@ class GraphBuilder:
                 )
 
         # ---------------------------------------------------------
-        # 3. Action 射の結線 (同一文脈内の Entity ──Action──> Event のみ)
+        # 3. Action 射の結線 (同文脈内の Entity ──Action──> Event)
         # ---------------------------------------------------------
-        # 因果関係などの Event ノードが存在し、かつ Determined な Entity のみ結合
-        events = [n for n in graph.nodes if n.category == "Event"]
-        for log_item in log_data:
+        for idx, log_item in enumerate(log_data):
             stage3 = log_item.get("stage3")
             if stage3 and isinstance(stage3, dict) and "structure" in stage3:
-                # Stage 3 の因果文脈に登場する Agent (Entity) を特定して Action 射を張る
-                agent_label = log_item.get("stage1", {}).get("agent")
-                entity_node = next((n for n in graph.nodes if n.label == agent_label and n.category == "Entity"), None)
-                effect_label = stage3["structure"].get("effect")
-                event_node = next((n for n in graph.nodes if n.label == effect_label and n.category == "Event"), None)
+                # idx を使って「その文に対応する Agent ノード」を特定
+                if idx < len(graph.nodes):
+                    entity_node = graph.nodes[idx]
+                    effect_label = stage3["structure"].get("effect")
+                    event_node = next((n for n in graph.nodes if n.label == effect_label and n.category == "Event"), None)
 
-                if entity_node and event_node and entity_node.resolution_state == "Determined":
-                    edge_id = f"e_action_{entity_node.id}_{event_node.id}"
-                    if not any(e.id == edge_id for e in graph.edges):
-                        graph.edges.append(
-                            Edge(
-                                id=edge_id,
-                                source=entity_node.id,
-                                target=event_node.id,
-                                morphism_type="Action",
-                                detail="Agent of Action"
+                    if entity_node and event_node and entity_node.category == "Entity":
+                        edge_id = f"e_action_{entity_node.id}_{event_node.id}"
+                        if not any(e.id == edge_id for e in graph.edges):
+                            graph.edges.append(
+                                Edge(
+                                    id=edge_id,
+                                    source=entity_node.id,
+                                    target=event_node.id,
+                                    morphism_type="Action",
+                                    detail="Agent of Action"
+                                )
                             )
-                        )
-
         return graph

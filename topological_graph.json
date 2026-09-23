@@ -193,7 +193,7 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "by"
+        "how": "by working"
       }
     },
     {
@@ -305,7 +305,7 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "by"
+        "how": "by him"
       }
     },
     {
@@ -423,16 +423,9 @@
       "detail": "Passive Receiver Constraint"
     },
     {
-      "id": "e_action_p_agent_d9d641_p_effect_caf9ed",
-      "source": "p_agent_d9d641",
+      "id": "e_action_p_agent_8d750b_p_effect_caf9ed",
+      "source": "p_agent_8d750b",
       "target": "p_effect_caf9ed",
-      "morphism_type": "Action",
-      "detail": "Agent of Action"
-    },
-    {
-      "id": "e_action_p_agent_d9d641_p_effect_bf7f72",
-      "source": "p_agent_d9d641",
-      "target": "p_effect_bf7f72",
       "morphism_type": "Action",
       "detail": "Agent of Action"
     }
