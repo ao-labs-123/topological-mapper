@@ -4,10 +4,11 @@
 
 Standard ACT-R operates on a macro level with production rules. This project zooms into the micro-level of cognitive processing.
 
-# Current Phase: topological-mapper
-![alt text](image.jpeg)
 
 <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/4f05a191-cefe-45bd-8b2b-ca36afca9018" />
+
+# Current Phase: topological-mapper
+![alt text](image.jpeg)
 
 ## Stage 2 of the Cognitive OS Pipeline
 Constructs category-theoretic graph networks [topological_graph.json](https://github.com/ao-labs-123/topological-mapper/blob/main/topological_graph.json) from encapsulated particle objects [data/particles.json](https://github.com/ao-labs-123/topological-mapper/blob/main/data/particles.json).
