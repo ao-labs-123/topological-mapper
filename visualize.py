@@ -31,9 +31,23 @@ def visualize_topological_graph(
     nodes = data.get("nodes", [])
     for node in nodes:
         node_id = node.get("id")
-        label = node.get("label", node_id)
+        base_label = node.get("label", node_id)
         category = node.get("category", "Entity")
         attrs = node.get("attributes", {})
+
+        # when や where があればラベルの後ろに括弧書きで追記する
+        context_text = []
+        if attrs.get("when") and attrs["when"] != "Unspecified":
+            context_text.append(attrs["when"])
+        if attrs.get("where") and attrs["where"] != "Unspecified":
+            context_text.append(attrs["where"])
+
+        if context_text:
+             # 例: "Unknown (in the meeting)" や "I (after)" になる
+            display_label = f"{base_label}\n[{', '.join(context_text)}]"
+        else:
+            display_label = base_label
+
 
         # ツールチップ（マウスホバー時の表示）に 5W1H 属性を整形
         attr_lines = [
@@ -45,7 +59,7 @@ def visualize_topological_graph(
 
         title_html = (
             f"<div style='font-family: sans-serif;'>"
-            f"<b>{label}</b> <i>({category})</i><br>"
+            f"<b>{base_label}</b> <i>({category})</i><br>"
             f"<hr style='margin: 4px 0; border-color: #555;'>"
             f"{attr_html if attr_html else 'No extra context'}"
             f"</div>"
@@ -63,7 +77,7 @@ def visualize_topological_graph(
 
         net.add_node(
             node_id,
-            label=label,
+            label=display_label,
             title=title_html,
             color=color,
             shape=shape,
