@@ -19,7 +19,7 @@ OUTPUT_LOCAL_PATH = os.path.join(PROJECT_ROOT, "topological_graph.json")
 
 # Raw URL 設定
 LOG_URL = "https://raw.githubusercontent.com/ao-labs-123/input-parser/main/data/log.json"
-PARTICLES_URL = "https://raw.githubusercontent.com/ao-labs-123/particle-encapsulation/main/data/particles.json"
+PARTICLES_URL = "https://raw.githubusercontent.com/ao-labs-123/particle-encapsulation/main/particles.json"
 
 def fetch_and_save_json(url, local_path):
     """指定したURLからJSONを取得し、ローカルに保存してデータを返す"""
