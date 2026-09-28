@@ -473,14 +473,6 @@
       "constraint_type": ""
     },
     {
-      "id": "e_constraint_p_agent_f5acc9_p_cause_717d66",
-      "source": "p_agent_f5acc9",
-      "target": "p_cause_717d66",
-      "morphism_type": "Constraint",
-      "detail": "Defining Clause Constraint",
-      "constraint_type": "ClauseCondition"
-    },
-    {
       "id": "e_cause_p_cause_5bc649_p_effect_1ca840",
       "source": "p_cause_5bc649",
       "target": "p_effect_1ca840",
@@ -519,38 +511,6 @@
       "morphism_type": "Temporal",
       "detail": "Temporal relation (after)",
       "constraint_type": ""
-    },
-    {
-      "id": "e_constraint_p_cause_8768be_p_cause_717d66",
-      "source": "p_cause_8768be",
-      "target": "p_cause_717d66",
-      "morphism_type": "Constraint",
-      "detail": "Defining Clause Constraint",
-      "constraint_type": "ClauseCondition"
-    },
-    {
-      "id": "e_constraint_p_effect_06f196_p_cause_717d66",
-      "source": "p_effect_06f196",
-      "target": "p_cause_717d66",
-      "morphism_type": "Constraint",
-      "detail": "Spatial/Temporal Constraint",
-      "constraint_type": "SpatialTemporalCondition"
-    },
-    {
-      "id": "e_constraint_p_agent_20a1f3_p_cause_717d66",
-      "source": "p_agent_20a1f3",
-      "target": "p_cause_717d66",
-      "morphism_type": "Constraint",
-      "detail": "Spatial/Temporal Constraint",
-      "constraint_type": "SpatialTemporalCondition"
-    },
-    {
-      "id": "e_passive_p_agent_935fde_p_cause_717d66",
-      "source": "p_agent_935fde",
-      "target": "p_cause_717d66",
-      "morphism_type": "Constraint",
-      "detail": "Passive Receiver Constraint",
-      "constraint_type": "PassiveState"
     },
     {
       "id": "e_action_p_agent_85410d_p_effect_4e4361",
