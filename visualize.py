@@ -105,22 +105,49 @@ def visualize_topological_graph(
         color_map = {
             "Action": "#2ECC71",      # 緑: 動作・作用
             "Cause": "#E74C3C",       # 赤: 因果関係
-            "Constraint": "#F1C40F",  # 黄: 制約・属性
+            "Constraint": "#FFD166",  # 黄: 制約・属性
             "Relation": "#9B59B6",    # 紫: 一般関係
             "Manner": "#3498DB",
             "Temporal": "#E67E22",
         }
-        edge_color = color_map.get(m_type, "#AAAAAA")
+        constraint_colors = {
+            "ClauseCondition": "#FFD166",
+            "SpatialTemporalCondition": "#F4A261",
+            "PassiveState": "#C084FC",
+        }
+        edge_color = (
+            constraint_colors.get(edge.get("constraint_type"), color_map["Constraint"])
+            if m_type == "Constraint"
+            else color_map.get(m_type, "#AAAAAA")
+        )
+        edge_options = {
+            "color": edge_color,
+            "width": 2,
+            "arrows": {"to": {"enabled": True, "scaleFactor": 0.8}},
+            "font": {"size": 10, "color": "#EEEEEE", "align": "middle"},
+        }
+        if m_type == "Constraint":
+            edge_options.update(
+                {
+                    "dashes": [8, 5],
+                    "width": 3,
+                    "arrows": {
+                        "to": {
+                            "enabled": True,
+                            "type": "triangle",
+                            "scaleFactor": 1.1,
+                        }
+                    },
+                    "smooth": {"enabled": True, "type": "curvedCW", "roundness": 0.25},
+                }
+            )
 
         net.add_edge(
             src,
             tgt,
             label=m_type,
             title=edge_title,
-            color=edge_color,
-            width=2,
-            arrows={"to": {"enabled": True, "scaleFactor": 0.8}},
-            font={"size": 10, "color": "#EEEEEE", "align": "middle"},
+            **edge_options,
         )
 
     # HTML出力
