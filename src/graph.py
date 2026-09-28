@@ -80,6 +80,55 @@ class GraphBuilder:
         return None
 
     @classmethod
+    def _add_particle_constraint_edges(cls, graph: TopologicalGraph, particle_data: List[Dict[str, Any]]) -> None:
+        nodes_by_id = {node.id: node for node in graph.nodes}
+
+        for particle in particle_data:
+            source = nodes_by_id.get(particle.get("id"))
+            constraints = particle.get("constraints") or []
+            if isinstance(constraints, str):
+                constraints = [constraints]
+            constraints = [str(value).strip() for value in constraints if str(value).strip()]
+            if source is None or not constraints:
+                continue
+
+            entity_type = particle.get("entity_type", "")
+            target = None
+            constraint_type = f"{entity_type}Condition"
+            detail = "; ".join(constraints)
+
+            if entity_type == "Cause":
+                matching_effects = [
+                    candidate
+                    for candidate in particle_data
+                    if candidate.get("entity_type") == "Effect"
+                    and set(constraints).intersection(candidate.get("constraints") or [])
+                ]
+                if len(matching_effects) == 1:
+                    target = nodes_by_id.get(matching_effects[0].get("id"))
+            else:
+                event_label = (particle.get("properties") or {}).get("event")
+                if event_label:
+                    target = cls._find_event_node(graph, str(event_label))
+
+            if target is None or target.id == source.id:
+                continue
+
+            edge_id = f"e_particle_constraint_{source.id}_{target.id}"
+            if any(edge.id == edge_id for edge in graph.edges):
+                continue
+            graph.edges.append(
+                Edge(
+                    id=edge_id,
+                    source=source.id,
+                    target=target.id,
+                    morphism_type="Constraint",
+                    detail=detail,
+                    constraint_type=constraint_type,
+                )
+            )
+
+    @classmethod
     def build_graph(cls, particle_data: List[Dict[str, Any]], log_data: List[Dict[str, Any]]) -> TopologicalGraph:
         graph = TopologicalGraph()
         
@@ -123,6 +172,8 @@ class GraphBuilder:
                 attributes=w5h1
             )
             graph.nodes.append(node)
+
+        cls._add_particle_constraint_edges(graph, particle_data)
 
         # ---------------------------------------------------------
         # 2. 文脈（log_data）ごとの局所評価と Edge (Morphism) 結線

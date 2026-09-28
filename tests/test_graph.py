@@ -39,3 +39,49 @@ def test_passive_constraint_edges_are_not_self_loops():
     constraint_edges = [edge for edge in graph.edges if edge.morphism_type == "Constraint"]
     assert constraint_edges
     assert all(edge.source != edge.target for edge in constraint_edges)
+
+
+def test_particle_constraints_connect_shared_cause_effect_pair():
+    particle_data = [
+        {
+            "id": "cause-1",
+            "label": "missed the train",
+            "entity_type": "Cause",
+            "constraints": ["Agent: I + Marker: because"],
+        },
+        {
+            "id": "effect-1",
+            "label": "arrived late",
+            "entity_type": "Effect",
+            "constraints": ["Agent: I + Marker: because"],
+        },
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, [])
+
+    constraint_edges = [edge for edge in graph.edges if edge.morphism_type == "Constraint"]
+    assert len(constraint_edges) == 1
+    assert constraint_edges[0].source == "cause-1"
+    assert constraint_edges[0].target == "effect-1"
+    assert constraint_edges[0].detail == "Agent: I + Marker: because"
+
+
+def test_particle_constraint_uses_explicit_event_target():
+    particle_data = [
+        {
+            "id": "temporal-1",
+            "label": "the long meeting",
+            "entity_type": "Temporal",
+            "constraints": ["Agent: I + Temporal Marker: after"],
+            "properties": {"event": "I was stressed"},
+        },
+        {"id": "event-1", "label": "I was stressed", "entity_type": "Effect"},
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, [])
+
+    constraint_edges = [edge for edge in graph.edges if edge.morphism_type == "Constraint"]
+    assert len(constraint_edges) == 1
+    assert constraint_edges[0].source == "temporal-1"
+    assert constraint_edges[0].target == "event-1"
+    assert constraint_edges[0].constraint_type == "TemporalCondition"
