@@ -196,16 +196,36 @@ class GraphBuilder:
             current_node = graph.nodes[idx] # インデックスで対象ノードを直接特定（表記揺れによる取り違いを防止）
             input_text = log_item.get("input", "")
 
-            # --- 2-A. 属性の局所補完 (単語単体ではなく前置詞句レベルで誤検知防止) ---
+            # --- 2-A. Stage 3 が明示するイベントに文脈属性を付与 ---
             when_match = re.search(r'\b(yesterday|today|tomorrow|after|before|now)\b', input_text, re.I)
-            current_node.attributes["when"] = when_match.group(0) if when_match else "Unspecified"
-
             where_match = re.search(r'\b(at|in|on)\s+(the\s+\w+|\w+)', input_text, re.I)
-            current_node.attributes["where"] = where_match.group(0) if where_match else "Unspecified"
-
-            # 「by」単体ではなく「by him」などの句で拾うよう修正
             how_match = re.search(r'\b(by\s+\w+|with\s+\w+|through\s+\w+|quickly)\b', input_text, re.I)
-            current_node.attributes["how"] = how_match.group(0) if how_match else "Unspecified"
+            stage3_structure = (log_item.get("stage3") or {}).get("structure") or {}
+            event_labels = {
+                str(stage3_structure[key]).casefold()
+                for key in ("cause", "effect", "event", "context")
+                if stage3_structure.get(key)
+            }
+            stage1 = log_item.get("stage1") or {}
+            stage2 = log_item.get("stage2") or {}
+            agent_label = stage2.get("resolved_agent") or stage1.get("agent")
+            context_values = {
+                "when": when_match.group(0) if when_match else None,
+                "where": where_match.group(0) if where_match else None,
+                "how": how_match.group(0) if how_match else None,
+            }
+            if event_labels and any(context_values.values()):
+                for event_node in graph.nodes:
+                    if event_node.category != "Event" or event_node.label.casefold() not in event_labels:
+                        continue
+                    particle = particle_map.get(event_node.id, {})
+                    constraints = particle.get("constraints") or []
+                    constraints_text = " ".join(constraints).casefold()
+                    if agent_label and f"agent: {str(agent_label).casefold()}" not in constraints_text:
+                        continue
+                    for attribute, value in context_values.items():
+                        if value:
+                            event_node.attributes[attribute] = value
 
             # Determined / Unspecified の再判定
             has_identity = (current_node.attributes["who"] != "Unspecified") or (current_node.attributes["what"] != "Unspecified")

@@ -40,7 +40,7 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified",
+        "how": "by working",
         "agent": "He"
       }
     },
@@ -66,7 +66,7 @@
       "attributes": {
         "who": "He/She/They",
         "what": "Unspecified",
-        "when": "yesterday",
+        "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified"
@@ -81,7 +81,7 @@
         "who": "you",
         "what": "Unspecified",
         "when": "Unspecified",
-        "where": "at the office",
+        "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified"
       }
@@ -136,7 +136,7 @@
       "attributes": {
         "who": "Unspecified",
         "what": "you helped",
-        "when": "yesterday",
+        "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified",
@@ -152,7 +152,7 @@
         "who": "Unspecified",
         "what": "succeeded",
         "when": "Unspecified",
-        "where": "in the meeting",
+        "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified",
         "agent": "Unknown"
@@ -197,7 +197,7 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "by working"
+        "how": "Unspecified"
       }
     },
     {
@@ -208,7 +208,7 @@
       "attributes": {
         "who": "Unspecified",
         "what": "Unspecified",
-        "when": "after",
+        "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified"
@@ -313,7 +313,7 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "by him"
+        "how": "Unspecified"
       }
     },
     {
@@ -327,7 +327,7 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "quickly",
+        "how": "by working",
         "agent": "He"
       }
     },
@@ -353,7 +353,7 @@
       "attributes": {
         "who": "Unspecified",
         "what": "the long meeting",
-        "when": "Unspecified",
+        "when": "after",
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified",

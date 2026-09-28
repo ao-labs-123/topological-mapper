@@ -143,3 +143,42 @@ def test_cause_edges_disambiguate_duplicate_cause_labels_by_constraints():
         ("agent-unknown", "effect-unknown"),
         ("agent-i", "effect-i"),
     }
+
+
+def test_log_context_is_added_to_referenced_events_not_node_at_same_index():
+    particle_data = [
+        {"id": "agent-i", "label": "I", "entity_type": "Agent"},
+        {"id": "unrelated-event", "label": "unrelated event", "entity_type": "Event"},
+        {"id": "agent-unknown", "label": "Unknown", "entity_type": "Agent"},
+        {
+            "id": "cause-unknown",
+            "label": "you helped",
+            "entity_type": "Cause",
+            "constraints": ["Agent: Unknown + Marker: because"],
+        },
+        {
+            "id": "effect-unknown",
+            "label": "succeeded",
+            "entity_type": "Effect",
+            "constraints": ["Agent: Unknown + Marker: because"],
+        },
+    ]
+    log_data = [
+        {},
+        {},
+        {
+            "input": "Succeeded yesterday because you helped.",
+            "stage1": {"agent": "Unknown"},
+            "stage3": {
+                "structure": {"cause": "you helped", "effect": "succeeded"}
+            },
+        },
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    assert nodes_by_id["agent-unknown"].attributes["when"] == "Unspecified"
+    assert nodes_by_id["unrelated-event"].attributes["when"] == "Unspecified"
+    assert nodes_by_id["cause-unknown"].attributes["when"] == "yesterday"
+    assert nodes_by_id["effect-unknown"].attributes["when"] == "yesterday"
