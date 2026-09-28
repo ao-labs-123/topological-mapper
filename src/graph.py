@@ -228,8 +228,31 @@ class GraphBuilder:
                 cause_label = struct.get("cause")
                 effect_label = struct.get("effect")
 
-                src = next((n for n in graph.nodes if n.label == cause_label), None)
-                tgt = next((n for n in graph.nodes if n.label == effect_label), None)
+                cause_candidates = [
+                    node for node in graph.nodes
+                    if node.label.casefold() == str(cause_label).casefold()
+                    and particle_map.get(node.id, {}).get("entity_type") == "Cause"
+                ]
+                effect_candidates = [
+                    node for node in graph.nodes
+                    if node.label.casefold() == str(effect_label).casefold()
+                    and particle_map.get(node.id, {}).get("entity_type") == "Effect"
+                ]
+                matching_pairs = [
+                    (cause_node, effect_node)
+                    for cause_node in cause_candidates
+                    for effect_node in effect_candidates
+                    if set(particle_map[cause_node.id].get("constraints") or []).intersection(
+                        particle_map[effect_node.id].get("constraints") or []
+                    )
+                ]
+
+                if len(matching_pairs) == 1:
+                    src, tgt = matching_pairs[0]
+                elif len(cause_candidates) == 1 and len(effect_candidates) == 1:
+                    src, tgt = cause_candidates[0], effect_candidates[0]
+                else:
+                    src, tgt = None, None
 
                 if src and tgt:
                     graph.edges.append(

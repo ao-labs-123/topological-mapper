@@ -18,7 +18,8 @@ def test_constraint_edges_target_related_event_not_self_loop():
 
     constraint_edges = [edge for edge in graph.edges if edge.morphism_type == "Constraint"]
     assert constraint_edges
-    assert all(edge.source != edge.target for edge in constraint_edges)
+    assert all(edge.source
+ != edge.target for edge in constraint_edges)
 
 
 def test_passive_constraint_edges_are_not_self_loops():
@@ -85,3 +86,44 @@ def test_particle_constraint_uses_explicit_event_target():
     assert constraint_edges[0].source == "temporal-1"
     assert constraint_edges[0].target == "event-1"
     assert constraint_edges[0].constraint_type == "TemporalCondition"
+
+
+def test_cause_edges_disambiguate_duplicate_cause_labels_by_constraints():
+    particle_data = [
+        {
+            "id": "cause-unknown",
+            "label": "you helped",
+            "entity_type": "Cause",
+            "constraints": ["Agent: Unknown + Marker: because"],
+        },
+        {
+            "id": "effect-unknown",
+            "label": "succeeded",
+            "entity_type": "Effect",
+            "constraints": ["Agent: Unknown + Marker: because"],
+        },
+        {
+            "id": "cause-i",
+            "label": "you helped",
+            "entity_type": "Cause",
+            "constraints": ["Agent: I + Marker: because"],
+        },
+        {
+            "id": "effect-i",
+            "label": "i succeeded",
+            "entity_type": "Effect",
+            "constraints": ["Agent: I + Marker: because"],
+        },
+    ]
+    log_data = [
+        {"stage3": {"structure": {"cause": "you helped", "effect": "succeeded"}}},
+        {"stage3": {"structure": {"cause": "you helped", "effect": "i succeeded"}}},
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    cause_edges = [edge for edge in graph.edges if edge.morphism_type == "Cause"]
+    assert {(edge.source, edge.target) for edge in cause_edges} == {
+        ("cause-unknown", "effect-unknown"),
+        ("cause-i", "effect-i"),
+    }
