@@ -579,24 +579,24 @@
       "constraint_type": ""
     },
     {
-      "id": "e_action_p_agent_08ecca_p_effect_1ca840",
-      "source": "p_agent_08ecca",
+      "id": "e_action_p_agent_d4dbda_p_effect_1ca840",
+      "source": "p_agent_d4dbda",
       "target": "p_effect_1ca840",
       "morphism_type": "Action",
       "detail": "Agent of Action",
       "constraint_type": ""
     },
     {
-      "id": "e_action_p_agent_39a4cb_p_effect_06f196",
-      "source": "p_agent_39a4cb",
+      "id": "e_action_p_agent_dc905a_p_effect_06f196",
+      "source": "p_agent_dc905a",
       "target": "p_effect_06f196",
       "morphism_type": "Action",
       "detail": "Agent of Action",
       "constraint_type": ""
     },
     {
-      "id": "e_action_p_agent_259510_p_effect_e8fb2e",
-      "source": "p_agent_259510",
+      "id": "e_action_p_agent_20a1f3_p_effect_e8fb2e",
+      "source": "p_agent_20a1f3",
       "target": "p_effect_e8fb2e",
       "morphism_type": "Action",
       "detail": "Agent of Action",

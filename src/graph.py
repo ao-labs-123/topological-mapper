@@ -317,25 +317,50 @@ class GraphBuilder:
         # ---------------------------------------------------------
         # 3. Action 射の結線 (同文脈内の Entity ──Action──> Event)
         # ---------------------------------------------------------
-        for idx, log_item in enumerate(log_data):
+        for log_item in log_data:
             stage3 = log_item.get("stage3")
             if stage3 and isinstance(stage3, dict) and "structure" in stage3:
-                # idx を使って「その文に対応する Agent ノード」を特定
-                if idx < len(graph.nodes):
-                    entity_node = graph.nodes[idx]
-                    effect_label = stage3["structure"].get("effect")
-                    event_node = next((n for n in graph.nodes if n.label == effect_label and n.category == "Event"), None)
+                structure = stage3["structure"]
+                effect_label = structure.get("effect")
+                stage1 = log_item.get("stage1") or {}
+                stage2 = log_item.get("stage2") or {}
+                agent_label = stage2.get("resolved_agent") or stage1.get("agent")
+                if not effect_label or not agent_label:
+                    continue
 
-                    if entity_node and event_node and entity_node.category == "Entity":
-                        edge_id = f"e_action_{entity_node.id}_{event_node.id}"
-                        if not any(e.id == edge_id for e in graph.edges):
-                            graph.edges.append(
-                                Edge(
-                                    id=edge_id,
-                                    source=entity_node.id,
-                                    target=event_node.id,
-                                    morphism_type="Action",
-                                    detail="Agent of Action"
-                                )
-                            )
+                event_candidates = [
+                    node for node in graph.nodes
+                    if node.category == "Event"
+                    and node.label.casefold() == str(effect_label).casefold()
+                    and particle_map.get(node.id, {}).get("entity_type") == "Effect"
+                ]
+                entity_candidates = [
+                    node for node in graph.nodes
+                    if node.category == "Entity"
+                    and node.label.casefold() == str(agent_label).casefold()
+                ]
+                if len(event_candidates) != 1 or not entity_candidates:
+                    continue
+
+                event_node = event_candidates[0]
+                event_index = graph.nodes.index(event_node)
+                prior_entities = [
+                    node for node in entity_candidates
+                    if graph.nodes.index(node) < event_index
+                ]
+                if not prior_entities:
+                    continue
+                entity_node = prior_entities[-1]
+
+                edge_id = f"e_action_{entity_node.id}_{event_node.id}"
+                if not any(edge.id == edge_id for edge in graph.edges):
+                    graph.edges.append(
+                        Edge(
+                            id=edge_id,
+                            source=entity_node.id,
+                            target=event_node.id,
+                            morphism_type="Action",
+                            detail="Agent of Action"
+                        )
+                    )
         return graph

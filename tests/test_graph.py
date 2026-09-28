@@ -90,6 +90,7 @@ def test_particle_constraint_uses_explicit_event_target():
 
 def test_cause_edges_disambiguate_duplicate_cause_labels_by_constraints():
     particle_data = [
+        {"id": "agent-unknown", "label": "Unknown", "entity_type": "Agent"},
         {
             "id": "cause-unknown",
             "label": "you helped",
@@ -102,6 +103,7 @@ def test_cause_edges_disambiguate_duplicate_cause_labels_by_constraints():
             "entity_type": "Effect",
             "constraints": ["Agent: Unknown + Marker: because"],
         },
+        {"id": "agent-i", "label": "I", "entity_type": "Agent"},
         {
             "id": "cause-i",
             "label": "you helped",
@@ -116,8 +118,14 @@ def test_cause_edges_disambiguate_duplicate_cause_labels_by_constraints():
         },
     ]
     log_data = [
-        {"stage3": {"structure": {"cause": "you helped", "effect": "succeeded"}}},
-        {"stage3": {"structure": {"cause": "you helped", "effect": "i succeeded"}}},
+        {
+            "stage1": {"agent": "Unknown"},
+            "stage3": {"structure": {"cause": "you helped", "effect": "succeeded"}},
+        },
+        {
+            "stage1": {"agent": "I"},
+            "stage3": {"structure": {"cause": "you helped", "effect": "i succeeded"}},
+        },
     ]
 
     graph = GraphBuilder.build_graph(particle_data, log_data)
@@ -130,3 +138,8 @@ def test_cause_edges_disambiguate_duplicate_cause_labels_by_constraints():
     nodes_by_id = {node.id: node for node in graph.nodes}
     assert nodes_by_id["cause-unknown"].attributes["agent"] == "Unknown"
     assert nodes_by_id["cause-i"].attributes["agent"] == "I"
+    action_edges = [edge for edge in graph.edges if edge.morphism_type == "Action"]
+    assert {(edge.source, edge.target) for edge in action_edges} == {
+        ("agent-unknown", "effect-unknown"),
+        ("agent-i", "effect-i"),
+    }
