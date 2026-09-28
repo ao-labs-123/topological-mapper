@@ -19,6 +19,7 @@ class Edge:
     target: str                         # 終点ノードID
     morphism_type: str                  # "Action", "Cause", "Constraint"
     detail: str = ""
+    constraint_type: str = ""          # "Condition", "State" など、Constraint の内部分類
 
 @dataclass
 class TopologicalGraph:
@@ -57,6 +58,24 @@ class GraphBuilder:
             )
         ]
         return matches[0] if len(matches) == 1 else None
+
+    @classmethod
+    def _find_constraint_target(cls, graph: TopologicalGraph, current_node: Node, log_item: Dict[str, Any], idx: int) -> Optional[Node]:
+        stage3 = log_item.get("stage3")
+        if stage3 and isinstance(stage3, dict) and "structure" in stage3:
+            struct = stage3["structure"]
+            for key in ("effect", "cause"):
+                label = struct.get(key)
+                if not label:
+                    continue
+                event_node = cls._find_event_node(graph, str(label))
+                if event_node and event_node.id != current_node.id:
+                    return event_node
+
+        for node in graph.nodes:
+            if node.category == "Event" and node.id != current_node.id:
+                return node
+        return None
 
     @classmethod
     def build_graph(cls, particle_data: List[Dict[str, Any]], log_data: List[Dict[str, Any]]) -> TopologicalGraph:
@@ -170,33 +189,44 @@ class GraphBuilder:
                         )
                     )
 
-            # --- 2-C. 局所 Constraint 射の結線 (自身へのピンポイント結線) ---
+            # --- 2-C. 局所 Constraint 射の結線 (自己参照ではなく関連する Event へ接続) ---
             stage4 = log_item.get("stage4")
             is_spatial_temporal_relative = bool(re.search(r'\b(where|when)\b', input_text, re.I)) and ("where" in input_text or "when" in input_text)
 
             if (stage4 and isinstance(stage4, dict) and stage4.get("decision") == "Essential") or (is_spatial_temporal_relative and stage4):
                 detail_msg = "Spatial/Temporal Constraint" if is_spatial_temporal_relative else "Defining Clause Constraint"
-                graph.edges.append(
-                    Edge(
-                        id=f"e_constraint_{current_node.id}",
-                        source=current_node.id,
-                        target=current_node.id,
-                        morphism_type="Constraint",
-                        detail=detail_msg
-                    )
-                )
+                constraint_kind = "SpatialTemporalCondition" if is_spatial_temporal_relative else "ClauseCondition"
+                target_node = cls._find_constraint_target(graph, current_node, log_item, idx)
+                if target_node:
+                    edge_id = f"e_constraint_{current_node.id}_{target_node.id}"
+                    if not any(edge.id == edge_id for edge in graph.edges):
+                        graph.edges.append(
+                            Edge(
+                                id=edge_id,
+                                source=current_node.id,
+                                target=target_node.id,
+                                morphism_type="Constraint",
+                                detail=detail_msg,
+                                constraint_type=constraint_kind,
+                            )
+                        )
 
             stage5 = log_item.get("stage5")
             if stage5 and isinstance(stage5, dict) and "Actor:" in stage5.get("result", ""):
-                graph.edges.append(
-                    Edge(
-                        id=f"e_passive_{current_node.id}",
-                        source=current_node.id,
-                        target=current_node.id,
-                        morphism_type="Constraint",
-                        detail="Passive Receiver Constraint"
-                    )
-                )
+                target_node = cls._find_constraint_target(graph, current_node, log_item, idx)
+                if target_node:
+                    edge_id = f"e_passive_{current_node.id}_{target_node.id}"
+                    if not any(edge.id == edge_id for edge in graph.edges):
+                        graph.edges.append(
+                            Edge(
+                                id=edge_id,
+                                source=current_node.id,
+                                target=target_node.id,
+                                morphism_type="Constraint",
+                                detail="Passive Receiver Constraint",
+                                constraint_type="PassiveState",
+                            )
+                        )
 
         # ---------------------------------------------------------
         # 3. Action 射の結線 (同文脈内の Entity ──Action──> Event)
