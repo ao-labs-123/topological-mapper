@@ -54,6 +54,27 @@ It ingests discrete `Particle` objects, maps them into **Entities** or **Events*
 * **`morphism_type`**: Functional relation classification (`Action`, `Cause`, `Constraint`, `Relation`)
 * **`attributes` / `detail`**: Contextual bound conditions (`When`, `Where`, `Why`, `How`)
 
+### Explicit Particle References
+
+Edges are created only from particle IDs supplied by the upstream stages. Labels, array positions, and matching constraint text are not used to infer edge endpoints. Missing, unknown, duplicated, or wrong-type references produce no edge.
+
+Stage 3 `structure` may include `agent_particle_id`, `cause_particle_id`, `effect_particle_id`, `context_particle_id`, and `event_particle_id` as applicable. Stage 4/5 may include `source_particle_id` and `target_particle_id`. Particle-level constraints use `target_particle_id` or `properties.event_particle_id`.
+
+Each reference must equal the target particle's existing `id`, for example:
+
+```json
+{
+  "stage3": {
+    "structure": {
+      "cause": "you helped",
+      "effect": "I succeeded",
+      "cause_particle_id": "p_cause_123",
+      "effect_particle_id": "p_effect_456",
+      "agent_particle_id": "p_agent_789"
+    }
+  }
+}
+```
 
 
 ## Quick Start

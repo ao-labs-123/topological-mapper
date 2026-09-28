@@ -36,14 +36,28 @@ class GraphBuilder:
         "am", "is", "are", "was", "were", "be", "been", "being",
     }
 
-    @classmethod
-    def _find_event_node(cls, graph: TopologicalGraph, event_label: str) -> Optional[Node]:
-        matches = [
-            node for node in graph.nodes
-            if node.category == "Event"
-            and node.label.casefold() == event_label.casefold()
-        ]
-        return matches[0] if len(matches) == 1 else None
+    @staticmethod
+    def _resolve_particle_node(
+        graph: TopologicalGraph,
+        particle_map: Dict[str, Dict[str, Any]],
+        particle_id: Any,
+        expected_type: Optional[str],
+    ) -> Optional[Node]:
+        if not isinstance(particle_id, str) or not particle_id.strip():
+            return None
+        matches = [node for node in graph.nodes if node.id == particle_id]
+        if len(matches) != 1:
+            return None
+
+        node = matches[0]
+        if expected_type:
+            expected_category = "Entity" if expected_type == "Agent" else "Event"
+            if (
+                node.category != expected_category
+                or particle_map.get(node.id, {}).get("entity_type") != expected_type
+            ):
+                return None
+        return node
 
     @classmethod
     def _add_particle_constraint_edges(cls, graph: TopologicalGraph, particle_data: List[Dict[str, Any]]) -> None:
@@ -63,19 +77,20 @@ class GraphBuilder:
             constraint_type = f"{entity_type}Condition"
             detail = "; ".join(constraints)
 
+            properties = particle.get("properties") or {}
             if entity_type == "Cause":
-                matching_effects = [
-                    candidate
-                    for candidate in particle_data
-                    if candidate.get("entity_type") == "Effect"
-                    and set(constraints).intersection(candidate.get("constraints") or [])
-                ]
-                if len(matching_effects) == 1:
-                    target = nodes_by_id.get(matching_effects[0].get("id"))
+                target_particle_id = particle.get("target_particle_id")
+                target_type = "Effect"
             else:
-                event_label = (particle.get("properties") or {}).get("event")
-                if event_label:
-                    target = cls._find_event_node(graph, str(event_label))
+                target_particle_id = (
+                    properties.get("event_particle_id")
+                    or particle.get("target_particle_id")
+                )
+                target_type = "Effect" if properties.get("event_particle_id") else None
+            target = cls._resolve_particle_node(
+                graph, {item.get("id"): item for item in particle_data},
+                target_particle_id, target_type
+            )
 
             if target is None or target.id == source.id:
                 continue
@@ -161,37 +176,32 @@ class GraphBuilder:
             when_match = re.search(r'\b(yesterday|today|tomorrow|after|before|now)\b', input_text, re.I)
             where_match = re.search(r'\b(at|in|on)\s+(the\s+\w+|\w+)', input_text, re.I)
             how_match = re.search(r'\b(by\s+\w+|with\s+\w+|through\s+\w+|quickly)\b', input_text, re.I)
-            stage3_structure = (log_item.get("stage3") or {}).get("structure") or {}
-            event_labels = {
-                str(stage3_structure[key]).casefold()
-                for key in ("cause", "effect", "event", "context")
-                if stage3_structure.get(key)
-            }
-            stage1 = log_item.get("stage1") or {}
-            stage2 = log_item.get("stage2") or {}
-            agent_label = stage2.get("resolved_agent") or stage1.get("agent")
             context_values = {
                 "when": when_match.group(0) if when_match else None,
                 "where": where_match.group(0) if where_match else None,
                 "how": how_match.group(0) if how_match else None,
             }
-            if event_labels and any(context_values.values()):
-                for event_label in event_labels:
-                    event_candidates = [
-                        node for node in graph.nodes
-                        if node.category == "Event"
-                        and node.label.casefold() == event_label
-                        and (
-                            not agent_label
-                            or f"agent: {str(agent_label).casefold()}"
-                            in " ".join(particle_map.get(node.id, {}).get("constraints") or []).casefold()
-                        )
-                    ]
-                    if len(event_candidates) != 1:
-                        continue
+            stage3_structure = (log_item.get("stage3") or {}).get("structure") or {}
+            relation = stage3_structure.get("relation")
+            context_node = None
+            if relation in ("Manner", "Temporal"):
+                context_node = cls._resolve_particle_node(
+                    graph,
+                    particle_map,
+                    stage3_structure.get("context_particle_id"),
+                    relation,
+                )
+            referenced_events = [
+                cls._resolve_particle_node(graph, particle_map, stage3_structure.get("cause_particle_id"), "Cause"),
+                cls._resolve_particle_node(graph, particle_map, stage3_structure.get("effect_particle_id"), "Effect"),
+                cls._resolve_particle_node(graph, particle_map, stage3_structure.get("event_particle_id"), "Effect"),
+                context_node,
+            ]
+            if any(context_values.values()):
+                for event_node in {node.id: node for node in referenced_events if node}.values():
                     for attribute, value in context_values.items():
                         if value:
-                            event_candidates[0].attributes[attribute] = value
+                            event_node.attributes[attribute] = value
 
             # --- 2-B. 局所 Cause 射の結線 (Stage 3) ---
             stage3 = log_item.get("stage3")
@@ -199,9 +209,13 @@ class GraphBuilder:
                 struct = stage3["structure"]
                 relation = struct.get("relation")
                 if relation in ("Manner", "Temporal"):
-                    source = cls._find_event_node(graph, str(struct.get("context", "")))
-                    target = cls._find_event_node(graph, struct.get("event", ""))
-                    if source and target:
+                    source = cls._resolve_particle_node(
+                        graph, particle_map, struct.get("context_particle_id"), relation
+                    )
+                    target = cls._resolve_particle_node(
+                        graph, particle_map, struct.get("event_particle_id"), "Effect"
+                    )
+                    if source and target and source.id != target.id:
                         edge_id = f"e_{relation.lower()}_{source.id}_{target.id}"
                         if not any(edge.id == edge_id for edge in graph.edges):
                             graph.edges.append(
@@ -214,34 +228,12 @@ class GraphBuilder:
                                 )
                             )
 
-                cause_label = struct.get("cause")
-                effect_label = struct.get("effect")
-
-                cause_candidates = [
-                    node for node in graph.nodes
-                    if cause_label
-                    and node.label.casefold() == str(cause_label).casefold()
-                    and particle_map.get(node.id, {}).get("entity_type") == "Cause"
-                ]
-                effect_candidates = [
-                    node for node in graph.nodes
-                    if effect_label
-                    and node.label.casefold() == str(effect_label).casefold()
-                    and particle_map.get(node.id, {}).get("entity_type") == "Effect"
-                ]
-                matching_pairs = [
-                    (cause_node, effect_node)
-                    for cause_node in cause_candidates
-                    for effect_node in effect_candidates
-                    if set(particle_map[cause_node.id].get("constraints") or []).intersection(
-                        particle_map[effect_node.id].get("constraints") or []
-                    )
-                ]
-
-                if len(matching_pairs) == 1:
-                    src, tgt = matching_pairs[0]
-                else:
-                    src, tgt = None, None
+                src = cls._resolve_particle_node(
+                    graph, particle_map, struct.get("cause_particle_id"), "Cause"
+                )
+                tgt = cls._resolve_particle_node(
+                    graph, particle_map, struct.get("effect_particle_id"), "Effect"
+                )
 
                 if src and tgt:
                     graph.edges.append(
@@ -255,35 +247,61 @@ class GraphBuilder:
                     )
 
         # ---------------------------------------------------------
-        # 3. Action 射の結線 (同文脈内の Entity ──Action──> Event)
+        # 3. 明示的な Stage 4/5 ID 参照から Constraint 射を結線
+        # ---------------------------------------------------------
+        for log_item in log_data:
+            for stage_name, detail in (
+                ("stage4", "Defining Clause Constraint"),
+                ("stage5", "Passive Receiver Constraint"),
+            ):
+                stage = log_item.get(stage_name) or {}
+                if not isinstance(stage, dict):
+                    continue
+                if stage_name == "stage4" and stage.get("decision") != "Essential":
+                    continue
+                if stage_name == "stage5" and "Actor:" not in stage.get("result", ""):
+                    continue
+
+                source = cls._resolve_particle_node(
+                    graph, particle_map, stage.get("source_particle_id"), None
+                )
+                target = cls._resolve_particle_node(
+                    graph, particle_map, stage.get("target_particle_id"), None
+                )
+                if source is None or target is None or source.id == target.id:
+                    continue
+
+                edge_id = f"e_{stage_name}_{source.id}_{target.id}"
+                if not any(edge.id == edge_id for edge in graph.edges):
+                    graph.edges.append(
+                        Edge(
+                            id=edge_id,
+                            source=source.id,
+                            target=target.id,
+                            morphism_type="Constraint",
+                            detail=detail,
+                            constraint_type=stage.get(
+                                "constraint_type",
+                                "ClauseCondition" if stage_name == "stage4" else "PassiveState",
+                            ),
+                        )
+                    )
+
+        # ---------------------------------------------------------
+        # 4. Action 射の結線 (同文脈内の Entity ──Action──> Event)
         # ---------------------------------------------------------
         for log_item in log_data:
             stage3 = log_item.get("stage3")
             if stage3 and isinstance(stage3, dict) and "structure" in stage3:
                 structure = stage3["structure"]
-                effect_label = structure.get("effect")
-                stage1 = log_item.get("stage1") or {}
-                stage2 = log_item.get("stage2") or {}
-                agent_label = stage2.get("resolved_agent") or stage1.get("agent")
-                if not effect_label or not agent_label:
+                entity_node = cls._resolve_particle_node(
+                    graph, particle_map, structure.get("agent_particle_id"), "Agent"
+                )
+                event_node = cls._resolve_particle_node(
+                    graph, particle_map, structure.get("effect_particle_id"), "Effect"
+                )
+                if entity_node is None or event_node is None:
                     continue
-
-                event_candidates = [
-                    node for node in graph.nodes
-                    if node.category == "Event"
-                    and node.label.casefold() == str(effect_label).casefold()
-                    and particle_map.get(node.id, {}).get("entity_type") == "Effect"
-                ]
-                entity_candidates = [
-                    node for node in graph.nodes
-                    if node.category == "Entity"
-                    and node.label.casefold() == str(agent_label).casefold()
-                ]
-                if len(event_candidates) != 1 or len(entity_candidates) != 1:
-                    continue
-
-                event_node = event_candidates[0]
-                entity_node = entity_candidates[0]
 
                 edge_id = f"e_action_{entity_node.id}_{event_node.id}"
                 if not any(edge.id == edge_id for edge in graph.edges):
