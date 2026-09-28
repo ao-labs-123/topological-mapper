@@ -30,6 +30,34 @@ class TopologicalGraph:
 
 
 class GraphBuilder:
+    EVENT_STOP_WORDS = {
+        "a", "an", "the", "i", "you", "he", "she", "they", "we", "it",
+        "am", "is", "are", "was", "were", "be", "been", "being",
+    }
+
+    @classmethod
+    def _find_event_node(cls, graph: TopologicalGraph, event_label: str) -> Optional[Node]:
+        event_node = next(
+            (node for node in graph.nodes
+             if node.category == "Event" and node.label.casefold() == event_label.casefold()),
+            None,
+        )
+        if event_node:
+            return event_node
+
+        event_words = set(re.findall(r"\b[a-z]+\b", event_label.casefold())) - cls.EVENT_STOP_WORDS
+        if not event_words:
+            return None
+
+        matches = [
+            node for node in graph.nodes
+            if node.category == "Event"
+            and event_words.issubset(
+                set(re.findall(r"\b[a-z]+\b", node.label.casefold())) - cls.EVENT_STOP_WORDS
+            )
+        ]
+        return matches[0] if len(matches) == 1 else None
+
     @classmethod
     def build_graph(cls, particle_data: List[Dict[str, Any]], log_data: List[Dict[str, Any]]) -> TopologicalGraph:
         graph = TopologicalGraph()
@@ -105,6 +133,26 @@ class GraphBuilder:
             stage3 = log_item.get("stage3")
             if stage3 and isinstance(stage3, dict) and "structure" in stage3:
                 struct = stage3["structure"]
+                relation = struct.get("relation")
+                if relation in ("Manner", "Temporal"):
+                    source = next(
+                        (node for node in graph.nodes if node.label.casefold() == struct.get("context", "").casefold()),
+                        None,
+                    )
+                    target = cls._find_event_node(graph, struct.get("event", ""))
+                    if source and target:
+                        edge_id = f"e_{relation.lower()}_{source.id}_{target.id}"
+                        if not any(edge.id == edge_id for edge in graph.edges):
+                            graph.edges.append(
+                                Edge(
+                                    id=edge_id,
+                                    source=source.id,
+                                    target=target.id,
+                                    morphism_type=relation,
+                                    detail=f"{relation} relation ({struct.get('marker', '')})",
+                                )
+                            )
+
                 cause_label = struct.get("cause")
                 effect_label = struct.get("effect")
 

@@ -107,6 +107,8 @@ def visualize_topological_graph(
             "Cause": "#E74C3C",       # 赤: 因果関係
             "Constraint": "#F1C40F",  # 黄: 制約・属性
             "Relation": "#9B59B6",    # 紫: 一般関係
+            "Manner": "#3498DB",
+            "Temporal": "#E67E22",
         }
         edge_color = color_map.get(m_type, "#AAAAAA")
 
