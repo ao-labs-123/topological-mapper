@@ -335,7 +335,7 @@
       "id": "p_agent_bb70d8",
       "label": "I",
       "category": "Entity",
-      "resolution_state": "Unspecified",
+      "resolution_state": "Determined",
       "attributes": {
         "who": "I",
         "what": "Unspecified",
@@ -349,7 +349,7 @@
       "id": "p_temporal_2ee08f",
       "label": "the long meeting",
       "category": "Event",
-      "resolution_state": "Unspecified",
+      "resolution_state": "Determined",
       "attributes": {
         "who": "Unspecified",
         "what": "the long meeting",
@@ -364,7 +364,7 @@
       "id": "p_agent_1e9abd",
       "label": "The report",
       "category": "Entity",
-      "resolution_state": "Unspecified",
+      "resolution_state": "Determined",
       "attributes": {
         "who": "The report",
         "what": "Unspecified",
@@ -378,7 +378,7 @@
       "id": "p_agent_81f66f",
       "label": "The report",
       "category": "Entity",
-      "resolution_state": "Unspecified",
+      "resolution_state": "Determined",
       "attributes": {
         "who": "The report",
         "what": "Unspecified",
@@ -392,7 +392,7 @@
       "id": "p_agent_bf7552",
       "label": "The office",
       "category": "Entity",
-      "resolution_state": "Unspecified",
+      "resolution_state": "Determined",
       "attributes": {
         "who": "The office",
         "what": "Unspecified",
@@ -406,7 +406,7 @@
       "id": "p_agent_46f580",
       "label": "The day",
       "category": "Entity",
-      "resolution_state": "Unspecified",
+      "resolution_state": "Determined",
       "attributes": {
         "who": "The day",
         "what": "Unspecified",
@@ -420,7 +420,7 @@
       "id": "p_agent_a8394a",
       "label": "I",
       "category": "Entity",
-      "resolution_state": "Unspecified",
+      "resolution_state": "Determined",
       "attributes": {
         "who": "I",
         "what": "Unspecified",
@@ -434,7 +434,7 @@
       "id": "p_agent_a91e7c",
       "label": "I",
       "category": "Entity",
-      "resolution_state": "Unspecified",
+      "resolution_state": "Determined",
       "attributes": {
         "who": "I",
         "what": "Unspecified",
@@ -448,7 +448,7 @@
       "id": "p_agent_d80b6e",
       "label": "I",
       "category": "Entity",
-      "resolution_state": "Unspecified",
+      "resolution_state": "Determined",
       "attributes": {
         "who": "I",
         "what": "Unspecified",
@@ -462,7 +462,7 @@
       "id": "p_agent_6ea067",
       "label": "The report",
       "category": "Entity",
-      "resolution_state": "Unspecified",
+      "resolution_state": "Determined",
       "attributes": {
         "who": "The report",
         "what": "Unspecified",
@@ -515,14 +515,6 @@
       "constraint_type": "MannerCondition"
     },
     {
-      "id": "e_particle_constraint_p_temporal_2ee08f_p_effect_06f196",
-      "source": "p_temporal_2ee08f",
-      "target": "p_effect_06f196",
-      "morphism_type": "Constraint",
-      "detail": "Agent: I + Temporal Marker: after",
-      "constraint_type": "TemporalCondition"
-    },
-    {
       "id": "e_cause_p_cause_717d66_p_effect_4e4361",
       "source": "p_cause_717d66",
       "target": "p_effect_4e4361",
@@ -560,46 +552,6 @@
       "target": "p_effect_4e4361",
       "morphism_type": "Manner",
       "detail": "Manner relation (by)",
-      "constraint_type": ""
-    },
-    {
-      "id": "e_temporal_p_temporal_2ee08f_p_effect_06f196",
-      "source": "p_temporal_2ee08f",
-      "target": "p_effect_06f196",
-      "morphism_type": "Temporal",
-      "detail": "Temporal relation (after)",
-      "constraint_type": ""
-    },
-    {
-      "id": "e_action_p_agent_85410d_p_effect_4e4361",
-      "source": "p_agent_85410d",
-      "target": "p_effect_4e4361",
-      "morphism_type": "Action",
-      "detail": "Agent of Action",
-      "constraint_type": ""
-    },
-    {
-      "id": "e_action_p_agent_d4dbda_p_effect_1ca840",
-      "source": "p_agent_d4dbda",
-      "target": "p_effect_1ca840",
-      "morphism_type": "Action",
-      "detail": "Agent of Action",
-      "constraint_type": ""
-    },
-    {
-      "id": "e_action_p_agent_dc905a_p_effect_06f196",
-      "source": "p_agent_dc905a",
-      "target": "p_effect_06f196",
-      "morphism_type": "Action",
-      "detail": "Agent of Action",
-      "constraint_type": ""
-    },
-    {
-      "id": "e_action_p_agent_20a1f3_p_effect_e8fb2e",
-      "source": "p_agent_20a1f3",
-      "target": "p_effect_e8fb2e",
-      "morphism_type": "Action",
-      "detail": "Agent of Action",
       "constraint_type": ""
     }
   ]

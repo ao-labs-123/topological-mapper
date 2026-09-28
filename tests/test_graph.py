@@ -1,7 +1,7 @@
 from src.graph import GraphBuilder
 
 
-def test_constraint_edges_target_related_event_not_self_loop():
+def test_stage4_without_explicit_target_does_not_create_constraint_edge():
     particle_data = [
         {"id": "agent-1", "label": "I", "entity_type": "Agent"},
         {"id": "event-1", "label": "submit the form", "entity_type": "Event"},
@@ -17,12 +17,10 @@ def test_constraint_edges_target_related_event_not_self_loop():
     graph = GraphBuilder.build_graph(particle_data, log_data)
 
     constraint_edges = [edge for edge in graph.edges if edge.morphism_type == "Constraint"]
-    assert constraint_edges
-    assert all(edge.source
- != edge.target for edge in constraint_edges)
+    assert constraint_edges == []
 
 
-def test_passive_constraint_edges_are_not_self_loops():
+def test_stage5_actor_without_explicit_target_does_not_create_constraint_edge():
     particle_data = [
         {"id": "agent-1", "label": "I", "entity_type": "Agent"},
         {"id": "event-1", "label": "submit the form", "entity_type": "Event"},
@@ -38,8 +36,7 @@ def test_passive_constraint_edges_are_not_self_loops():
     graph = GraphBuilder.build_graph(particle_data, log_data)
 
     constraint_edges = [edge for edge in graph.edges if edge.morphism_type == "Constraint"]
-    assert constraint_edges
-    assert all(edge.source != edge.target for edge in constraint_edges)
+    assert constraint_edges == []
 
 
 def test_particle_constraints_connect_shared_cause_effect_pair():
@@ -182,3 +179,26 @@ def test_log_context_is_added_to_referenced_events_not_node_at_same_index():
     assert nodes_by_id["unrelated-event"].attributes["when"] == "Unspecified"
     assert nodes_by_id["cause-unknown"].attributes["when"] == "yesterday"
     assert nodes_by_id["effect-unknown"].attributes["when"] == "yesterday"
+
+
+def test_action_edge_is_omitted_when_agent_label_is_ambiguous():
+    particle_data = [
+        {"id": "agent-i-1", "label": "I", "entity_type": "Agent"},
+        {"id": "agent-i-2", "label": "I", "entity_type": "Agent"},
+        {
+            "id": "effect-1",
+            "label": "submitted the form",
+            "entity_type": "Effect",
+            "constraints": ["Agent: I"],
+        },
+    ]
+    log_data = [
+        {
+            "stage1": {"agent": "I"},
+            "stage3": {"structure": {"effect": "submitted the form"}},
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    assert not [edge for edge in graph.edges if edge.morphism_type == "Action"]
