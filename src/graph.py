@@ -162,6 +162,16 @@ class GraphBuilder:
             else:
                 if is_valid_label:
                     w5h1["what"] = p_label
+                constraints = p.get("constraints") or []
+                if isinstance(constraints, str):
+                    constraints = [constraints]
+                for constraint in constraints:
+                    agent_match = re.search(
+                        r"\bAgent:\s*(.+?)(?:\s*\+\s*|$)", str(constraint)
+                    )
+                    if agent_match:
+                        w5h1["agent"] = agent_match.group(1).strip()
+                        break
 
             # Node の基礎を登録
             node = Node(

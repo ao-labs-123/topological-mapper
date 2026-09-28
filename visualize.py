@@ -37,6 +37,8 @@ def visualize_topological_graph(
 
         # when や where があればラベルの後ろに括弧書きで追記する
         context_text = []
+        if attrs.get("agent") and attrs["agent"] != "Unspecified":
+            context_text.append(f"Agent: {attrs['agent']}")
         if attrs.get("when") and attrs["when"] != "Unspecified":
             context_text.append(attrs["when"])
         if attrs.get("where") and attrs["where"] != "Unspecified":

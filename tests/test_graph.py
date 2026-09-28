@@ -127,3 +127,6 @@ def test_cause_edges_disambiguate_duplicate_cause_labels_by_constraints():
         ("cause-unknown", "effect-unknown"),
         ("cause-i", "effect-i"),
     }
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    assert nodes_by_id["cause-unknown"].attributes["agent"] == "Unknown"
+    assert nodes_by_id["cause-i"].attributes["agent"] == "I"
