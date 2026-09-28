@@ -120,6 +120,8 @@ topological-mapping/
 │   ├── log.json            # Input log data
 │   └── particles.json      # Ingested particle objects
 ├── topological_graph.json  # Exported topological network graph
+├── visualize.py
+├── index.html
 └── src/
   ├── main.py             # Pipeline execution script
   └── graph.py            # Graph data structures and GraphBuilder logic
