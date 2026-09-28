@@ -64,17 +64,19 @@ class GraphBuilder:
         stage3 = log_item.get("stage3")
         if stage3 and isinstance(stage3, dict) and "structure" in stage3:
             struct = stage3["structure"]
+            candidate_labels = []
             for key in ("effect", "cause"):
                 label = struct.get(key)
-                if not label:
-                    continue
-                event_node = cls._find_event_node(graph, str(label))
+                if label:
+                    candidate_labels.append(str(label))
+
+            for label in candidate_labels:
+                event_node = cls._find_event_node(graph, label)
                 if event_node and event_node.id != current_node.id:
                     return event_node
 
-        for node in graph.nodes:
-            if node.category == "Event" and node.id != current_node.id:
-                return node
+        # ルール: 明示的なイベント関係がない場合は、Constraint を「最初の Event」へ
+        # 勝手に寄せない。曖昧な Constraint は生成しない。
         return None
 
     @classmethod
