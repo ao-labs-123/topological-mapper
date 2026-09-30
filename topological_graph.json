@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "p_agent_85410d",
+      "id": "p_agent_a7125c",
       "label": "He",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -15,7 +15,7 @@
       }
     },
     {
-      "id": "p_cause_717d66",
+      "id": "p_cause_ddf09b",
       "label": "i helped",
       "category": "Event",
       "resolution_state": "Determined",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "id": "p_effect_4e4361",
+      "id": "p_effect_4c8b2b",
       "label": "he succeeded",
       "category": "Event",
       "resolution_state": "Determined",
@@ -45,7 +45,21 @@
       }
     },
     {
-      "id": "p_agent_f5acc9",
+      "id": "p_morphology_442dd5",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_dca0d3",
       "label": "I",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -59,7 +73,21 @@
       }
     },
     {
-      "id": "p_agent_f0751d",
+      "id": "p_morphology_60516e",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_771196",
       "label": "He/She/They",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -73,7 +101,21 @@
       }
     },
     {
-      "id": "p_agent_6b3c90",
+      "id": "p_morphology_ceb345",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_107858",
       "label": "you",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -87,7 +129,35 @@
       }
     },
     {
-      "id": "p_agent_08ecca",
+      "id": "p_relative_clause_98ed87",
+      "label": "Defining clause",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "Defining clause",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_morphology_2f3949",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_41f953",
       "label": "I",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -101,7 +171,21 @@
       }
     },
     {
-      "id": "p_agent_70a694",
+      "id": "p_morphology_a21bac",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_eb85b6",
       "label": "I",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -115,7 +199,21 @@
       }
     },
     {
-      "id": "p_agent_d4dbda",
+      "id": "p_morphology_504e57",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_c119d2",
       "label": "Unknown",
       "category": "Entity",
       "resolution_state": "Unspecified",
@@ -129,7 +227,7 @@
       }
     },
     {
-      "id": "p_cause_5bc649",
+      "id": "p_cause_e7d329",
       "label": "you helped",
       "category": "Event",
       "resolution_state": "Determined",
@@ -144,7 +242,7 @@
       }
     },
     {
-      "id": "p_effect_1ca840",
+      "id": "p_effect_cdbef7",
       "label": "succeeded",
       "category": "Event",
       "resolution_state": "Determined",
@@ -159,7 +257,21 @@
       }
     },
     {
-      "id": "p_agent_39a4cb",
+      "id": "p_morphology_137141",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_f466fd",
       "label": "Unknown",
       "category": "Entity",
       "resolution_state": "Unspecified",
@@ -173,7 +285,21 @@
       }
     },
     {
-      "id": "p_agent_259510",
+      "id": "p_morphology_78d02c",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_33ab9d",
       "label": "Unknown",
       "category": "Entity",
       "resolution_state": "Unspecified",
@@ -187,7 +313,21 @@
       }
     },
     {
-      "id": "p_agent_123838",
+      "id": "p_morphology_caf960",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_8b1097",
       "label": "Unknown",
       "category": "Entity",
       "resolution_state": "Unspecified",
@@ -201,7 +341,21 @@
       }
     },
     {
-      "id": "p_agent_578775",
+      "id": "p_morphology_55f630",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_aba5ac",
       "label": "Unknown",
       "category": "Entity",
       "resolution_state": "Unspecified",
@@ -215,7 +369,21 @@
       }
     },
     {
-      "id": "p_agent_dc905a",
+      "id": "p_morphology_87d3ab",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_7eda83",
       "label": "I",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -229,7 +397,7 @@
       }
     },
     {
-      "id": "p_cause_8768be",
+      "id": "p_cause_d72fe8",
       "label": "the project",
       "category": "Event",
       "resolution_state": "Determined",
@@ -244,7 +412,7 @@
       }
     },
     {
-      "id": "p_effect_06f196",
+      "id": "p_effect_0fa786",
       "label": "i'm stressed",
       "category": "Event",
       "resolution_state": "Determined",
@@ -259,7 +427,21 @@
       }
     },
     {
-      "id": "p_agent_20a1f3",
+      "id": "p_morphology_e908fd",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_84f99b",
       "label": "I",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -273,7 +455,7 @@
       }
     },
     {
-      "id": "p_cause_3b3446",
+      "id": "p_cause_c17e3b",
       "label": "you helped",
       "category": "Event",
       "resolution_state": "Determined",
@@ -288,7 +470,7 @@
       }
     },
     {
-      "id": "p_effect_e8fb2e",
+      "id": "p_effect_0ba27a",
       "label": "i succeeded",
       "category": "Event",
       "resolution_state": "Determined",
@@ -303,7 +485,21 @@
       }
     },
     {
-      "id": "p_agent_935fde",
+      "id": "p_morphology_2b7464",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_d80a5e",
       "label": "He",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -317,7 +513,7 @@
       }
     },
     {
-      "id": "p_manner_2ec447",
+      "id": "p_manner_c6c430",
       "label": "working hard",
       "category": "Event",
       "resolution_state": "Determined",
@@ -332,7 +528,21 @@
       }
     },
     {
-      "id": "p_agent_bb70d8",
+      "id": "p_morphology_7c1c40",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_c2b008",
       "label": "I",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -346,7 +556,7 @@
       }
     },
     {
-      "id": "p_temporal_2ee08f",
+      "id": "p_temporal_ad8b6a",
       "label": "the long meeting",
       "category": "Event",
       "resolution_state": "Determined",
@@ -361,7 +571,21 @@
       }
     },
     {
-      "id": "p_agent_1e9abd",
+      "id": "p_morphology_9f5d30",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_b259f3",
       "label": "The report",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -375,7 +599,35 @@
       }
     },
     {
-      "id": "p_agent_81f66f",
+      "id": "p_relative_clause_d815f5",
+      "label": "Non-defining clause",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "Non-defining clause",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_morphology_5e290a",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_595ba0",
       "label": "The report",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -389,7 +641,35 @@
       }
     },
     {
-      "id": "p_agent_bf7552",
+      "id": "p_relative_clause_84e993",
+      "label": "Defining clause",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "Defining clause",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_morphology_9d4c3d",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_abdfe3",
       "label": "The office",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -403,7 +683,21 @@
       }
     },
     {
-      "id": "p_agent_46f580",
+      "id": "p_morphology_b53266",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_5b461e",
       "label": "The day",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -417,7 +711,21 @@
       }
     },
     {
-      "id": "p_agent_a8394a",
+      "id": "p_morphology_8c5f77",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_2a6f65",
       "label": "I",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -431,7 +739,21 @@
       }
     },
     {
-      "id": "p_agent_a91e7c",
+      "id": "p_morphology_7cbfc3",
+      "label": "[Morphology: Base] → [Category: Stative]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Stative]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_2e8260",
       "label": "I",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -445,7 +767,21 @@
       }
     },
     {
-      "id": "p_agent_d80b6e",
+      "id": "p_morphology_391286",
+      "label": "[Morphology: be + V-ing] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: be + V-ing] → [Category: Action]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_834daa",
       "label": "I",
       "category": "Entity",
       "resolution_state": "Determined",
@@ -459,13 +795,41 @@
       }
     },
     {
-      "id": "p_agent_6ea067",
+      "id": "p_morphology_c265a0",
+      "label": "[Passive: be + V-en + by]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Passive: be + V-en + by]",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_agent_bd6f76",
       "label": "The report",
       "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
         "who": "The report",
         "what": "Unspecified",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      }
+    },
+    {
+      "id": "p_morphology_3a02fd",
+      "label": "[Morphology: Base] → [Category: Action]",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "[Morphology: Base] → [Category: Action]",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",

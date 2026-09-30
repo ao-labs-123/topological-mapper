@@ -1,6 +1,6 @@
 [
   {
-    "id": "p_agent_85410d",
+    "id": "p_agent_a7125c",
     "label": "He",
     "entity_type": "Agent",
     "state": "determined",
@@ -12,7 +12,7 @@
     }
   },
   {
-    "id": "p_cause_717d66",
+    "id": "p_cause_ddf09b",
     "label": "i helped",
     "entity_type": "Cause",
     "state": "determined",
@@ -22,7 +22,7 @@
     "properties": {}
   },
   {
-    "id": "p_effect_4e4361",
+    "id": "p_effect_4c8b2b",
     "label": "he succeeded",
     "entity_type": "Effect",
     "state": "determined",
@@ -32,7 +32,19 @@
     "properties": {}
   },
   {
-    "id": "p_agent_f5acc9",
+    "id": "p_morphology_442dd5",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_dca0d3",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -44,7 +56,19 @@
     }
   },
   {
-    "id": "p_agent_f0751d",
+    "id": "p_morphology_60516e",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_771196",
     "label": "He/She/They",
     "entity_type": "Agent",
     "state": "determined",
@@ -56,7 +80,19 @@
     }
   },
   {
-    "id": "p_agent_6b3c90",
+    "id": "p_morphology_ceb345",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_107858",
     "label": "you",
     "entity_type": "Agent",
     "state": "determined",
@@ -68,7 +104,32 @@
     }
   },
   {
-    "id": "p_agent_08ecca",
+    "id": "p_relative_clause_98ed87",
+    "label": "Defining clause",
+    "entity_type": "RelativeClause",
+    "state": "determined",
+    "constraints": [
+      "Defining clause"
+    ],
+    "properties": {
+      "decision": "Essential",
+      "result": "AI defines the primary identity of 'It is required'."
+    }
+  },
+  {
+    "id": "p_morphology_2f3949",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_41f953",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -80,7 +141,19 @@
     }
   },
   {
-    "id": "p_agent_70a694",
+    "id": "p_morphology_a21bac",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_eb85b6",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -92,7 +165,19 @@
     }
   },
   {
-    "id": "p_agent_d4dbda",
+    "id": "p_morphology_504e57",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_c119d2",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "determined",
@@ -104,7 +189,7 @@
     }
   },
   {
-    "id": "p_cause_5bc649",
+    "id": "p_cause_e7d329",
     "label": "you helped",
     "entity_type": "Cause",
     "state": "determined",
@@ -114,7 +199,7 @@
     "properties": {}
   },
   {
-    "id": "p_effect_1ca840",
+    "id": "p_effect_cdbef7",
     "label": "succeeded",
     "entity_type": "Effect",
     "state": "determined",
@@ -124,7 +209,19 @@
     "properties": {}
   },
   {
-    "id": "p_agent_39a4cb",
+    "id": "p_morphology_137141",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_f466fd",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "determined",
@@ -136,7 +233,19 @@
     }
   },
   {
-    "id": "p_agent_259510",
+    "id": "p_morphology_78d02c",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_33ab9d",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "determined",
@@ -148,7 +257,19 @@
     }
   },
   {
-    "id": "p_agent_123838",
+    "id": "p_morphology_caf960",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_8b1097",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "determined",
@@ -160,7 +281,19 @@
     }
   },
   {
-    "id": "p_agent_578775",
+    "id": "p_morphology_55f630",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_aba5ac",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "determined",
@@ -172,7 +305,19 @@
     }
   },
   {
-    "id": "p_agent_dc905a",
+    "id": "p_morphology_87d3ab",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_7eda83",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -184,7 +329,7 @@
     }
   },
   {
-    "id": "p_cause_8768be",
+    "id": "p_cause_d72fe8",
     "label": "the project",
     "entity_type": "Cause",
     "state": "determined",
@@ -194,7 +339,7 @@
     "properties": {}
   },
   {
-    "id": "p_effect_06f196",
+    "id": "p_effect_0fa786",
     "label": "i'm stressed",
     "entity_type": "Effect",
     "state": "determined",
@@ -204,7 +349,19 @@
     "properties": {}
   },
   {
-    "id": "p_agent_20a1f3",
+    "id": "p_morphology_e908fd",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_84f99b",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -216,7 +373,7 @@
     }
   },
   {
-    "id": "p_cause_3b3446",
+    "id": "p_cause_c17e3b",
     "label": "you helped",
     "entity_type": "Cause",
     "state": "determined",
@@ -226,7 +383,7 @@
     "properties": {}
   },
   {
-    "id": "p_effect_e8fb2e",
+    "id": "p_effect_0ba27a",
     "label": "i succeeded",
     "entity_type": "Effect",
     "state": "determined",
@@ -236,7 +393,19 @@
     "properties": {}
   },
   {
-    "id": "p_agent_935fde",
+    "id": "p_morphology_2b7464",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_d80a5e",
     "label": "He",
     "entity_type": "Agent",
     "state": "determined",
@@ -248,7 +417,7 @@
     }
   },
   {
-    "id": "p_manner_2ec447",
+    "id": "p_manner_c6c430",
     "label": "working hard",
     "entity_type": "Manner",
     "state": "determined",
@@ -261,7 +430,19 @@
     }
   },
   {
-    "id": "p_agent_bb70d8",
+    "id": "p_morphology_7c1c40",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_c2b008",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -273,7 +454,7 @@
     }
   },
   {
-    "id": "p_temporal_2ee08f",
+    "id": "p_temporal_ad8b6a",
     "label": "the long meeting",
     "entity_type": "Temporal",
     "state": "determined",
@@ -286,7 +467,19 @@
     }
   },
   {
-    "id": "p_agent_1e9abd",
+    "id": "p_morphology_9f5d30",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_b259f3",
     "label": "The report",
     "entity_type": "Agent",
     "state": "determined",
@@ -298,7 +491,32 @@
     }
   },
   {
-    "id": "p_agent_81f66f",
+    "id": "p_relative_clause_d815f5",
+    "label": "Non-defining clause",
+    "entity_type": "RelativeClause",
+    "state": "determined",
+    "constraints": [
+      "Non-defining clause"
+    ],
+    "properties": {
+      "decision": "Supplementary",
+      "result": "AI treats 'was long' as an attribute, not the primary identifier."
+    }
+  },
+  {
+    "id": "p_morphology_5e290a",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_595ba0",
     "label": "The report",
     "entity_type": "Agent",
     "state": "determined",
@@ -310,7 +528,32 @@
     }
   },
   {
-    "id": "p_agent_bf7552",
+    "id": "p_relative_clause_84e993",
+    "label": "Defining clause",
+    "entity_type": "RelativeClause",
+    "state": "determined",
+    "constraints": [
+      "Defining clause"
+    ],
+    "properties": {
+      "decision": "Essential",
+      "result": "AI links 'The report' (Agent) to the specific the report as a defining marker."
+    }
+  },
+  {
+    "id": "p_morphology_9d4c3d",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_abdfe3",
     "label": "The office",
     "entity_type": "Agent",
     "state": "determined",
@@ -322,7 +565,19 @@
     }
   },
   {
-    "id": "p_agent_46f580",
+    "id": "p_morphology_b53266",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_5b461e",
     "label": "The day",
     "entity_type": "Agent",
     "state": "determined",
@@ -334,7 +589,19 @@
     }
   },
   {
-    "id": "p_agent_a8394a",
+    "id": "p_morphology_8c5f77",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_2a6f65",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -346,7 +613,19 @@
     }
   },
   {
-    "id": "p_agent_a91e7c",
+    "id": "p_morphology_7cbfc3",
+    "label": "[Morphology: Base] → [Category: Stative]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Stative]"
+    ],
+    "properties": {
+      "result": "Possession status."
+    }
+  },
+  {
+    "id": "p_agent_2e8260",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -358,7 +637,19 @@
     }
   },
   {
-    "id": "p_agent_d80b6e",
+    "id": "p_morphology_391286",
+    "label": "[Morphology: be + V-ing] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: be + V-ing] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "Active event participation."
+    }
+  },
+  {
+    "id": "p_agent_834daa",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -370,7 +661,19 @@
     }
   },
   {
-    "id": "p_agent_6ea067",
+    "id": "p_morphology_c265a0",
+    "label": "[Passive: be + V-en + by]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Passive: be + V-en + by]"
+    ],
+    "properties": {
+      "result": "Actor: him / Receiver: I."
+    }
+  },
+  {
+    "id": "p_agent_bd6f76",
     "label": "The report",
     "entity_type": "Agent",
     "state": "determined",
@@ -379,6 +682,18 @@
     ],
     "properties": {
       "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_morphology_3a02fd",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
     }
   }
 ]
