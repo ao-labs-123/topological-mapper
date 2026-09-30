@@ -1,4 +1,68 @@
+import json
+
 from src.graph import GraphBuilder
+from src.upstream_adapter import load_upstream_repo, normalize_upstream_payload
+
+
+def test_upstream_stage_data_is_normalized_for_stage3_4_5():
+    upstream_payload = {
+        "particles": [
+            {"id": "agent-1", "label": "I", "entity_type": "Agent"},
+            {"id": "event-1", "label": "submit the form", "entity_type": "Event"},
+        ],
+        "records": [
+            {
+                "input": "I submit the form at the office",
+                "stage3": {"structure": {"effect": "submit the form"}},
+                "stage4": {"decision": "Essential", "source_particle_id": "agent-1", "target_particle_id": "event-1"},
+                "stage5": {"result": "Actor: I", "source_particle_id": "agent-1", "target_particle_id": "event-1"},
+            }
+        ],
+    }
+
+    particle_data, log_data = normalize_upstream_payload(upstream_payload)
+
+    assert particle_data[0]["id"] == "agent-1"
+    assert log_data[0]["stage3"]["structure"]["effect"] == "submit the form"
+    assert log_data[0]["stage4"]["target_particle_id"] == "event-1"
+    assert log_data[0]["stage5"]["source_particle_id"] == "agent-1"
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+    constraint_edges = [edge for edge in graph.edges if edge.morphism_type == "Constraint"]
+    assert constraint_edges
+    assert any(edge.source == "agent-1" and edge.target == "event-1" for edge in constraint_edges)
+
+
+def test_upstream_repo_directory_with_data_log_and_particles_is_supported(tmp_path):
+    repo_dir = tmp_path / "upstream-repo"
+    data_dir = repo_dir / "data"
+    data_dir.mkdir(parents=True)
+
+    (repo_dir / "particles.json").write_text(
+        json.dumps([
+            {"id": "agent-1", "label": "I", "entity_type": "Agent"},
+            {"id": "event-1", "label": "submit the form", "entity_type": "Event"},
+        ]),
+        encoding="utf-8",
+    )
+    (data_dir / "log.json").write_text(
+        json.dumps([
+            {
+                "input": "I submit the form",
+                "stage3": {"structure": {"effect": "submit the form"}},
+                "stage4": {"decision": "Essential", "source_particle_id": "agent-1", "target_particle_id": "event-1"},
+                "stage5": {"result": "Actor: I", "source_particle_id": "agent-1", "target_particle_id": "event-1"},
+            }
+        ]),
+        encoding="utf-8",
+    )
+
+    particle_data, log_data = load_upstream_repo(repo_dir, particle_repo_dir=repo_dir)
+    assert particle_data[0]["id"] == "agent-1"
+    assert log_data[0]["stage4"]["target_particle_id"] == "event-1"
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+    assert any(edge.morphism_type == "Constraint" for edge in graph.edges)
 
 
 def test_stage4_without_explicit_target_does_not_create_constraint_edge():

@@ -1,11 +1,14 @@
+import argparse
 import json
 import urllib.request
 import os
 
 if __package__:
     from .graph import GraphBuilder
+    from .upstream_adapter import build_graph_from_upstream_payload, load_upstream_json, load_upstream_repo
 else:
     from graph import GraphBuilder
+    from upstream_adapter import build_graph_from_upstream_payload, load_upstream_json, load_upstream_repo
 
 # スクリプト（main.py）が存在するディレクトリの絶対パスを取得
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -34,22 +37,43 @@ def fetch_and_save_json(url, local_path):
     return data
 
 def main():
-    # 1. log.json と particles.json の取得と保存
-    log_data = fetch_and_save_json(LOG_URL, LOG_LOCAL_PATH)
-    particle_data = fetch_and_save_json(PARTICLES_URL, PARTICLES_LOCAL_PATH)
+    parser = argparse.ArgumentParser(description="Generate topological graph from particle and log data.")
+    parser.add_argument("--upstream-json", type=str, default=None, help="Path to an upstream JSON payload with particles/records or data/records.")
+    parser.add_argument("--upstream-dir", type=str, default=None, help="Path to a repo containing both particles.json and a log file.")
+    parser.add_argument("--upstream-particle-dir", type=str, default=None, help="Path to the particle-encapsulation repo containing particles.json.")
+    parser.add_argument("--upstream-log-dir", type=str, default=None, help="Path to the input-parser repo containing data/log.json.")
+    parser.add_argument("--output", type=str, default=OUTPUT_LOCAL_PATH, help="Destination JSON path for the generated graph.")
+    args = parser.parse_args()
 
-    # 2. グラフの構築
-    graph = GraphBuilder.build_graph(particle_data, log_data)
+    if args.upstream_json:
+        payload = load_upstream_json(args.upstream_json)
+        graph = build_graph_from_upstream_payload(payload)
+    elif args.upstream_dir or args.upstream_particle_dir or args.upstream_log_dir:
+        particle_data, log_data = load_upstream_repo(
+            args.upstream_dir,
+            particle_repo_dir=args.upstream_particle_dir,
+            log_repo_dir=args.upstream_log_dir,
+        )
+        graph = GraphBuilder.build_graph(particle_data, log_data)
+    else:
+        # 1. log.json と particles.json の取得と保存
+        log_data = fetch_and_save_json(LOG_URL, LOG_LOCAL_PATH)
+        particle_data = fetch_and_save_json(PARTICLES_URL, PARTICLES_LOCAL_PATH)
+
+        # 2. グラフの構築
+        graph = GraphBuilder.build_graph(particle_data, log_data)
 
     print("\n--- Generated Topological Graph ---")
     print(f"Nodes: {len(graph.nodes)}, Edges: {len(graph.edges)}")
 
     # 3. 構築結果を保存
     graph_dict = graph.to_dict() if hasattr(graph, 'to_dict') else graph.__dict__
-    
-    with open(OUTPUT_LOCAL_PATH, "w", encoding="utf-8") as f:
+
+    output_path = args.output
+    os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(graph_dict, f, ensure_ascii=False, indent=2)
-    print(f"Successfully generated {OUTPUT_LOCAL_PATH}!")
+    print(f"Successfully generated {output_path}!")
 
 if __name__ == "__main__":
     main()
