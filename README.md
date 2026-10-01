@@ -35,7 +35,7 @@ It ingests discrete `Particle` objects, maps them into **Entities** or **Events*
 ### Pipeline Position
 
 ```text
-(Particle Encapsulation) ──> [ particle.json ] ──> [ Topological Mapping ] ──> [ topological_graph.json ]
+(Particle Encapsulation) ──> [ particles.json ] ──> [ Topological Mapping ] ──> [ topological_graph.json ]
 ```
 ## Topology & Graph Design
 
