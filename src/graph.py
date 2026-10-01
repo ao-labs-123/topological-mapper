@@ -172,6 +172,14 @@ class GraphBuilder:
             p_id = p.get("id", "")
             p_label = p.get("label", "")
             p_type = p.get("entity_type", "")
+            properties = p.get("properties") or {}
+
+            if (
+                p_type == "Morphology"
+                and not p.get("target_particle_id")
+                and not properties.get("event_particle_id")
+            ):
+                continue
             
             category = "Entity" if p_type == "Agent" else "Event"
             
@@ -231,6 +239,27 @@ class GraphBuilder:
                 "how": how_match.group(0) if how_match else None,
             }
             stage3_structure = (log_item.get("stage3") or {}).get("structure") or {}
+            stage5 = log_item.get("stage5") or {}
+            if isinstance(stage5, dict):
+                stage5_target_ids = (
+                    stage5.get("target_particle_id"),
+                    stage3_structure.get("effect_particle_id"),
+                    stage3_structure.get("event_particle_id"),
+                )
+                stage5_event = None
+                for particle_id in stage5_target_ids:
+                    candidate = cls._resolve_particle_node(graph, particle_map, particle_id, None)
+                    if candidate and candidate.category == "Event":
+                        stage5_event = candidate
+                        break
+                if stage5_event:
+                    process = stage5.get("process")
+                    result = stage5.get("result")
+                    if isinstance(process, str) and process.strip():
+                        stage5_event.attributes["stage5_process"] = process
+                    if isinstance(result, str) and result.strip():
+                        stage5_event.attributes["stage5_result"] = result
+
             stage1 = log_item.get("stage1") or {}
             stage1_agent = stage1.get("agent") if isinstance(stage1, dict) else None
             relation = stage3_structure.get("relation")

@@ -31,6 +31,8 @@ def test_upstream_stage_data_is_normalized_for_stage3_4_5():
     constraint_edges = [edge for edge in graph.edges if edge.morphism_type == "Constraint"]
     assert constraint_edges
     assert any(edge.source == "agent-1" and edge.target == "event-1" for edge in constraint_edges)
+    event_node = next(node for node in graph.nodes if node.id == "event-1")
+    assert event_node.attributes["stage5_result"] == "Actor: I"
 
 
 def test_upstream_repo_directory_with_data_log_and_particles_is_supported(tmp_path):
@@ -117,6 +119,47 @@ def test_stage5_actor_without_explicit_target_does_not_create_constraint_edge():
 
     constraint_edges = [edge for edge in graph.edges if edge.morphism_type == "Constraint"]
     assert constraint_edges == []
+
+
+def test_stage5_summary_is_an_event_attribute_and_linked_features_remain_nodes():
+    particle_data = [
+        {"id": "event-1", "label": "I submitted the form", "entity_type": "Effect"},
+        {
+            "id": "morphology-summary",
+            "label": "[Morphology: Base] -> [Category: Action]",
+            "entity_type": "Morphology",
+            "properties": {"result": "General action statement."},
+        },
+        {
+            "id": "passive-feature",
+            "label": "Passive",
+            "entity_type": "Morphology",
+            "constraints": ["Voice: Passive"],
+            "properties": {"event_particle_id": "event-1"},
+        },
+    ]
+    log_data = [
+        {
+            "stage3": {"structure": {"effect_particle_id": "event-1"}},
+            "stage5": {
+                "process": "[Morphology: Base] -> [Category: Action]",
+                "result": "General action statement.",
+            },
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    assert "morphology-summary" not in nodes_by_id
+    assert nodes_by_id["event-1"].attributes["stage5_result"] == "General action statement."
+    assert "passive-feature" in nodes_by_id
+    assert any(
+        edge.source == "passive-feature"
+        and edge.target == "event-1"
+        and edge.morphism_type == "Constraint"
+        for edge in graph.edges
+    )
 
 
 def test_particle_constraint_uses_explicit_target_particle_id():

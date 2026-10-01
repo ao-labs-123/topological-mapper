@@ -41,21 +41,9 @@
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified",
-        "agent": "He"
-      }
-    },
-    {
-      "id": "p_morphology_9b9513",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
+        "agent": "He",
+        "stage5_process": "[Morphology: Base] → [Category: Action]",
+        "stage5_result": "General action statement."
       }
     },
     {
@@ -73,20 +61,6 @@
       }
     },
     {
-      "id": "p_morphology_0c00b3",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_0e4ca4",
       "label": "He/She/They",
       "category": "Entity",
@@ -94,20 +68,6 @@
       "attributes": {
         "who": "He/She/They",
         "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_morphology_443b22",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -143,20 +103,6 @@
       }
     },
     {
-      "id": "p_morphology_f498de",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_5a7bbb",
       "label": "I",
       "category": "Entity",
@@ -171,20 +117,6 @@
       }
     },
     {
-      "id": "p_morphology_bc8649",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_e410ef",
       "label": "I",
       "category": "Entity",
@@ -192,20 +124,6 @@
       "attributes": {
         "who": "I",
         "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_morphology_d0f608",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -253,21 +171,9 @@
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified",
-        "agent": "Unknown"
-      }
-    },
-    {
-      "id": "p_morphology_21b51b",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
+        "agent": "Unknown",
+        "stage5_process": "[Morphology: Base] → [Category: Action]",
+        "stage5_result": "General action statement."
       }
     },
     {
@@ -278,20 +184,6 @@
       "attributes": {
         "who": "Unspecified",
         "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_morphology_529ce9",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -313,20 +205,6 @@
       }
     },
     {
-      "id": "p_morphology_772a0d",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_d34949",
       "label": "Unknown",
       "category": "Entity",
@@ -341,20 +219,6 @@
       }
     },
     {
-      "id": "p_morphology_bc251a",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_c63d77",
       "label": "Unknown",
       "category": "Entity",
@@ -362,20 +226,6 @@
       "attributes": {
         "who": "Unspecified",
         "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_morphology_4374f0",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -423,21 +273,9 @@
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified",
-        "agent": "I"
-      }
-    },
-    {
-      "id": "p_morphology_0f8e4c",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
+        "agent": "I",
+        "stage5_process": "[Morphology: Base] → [Category: Action]",
+        "stage5_result": "General action statement."
       }
     },
     {
@@ -481,21 +319,9 @@
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified",
-        "agent": "I"
-      }
-    },
-    {
-      "id": "p_morphology_021a90",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
+        "agent": "I",
+        "stage5_process": "[Morphology: Base] → [Category: Action]",
+        "stage5_result": "General action statement."
       }
     },
     {
@@ -524,7 +350,9 @@
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "by working",
-        "agent": "He"
+        "agent": "He",
+        "stage5_process": "[Morphology: Base] → [Category: Action]",
+        "stage5_result": "General action statement."
       }
     },
     {
@@ -540,20 +368,6 @@
         "why": "Unspecified",
         "how": "by working",
         "agent": "He"
-      }
-    },
-    {
-      "id": "p_morphology_d37eb4",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
       }
     },
     {
@@ -582,7 +396,9 @@
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified",
-        "agent": "I"
+        "agent": "I",
+        "stage5_process": "[Morphology: Base] → [Category: Action]",
+        "stage5_result": "General action statement."
       }
     },
     {
@@ -598,20 +414,6 @@
         "why": "Unspecified",
         "how": "Unspecified",
         "agent": "I"
-      }
-    },
-    {
-      "id": "p_morphology_8277c0",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
       }
     },
     {
@@ -636,20 +438,6 @@
       "attributes": {
         "who": "Unspecified",
         "what": "Non-defining clause",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_morphology_0a6842",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -685,20 +473,6 @@
       }
     },
     {
-      "id": "p_morphology_509466",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_b2105c",
       "label": "The office",
       "category": "Entity",
@@ -706,20 +480,6 @@
       "attributes": {
         "who": "The office",
         "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_morphology_2e50b3",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -741,20 +501,6 @@
       }
     },
     {
-      "id": "p_morphology_79ac84",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_954680",
       "label": "I",
       "category": "Entity",
@@ -762,20 +508,6 @@
       "attributes": {
         "who": "I",
         "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_morphology_24eeb7",
-      "label": "[Morphology: Base] → [Category: Stative]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Stative]",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -797,20 +529,6 @@
       }
     },
     {
-      "id": "p_morphology_f07dc0",
-      "label": "[Morphology: be + V-ing] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: be + V-ing] → [Category: Action]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_518f03",
       "label": "I",
       "category": "Entity",
@@ -825,20 +543,6 @@
       }
     },
     {
-      "id": "p_morphology_730e35",
-      "label": "[Passive: be + V-en + by]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Passive: be + V-en + by]",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_2bc40a",
       "label": "The report",
       "category": "Entity",
@@ -846,20 +550,6 @@
       "attributes": {
         "who": "The report",
         "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_morphology_695b36",
-      "label": "[Morphology: Base] → [Category: Action]",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "[Morphology: Base] → [Category: Action]",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
