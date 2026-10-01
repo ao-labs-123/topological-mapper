@@ -66,7 +66,8 @@ def visualize_topological_graph(
         stage5_process = attrs.get("stage5_process", "")
         stage5_category = re.search(r"\[Category:\s*([^\]]+)\]", stage5_process)
         if stage5_category:
-            display_label += f"\n[{stage5_category.group(1).strip()}]"
+            display_label += f"\n[S5: {stage5_category.group(1).strip()}]"
+        has_stage5 = bool(stage5_process or attrs.get("stage5_result"))
 
 
         # ツールチップ（マウスホバー時の表示）に 5W1H 属性を整形
@@ -90,6 +91,14 @@ def visualize_topological_graph(
             color = "#00ADB5"
             shape = "dot"
             size = 25
+        elif has_stage5:
+            color = {
+                "background": "#FF2E63",
+                "border": "#FFD166",
+                "highlight": {"background": "#FF2E63", "border": "#FFFFFF"},
+            }
+            shape = "diamond"
+            size = 36
         else:
             color = "#FF2E63"
             shape = "diamond"
@@ -100,6 +109,7 @@ def visualize_topological_graph(
             label=display_label,
             title=title_html,
             color=color,
+            borderWidth=5 if has_stage5 else 1,
             shape=shape,
             size=size,
             font={"size": 14, "color": "#FFFFFF"},
