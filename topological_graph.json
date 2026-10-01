@@ -523,7 +523,7 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified",
+        "how": "by working",
         "agent": "He"
       }
     },
@@ -538,7 +538,7 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified",
+        "how": "by working",
         "agent": "He"
       }
     },
@@ -578,7 +578,7 @@
       "attributes": {
         "who": "Unspecified",
         "what": "I was stressed",
-        "when": "Unspecified",
+        "when": "after",
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified",
@@ -593,7 +593,7 @@
       "attributes": {
         "who": "Unspecified",
         "what": "the long meeting",
-        "when": "Unspecified",
+        "when": "after",
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified",
@@ -869,6 +869,14 @@
   ],
   "edges": [
     {
+      "id": "e_cause_p_cause_2d92c5_p_effect_ecaf45",
+      "source": "p_cause_2d92c5",
+      "target": "p_effect_ecaf45",
+      "morphism_type": "Cause",
+      "detail": "Primary Cause",
+      "constraint_type": ""
+    },
+    {
       "id": "e_cause_p_cause_f090aa_p_effect_a11e90",
       "source": "p_cause_f090aa",
       "target": "p_effect_a11e90",
@@ -890,6 +898,54 @@
       "target": "p_effect_4329b4",
       "morphism_type": "Cause",
       "detail": "Primary Cause",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_manner_p_manner_f1a670_p_effect_ebdbdf",
+      "source": "p_manner_f1a670",
+      "target": "p_effect_ebdbdf",
+      "morphism_type": "Manner",
+      "detail": "Manner relation (by)",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_temporal_p_temporal_fbce8c_p_effect_87c9ac",
+      "source": "p_temporal_fbce8c",
+      "target": "p_effect_87c9ac",
+      "morphism_type": "Temporal",
+      "detail": "Temporal relation (after)",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_c7c1d2_p_effect_ecaf45",
+      "source": "p_agent_c7c1d2",
+      "target": "p_effect_ecaf45",
+      "morphism_type": "Action",
+      "detail": "Agent of Action",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_1e4d8c_p_effect_a11e90",
+      "source": "p_agent_1e4d8c",
+      "target": "p_effect_a11e90",
+      "morphism_type": "Action",
+      "detail": "Agent of Action",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_6e3d7c_p_effect_ff7567",
+      "source": "p_agent_6e3d7c",
+      "target": "p_effect_ff7567",
+      "morphism_type": "Action",
+      "detail": "Agent of Action",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_6a1786_p_effect_4329b4",
+      "source": "p_agent_6a1786",
+      "target": "p_effect_4329b4",
+      "morphism_type": "Action",
+      "detail": "Agent of Action",
       "constraint_type": ""
     }
   ]

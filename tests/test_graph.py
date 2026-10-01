@@ -65,6 +65,22 @@ def test_upstream_repo_directory_with_data_log_and_particles_is_supported(tmp_pa
     assert any(edge.morphism_type == "Constraint" for edge in graph.edges)
 
 
+def test_particle_repo_directory_loads_root_log_json(tmp_path):
+    repo_dir = tmp_path / "particle-encapsulation"
+    repo_dir.mkdir()
+
+    (repo_dir / "particles.json").write_text(json.dumps([]), encoding="utf-8")
+    (repo_dir / "log.json").write_text(
+        json.dumps([{"input": "I submitted the form"}]),
+        encoding="utf-8",
+    )
+
+    particle_data, log_data = load_upstream_repo(particle_repo_dir=repo_dir)
+
+    assert particle_data == []
+    assert log_data[0]["input"] == "I submitted the form"
+
+
 def test_stage4_without_explicit_target_does_not_create_constraint_edge():
     particle_data = [
         {"id": "agent-1", "label": "I", "entity_type": "Agent"},

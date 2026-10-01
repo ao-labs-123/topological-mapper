@@ -21,7 +21,7 @@ PARTICLES_LOCAL_PATH = os.path.join(DATA_DIR, "particles.json")
 OUTPUT_LOCAL_PATH = os.path.join(PROJECT_ROOT, "topological_graph.json")
 
 # Raw URL 設定
-LOG_URL = "https://raw.githubusercontent.com/ao-labs-123/input-parser/main/data/log.json"
+LOG_URL = "https://raw.githubusercontent.com/ao-labs-123/particle-encapsulation/main/log.json"
 PARTICLES_URL = "https://raw.githubusercontent.com/ao-labs-123/particle-encapsulation/main/particles.json"
 
 def fetch_and_save_json(url, local_path):
@@ -39,9 +39,9 @@ def fetch_and_save_json(url, local_path):
 def main():
     parser = argparse.ArgumentParser(description="Generate topological graph from particle and log data.")
     parser.add_argument("--upstream-json", type=str, default=None, help="Path to an upstream JSON payload with particles/records or data/records.")
-    parser.add_argument("--upstream-dir", type=str, default=None, help="Path to a repo containing both particles.json and a log file.")
-    parser.add_argument("--upstream-particle-dir", type=str, default=None, help="Path to the particle-encapsulation repo containing particles.json.")
-    parser.add_argument("--upstream-log-dir", type=str, default=None, help="Path to the input-parser repo containing data/log.json.")
+    parser.add_argument("--upstream-dir", type=str, default=None, help="Path to a repo containing particles.json and log.json.")
+    parser.add_argument("--upstream-particle-dir", type=str, default=None, help="Path to the particle-encapsulation repo containing particles.json and log.json.")
+    parser.add_argument("--upstream-log-dir", type=str, default=None, help="Path to a repo containing log.json; defaults to the particle repo when provided.")
     parser.add_argument("--output", type=str, default=OUTPUT_LOCAL_PATH, help="Destination JSON path for the generated graph.")
     args = parser.parse_args()
 

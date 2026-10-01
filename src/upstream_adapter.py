@@ -110,7 +110,7 @@ def load_upstream_repo(
 
     if particle_repo_dir is not None or log_repo_dir is not None:
         particle_root = Path(particle_repo_dir or repo_dir or ".")
-        log_root = Path(log_repo_dir or repo_dir or ".")
+        log_root = Path(log_repo_dir or particle_repo_dir or repo_dir or ".")
     else:
         repo_root = Path(repo_dir or ".")
         particle_root = repo_root
@@ -153,7 +153,7 @@ def load_upstream_repo(
     if log_file is None:
         raise FileNotFoundError(
             f"Could not find log.json in {log_root}. "
-            "Pass the input-parser repo as log_repo_dir."
+            "Pass the particle-encapsulation repo as particle_repo_dir, or specify log_repo_dir."
         )
 
     payload = {

@@ -17,7 +17,10 @@
       "mapping": "i helped -> Causes -> he succeeded",
       "structure": {
         "cause": "i helped",
-        "effect": "he succeeded"
+        "effect": "he succeeded",
+        "agent_particle_id": "p_agent_c7c1d2",
+        "cause_particle_id": "p_cause_2d92c5",
+        "effect_particle_id": "p_effect_ecaf45"
       }
     },
     "stage4": {
@@ -184,7 +187,10 @@
       "mapping": "you helped -> Causes -> succeeded",
       "structure": {
         "cause": "you helped",
-        "effect": "succeeded"
+        "effect": "succeeded",
+        "agent_particle_id": "p_agent_1e4d8c",
+        "cause_particle_id": "p_cause_f090aa",
+        "effect_particle_id": "p_effect_a11e90"
       }
     },
     "stage4": {
@@ -323,7 +329,10 @@
       "mapping": "the project -> Causes -> i'm stressed",
       "structure": {
         "cause": "the project",
-        "effect": "i'm stressed"
+        "effect": "i'm stressed",
+        "agent_particle_id": "p_agent_6e3d7c",
+        "cause_particle_id": "p_cause_8674cc",
+        "effect_particle_id": "p_effect_ff7567"
       }
     },
     "stage4": {
@@ -354,7 +363,10 @@
       "mapping": "you helped -> Causes -> i succeeded",
       "structure": {
         "cause": "you helped",
-        "effect": "i succeeded"
+        "effect": "i succeeded",
+        "agent_particle_id": "p_agent_6a1786",
+        "cause_particle_id": "p_cause_319a7e",
+        "effect_particle_id": "p_effect_4329b4"
       }
     },
     "stage4": {
@@ -387,7 +399,9 @@
         "relation": "Manner",
         "marker": "by",
         "context": "working hard",
-        "event": "He succeeded"
+        "event": "He succeeded",
+        "context_particle_id": "p_manner_f1a670",
+        "event_particle_id": "p_effect_ebdbdf"
       }
     },
     "stage4": {
@@ -420,7 +434,9 @@
         "relation": "Temporal",
         "marker": "after",
         "context": "the long meeting",
-        "event": "I was stressed"
+        "event": "I was stressed",
+        "context_particle_id": "p_temporal_fbce8c",
+        "event_particle_id": "p_effect_87c9ac"
       }
     },
     "stage4": {
