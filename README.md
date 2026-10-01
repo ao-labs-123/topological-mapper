@@ -97,6 +97,7 @@ Ingest ⁠`particle.json⁠` (local or via automated fetch) and generate the top
 
 ```bash
 python -m src.main
+python visualize.py
 ```
 
 ### 2. Output Example (⁠topological_graph.json⁠)
