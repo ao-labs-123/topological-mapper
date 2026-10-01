@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import sys
 from pyvis.network import Network
 
@@ -61,6 +62,11 @@ def visualize_topological_graph(
             display_label = f"{base_label}\n[{', '.join(context_text)}]"
         else:
             display_label = base_label
+
+        stage5_process = attrs.get("stage5_process", "")
+        stage5_category = re.search(r"\[Category:\s*([^\]]+)\]", stage5_process)
+        if stage5_category:
+            display_label += f"\n[{stage5_category.group(1).strip()}]"
 
 
         # ツールチップ（マウスホバー時の表示）に 5W1H 属性を整形
