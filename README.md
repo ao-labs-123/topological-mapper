@@ -69,7 +69,7 @@ It ingests discrete `Particle` objects, maps them into **Entities** or **Events*
 
 ### Explicit Particle References
 
-Edges are created only from particle IDs supplied by the upstream stages. Labels, array positions, and matching constraint text are not used to infer edge endpoints. Missing, unknown, duplicated, or wrong-type references produce no edge.
+Explicit particle IDs from upstream stages take precedence. When Stage 3 omits a `cause_particle_id` or `effect_particle_id`, the mapper can resolve its `cause` or `effect` text against an exact particle label (case-insensitive); duplicate labels are accepted only when `stage1.agent` and the particle's `Agent:` constraint identify one unique particle. Ambiguous labels and unknown or wrong-type explicit IDs produce no edge. Other edge endpoints are not inferred from array positions or constraint text.
 
 Stage 3 `structure` may include `agent_particle_id`, `cause_particle_id`, `effect_particle_id`, `context_particle_id`, and `event_particle_id` as applicable. Stage 4/5 may include `source_particle_id` and `target_particle_id`. Particle-level constraints use `target_particle_id` or `properties.event_particle_id`.
 

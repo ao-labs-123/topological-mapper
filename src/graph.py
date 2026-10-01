@@ -60,6 +60,55 @@ class GraphBuilder:
         return node
 
     @classmethod
+    def _resolve_stage3_particle_node(
+        cls,
+        graph: TopologicalGraph,
+        particle_map: Dict[str, Dict[str, Any]],
+        structure: Dict[str, Any],
+        id_key: str,
+        label_key: str,
+        expected_type: str,
+        agent: Any = None,
+    ) -> Optional[Node]:
+        particle_id = structure.get(id_key)
+        if isinstance(particle_id, str) and particle_id.strip():
+            return cls._resolve_particle_node(graph, particle_map, particle_id, expected_type)
+        if id_key in structure and particle_id not in (None, ""):
+            return None
+
+        label = structure.get(label_key)
+        if not isinstance(label, str) or not label.strip():
+            return None
+
+        candidates = []
+        for node in graph.nodes:
+            particle = particle_map.get(node.id, {})
+            particle_label = particle.get("label")
+            if (
+                particle.get("entity_type") == expected_type
+                and isinstance(particle_label, str)
+                and particle_label.strip().casefold() == label.strip().casefold()
+            ):
+                candidates.append(node)
+
+        if len(candidates) == 1:
+            return candidates[0]
+        if not isinstance(agent, str) or not agent.strip():
+            return None
+
+        matching_candidates = []
+        for node in candidates:
+            constraints = particle_map.get(node.id, {}).get("constraints") or []
+            if isinstance(constraints, str):
+                constraints = [constraints]
+            for constraint in constraints:
+                agent_match = re.search(r"\bAgent:\s*(.+?)(?:\s*\+\s*|$)", str(constraint))
+                if agent_match and agent_match.group(1).strip().casefold() == agent.strip().casefold():
+                    matching_candidates.append(node)
+                    break
+        return matching_candidates[0] if len(matching_candidates) == 1 else None
+
+    @classmethod
     def _add_particle_constraint_edges(cls, graph: TopologicalGraph, particle_data: List[Dict[str, Any]]) -> None:
         nodes_by_id = {node.id: node for node in graph.nodes}
 
@@ -182,6 +231,8 @@ class GraphBuilder:
                 "how": how_match.group(0) if how_match else None,
             }
             stage3_structure = (log_item.get("stage3") or {}).get("structure") or {}
+            stage1 = log_item.get("stage1") or {}
+            stage1_agent = stage1.get("agent") if isinstance(stage1, dict) else None
             relation = stage3_structure.get("relation")
             context_node = None
             if relation in ("Manner", "Temporal"):
@@ -192,8 +243,12 @@ class GraphBuilder:
                     relation,
                 )
             referenced_events = [
-                cls._resolve_particle_node(graph, particle_map, stage3_structure.get("cause_particle_id"), "Cause"),
-                cls._resolve_particle_node(graph, particle_map, stage3_structure.get("effect_particle_id"), "Effect"),
+                cls._resolve_stage3_particle_node(
+                    graph, particle_map, stage3_structure, "cause_particle_id", "cause", "Cause", stage1_agent
+                ),
+                cls._resolve_stage3_particle_node(
+                    graph, particle_map, stage3_structure, "effect_particle_id", "effect", "Effect", stage1_agent
+                ),
                 cls._resolve_particle_node(graph, particle_map, stage3_structure.get("event_particle_id"), "Effect"),
                 context_node,
             ]
@@ -228,23 +283,25 @@ class GraphBuilder:
                                 )
                             )
 
-                src = cls._resolve_particle_node(
-                    graph, particle_map, struct.get("cause_particle_id"), "Cause"
+                src = cls._resolve_stage3_particle_node(
+                    graph, particle_map, struct, "cause_particle_id", "cause", "Cause", stage1_agent
                 )
-                tgt = cls._resolve_particle_node(
-                    graph, particle_map, struct.get("effect_particle_id"), "Effect"
+                tgt = cls._resolve_stage3_particle_node(
+                    graph, particle_map, struct, "effect_particle_id", "effect", "Effect", stage1_agent
                 )
 
                 if src and tgt:
-                    graph.edges.append(
-                        Edge(
-                            id=f"e_cause_{src.id}_{tgt.id}",
-                            source=src.id,
-                            target=tgt.id,
-                            morphism_type="Cause",
-                            detail="Primary Cause"
+                    edge_id = f"e_cause_{src.id}_{tgt.id}"
+                    if not any(edge.id == edge_id for edge in graph.edges):
+                        graph.edges.append(
+                            Edge(
+                                id=edge_id,
+                                source=src.id,
+                                target=tgt.id,
+                                morphism_type="Cause",
+                                detail="Primary Cause"
+                            )
                         )
-                    )
 
         # ---------------------------------------------------------
         # 3. 明示的な Stage 4/5 ID 参照から Constraint 射を結線

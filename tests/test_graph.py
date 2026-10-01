@@ -226,6 +226,76 @@ def test_cause_edges_disambiguate_duplicate_cause_labels_by_constraints():
     }
 
 
+def test_cause_edges_resolve_stage3_labels_when_particle_ids_are_missing():
+    particle_data = [
+        {
+            "id": "cause-unknown",
+            "label": "you helped",
+            "entity_type": "Cause",
+            "constraints": ["Agent: Unknown + Marker: because"],
+        },
+        {
+            "id": "cause-i",
+            "label": "you helped",
+            "entity_type": "Cause",
+            "constraints": ["Agent: I + Marker: because"],
+        },
+        {
+            "id": "effect-unknown",
+            "label": "succeeded",
+            "entity_type": "Effect",
+            "constraints": ["Agent: Unknown + Marker: because"],
+        },
+        {
+            "id": "effect-i",
+            "label": "i succeeded",
+            "entity_type": "Effect",
+            "constraints": ["Agent: I + Marker: because"],
+        },
+    ]
+    log_data = [
+        {
+            "stage1": {"agent": "Unknown"},
+            "stage3": {"structure": {"cause": "you helped", "effect": "succeeded"}},
+        },
+        {
+            "stage1": {"agent": "I"},
+            "stage3": {"structure": {"cause": "you helped", "effect": "i succeeded"}},
+        },
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    cause_edges = [edge for edge in graph.edges if edge.morphism_type == "Cause"]
+    assert {(edge.source, edge.target) for edge in cause_edges} == {
+        ("cause-unknown", "effect-unknown"),
+        ("cause-i", "effect-i"),
+    }
+
+
+def test_invalid_explicit_stage3_particle_id_does_not_fall_back_to_label():
+    particle_data = [
+        {"id": "cause-1", "label": "missed the train", "entity_type": "Cause"},
+        {"id": "effect-1", "label": "arrived late", "entity_type": "Effect"},
+    ]
+    log_data = [
+        {
+            "stage3": {
+                "structure": {
+                    "cause": "missed the train",
+                    "effect": "arrived late",
+                    "cause_particle_id": "unknown-cause-id",
+                }
+            }
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    cause_edges = [edge for edge in graph.edges if edge.morphism_type == "Cause"]
+    assert cause_edges == []
+
+
 def test_log_context_is_added_to_referenced_events_not_node_at_same_index():
     particle_data = [
         {"id": "agent-i", "label": "I", "entity_type": "Agent"},
@@ -316,7 +386,7 @@ def test_stage4_constraint_uses_explicit_particle_ids():
     assert constraint_edges[0].target == "target-1"
 
 
-def test_stage3_labels_without_particle_ids_do_not_infer_edges():
+def test_stage3_labels_without_particle_ids_resolve_unique_particles():
     particle_data = [
         {"id": "agent-1", "label": "I", "entity_type": "Agent"},
         {
@@ -346,7 +416,10 @@ def test_stage3_labels_without_particle_ids_do_not_infer_edges():
 
     graph = GraphBuilder.build_graph(particle_data, log_data)
 
-    assert graph.edges == []
+    cause_edges = [edge for edge in graph.edges if edge.morphism_type == "Cause"]
+    assert len(cause_edges) == 1
+    assert cause_edges[0].source == "cause-1"
+    assert cause_edges[0].target == "effect-1"
 
 
 def test_manner_edge_uses_explicit_context_and_event_ids():

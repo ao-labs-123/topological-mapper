@@ -837,5 +837,38 @@
       }
     }
   ],
-  "edges": []
+  "edges": [
+    {
+      "id": "e_cause_p_cause_f04ee9_p_effect_2f0291",
+      "source": "p_cause_f04ee9",
+      "target": "p_effect_2f0291",
+      "morphism_type": "Cause",
+      "detail": "Primary Cause",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_cause_p_cause_6d70a2_p_effect_3cbf5d",
+      "source": "p_cause_6d70a2",
+      "target": "p_effect_3cbf5d",
+      "morphism_type": "Cause",
+      "detail": "Primary Cause",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_cause_p_cause_8b63a1_p_effect_2cb62e",
+      "source": "p_cause_8b63a1",
+      "target": "p_effect_2cb62e",
+      "morphism_type": "Cause",
+      "detail": "Primary Cause",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_cause_p_cause_ec78a6_p_effect_d5c396",
+      "source": "p_cause_ec78a6",
+      "target": "p_effect_d5c396",
+      "morphism_type": "Cause",
+      "detail": "Primary Cause",
+      "constraint_type": ""
+    }
+  ]
 }
