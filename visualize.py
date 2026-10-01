@@ -32,6 +32,9 @@ def visualize_topological_graph(
     for node in nodes:
         node_id = node.get("id")
         base_label = node.get("label", node_id)
+        if isinstance(node_id, str) and node_id.startswith("p_morphology_"):
+            continue
+
         category = node.get("category", "Entity")
         attrs = node.get("attributes", {})
 
