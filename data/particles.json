@@ -427,6 +427,16 @@
     "properties": {}
   },
   {
+    "id": "p_event_7f3a91",
+    "label": "He succeeded",
+    "entity_type": "Event",
+    "state": "determined",
+    "constraints": [
+      "Agent: He + Manner Marker: by"
+    ],
+    "properties": {}
+  },
+  {
     "id": "p_manner_e110cd",
     "label": "working hard",
     "entity_type": "Manner",
@@ -467,6 +477,16 @@
     "id": "p_effect_a62e4c",
     "label": "I was stressed",
     "entity_type": "Effect",
+    "state": "determined",
+    "constraints": [
+      "Agent: I + Temporal Marker: after"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_event_a62e4c",
+    "label": "I was stressed",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
       "Agent: I + Temporal Marker: after"

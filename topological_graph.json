@@ -528,6 +528,21 @@
       }
     },
     {
+      "id": "p_event_7f3a91",
+      "label": "He succeeded",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "He succeeded",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified",
+        "agent": "He"
+      }
+    },
+    {
       "id": "p_manner_e110cd",
       "label": "working hard",
       "category": "Event",
@@ -572,6 +587,21 @@
     },
     {
       "id": "p_effect_a62e4c",
+      "label": "I was stressed",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "who": "Unspecified",
+        "what": "I was stressed",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified",
+        "agent": "I"
+      }
+    },
+    {
+      "id": "p_event_a62e4c",
       "label": "I was stressed",
       "category": "Event",
       "resolution_state": "Determined",
