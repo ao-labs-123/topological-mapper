@@ -17,6 +17,17 @@ def visualize_topological_graph(
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
+    particles_path = os.path.join(os.path.dirname(json_path), "data", "particles.json")
+    constraint_labels = set()
+    if os.path.exists(particles_path):
+        with open(particles_path, "r", encoding="utf-8") as f:
+            particles = json.load(f)
+        for particle in particles:
+            constraints = particle.get("constraints") or []
+            if isinstance(constraints, str):
+                constraints = [constraints]
+            constraint_labels.update(str(value).strip() for value in constraints)
+
     # ネットワークグラフの初期化（有向グラフ）
     net = Network(
         height="800px", width="100%", directed=True, bgcolor="#222222", font_color="white"
@@ -32,7 +43,7 @@ def visualize_topological_graph(
     for node in nodes:
         node_id = node.get("id")
         base_label = node.get("label", node_id)
-        if isinstance(node_id, str) and node_id.startswith("p_morphology_"):
+        if base_label in constraint_labels:
             continue
 
         category = node.get("category", "Entity")
