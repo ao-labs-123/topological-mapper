@@ -30,7 +30,7 @@ Constructs category-theoretic graph networks [topological_graph.json](https://gi
 ## Overview
 
 This repository handles the **Topological Mapping** phase of the deterministic Cognitive OS.
-It ingests discrete `Particle` objects, maps them into **Entities** or **Events**, and automatically wires category-theoretic morphisms (**Cause**, **Action**, **Relation**, **Constraint**) between them.
+It ingests discrete `Particle` objects, maps them into **Entities** or **Events**, and automatically wires category-theoretic morphisms (**Cause**, **Action**, **Relation**,) between them.
 
 ### Pipeline Position
 
@@ -46,7 +46,7 @@ It ingests discrete `Particle` objects, maps them into **Entities** or **Events*
    └── 5W1H: Who                             └── 5W1H: What
               │                                         │
               ├─────────────── [ Morphisms ] ───────────┤
-              │        ( Action / Cause / Constraint )  │
+              │        ( Action / Cause )  │
               │                                         │
               └───────── [ Context Attributes ] ────────┘
                       ( When / Where / Why / How )
@@ -64,7 +64,7 @@ It ingests discrete `Particle` objects, maps them into **Entities** or **Events*
 #### Edges (Morphisms / Wires)
 * **`source`**: Domain object ID (始点オブジェクト)
 * **`target`**: Codomain object ID (終点オブジェクト)
-* **`morphism_type`**: Functional relation classification (`Action`, `Cause`, `Constraint`, `Relation`)
+* **`morphism_type`**: Functional relation classification (`Action`, `Cause`, `Relation`)
 * **`attributes` / `detail`**: Contextual bound conditions (`When`, `Where`, `Why`, `How`)
 
 ### Explicit Particle References
