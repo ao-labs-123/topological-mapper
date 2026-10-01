@@ -440,16 +440,6 @@
     }
   },
   {
-    "id": "p_event_1664ec",
-    "label": "He succeeded",
-    "entity_type": "Event",
-    "state": "determined",
-    "constraints": [
-      "Agent: He + Manner Marker: by"
-    ],
-    "properties": {}
-  },
-  {
     "id": "p_morphology_d37eb4",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
@@ -495,16 +485,6 @@
       "marker": "after",
       "event": "I was stressed"
     }
-  },
-  {
-    "id": "p_event_644b65",
-    "label": "I was stressed",
-    "entity_type": "Event",
-    "state": "determined",
-    "constraints": [
-      "Agent: I + Temporal Marker: after"
-    ],
-    "properties": {}
   },
   {
     "id": "p_morphology_8277c0",

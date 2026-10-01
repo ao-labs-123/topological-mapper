@@ -543,21 +543,6 @@
       }
     },
     {
-      "id": "p_event_1664ec",
-      "label": "He succeeded",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "He succeeded",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified",
-        "agent": "He"
-      }
-    },
-    {
       "id": "p_morphology_d37eb4",
       "label": "[Morphology: Base] → [Category: Action]",
       "category": "Event",
@@ -608,21 +593,6 @@
       "attributes": {
         "who": "Unspecified",
         "what": "the long meeting",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified",
-        "agent": "I"
-      }
-    },
-    {
-      "id": "p_event_644b65",
-      "label": "I was stressed",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "I was stressed",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
