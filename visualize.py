@@ -90,6 +90,9 @@ def visualize_topological_graph(
     # 2. Edges (Morphisms: Action / Cause / Constraint / Relation) の配置
     edges = data.get("edges", [])
     for edge in edges:
+        if edge.get("morphism_type") == "Constraint":
+            continue
+
         src = edge.get("source")
         tgt = edge.get("target")
         m_type = edge.get("morphism_type", "Relation")
