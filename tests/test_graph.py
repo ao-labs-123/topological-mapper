@@ -2,6 +2,14 @@ import json
 
 from src.graph import GraphBuilder
 from src.upstream_adapter import load_upstream_repo, normalize_upstream_payload
+from visualize import _is_unknown_agent_node
+
+
+def test_visualizer_hides_unknown_agent_nodes_only():
+    assert _is_unknown_agent_node({"category": "Entity", "label": "Unknown"})
+    assert _is_unknown_agent_node({"category": "Entity", "label": "  "})
+    assert not _is_unknown_agent_node({"category": "Entity", "label": "I"})
+    assert not _is_unknown_agent_node({"category": "Event", "label": "Unknown"})
 
 
 def test_upstream_stage_data_is_normalized_for_stage3_4_5():

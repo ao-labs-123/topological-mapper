@@ -5,6 +5,13 @@ import sys
 from pyvis.network import Network
 
 
+def _is_unknown_agent_node(node):
+    if node.get("category") != "Entity":
+        return False
+    label = str(node.get("label", "")).strip().casefold()
+    return label in {"", "unknown", "none", "null"}
+
+
 def visualize_topological_graph(
     json_path="topological_graph.json", output_html="index.html"
 ):
@@ -41,8 +48,13 @@ def visualize_topological_graph(
 
     # 1. Nodes (Objects: Entity / Event) の配置
     nodes = data.get("nodes", [])
+    hidden_node_ids = {
+        node.get("id") for node in nodes if _is_unknown_agent_node(node)
+    }
     for node in nodes:
         node_id = node.get("id")
+        if node_id in hidden_node_ids:
+            continue
         base_label = node.get("label", node_id)
         if base_label in constraint_labels:
             continue
@@ -123,6 +135,8 @@ def visualize_topological_graph(
 
         src = edge.get("source")
         tgt = edge.get("target")
+        if src in hidden_node_ids or tgt in hidden_node_ids:
+            continue
         m_type = edge.get("morphism_type", "Relation")
         detail = edge.get("detail", "")
         how = edge.get("how", "")
