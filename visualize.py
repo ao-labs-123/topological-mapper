@@ -66,7 +66,7 @@ def visualize_topological_graph(
         stage5_process = attrs.get("stage5_process", "")
         stage5_category = re.search(r"\[Category:\s*([^\]]+)\]", stage5_process)
         if stage5_category:
-            display_label += f"\n[S5: {stage5_category.group(1).strip()}]"
+            display_label += f" [S5: {stage5_category.group(1).strip()}]"
         has_stage5 = bool(stage5_process or attrs.get("stage5_result"))
 
 

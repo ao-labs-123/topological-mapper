@@ -1,6 +1,6 @@
 [
   {
-    "id": "p_agent_c7c1d2",
+    "id": "p_agent_ae6e3e",
     "label": "He",
     "entity_type": "Agent",
     "state": "determined",
@@ -12,7 +12,7 @@
     }
   },
   {
-    "id": "p_cause_2d92c5",
+    "id": "p_cause_59f228",
     "label": "i helped",
     "entity_type": "Cause",
     "state": "determined",
@@ -22,7 +22,7 @@
     "properties": {}
   },
   {
-    "id": "p_effect_ecaf45",
+    "id": "p_effect_4ff001",
     "label": "he succeeded",
     "entity_type": "Effect",
     "state": "determined",
@@ -32,7 +32,7 @@
     "properties": {}
   },
   {
-    "id": "p_morphology_9b9513",
+    "id": "p_morphology_6d2380",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -44,7 +44,7 @@
     }
   },
   {
-    "id": "p_agent_aef650",
+    "id": "p_agent_cc7b83",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -56,7 +56,7 @@
     }
   },
   {
-    "id": "p_morphology_0c00b3",
+    "id": "p_morphology_2d39a9",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -68,7 +68,7 @@
     }
   },
   {
-    "id": "p_agent_0e4ca4",
+    "id": "p_agent_9caa20",
     "label": "He/She/They",
     "entity_type": "Agent",
     "state": "determined",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "id": "p_morphology_443b22",
+    "id": "p_morphology_11f0df",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -92,7 +92,7 @@
     }
   },
   {
-    "id": "p_agent_caf603",
+    "id": "p_agent_47a64c",
     "label": "you",
     "entity_type": "Agent",
     "state": "determined",
@@ -104,7 +104,7 @@
     }
   },
   {
-    "id": "p_relative_clause_8a498c",
+    "id": "p_relative_clause_63abf6",
     "label": "Defining clause",
     "entity_type": "RelativeClause",
     "state": "determined",
@@ -117,19 +117,19 @@
     }
   },
   {
-    "id": "p_morphology_f498de",
-    "label": "[Morphology: Base] → [Category: Action]",
+    "id": "p_morphology_6fb551",
+    "label": "[Passive: be + V-en + by]",
     "entity_type": "Morphology",
     "state": "determined",
     "constraints": [
-      "[Morphology: Base] → [Category: Action]"
+      "[Passive: be + V-en + by]"
     ],
     "properties": {
-      "result": "General action statement."
+      "result": "Actor: Unknown / Receiver: It."
     }
   },
   {
-    "id": "p_agent_5a7bbb",
+    "id": "p_agent_c08b69",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -141,7 +141,7 @@
     }
   },
   {
-    "id": "p_morphology_bc8649",
+    "id": "p_morphology_c9b328",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -153,7 +153,7 @@
     }
   },
   {
-    "id": "p_agent_e410ef",
+    "id": "p_agent_81c2c0",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -165,7 +165,7 @@
     }
   },
   {
-    "id": "p_morphology_d0f608",
+    "id": "p_morphology_45f2e9",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -177,7 +177,7 @@
     }
   },
   {
-    "id": "p_agent_1e4d8c",
+    "id": "p_agent_4fda99",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "determined",
@@ -189,7 +189,7 @@
     }
   },
   {
-    "id": "p_cause_f090aa",
+    "id": "p_cause_b84cd9",
     "label": "you helped",
     "entity_type": "Cause",
     "state": "determined",
@@ -199,7 +199,7 @@
     "properties": {}
   },
   {
-    "id": "p_effect_a11e90",
+    "id": "p_effect_f9f97a",
     "label": "succeeded",
     "entity_type": "Effect",
     "state": "determined",
@@ -209,7 +209,7 @@
     "properties": {}
   },
   {
-    "id": "p_morphology_21b51b",
+    "id": "p_morphology_56c307",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -221,7 +221,7 @@
     }
   },
   {
-    "id": "p_agent_0cabd5",
+    "id": "p_agent_2fd2fd",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "determined",
@@ -233,7 +233,7 @@
     }
   },
   {
-    "id": "p_morphology_529ce9",
+    "id": "p_morphology_a6847a",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -245,7 +245,7 @@
     }
   },
   {
-    "id": "p_agent_11f6ef",
+    "id": "p_agent_10d884",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "determined",
@@ -257,7 +257,7 @@
     }
   },
   {
-    "id": "p_morphology_772a0d",
+    "id": "p_morphology_b98484",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -269,7 +269,7 @@
     }
   },
   {
-    "id": "p_agent_d34949",
+    "id": "p_agent_3e8cc5",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "determined",
@@ -281,7 +281,7 @@
     }
   },
   {
-    "id": "p_morphology_bc251a",
+    "id": "p_morphology_6ef79b",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -293,7 +293,7 @@
     }
   },
   {
-    "id": "p_agent_c63d77",
+    "id": "p_agent_250a3c",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "determined",
@@ -305,7 +305,7 @@
     }
   },
   {
-    "id": "p_morphology_4374f0",
+    "id": "p_morphology_c61dbf",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -317,7 +317,7 @@
     }
   },
   {
-    "id": "p_agent_6e3d7c",
+    "id": "p_agent_1ac6d8",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -329,7 +329,7 @@
     }
   },
   {
-    "id": "p_cause_8674cc",
+    "id": "p_cause_4201b5",
     "label": "the project",
     "entity_type": "Cause",
     "state": "determined",
@@ -339,7 +339,7 @@
     "properties": {}
   },
   {
-    "id": "p_effect_ff7567",
+    "id": "p_effect_3ec356",
     "label": "i'm stressed",
     "entity_type": "Effect",
     "state": "determined",
@@ -349,7 +349,7 @@
     "properties": {}
   },
   {
-    "id": "p_morphology_0f8e4c",
+    "id": "p_morphology_cfb21b",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -361,7 +361,7 @@
     }
   },
   {
-    "id": "p_agent_6a1786",
+    "id": "p_agent_8c91c0",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -373,7 +373,7 @@
     }
   },
   {
-    "id": "p_cause_319a7e",
+    "id": "p_cause_bbef75",
     "label": "you helped",
     "entity_type": "Cause",
     "state": "determined",
@@ -383,7 +383,7 @@
     "properties": {}
   },
   {
-    "id": "p_effect_4329b4",
+    "id": "p_effect_a89adb",
     "label": "i succeeded",
     "entity_type": "Effect",
     "state": "determined",
@@ -393,7 +393,7 @@
     "properties": {}
   },
   {
-    "id": "p_morphology_021a90",
+    "id": "p_morphology_3f520b",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -405,7 +405,7 @@
     }
   },
   {
-    "id": "p_agent_1da7f0",
+    "id": "p_agent_a28b7d",
     "label": "He",
     "entity_type": "Agent",
     "state": "determined",
@@ -417,7 +417,7 @@
     }
   },
   {
-    "id": "p_effect_ebdbdf",
+    "id": "p_effect_922710",
     "label": "He succeeded",
     "entity_type": "Effect",
     "state": "determined",
@@ -427,7 +427,7 @@
     "properties": {}
   },
   {
-    "id": "p_manner_f1a670",
+    "id": "p_manner_0d33f8",
     "label": "working hard",
     "entity_type": "Manner",
     "state": "determined",
@@ -440,7 +440,7 @@
     }
   },
   {
-    "id": "p_morphology_d37eb4",
+    "id": "p_morphology_edb1e4",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -452,7 +452,7 @@
     }
   },
   {
-    "id": "p_agent_dd52db",
+    "id": "p_agent_9b567c",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -464,7 +464,7 @@
     }
   },
   {
-    "id": "p_effect_87c9ac",
+    "id": "p_effect_deeca7",
     "label": "I was stressed",
     "entity_type": "Effect",
     "state": "determined",
@@ -474,7 +474,7 @@
     "properties": {}
   },
   {
-    "id": "p_temporal_fbce8c",
+    "id": "p_temporal_90ff49",
     "label": "the long meeting",
     "entity_type": "Temporal",
     "state": "determined",
@@ -487,19 +487,19 @@
     }
   },
   {
-    "id": "p_morphology_8277c0",
-    "label": "[Morphology: Base] → [Category: Action]",
+    "id": "p_morphology_93a05b",
+    "label": "[Passive: be + V-en + by]",
     "entity_type": "Morphology",
     "state": "determined",
     "constraints": [
-      "[Morphology: Base] → [Category: Action]"
+      "[Passive: be + V-en + by]"
     ],
     "properties": {
-      "result": "General action statement."
+      "result": "Actor: Unknown / Receiver: I."
     }
   },
   {
-    "id": "p_agent_19385b",
+    "id": "p_agent_3bed4f",
     "label": "The report",
     "entity_type": "Agent",
     "state": "determined",
@@ -511,7 +511,7 @@
     }
   },
   {
-    "id": "p_relative_clause_97b777",
+    "id": "p_relative_clause_1e6e5f",
     "label": "Non-defining clause",
     "entity_type": "RelativeClause",
     "state": "determined",
@@ -524,7 +524,7 @@
     }
   },
   {
-    "id": "p_morphology_0a6842",
+    "id": "p_morphology_fcb80f",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -536,7 +536,7 @@
     }
   },
   {
-    "id": "p_agent_ffeab6",
+    "id": "p_agent_eaa129",
     "label": "The report",
     "entity_type": "Agent",
     "state": "determined",
@@ -548,7 +548,7 @@
     }
   },
   {
-    "id": "p_relative_clause_d243d9",
+    "id": "p_relative_clause_dd2ec7",
     "label": "Defining clause",
     "entity_type": "RelativeClause",
     "state": "determined",
@@ -561,7 +561,7 @@
     }
   },
   {
-    "id": "p_morphology_509466",
+    "id": "p_morphology_bed3ab",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -573,7 +573,7 @@
     }
   },
   {
-    "id": "p_agent_b2105c",
+    "id": "p_agent_2b5f73",
     "label": "The office",
     "entity_type": "Agent",
     "state": "determined",
@@ -585,19 +585,19 @@
     }
   },
   {
-    "id": "p_morphology_2e50b3",
-    "label": "[Morphology: Base] → [Category: Action]",
+    "id": "p_morphology_909990",
+    "label": "[Passive: be + V-en + by]",
     "entity_type": "Morphology",
     "state": "determined",
     "constraints": [
-      "[Morphology: Base] → [Category: Action]"
+      "[Passive: be + V-en + by]"
     ],
     "properties": {
-      "result": "General action statement."
+      "result": "Actor: Unknown / Receiver: The office where I wrote the report."
     }
   },
   {
-    "id": "p_agent_476555",
+    "id": "p_agent_a89400",
     "label": "The day",
     "entity_type": "Agent",
     "state": "determined",
@@ -609,19 +609,19 @@
     }
   },
   {
-    "id": "p_morphology_79ac84",
-    "label": "[Morphology: Base] → [Category: Action]",
+    "id": "p_morphology_95d526",
+    "label": "[Passive: be + V-en + by]",
     "entity_type": "Morphology",
     "state": "determined",
     "constraints": [
-      "[Morphology: Base] → [Category: Action]"
+      "[Passive: be + V-en + by]"
     ],
     "properties": {
-      "result": "General action statement."
+      "result": "Actor: Unknown / Receiver: The day where he succeeded."
     }
   },
   {
-    "id": "p_agent_954680",
+    "id": "p_agent_4d2b94",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -633,7 +633,7 @@
     }
   },
   {
-    "id": "p_morphology_24eeb7",
+    "id": "p_morphology_bccba0",
     "label": "[Morphology: Base] → [Category: Stative]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -645,7 +645,7 @@
     }
   },
   {
-    "id": "p_agent_b95fa0",
+    "id": "p_agent_d9467b",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -657,7 +657,7 @@
     }
   },
   {
-    "id": "p_morphology_f07dc0",
+    "id": "p_morphology_e4acd9",
     "label": "[Morphology: be + V-ing] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -669,7 +669,7 @@
     }
   },
   {
-    "id": "p_agent_518f03",
+    "id": "p_agent_f928ae",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -681,7 +681,7 @@
     }
   },
   {
-    "id": "p_morphology_730e35",
+    "id": "p_morphology_74d760",
     "label": "[Passive: be + V-en + by]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -693,7 +693,7 @@
     }
   },
   {
-    "id": "p_agent_2bc40a",
+    "id": "p_agent_1ef44d",
     "label": "The report",
     "entity_type": "Agent",
     "state": "determined",
@@ -705,7 +705,51 @@
     }
   },
   {
-    "id": "p_morphology_695b36",
+    "id": "p_morphology_654949",
+    "label": "[Passive: be + V-en + by]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Passive: be + V-en + by]"
+    ],
+    "properties": {
+      "result": "Actor: Unknown / Receiver: The report."
+    }
+  },
+  {
+    "id": "p_agent_d2dd4f",
+    "label": "He",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_cause_abbe7f",
+    "label": "i helped",
+    "entity_type": "Cause",
+    "state": "determined",
+    "constraints": [
+      "Agent: He + Marker: because"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_effect_f84913",
+    "label": "he succeeded",
+    "entity_type": "Effect",
+    "state": "determined",
+    "constraints": [
+      "Agent: He + Marker: because"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_morphology_690738",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -714,6 +758,679 @@
     ],
     "properties": {
       "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_414ae7",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Psychological Verb + Null Subject"
+    ],
+    "properties": {
+      "decision": "Default: Speaker"
+    }
+  },
+  {
+    "id": "p_morphology_a060da",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_a12207",
+    "label": "He/She/They",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Psychological Verb + Null Subject + Evidential Marker"
+    ],
+    "properties": {
+      "decision": "Override: 3rd Party"
+    }
+  },
+  {
+    "id": "p_morphology_481a4f",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_a042e0",
+    "label": "you",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Formal Subject Detected (It ... that)"
+    ],
+    "properties": {
+      "decision": "Priority: True Subject in Clause"
+    }
+  },
+  {
+    "id": "p_relative_clause_eebe70",
+    "label": "Defining clause",
+    "entity_type": "RelativeClause",
+    "state": "determined",
+    "constraints": [
+      "Defining clause"
+    ],
+    "properties": {
+      "decision": "Essential",
+      "result": "AI defines the primary identity of 'It is required'."
+    }
+  },
+  {
+    "id": "p_morphology_f3366b",
+    "label": "[Passive: be + V-en + by]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Passive: be + V-en + by]"
+    ],
+    "properties": {
+      "result": "Actor: Unknown / Receiver: It."
+    }
+  },
+  {
+    "id": "p_agent_bfee25",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_morphology_4e19ac",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_0dc980",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_morphology_09db58",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_03d24b",
+    "label": "Unknown",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Standard"
+    ],
+    "properties": {
+      "decision": "None"
+    }
+  },
+  {
+    "id": "p_cause_5a38f3",
+    "label": "you helped",
+    "entity_type": "Cause",
+    "state": "determined",
+    "constraints": [
+      "Agent: Unknown + Marker: because"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_effect_f994d3",
+    "label": "succeeded",
+    "entity_type": "Effect",
+    "state": "determined",
+    "constraints": [
+      "Agent: Unknown + Marker: because"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_morphology_ffb2ba",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_fc8406",
+    "label": "Unknown",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Standard"
+    ],
+    "properties": {
+      "decision": "None"
+    }
+  },
+  {
+    "id": "p_morphology_24b05a",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_b6ca1c",
+    "label": "Unknown",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Standard"
+    ],
+    "properties": {
+      "decision": "None"
+    }
+  },
+  {
+    "id": "p_morphology_6e1ded",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_444d3d",
+    "label": "Unknown",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Standard"
+    ],
+    "properties": {
+      "decision": "None"
+    }
+  },
+  {
+    "id": "p_morphology_41846d",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_6e3b47",
+    "label": "Unknown",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Standard"
+    ],
+    "properties": {
+      "decision": "None"
+    }
+  },
+  {
+    "id": "p_morphology_202099",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_6f0ac2",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_cause_61fca4",
+    "label": "the project",
+    "entity_type": "Cause",
+    "state": "determined",
+    "constraints": [
+      "Agent: I + Marker: due to"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_effect_301b2e",
+    "label": "i'm stressed",
+    "entity_type": "Effect",
+    "state": "determined",
+    "constraints": [
+      "Agent: I + Marker: due to"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_morphology_918003",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_aa1a78",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_cause_1acb1a",
+    "label": "you helped",
+    "entity_type": "Cause",
+    "state": "determined",
+    "constraints": [
+      "Agent: I + Marker: because"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_effect_91c6ba",
+    "label": "i succeeded",
+    "entity_type": "Effect",
+    "state": "determined",
+    "constraints": [
+      "Agent: I + Marker: because"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_morphology_e1a507",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_078632",
+    "label": "He",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_effect_9e3337",
+    "label": "He succeeded",
+    "entity_type": "Effect",
+    "state": "determined",
+    "constraints": [
+      "Agent: He + Manner Marker: by"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_manner_b6b148",
+    "label": "working hard",
+    "entity_type": "Manner",
+    "state": "determined",
+    "constraints": [
+      "Agent: He + Manner Marker: by"
+    ],
+    "properties": {
+      "marker": "by",
+      "event": "He succeeded"
+    }
+  },
+  {
+    "id": "p_morphology_39cff2",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_6bd1a5",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_effect_608dcd",
+    "label": "I was stressed",
+    "entity_type": "Effect",
+    "state": "determined",
+    "constraints": [
+      "Agent: I + Temporal Marker: after"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_temporal_cb838a",
+    "label": "the long meeting",
+    "entity_type": "Temporal",
+    "state": "determined",
+    "constraints": [
+      "Agent: I + Temporal Marker: after"
+    ],
+    "properties": {
+      "marker": "after",
+      "event": "I was stressed"
+    }
+  },
+  {
+    "id": "p_morphology_500e50",
+    "label": "[Passive: be + V-en + by]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Passive: be + V-en + by]"
+    ],
+    "properties": {
+      "result": "Actor: Unknown / Receiver: I."
+    }
+  },
+  {
+    "id": "p_agent_0ce75a",
+    "label": "The report",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_relative_clause_e51d3e",
+    "label": "Non-defining clause",
+    "entity_type": "RelativeClause",
+    "state": "determined",
+    "constraints": [
+      "Non-defining clause"
+    ],
+    "properties": {
+      "decision": "Supplementary",
+      "result": "AI treats 'was long' as an attribute, not the primary identifier."
+    }
+  },
+  {
+    "id": "p_morphology_4d4492",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_4ed85f",
+    "label": "The report",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_relative_clause_5f9d9e",
+    "label": "Defining clause",
+    "entity_type": "RelativeClause",
+    "state": "determined",
+    "constraints": [
+      "Defining clause"
+    ],
+    "properties": {
+      "decision": "Essential",
+      "result": "AI links 'The report' (Agent) to the specific the report as a defining marker."
+    }
+  },
+  {
+    "id": "p_morphology_a4ecfc",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "General action statement."
+    }
+  },
+  {
+    "id": "p_agent_2f3096",
+    "label": "The office",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_morphology_f9f3a2",
+    "label": "[Passive: be + V-en + by]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Passive: be + V-en + by]"
+    ],
+    "properties": {
+      "result": "Actor: Unknown / Receiver: The office where I wrote the report."
+    }
+  },
+  {
+    "id": "p_agent_5668a9",
+    "label": "The day",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_morphology_e65497",
+    "label": "[Passive: be + V-en + by]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Passive: be + V-en + by]"
+    ],
+    "properties": {
+      "result": "Actor: Unknown / Receiver: The day where he succeeded."
+    }
+  },
+  {
+    "id": "p_agent_f80088",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_morphology_f6ac87",
+    "label": "[Morphology: Base] → [Category: Stative]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Stative]"
+    ],
+    "properties": {
+      "result": "Possession status."
+    }
+  },
+  {
+    "id": "p_agent_3b5da7",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_morphology_730a0c",
+    "label": "[Morphology: be + V-ing] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: be + V-ing] → [Category: Action]"
+    ],
+    "properties": {
+      "result": "Active event participation."
+    }
+  },
+  {
+    "id": "p_agent_a2ec93",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_morphology_7dd5ec",
+    "label": "[Passive: be + V-en + by]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Passive: be + V-en + by]"
+    ],
+    "properties": {
+      "result": "Actor: him / Receiver: I."
+    }
+  },
+  {
+    "id": "p_agent_63b7e1",
+    "label": "The report",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_morphology_22223b",
+    "label": "[Passive: be + V-en + by]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Passive: be + V-en + by]"
+    ],
+    "properties": {
+      "result": "Actor: Unknown / Receiver: The report."
     }
   }
 ]
