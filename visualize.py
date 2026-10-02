@@ -109,9 +109,11 @@ def visualize_topological_graph(
             display_label = base_label
 
         stage5_process = attrs.get("stage5_process", "")
-        stage5_category = re.search(r"\[Category:\s*([^\]]+)\]", stage5_process)
-        if stage5_category:
-            display_label += f" [S5: {stage5_category.group(1).strip()}]"
+        stage5_category = (
+            re.search(r"\[Category:\s*([^\]]+)\]", stage5_process)
+            if isinstance(stage5_process, str)
+            else None
+        )
         has_stage5 = bool(stage5_process or attrs.get("stage5_result"))
 
 
@@ -119,8 +121,15 @@ def visualize_topological_graph(
         attr_lines = [
             f"<b>{k}</b>: {v}"
             for k, v in attrs.items()
-            if k != "agent" and v and v != "Unspecified"
+            if k not in {"agent", "stage5_process", "stage5_result"}
+            and v
+            and v != "Unspecified"
         ]
+        if stage5_category:
+            attr_lines.append(f"<b>Category</b>: {stage5_category.group(1).strip()}")
+        stage5_result = attrs.get("stage5_result")
+        if stage5_result and stage5_result != "Unspecified":
+            attr_lines.append(f"<b>Interpretation</b>: {stage5_result}")
         attr_html = "<br>".join(attr_lines)
         group_note = (
             "<br><i>Grouped by matching label only; identity is unresolved.</i>"

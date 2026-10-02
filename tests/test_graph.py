@@ -2,7 +2,11 @@ import json
 
 from src.graph import GraphBuilder
 from src.upstream_adapter import load_upstream_repo, normalize_upstream_payload
-from visualize import _group_agent_nodes, _is_unknown_agent_node
+from visualize import (
+    _group_agent_nodes,
+    _is_unknown_agent_node,
+    visualize_topological_graph,
+)
 
 
 def test_visualizer_hides_unknown_agent_nodes_only():
@@ -26,6 +30,44 @@ def test_visualizer_groups_matching_agent_labels_without_claiming_identity():
     assert node_id_map["agent-2"] == "agent-1"
     assert "agent-unknown" not in node_id_map
     assert grouped_counts["agent-1"] == 2
+
+
+def test_visualizer_shows_stage5_details_in_tooltip_not_node_label(tmp_path):
+    graph_path = tmp_path / "graph.json"
+    output_path = tmp_path / "index.html"
+    graph_path.write_text(
+        json.dumps(
+            {
+                "nodes": [
+                    {
+                        "id": "event-1",
+                        "label": "he succeeded",
+                        "category": "Event",
+                        "attributes": {
+                            "what": "he succeeded",
+                            "stage5_process": "[Morphology: Base] -> [Category: Action]",
+                            "stage5_result": "General action statement.",
+                        },
+                    }
+                ],
+                "edges": [],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    visualize_topological_graph(str(graph_path), str(output_path))
+    html = (
+        output_path.read_text(encoding="utf-8")
+        .replace("\\u003c", "<")
+        .replace("\\u003e", ">")
+    )
+
+    assert "he succeeded [S5: Action]" not in html
+    assert "Category</b>: Action" in html
+    assert "Interpretation</b>: General action statement." in html
+    assert "stage5_process" not in html
+    assert "stage5_result" not in html
 
 
 def test_upstream_stage_data_is_normalized_for_stage3_4_5():
