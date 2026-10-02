@@ -2,7 +2,7 @@ import json
 
 from src.graph import GraphBuilder
 from src.upstream_adapter import load_upstream_repo, normalize_upstream_payload
-from visualize import _is_unknown_agent_node
+from visualize import _group_agent_nodes, _is_unknown_agent_node
 
 
 def test_visualizer_hides_unknown_agent_nodes_only():
@@ -10,6 +10,22 @@ def test_visualizer_hides_unknown_agent_nodes_only():
     assert _is_unknown_agent_node({"category": "Entity", "label": "  "})
     assert not _is_unknown_agent_node({"category": "Entity", "label": "I"})
     assert not _is_unknown_agent_node({"category": "Event", "label": "Unknown"})
+
+
+def test_visualizer_groups_matching_agent_labels_without_claiming_identity():
+    nodes = [
+        {"id": "agent-1", "category": "Entity", "label": "I"},
+        {"id": "agent-2", "category": "Entity", "label": " i "},
+        {"id": "agent-unknown", "category": "Entity", "label": "Unknown"},
+        {"id": "event-1", "category": "Event", "label": "I arrived"},
+    ]
+
+    display_nodes, node_id_map, grouped_counts = _group_agent_nodes(nodes)
+
+    assert [node["id"] for node in display_nodes] == ["agent-1", "event-1"]
+    assert node_id_map["agent-2"] == "agent-1"
+    assert "agent-unknown" not in node_id_map
+    assert grouped_counts["agent-1"] == 2
 
 
 def test_upstream_stage_data_is_normalized_for_stage3_4_5():

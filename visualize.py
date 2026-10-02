@@ -12,6 +12,39 @@ def _is_unknown_agent_node(node):
     return label in {"", "unknown", "none", "null"}
 
 
+def _group_agent_nodes(nodes):
+    display_nodes = []
+    node_id_map = {}
+    grouped_agent_counts = {}
+    agent_groups = {}
+
+    for node in nodes:
+        node_id = node.get("id")
+        if _is_unknown_agent_node(node):
+            continue
+
+        if node.get("category") != "Entity":
+            display_nodes.append(node)
+            node_id_map[node_id] = node_id
+            continue
+
+        label = str(node.get("label", "")).strip()
+        group_key = label.casefold()
+        representative = agent_groups.get(group_key)
+        if representative is None:
+            representative = dict(node)
+            agent_groups[group_key] = representative
+            display_nodes.append(representative)
+            grouped_agent_counts[node_id] = 1
+            node_id_map[node_id] = node_id
+        else:
+            representative_id = representative.get("id")
+            grouped_agent_counts[representative_id] += 1
+            node_id_map[node_id] = representative_id
+
+    return display_nodes, node_id_map, grouped_agent_counts
+
+
 def visualize_topological_graph(
     json_path="topological_graph.json", output_html="index.html"
 ):
@@ -47,15 +80,15 @@ def visualize_topological_graph(
     )
 
     # 1. Nodes (Objects: Entity / Event) の配置
-    nodes = data.get("nodes", [])
-    hidden_node_ids = {
-        node.get("id") for node in nodes if _is_unknown_agent_node(node)
-    }
+    nodes, node_id_map, grouped_agent_counts = _group_agent_nodes(
+        data.get("nodes", [])
+    )
     for node in nodes:
         node_id = node.get("id")
-        if node_id in hidden_node_ids:
-            continue
         base_label = node.get("label", node_id)
+        grouped_count = grouped_agent_counts.get(node_id, 1)
+        if grouped_count > 1:
+            base_label = f"{base_label} ({grouped_count} mentions)"
         if base_label in constraint_labels:
             continue
 
@@ -89,12 +122,17 @@ def visualize_topological_graph(
             if k != "agent" and v and v != "Unspecified"
         ]
         attr_html = "<br>".join(attr_lines)
+        group_note = (
+            "<br><i>Grouped by matching label only; identity is unresolved.</i>"
+            if grouped_count > 1
+            else ""
+        )
 
         title_html = (
             f"<div style='font-family: sans-serif;'>"
             f"<b>{base_label}</b> <i>({category})</i><br>"
             f"<hr style='margin: 4px 0; border-color: #555;'>"
-            f"{attr_html if attr_html else 'No extra context'}"
+            f"{attr_html if attr_html else 'No extra context'}{group_note}"
             f"</div>"
         )
 
@@ -129,17 +167,22 @@ def visualize_topological_graph(
 
     # 2. Edges (Morphisms: Action / Cause / Constraint / Relation) の配置
     edges = data.get("edges", [])
+    displayed_edges = set()
     for edge in edges:
         if edge.get("morphism_type") == "Constraint":
             continue
 
-        src = edge.get("source")
-        tgt = edge.get("target")
-        if src in hidden_node_ids or tgt in hidden_node_ids:
+        src = node_id_map.get(edge.get("source"))
+        tgt = node_id_map.get(edge.get("target"))
+        if src is None or tgt is None or src == tgt:
             continue
         m_type = edge.get("morphism_type", "Relation")
         detail = edge.get("detail", "")
         how = edge.get("how", "")
+        edge_key = (src, tgt, m_type, detail, how)
+        if edge_key in displayed_edges:
+            continue
+        displayed_edges.add(edge_key)
 
         # ホバー時の説明
         edge_title = f"Type: {m_type}"
@@ -152,7 +195,6 @@ def visualize_topological_graph(
         color_map = {
             "Action": "#2ECC71",      # 緑: 動作・作用
             "Cause": "#E74C3C",       # 赤: 因果関係
-            "Constraint": "#FFD166",  # 黄: 制約・属性
             "Relation": "#9B59B6",    # 紫: 一般関係
             "Manner": "#3498DB",
             "Temporal": "#E67E22",
