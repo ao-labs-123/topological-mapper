@@ -12,37 +12,19 @@ def _is_unknown_agent_node(node):
     return label in {"", "unknown", "none", "null"}
 
 
-def _group_agent_nodes(nodes):
+def _filter_unknown_agent_nodes(nodes):
     display_nodes = []
     node_id_map = {}
-    grouped_agent_counts = {}
-    agent_groups = {}
 
     for node in nodes:
         node_id = node.get("id")
         if _is_unknown_agent_node(node):
             continue
 
-        if node.get("category") != "Entity":
-            display_nodes.append(node)
-            node_id_map[node_id] = node_id
-            continue
+        display_nodes.append(node)
+        node_id_map[node_id] = node_id
 
-        label = str(node.get("label", "")).strip()
-        group_key = label.casefold()
-        representative = agent_groups.get(group_key)
-        if representative is None:
-            representative = dict(node)
-            agent_groups[group_key] = representative
-            display_nodes.append(representative)
-            grouped_agent_counts[node_id] = 1
-            node_id_map[node_id] = node_id
-        else:
-            representative_id = representative.get("id")
-            grouped_agent_counts[representative_id] += 1
-            node_id_map[node_id] = representative_id
-
-    return display_nodes, node_id_map, grouped_agent_counts
+    return display_nodes, node_id_map
 
 
 def visualize_topological_graph(
@@ -80,15 +62,12 @@ def visualize_topological_graph(
     )
 
     # 1. Nodes (Objects: Entity / Event) の配置
-    nodes, node_id_map, grouped_agent_counts = _group_agent_nodes(
+    nodes, node_id_map = _filter_unknown_agent_nodes(
         data.get("nodes", [])
     )
     for node in nodes:
         node_id = node.get("id")
         base_label = node.get("label", node_id)
-        grouped_count = grouped_agent_counts.get(node_id, 1)
-        if grouped_count > 1:
-            base_label = f"{base_label} ({grouped_count} mentions)"
         if base_label in constraint_labels:
             continue
 
@@ -131,17 +110,11 @@ def visualize_topological_graph(
         if stage5_result and stage5_result != "Unspecified":
             attr_lines.append(f"<b>Interpretation</b>: {stage5_result}")
         attr_html = "<br>".join(attr_lines)
-        group_note = (
-            "<br><i>Grouped by matching label only; identity is unresolved.</i>"
-            if grouped_count > 1
-            else ""
-        )
-
         title_html = (
             f"<div style='font-family: sans-serif;'>"
             f"<b>{base_label}</b> <i>({category})</i><br>"
             f"<hr style='margin: 4px 0; border-color: #555;'>"
-            f"{attr_html if attr_html else 'No extra context'}{group_note}"
+            f"{attr_html if attr_html else 'No extra context'}"
             f"</div>"
         )
 
