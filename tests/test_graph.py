@@ -133,6 +133,56 @@ def test_upstream_repo_directory_with_data_log_and_particles_is_supported(tmp_pa
     assert any(edge.morphism_type == "Constraint" for edge in graph.edges)
 
 
+def test_new_stage_layout_builds_cause_and_stage5_frame_without_null_errors():
+    particle_data = [
+        {"id": "agent-1", "label": "He", "entity_type": "Agent"},
+        {"id": "cause-1", "label": "I helped", "entity_type": "Cause"},
+        {"id": "effect-1", "label": "He succeeded", "entity_type": "Effect"},
+    ]
+    log_data = [
+        {
+            "stage1": {"agent": "He"},
+            "stage2": {
+                "structure": {
+                    "relation": "CauseEffect",
+                    "cause": "I helped",
+                    "effect": "He succeeded",
+                    "cause_particle_id": "stale-cause-id",
+                    "effect_particle_id": "stale-effect-id",
+                }
+            },
+            "stage3": {"structure": None},
+            "stage4": {"structure": {"form": "Base", "verb": "succeeded"}},
+            "stage5": {
+                "frame": {
+                    "who": "He",
+                    "what": "succeeded",
+                    "when": "Unspecified",
+                    "where": "Unspecified",
+                    "why": "because I helped",
+                    "how": "Unspecified",
+                },
+                "result": None,
+            },
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    assert any(
+        edge.morphism_type == "Cause" and edge.source == "cause-1" and edge.target == "effect-1"
+        for edge in graph.edges
+    )
+    assert any(
+        edge.morphism_type == "Action" and edge.source == "agent-1" and edge.target == "effect-1"
+        for edge in graph.edges
+    )
+    effect = next(node for node in graph.nodes if node.id == "effect-1")
+    assert effect.attributes["who"] == "He"
+    assert effect.attributes["what"] == "succeeded"
+    assert effect.attributes["why"] == "because I helped"
+
+
 def test_particle_repo_directory_loads_root_log_json(tmp_path):
     repo_dir = tmp_path / "particle-encapsulation"
     repo_dir.mkdir()

@@ -69,11 +69,16 @@ class GraphBuilder:
         label_key: str,
         expected_type: str,
         agent: Any = None,
+        allow_label_fallback: bool = False,
     ) -> Optional[Node]:
         particle_id = structure.get(id_key)
         if isinstance(particle_id, str) and particle_id.strip():
-            return cls._resolve_particle_node(graph, particle_map, particle_id, expected_type)
-        if id_key in structure and particle_id not in (None, ""):
+            node = cls._resolve_particle_node(graph, particle_map, particle_id, expected_type)
+            if node:
+                return node
+            if not allow_label_fallback:
+                return None
+        elif id_key in structure and particle_id not in (None, ""):
             return None
 
         label = structure.get(label_key)
@@ -238,11 +243,27 @@ class GraphBuilder:
                 "where": where_match.group(0) if where_match else None,
                 "how": how_match.group(0) if how_match else None,
             }
-            stage3_structure = (log_item.get("stage3") or {}).get("structure") or {}
+            stage2 = log_item.get("stage2") or {}
+            stage2_structure = stage2.get("structure") if isinstance(stage2, dict) else None
+            if not isinstance(stage2_structure, dict):
+                stage2_structure = {}
+            stage3 = log_item.get("stage3") or {}
+            stage3_structure = stage3.get("structure") if isinstance(stage3, dict) else None
+            if not isinstance(stage3_structure, dict):
+                stage3_structure = {}
+            cause_structure = (
+                stage2_structure
+                if stage2_structure.get("relation") == "CauseEffect"
+                or stage2_structure.get("cause_particle_id")
+                or stage2_structure.get("effect_particle_id")
+                else stage3_structure
+            )
+            allow_cause_label_fallback = cause_structure is stage2_structure
             stage5 = log_item.get("stage5") or {}
             if isinstance(stage5, dict):
                 stage5_target_ids = (
                     stage5.get("target_particle_id"),
+                    stage2_structure.get("effect_particle_id"),
                     stage3_structure.get("effect_particle_id"),
                     stage3_structure.get("event_particle_id"),
                 )
@@ -252,6 +273,29 @@ class GraphBuilder:
                     if candidate and candidate.category == "Event":
                         stage5_event = candidate
                         break
+                if stage5_event is None:
+                    stage5_event = cls._resolve_stage3_particle_node(
+                        graph,
+                        particle_map,
+                        cause_structure,
+                        "effect_particle_id",
+                        "effect",
+                        "Effect",
+                        allow_label_fallback=allow_cause_label_fallback,
+                    )
+                if stage5_event is None:
+                    frame = stage5.get("frame")
+                    frame_what = frame.get("what") if isinstance(frame, dict) else None
+                    what_candidates = [
+                        node
+                        for node in graph.nodes
+                        if particle_map.get(node.id, {}).get("entity_type") == "What"
+                        and isinstance(frame_what, str)
+                        and str(particle_map[node.id].get("label", "")).strip().casefold()
+                        == frame_what.strip().casefold()
+                    ]
+                    if len(what_candidates) == 1:
+                        stage5_event = what_candidates[0]
                 if stage5_event:
                     process = stage5.get("process")
                     result = stage5.get("result")
@@ -259,6 +303,12 @@ class GraphBuilder:
                         stage5_event.attributes["stage5_process"] = process
                     if isinstance(result, str) and result.strip():
                         stage5_event.attributes["stage5_result"] = result
+                    frame = stage5.get("frame")
+                    if isinstance(frame, dict):
+                        for attribute in ("who", "what", "when", "where", "why", "how"):
+                            value = frame.get(attribute)
+                            if isinstance(value, str) and value.strip():
+                                stage5_event.attributes[attribute] = value
 
             stage1 = log_item.get("stage1") or {}
             stage1_agent = stage1.get("agent") if isinstance(stage1, dict) else None
@@ -273,10 +323,24 @@ class GraphBuilder:
                 )
             referenced_events = [
                 cls._resolve_stage3_particle_node(
-                    graph, particle_map, stage3_structure, "cause_particle_id", "cause", "Cause", stage1_agent
+                    graph,
+                    particle_map,
+                    cause_structure,
+                    "cause_particle_id",
+                    "cause",
+                    "Cause",
+                    stage1_agent,
+                    allow_cause_label_fallback,
                 ),
                 cls._resolve_stage3_particle_node(
-                    graph, particle_map, stage3_structure, "effect_particle_id", "effect", "Effect", stage1_agent
+                    graph,
+                    particle_map,
+                    cause_structure,
+                    "effect_particle_id",
+                    "effect",
+                    "Effect",
+                    stage1_agent,
+                    allow_cause_label_fallback,
                 ),
                 cls._resolve_particle_node(graph, particle_map, stage3_structure.get("event_particle_id"), "Effect"),
                 context_node,
@@ -287,10 +351,9 @@ class GraphBuilder:
                         if value:
                             event_node.attributes[attribute] = value
 
-            # --- 2-B. 局所 Cause 射の結線 (Stage 3) ---
-            stage3 = log_item.get("stage3")
-            if stage3 and isinstance(stage3, dict) and "structure" in stage3:
-                struct = stage3["structure"]
+            # --- 2-B. Cause / context relation edges ---
+            struct = cause_structure
+            if struct:
                 relation = struct.get("relation")
                 if relation in ("Manner", "Temporal"):
                     source = cls._resolve_particle_node(
@@ -313,10 +376,24 @@ class GraphBuilder:
                             )
 
                 src = cls._resolve_stage3_particle_node(
-                    graph, particle_map, struct, "cause_particle_id", "cause", "Cause", stage1_agent
+                    graph,
+                    particle_map,
+                    struct,
+                    "cause_particle_id",
+                    "cause",
+                    "Cause",
+                    stage1_agent,
+                    allow_cause_label_fallback,
                 )
                 tgt = cls._resolve_stage3_particle_node(
-                    graph, particle_map, struct, "effect_particle_id", "effect", "Effect", stage1_agent
+                    graph,
+                    particle_map,
+                    struct,
+                    "effect_particle_id",
+                    "effect",
+                    "Effect",
+                    stage1_agent,
+                    allow_cause_label_fallback,
                 )
 
                 if src and tgt:
@@ -345,8 +422,10 @@ class GraphBuilder:
                     continue
                 if stage_name == "stage4" and stage.get("decision") != "Essential":
                     continue
-                if stage_name == "stage5" and "Actor:" not in stage.get("result", ""):
-                    continue
+                if stage_name == "stage5":
+                    result = stage.get("result")
+                    if not isinstance(result, str) or "Actor:" not in result:
+                        continue
 
                 source = cls._resolve_particle_node(
                     graph, particle_map, stage.get("source_particle_id"), None
@@ -377,15 +456,39 @@ class GraphBuilder:
         # 4. Action 射の結線 (同文脈内の Entity ──Action──> Event)
         # ---------------------------------------------------------
         for log_item in log_data:
-            stage3 = log_item.get("stage3")
-            if stage3 and isinstance(stage3, dict) and "structure" in stage3:
-                structure = stage3["structure"]
+            stage1 = log_item.get("stage1") or {}
+            stage1_agent = stage1.get("agent") if isinstance(stage1, dict) else None
+            stages = (log_item.get("stage2"), log_item.get("stage3"))
+            for stage in stages:
+                if not isinstance(stage, dict) or not isinstance(stage.get("structure"), dict):
+                    continue
+                structure = stage["structure"]
                 entity_node = cls._resolve_particle_node(
                     graph, particle_map, structure.get("agent_particle_id"), "Agent"
                 )
+                if entity_node is None and isinstance(stage1_agent, str):
+                    agent_candidates = [
+                        node
+                        for node in graph.nodes
+                        if particle_map.get(node.id, {}).get("entity_type") == "Agent"
+                        and str(particle_map[node.id].get("label", "")).strip().casefold()
+                        == stage1_agent.strip().casefold()
+                    ]
+                    if len(agent_candidates) == 1:
+                        entity_node = agent_candidates[0]
                 event_node = cls._resolve_particle_node(
                     graph, particle_map, structure.get("effect_particle_id"), "Effect"
                 )
+                if event_node is None:
+                    event_node = cls._resolve_stage3_particle_node(
+                        graph,
+                        particle_map,
+                        structure,
+                        "effect_particle_id",
+                        "effect",
+                        "Effect",
+                        allow_label_fallback=stage is stages[0],
+                    )
                 if entity_node is None or event_node is None:
                     continue
 
