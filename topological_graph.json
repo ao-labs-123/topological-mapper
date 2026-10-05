@@ -59,11 +59,11 @@
     {
       "id": "p_who_977b4a",
       "label": "He",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "He",
+        "who": "He",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -78,62 +78,6 @@
       "attributes": {
         "who": "Unspecified",
         "what": "succeeded",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_3b777c",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_97b726",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_a3dabc",
-      "label": "because I helped",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "because I helped",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_1c1a46",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -171,11 +115,11 @@
     {
       "id": "p_who_4322c6",
       "label": "You",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "You",
+        "who": "You",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -190,62 +134,6 @@
       "attributes": {
         "who": "You",
         "what": "review the document",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_e47e29",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_5ffe74",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_30b88b",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_f9a458",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -283,11 +171,11 @@
     {
       "id": "p_who_656519",
       "label": "I",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "I",
+        "who": "I",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -302,62 +190,6 @@
       "attributes": {
         "who": "I",
         "what": "thought was strange",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_12d8fc",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_50d375",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_799581",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_b67363",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -395,11 +227,11 @@
     {
       "id": "p_who_57de5d",
       "label": "He/She/They",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "He/She/They",
+        "who": "He/She/They",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -418,62 +250,6 @@
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "apparently"
-      }
-    },
-    {
-      "id": "p_when_25f4fc",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_50dfeb",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_de29ce",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_faa13b",
-      "label": "apparently",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "apparently",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
       }
     },
     {
@@ -507,7 +283,7 @@
     {
       "id": "p_who_dd28dd",
       "label": "Unknown",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Unspecified",
       "attributes": {
         "who": "Unspecified",
@@ -528,62 +304,6 @@
         "what": "went",
         "when": "yesterday",
         "where": "cafe",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_d5ecb8",
-      "label": "yesterday",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "yesterday",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_18ec85",
-      "label": "cafe",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "cafe",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_330b05",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_a1d5a3",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified"
       }
@@ -619,11 +339,11 @@
     {
       "id": "p_who_9a2106",
       "label": "you",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "you",
+        "who": "you",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -638,62 +358,6 @@
       "attributes": {
         "who": "you",
         "what": "required It",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_2bf1ac",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_500788",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_f9df86",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_3ddd28",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -731,11 +395,11 @@
     {
       "id": "p_who_75e8f3",
       "label": "I",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "I",
+        "who": "I",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -750,62 +414,6 @@
       "attributes": {
         "who": "Unspecified",
         "what": "submitted the form",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_b4eab0",
-      "label": "yesterday",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "yesterday",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_be1ee2",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_1f0f65",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_2e89e4",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -843,11 +451,11 @@
     {
       "id": "p_who_06dea5",
       "label": "I",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "I",
+        "who": "I",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -864,62 +472,6 @@
         "what": "wrote the report",
         "when": "Unspecified",
         "where": "at the office",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_9d9439",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_c3bc91",
-      "label": "at the office",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "at the office",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_8818f8",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_dd1350",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified"
       }
@@ -983,7 +535,7 @@
     {
       "id": "p_who_9d0da6",
       "label": "Unknown",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Unspecified",
       "attributes": {
         "who": "Unspecified",
@@ -1002,62 +554,6 @@
       "attributes": {
         "who": "Unspecified",
         "what": "succeeded",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_b8b98b",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_e84087",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_cd9de9",
-      "label": "because you helped",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "because you helped",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_f09adc",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1095,7 +591,7 @@
     {
       "id": "p_who_a5749c",
       "label": "Unknown",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Unspecified",
       "attributes": {
         "who": "Unspecified",
@@ -1114,62 +610,6 @@
       "attributes": {
         "who": "Unknown",
         "what": "failed despite the effort",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_d17335",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_3e65d1",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_8b6e1c",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_a1a106",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1207,7 +647,7 @@
     {
       "id": "p_who_a74596",
       "label": "Unknown",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Unspecified",
       "attributes": {
         "who": "Unspecified",
@@ -1226,62 +666,6 @@
       "attributes": {
         "who": "Unknown",
         "what": "required further investigation",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_21c613",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_568d79",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_45ca66",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_19704c",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1319,7 +703,7 @@
     {
       "id": "p_who_b7aa9f",
       "label": "Unknown",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Unspecified",
       "attributes": {
         "who": "Unspecified",
@@ -1338,62 +722,6 @@
       "attributes": {
         "who": "Unspecified",
         "what": "submitted the form",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_628ec0",
-      "label": "yesterday",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "yesterday",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_b119a7",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_f63004",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_b769e4",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1431,7 +759,7 @@
     {
       "id": "p_who_364693",
       "label": "Unknown",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Unspecified",
       "attributes": {
         "who": "Unspecified",
@@ -1450,62 +778,6 @@
       "attributes": {
         "who": "Unspecified",
         "what": "succeeded",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_63bce4",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_448082",
-      "label": "in the meeting",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "in the meeting",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_afee17",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_0d3581",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1571,11 +843,11 @@
     {
       "id": "p_who_d93a8a",
       "label": "I",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "I",
+        "who": "I",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1590,62 +862,6 @@
       "attributes": {
         "who": "Unspecified",
         "what": "'m stressed due",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_ca07ec",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_6e4a03",
-      "label": "project",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "project",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_7b5777",
-      "label": "due to the project",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "due to the project",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_838e13",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1711,11 +927,11 @@
     {
       "id": "p_who_4f020d",
       "label": "I",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "I",
+        "who": "I",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1730,62 +946,6 @@
       "attributes": {
         "who": "Unspecified",
         "what": "succeeded",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_b81096",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_af2bf8",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_dbf0d8",
-      "label": "because you helped",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "because you helped",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_f61467",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1823,11 +983,11 @@
     {
       "id": "p_who_84afdb",
       "label": "He",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "He",
+        "who": "He",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1842,62 +1002,6 @@
       "attributes": {
         "who": "Unspecified",
         "what": "succeeded",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_94c9cd",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_72ce4f",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_5d3432",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_7c2917",
-      "label": "by working hard",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "by working hard",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1935,11 +1039,11 @@
     {
       "id": "p_who_8785fe",
       "label": "I",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "I",
+        "who": "I",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1954,62 +1058,6 @@
       "attributes": {
         "who": "I",
         "what": "stressed I",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_9005b6",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_514686",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_443e83",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_81c15d",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2047,11 +1095,11 @@
     {
       "id": "p_who_76d913",
       "label": "The report",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "The report",
+        "who": "The report",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2066,62 +1114,6 @@
       "attributes": {
         "who": "The report",
         "what": "which was long, is done",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_f9d14a",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_326958",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_89d75b",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_401ae5",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2159,11 +1151,11 @@
     {
       "id": "p_who_7b7bb8",
       "label": "The report",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "The report",
+        "who": "The report",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2178,62 +1170,6 @@
       "attributes": {
         "who": "The report",
         "what": "that I wrote is done",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_ad633d",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_b20112",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_bdc3ac",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_e008de",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2271,11 +1207,11 @@
     {
       "id": "p_who_95f477",
       "label": "The office",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "The office",
+        "who": "The office",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2290,62 +1226,6 @@
       "attributes": {
         "who": "The office",
         "what": "quiet the office where I wrote the report",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_a076bd",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_ce25cb",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_a1e93a",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_bd26fd",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2383,11 +1263,11 @@
     {
       "id": "p_who_b8c657",
       "label": "The day",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "The day",
+        "who": "The day",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2402,62 +1282,6 @@
       "attributes": {
         "who": "The day",
         "what": "bright the day where he succeeded",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_041454",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_0135ff",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_2cb18a",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_f23e86",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2495,11 +1319,11 @@
     {
       "id": "p_who_00d44f",
       "label": "I",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "I",
+        "who": "I",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2514,62 +1338,6 @@
       "attributes": {
         "who": "I",
         "what": "have a car",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_780687",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_e45b13",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_cd547a",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_f3170c",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2607,11 +1375,11 @@
     {
       "id": "p_who_923d8e",
       "label": "I",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "I",
+        "who": "I",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2626,62 +1394,6 @@
       "attributes": {
         "who": "I",
         "what": "am having a party",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_c66fca",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_a17589",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_05bc44",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_e4dbc1",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2719,11 +1431,11 @@
     {
       "id": "p_who_39b798",
       "label": "him",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "him",
+        "who": "him",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2738,62 +1450,6 @@
       "attributes": {
         "who": "him",
         "what": "told I",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_36764d",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_012d64",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_c21267",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_642e7d",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2831,11 +1487,11 @@
     {
       "id": "p_who_99a32b",
       "label": "The report",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "The report",
+        "who": "The report",
+        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -2854,62 +1510,6 @@
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "quickly"
-      }
-    },
-    {
-      "id": "p_when_bdd3e1",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_bc43cb",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_aacdac",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_618999",
-      "label": "quickly",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "quickly",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
       }
     },
     {
@@ -2971,7 +1571,7 @@
     {
       "id": "p_who_f532d5",
       "label": "Unknown",
-      "category": "Event",
+      "category": "Entity",
       "resolution_state": "Unspecified",
       "attributes": {
         "who": "Unspecified",
@@ -2990,62 +1590,6 @@
       "attributes": {
         "who": "Unspecified",
         "what": "failed the exam",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_when_f23371",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_where_88d6c8",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_why_defc12",
-      "label": "because of bad luck",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "because of bad luck",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_how_13b915",
-      "label": "Unspecified",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Unspecified",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",

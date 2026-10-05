@@ -185,8 +185,11 @@ class GraphBuilder:
                 and not properties.get("event_particle_id")
             ):
                 continue
-            
-            category = "Entity" if p_type == "Agent" else "Event"
+
+            if p_type in {"When", "Where", "Why", "How"}:
+                continue
+
+            category = "Entity" if p_type in {"Agent", "Who"} else "Event"
             
             w5h1 = {
                 "who": "Unspecified",

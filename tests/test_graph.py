@@ -32,6 +32,26 @@ def test_visualizer_keeps_matching_agent_labels_as_separate_nodes():
     assert "agent-unknown" not in node_id_map
 
 
+def test_graph_builder_maps_who_to_entity_and_keeps_context_as_attributes():
+    particle_data = [
+        {"id": "agent-1", "label": "I", "entity_type": "Agent"},
+        {"id": "who-1", "label": "I", "entity_type": "Who"},
+        {"id": "what-1", "label": "submitted the form", "entity_type": "What"},
+        {"id": "when-1", "label": "yesterday", "entity_type": "When"},
+        {"id": "where-1", "label": "at the office", "entity_type": "Where"},
+        {"id": "why-1", "label": "because it was due", "entity_type": "Why"},
+        {"id": "how-1", "label": "carefully", "entity_type": "How"},
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, [])
+    nodes_by_id = {node.id: node for node in graph.nodes}
+
+    assert nodes_by_id["agent-1"].category == "Entity"
+    assert nodes_by_id["who-1"].category == "Entity"
+    assert nodes_by_id["what-1"].category == "Event"
+    assert not {"when-1", "where-1", "why-1", "how-1"} & nodes_by_id.keys()
+
+
 def test_visualizer_shows_stage5_details_in_tooltip_not_node_label(tmp_path):
     graph_path = tmp_path / "graph.json"
     output_path = tmp_path / "index.html"
