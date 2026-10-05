@@ -1595,6 +1595,24 @@
         "why": "Unspecified",
         "how": "Unspecified"
       }
+    },
+    {
+      "id": "context_concession_114",
+      "label": "the effort",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "what": "the effort"
+      }
+    },
+    {
+      "id": "context_temporal_115",
+      "label": "the long meeting",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "what": "the long meeting"
+      }
     }
   ],
   "edges": [
@@ -1615,6 +1633,14 @@
       "constraint_type": ""
     },
     {
+      "id": "e_concession_context_concession_114_p_what_1bff0c",
+      "source": "context_concession_114",
+      "target": "p_what_1bff0c",
+      "morphism_type": "Concession",
+      "detail": "Concession relation (despite)",
+      "constraint_type": ""
+    },
+    {
       "id": "e_cause_p_cause_2adc09_p_effect_8b5f33",
       "source": "p_cause_2adc09",
       "target": "p_effect_8b5f33",
@@ -1628,6 +1654,14 @@
       "target": "p_effect_0134c5",
       "morphism_type": "Cause",
       "detail": "Primary Cause",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_temporal_context_temporal_115_p_what_b1ef10",
+      "source": "context_temporal_115",
+      "target": "p_what_b1ef10",
+      "morphism_type": "Temporal",
+      "detail": "Temporal relation (after)",
       "constraint_type": ""
     },
     {

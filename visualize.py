@@ -180,6 +180,7 @@ def visualize_topological_graph(
             "Relation": "#9B59B6",    # 紫: 一般関係
             "Manner": "#3498DB",
             "Temporal": "#E67E22",
+            "Concession": "#F1C40F",
         }
         constraint_colors = {
             "ClauseCondition": "#FFD166",

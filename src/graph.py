@@ -59,6 +59,76 @@ class GraphBuilder:
                 return None
         return node
 
+    @staticmethod
+    def _ensure_context_node(
+        graph: TopologicalGraph,
+        particle_data: List[Dict[str, Any]],
+        label: Any,
+        relation: str,
+        entity_types: set[str],
+    ) -> Optional[Node]:
+        if not isinstance(label, str) or not label.strip():
+            return None
+        normalized_label = label.strip().casefold()
+        matching_nodes = [
+            node for node in graph.nodes
+            if node.label.strip().casefold() == normalized_label
+        ]
+        if len(matching_nodes) == 1:
+            return matching_nodes[0]
+
+        matching_particles = [
+            particle for particle in particle_data
+            if particle.get("entity_type") in entity_types
+            and isinstance(particle.get("label"), str)
+            and particle["label"].strip().casefold() == normalized_label
+        ]
+        if len(matching_particles) == 1:
+            particle = matching_particles[0]
+            node = Node(
+                id=particle.get("id", ""),
+                label=particle["label"],
+                category="Event",
+                resolution_state="Determined",
+                attributes={"what": particle["label"]},
+            )
+        else:
+            node_id = f"context_{relation.lower()}_{len(graph.nodes)}"
+            while any(existing.id == node_id for existing in graph.nodes):
+                node_id += "_"
+            node = Node(
+                id=node_id,
+                label=label.strip(),
+                category="Event",
+                resolution_state="Determined",
+                attributes={"what": label.strip()},
+            )
+        graph.nodes.append(node)
+        return node
+
+    @staticmethod
+    def _add_relation_edge(
+        graph: TopologicalGraph,
+        relation: str,
+        source: Optional[Node],
+        target: Optional[Node],
+        detail: str,
+    ) -> None:
+        if source is None or target is None or source.id == target.id:
+            return
+        edge_id = f"e_{relation.lower()}_{source.id}_{target.id}"
+        if any(edge.id == edge_id for edge in graph.edges):
+            return
+        graph.edges.append(
+            Edge(
+                id=edge_id,
+                source=source.id,
+                target=target.id,
+                morphism_type=relation,
+                detail=detail,
+            )
+        )
+
     @classmethod
     def _resolve_stage3_particle_node(
         cls,
@@ -263,6 +333,7 @@ class GraphBuilder:
             )
             allow_cause_label_fallback = cause_structure is stage2_structure
             stage5 = log_item.get("stage5") or {}
+            stage5_event = None
             if isinstance(stage5, dict):
                 stage5_target_ids = (
                     stage5.get("target_particle_id"),
@@ -270,7 +341,6 @@ class GraphBuilder:
                     stage3_structure.get("effect_particle_id"),
                     stage3_structure.get("event_particle_id"),
                 )
-                stage5_event = None
                 for particle_id in stage5_target_ids:
                     candidate = cls._resolve_particle_node(graph, particle_map, particle_id, None)
                     if candidate and candidate.category == "Event":
@@ -312,6 +382,101 @@ class GraphBuilder:
                             value = frame.get(attribute)
                             if isinstance(value, str) and value.strip():
                                 stage5_event.attributes[attribute] = value
+
+            if stage2_structure.get("relation") == "Concession":
+                concession_source = cls._resolve_particle_node(
+                    graph,
+                    particle_map,
+                    stage2_structure.get("concession_particle_id"),
+                    None,
+                )
+                if concession_source is None:
+                    concession_source = cls._ensure_context_node(
+                        graph,
+                        particle_data,
+                        stage2_structure.get("concession"),
+                        "Concession",
+                        {"Concession", "Cause", "What"},
+                    )
+                outcome = stage5_event or cls._ensure_context_node(
+                    graph,
+                    particle_data,
+                    stage2_structure.get("outcome"),
+                    "ConcessionOutcome",
+                    {"Effect", "What"},
+                )
+                cls._add_relation_edge(
+                    graph,
+                    "Concession",
+                    concession_source,
+                    outcome,
+                    f"Concession relation ({stage2_structure.get('marker', '')})",
+                )
+
+            if stage5_event:
+                frame = stage5.get("frame") if isinstance(stage5, dict) else None
+                frame_how = frame.get("how") if isinstance(frame, dict) else None
+                stage4 = log_item.get("stage4") or {}
+                stage4_structure = (
+                    stage4.get("structure") if isinstance(stage4, dict) else None
+                )
+                stage4_patient = stage4.get("patient") if isinstance(stage4, dict) else None
+                if not isinstance(stage4_patient, str) and isinstance(stage4_structure, dict):
+                    stage4_patient = stage4_structure.get("patient")
+                manner_label = (
+                    frame_how
+                    if isinstance(frame_how, str)
+                    and frame_how.strip()
+                    and frame_how.strip().casefold() != "unspecified"
+                    else None
+                )
+                stage4_form = stage4.get("form") if isinstance(stage4, dict) else None
+                if not stage4_form and isinstance(stage4_structure, dict):
+                    stage4_form = stage4_structure.get("form")
+                if (
+                    manner_label is None
+                    and stage4_form != "Passive"
+                    and isinstance(stage4_patient, str)
+                    and stage4_patient.strip().casefold().startswith("by ")
+                ):
+                    manner_label = stage4_patient
+                if isinstance(manner_label, str) and manner_label.strip().casefold().startswith("by "):
+                    manner_source = cls._ensure_context_node(
+                        graph,
+                        particle_data,
+                        manner_label,
+                        "Manner",
+                        {"How", "Manner"},
+                    )
+                    cls._add_relation_edge(
+                        graph,
+                        "Manner",
+                        manner_source,
+                        stage5_event,
+                        "Manner relation (by)",
+                    )
+
+                temporal_match = re.search(
+                    r"\b(after|before|during|since|until)\s+(.+?)(?:[.,!?;]|$)",
+                    str(input_text),
+                    re.IGNORECASE,
+                )
+                if temporal_match:
+                    marker, temporal_label = temporal_match.groups()
+                    temporal_source = cls._ensure_context_node(
+                        graph,
+                        particle_data,
+                        temporal_label.strip(),
+                        "Temporal",
+                        {"Temporal", "When"},
+                    )
+                    cls._add_relation_edge(
+                        graph,
+                        "Temporal",
+                        temporal_source,
+                        stage5_event,
+                        f"Temporal relation ({marker})",
+                    )
 
             stage1 = log_item.get("stage1") or {}
             stage1_agent = stage1.get("agent") if isinstance(stage1, dict) else None

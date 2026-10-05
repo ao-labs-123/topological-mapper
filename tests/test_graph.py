@@ -644,6 +644,95 @@ def test_manner_edge_uses_explicit_context_and_event_ids():
     assert manner_edges[0].target == "effect-1"
 
 
+def test_concession_edge_connects_concession_context_to_outcome():
+    particle_data = [
+        {"id": "outcome-1", "label": "failed despite the effort", "entity_type": "What"},
+    ]
+    log_data = [
+        {
+            "stage2": {
+                "structure": {
+                    "relation": "Concession",
+                    "marker": "despite",
+                    "concession": "the effort",
+                    "outcome": "Failed",
+                }
+            },
+            "stage5": {"frame": {"what": "failed despite the effort"}},
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    concession_edges = [edge for edge in graph.edges if edge.morphism_type == "Concession"]
+    assert len(concession_edges) == 1
+    source = next(node for node in graph.nodes if node.id == concession_edges[0].source)
+    assert source.label == "the effort"
+    assert concession_edges[0].target == "outcome-1"
+
+
+def test_stage5_by_phrase_creates_manner_edge_to_event():
+    particle_data = [
+        {"id": "how-1", "label": "by working hard", "entity_type": "How"},
+        {"id": "what-1", "label": "succeeded", "entity_type": "What"},
+    ]
+    log_data = [
+        {
+            "input": "He succeeded by working hard.",
+            "stage4": {"structure": {"patient": "by working hard"}},
+            "stage5": {"frame": {"what": "succeeded", "how": "by working hard"}},
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    manner_edges = [edge for edge in graph.edges if edge.morphism_type == "Manner"]
+    assert len(manner_edges) == 1
+    assert manner_edges[0].source == "how-1"
+    assert manner_edges[0].target == "what-1"
+
+
+def test_passive_by_agent_does_not_create_manner_edge():
+    particle_data = [
+        {"id": "what-1", "label": "was told", "entity_type": "What"},
+    ]
+    log_data = [
+        {
+            "input": "I was told by him.",
+            "stage4": {
+                "form": "Passive",
+                "patient": "by him",
+                "structure": {"form": "Passive", "patient": "by him"},
+            },
+            "stage5": {"frame": {"what": "was told", "how": "Unspecified"}},
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    assert not [edge for edge in graph.edges if edge.morphism_type == "Manner"]
+
+
+def test_after_phrase_creates_temporal_edge_to_event():
+    particle_data = [
+        {"id": "what-1", "label": "stressed I", "entity_type": "What"},
+    ]
+    log_data = [
+        {
+            "input": "I was stressed after the long meeting.",
+            "stage5": {"frame": {"what": "stressed I"}},
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    temporal_edges = [edge for edge in graph.edges if edge.morphism_type == "Temporal"]
+    assert len(temporal_edges) == 1
+    source = next(node for node in graph.nodes if node.id == temporal_edges[0].source)
+    assert source.label == "the long meeting"
+    assert temporal_edges[0].target == "what-1"
+
+
 def test_stage5_constraint_uses_explicit_particle_ids():
     particle_data = [
         {"id": "agent-1", "label": "I", "entity_type": "Agent"},
