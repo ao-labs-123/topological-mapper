@@ -1606,7 +1606,25 @@
       }
     },
     {
-      "id": "context_temporal_115",
+      "id": "p_how_7c2917",
+      "label": "by working hard",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "what": "by working hard"
+      }
+    },
+    {
+      "id": "context_mannerevent_116",
+      "label": "succeeded",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "what": "succeeded"
+      }
+    },
+    {
+      "id": "context_temporal_117",
       "label": "the long meeting",
       "category": "Event",
       "resolution_state": "Determined",
@@ -1657,8 +1675,16 @@
       "constraint_type": ""
     },
     {
-      "id": "e_temporal_context_temporal_115_p_what_b1ef10",
-      "source": "context_temporal_115",
+      "id": "e_manner_p_how_7c2917_context_mannerevent_116",
+      "source": "p_how_7c2917",
+      "target": "context_mannerevent_116",
+      "morphism_type": "Manner",
+      "detail": "Manner relation (by)",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_temporal_context_temporal_117_p_what_b1ef10",
+      "source": "context_temporal_117",
       "target": "p_what_b1ef10",
       "morphism_type": "Temporal",
       "detail": "Temporal relation (after)",

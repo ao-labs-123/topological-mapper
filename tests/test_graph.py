@@ -692,6 +692,29 @@ def test_stage5_by_phrase_creates_manner_edge_to_event():
     assert manner_edges[0].target == "what-1"
 
 
+def test_by_manner_uses_record_specific_event_when_labels_are_ambiguous():
+    particle_data = [
+        {"id": "how-1", "label": "by working hard", "entity_type": "How"},
+        {"id": "what-1", "label": "succeeded", "entity_type": "What"},
+        {"id": "what-2", "label": "succeeded", "entity_type": "What"},
+    ]
+    log_data = [
+        {
+            "input": "He succeeded by working hard.",
+            "stage4": {"structure": {"patient": "by working hard"}},
+            "stage5": {"frame": {"what": "succeeded", "how": "by working hard"}},
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    manner_edge = next(edge for edge in graph.edges if edge.morphism_type == "Manner")
+    assert manner_edge.source == "how-1"
+    assert manner_edge.target not in {"what-1", "what-2"}
+    target = next(node for node in graph.nodes if node.id == manner_edge.target)
+    assert target.label == "succeeded"
+
+
 def test_passive_by_agent_does_not_create_manner_edge():
     particle_data = [
         {"id": "what-1", "label": "was told", "entity_type": "What"},

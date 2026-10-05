@@ -383,6 +383,8 @@ class GraphBuilder:
                             if isinstance(value, str) and value.strip():
                                 stage5_event.attributes[attribute] = value
 
+            relation_event = stage5_event
+            stage5_frame = stage5.get("frame") if isinstance(stage5, dict) else None
             if stage2_structure.get("relation") == "Concession":
                 concession_source = cls._resolve_particle_node(
                     graph,
@@ -398,13 +400,19 @@ class GraphBuilder:
                         "Concession",
                         {"Concession", "Cause", "What"},
                     )
-                outcome = stage5_event or cls._ensure_context_node(
+                outcome_label = (
+                    stage5_frame.get("what")
+                    if isinstance(stage5_frame, dict)
+                    else None
+                ) or stage2_structure.get("outcome")
+                outcome = relation_event or cls._ensure_context_node(
                     graph,
                     particle_data,
-                    stage2_structure.get("outcome"),
+                    outcome_label,
                     "ConcessionOutcome",
                     {"Effect", "What"},
                 )
+                relation_event = outcome
                 cls._add_relation_edge(
                     graph,
                     "Concession",
@@ -413,9 +421,8 @@ class GraphBuilder:
                     f"Concession relation ({stage2_structure.get('marker', '')})",
                 )
 
-            if stage5_event:
-                frame = stage5.get("frame") if isinstance(stage5, dict) else None
-                frame_how = frame.get("how") if isinstance(frame, dict) else None
+            if stage5_event or isinstance(stage5_frame, dict):
+                frame_how = stage5_frame.get("how") if isinstance(stage5_frame, dict) else None
                 stage4 = log_item.get("stage4") or {}
                 stage4_structure = (
                     stage4.get("structure") if isinstance(stage4, dict) else None
@@ -448,11 +455,19 @@ class GraphBuilder:
                         "Manner",
                         {"How", "Manner"},
                     )
+                    if relation_event is None and isinstance(stage5_frame, dict):
+                        relation_event = cls._ensure_context_node(
+                            graph,
+                            particle_data,
+                            stage5_frame.get("what"),
+                            "MannerEvent",
+                            {"What", "Effect"},
+                        )
                     cls._add_relation_edge(
                         graph,
                         "Manner",
                         manner_source,
-                        stage5_event,
+                        relation_event,
                         "Manner relation (by)",
                     )
 
@@ -470,11 +485,19 @@ class GraphBuilder:
                         "Temporal",
                         {"Temporal", "When"},
                     )
+                    if relation_event is None and isinstance(stage5_frame, dict):
+                        relation_event = cls._ensure_context_node(
+                            graph,
+                            particle_data,
+                            stage5_frame.get("what"),
+                            "TemporalEvent",
+                            {"What", "Effect"},
+                        )
                     cls._add_relation_edge(
                         graph,
                         "Temporal",
                         temporal_source,
-                        stage5_event,
+                        relation_event,
                         f"Temporal relation ({marker})",
                     )
 
