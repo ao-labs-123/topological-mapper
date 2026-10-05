@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-10-04T19:23:02.831819",
+    "timestamp": "2026-10-05T10:23:28.521196",
     "input": "He succeeded because I helped.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -16,8 +16,9 @@
         "marker": "because",
         "cause": "I helped",
         "effect": "He succeeded",
-        "cause_particle_id": "p_cause_5dc2f2",
-        "effect_particle_id": "p_effect_be37ba"
+        "agent_particle_id": "p_agent_eeb0ce",
+        "cause_particle_id": "p_cause_9fb7a8",
+        "effect_particle_id": "p_effect_8176d6"
       },
       "agent": "He"
     },
@@ -60,7 +61,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.833001",
+    "timestamp": "2026-10-05T10:23:28.522412",
     "input": "Please review the document.",
     "stage1": {
       "process": "Imperative / Direct Directive",
@@ -113,7 +114,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.834001",
+    "timestamp": "2026-10-05T10:23:28.523492",
     "input": "Thought was strange.",
     "stage1": {
       "process": "Psychological Verb + Null Subject",
@@ -166,7 +167,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.835187",
+    "timestamp": "2026-10-05T10:23:28.524612",
     "input": "Thought it was strange apparently.",
     "stage1": {
       "process": "Null Subject + Evidential / Attribution Marker",
@@ -219,7 +220,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.836641",
+    "timestamp": "2026-10-05T10:23:28.526161",
     "input": "Went to the cafe yesterday.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
@@ -273,7 +274,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.837673",
+    "timestamp": "2026-10-05T10:23:28.527288",
     "input": "It is required that you submit the form.",
     "stage1": {
       "process": "Formal Subject Detected (It ... that)",
@@ -333,7 +334,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.838614",
+    "timestamp": "2026-10-05T10:23:28.528377",
     "input": "I submitted the form yesterday.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -386,7 +387,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.839668",
+    "timestamp": "2026-10-05T10:23:28.529560",
     "input": "I wrote the report at the office.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -439,7 +440,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.840906",
+    "timestamp": "2026-10-05T10:23:28.530969",
     "input": "Succeeded because you helped.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
@@ -456,8 +457,9 @@
         "marker": "because",
         "cause": "you helped",
         "effect": "Succeeded",
-        "cause_particle_id": "p_cause_6eeac6",
-        "effect_particle_id": "p_effect_d84862"
+        "agent_particle_id": "p_agent_89f13e",
+        "cause_particle_id": "p_cause_1c493d",
+        "effect_particle_id": "p_effect_f679d2"
       },
       "agent": "Unknown"
     },
@@ -500,7 +502,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.842614",
+    "timestamp": "2026-10-05T10:23:28.532329",
     "input": "Failed despite the effort.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
@@ -509,10 +511,16 @@
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "Clarification Required (Undetermined Agent)",
-      "mapping": "None",
-      "structure": null,
+      "process": "Concessive Marker: despite",
+      "decision": "Concessive relation mapped",
+      "mapping": "the effort -> Concession -> Failed",
+      "structure": {
+        "relation": "Concession",
+        "marker": "despite",
+        "concession": "the effort",
+        "outcome": "Failed",
+        "agent_particle_id": "p_agent_b105b7"
+      },
       "agent": "Unknown"
     },
     "stage3": {
@@ -554,7 +562,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.844093",
+    "timestamp": "2026-10-05T10:23:28.533775",
     "input": "Required further investigation.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
@@ -608,7 +616,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.845479",
+    "timestamp": "2026-10-05T10:23:28.535299",
     "input": "Submitted the form yesterday.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
@@ -662,7 +670,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.846952",
+    "timestamp": "2026-10-05T10:23:28.536984",
     "input": "Succeeded in the meeting.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
@@ -716,7 +724,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.848677",
+    "timestamp": "2026-10-05T10:23:28.538726",
     "input": "I'm stressed due to the project.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -732,8 +740,9 @@
         "marker": "due to",
         "cause": "the project",
         "effect": "I'm stressed",
-        "cause_particle_id": "p_cause_ebe754",
-        "effect_particle_id": "p_effect_51ffd0"
+        "agent_particle_id": "p_agent_f1af76",
+        "cause_particle_id": "p_cause_2adc09",
+        "effect_particle_id": "p_effect_8b5f33"
       },
       "agent": "I"
     },
@@ -776,7 +785,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.850235",
+    "timestamp": "2026-10-05T10:23:28.540360",
     "input": "I succeeded because you helped.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -792,8 +801,9 @@
         "marker": "because",
         "cause": "you helped",
         "effect": "I succeeded",
-        "cause_particle_id": "p_cause_9c9991",
-        "effect_particle_id": "p_effect_794289"
+        "agent_particle_id": "p_agent_2a9c29",
+        "cause_particle_id": "p_cause_8c4992",
+        "effect_particle_id": "p_effect_0134c5"
       },
       "agent": "I"
     },
@@ -836,7 +846,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.851762",
+    "timestamp": "2026-10-05T10:23:28.542068",
     "input": "He succeeded by working hard.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -889,7 +899,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.853417",
+    "timestamp": "2026-10-05T10:23:28.543847",
     "input": "I was stressed after the long meeting.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -942,7 +952,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.855182",
+    "timestamp": "2026-10-05T10:23:28.545721",
     "input": "The report, which was long, is done.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1001,7 +1011,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.856935",
+    "timestamp": "2026-10-05T10:23:28.547659",
     "input": "The report that I wrote is done.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1060,7 +1070,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.858861",
+    "timestamp": "2026-10-05T10:23:28.549715",
     "input": "The office where I wrote the report was quiet.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1113,7 +1123,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.860871",
+    "timestamp": "2026-10-05T10:23:28.551881",
     "input": "The day where he succeeded was bright.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1166,7 +1176,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.862837",
+    "timestamp": "2026-10-05T10:23:28.553998",
     "input": "I have a car.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1219,7 +1229,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.864858",
+    "timestamp": "2026-10-05T10:23:28.556130",
     "input": "I am having a party.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1272,7 +1282,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.867089",
+    "timestamp": "2026-10-05T10:23:28.558414",
     "input": "I was told by him.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1325,7 +1335,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.869269",
+    "timestamp": "2026-10-05T10:23:28.560759",
     "input": "The report was completed quickly.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1378,7 +1388,7 @@
     }
   },
   {
-    "timestamp": "2026-10-04T19:23:02.871676",
+    "timestamp": "2026-10-05T10:23:28.563340",
     "input": "Failed the exam because of bad luck.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
@@ -1395,8 +1405,9 @@
         "marker": "because of",
         "cause": "bad luck",
         "effect": "Failed the exam",
-        "cause_particle_id": "p_cause_eedcd5",
-        "effect_particle_id": "p_effect_6ff3db"
+        "agent_particle_id": "p_agent_75beda",
+        "cause_particle_id": "p_cause_d5dc47",
+        "effect_particle_id": "p_effect_ad3f58"
       },
       "agent": "Unknown"
     },
