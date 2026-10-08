@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-10-05T10:23:28.521196",
+    "timestamp": "2026-10-08T09:02:55.132514",
     "input": "He succeeded because I helped.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -8,23 +8,36 @@
       "agent": "He"
     },
     "stage2": {
-      "process": "Causal Marker: because",
-      "decision": "Causal relation mapped",
-      "mapping": "I helped -> Causes -> He succeeded",
+      "process": "Causal Marker: because; Event: Action",
+      "decision": "Causal relation mapped; Event classified: Action",
+      "mapping": "I helped -> Cause -> He succeeded; He -> Action -> succeeded",
       "structure": {
         "relation": "CauseEffect",
         "marker": "because",
         "cause": "I helped",
         "effect": "He succeeded",
-        "agent_particle_id": "p_agent_eeb0ce",
-        "cause_particle_id": "p_cause_9fb7a8",
-        "effect_particle_id": "p_effect_8176d6"
+        "event": {
+          "category": "Action",
+          "verb": "succeeded",
+          "actor": "He",
+          "patient": null
+        },
+        "agent_particle_id": "p_agent_aac8eb0fdb9c",
+        "cause_particle_id": "p_cause_cc942ad74fe1",
+        "effect_particle_id": "p_effect_47b1de987abf",
+        "event_particle_id": "p_event_3edbd3958741"
       },
-      "agent": "He"
+      "agent": "He",
+      "action": {
+        "verb": "succeeded",
+        "actor": "He",
+        "patient": null
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "He"
     },
@@ -33,7 +46,7 @@
       "form": "Base",
       "category": "Action",
       "verb": "succeeded",
-      "patient": "because I helped",
+      "patient": "Unspecified",
       "actor": "Unspecified",
       "receiver": "Unspecified",
       "subject": "He",
@@ -41,9 +54,9 @@
         "form": "Base",
         "verb": "succeeded",
         "subject": "He",
-        "object": "because I helped",
+        "object": null,
         "category": "Action",
-        "patient": "because I helped",
+        "patient": "Unspecified",
         "agent": "He"
       }
     },
@@ -61,7 +74,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.522412",
+    "timestamp": "2026-10-08T09:02:55.133744",
     "input": "Please review the document.",
     "stage1": {
       "process": "Imperative / Direct Directive",
@@ -69,15 +82,31 @@
       "agent": "You"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "You"
+      "process": "Event: Action",
+      "decision": "No causal relation; Event classified: Action",
+      "mapping": "You -> Action -> review the document",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Action",
+          "verb": "review",
+          "actor": "You",
+          "patient": "the document"
+        },
+        "agent_particle_id": "p_agent_0c8bfea52029",
+        "event_particle_id": "p_event_e989aac88239"
+      },
+      "agent": "You",
+      "action": {
+        "verb": "review",
+        "actor": "You",
+        "patient": "the document"
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "You"
     },
@@ -114,7 +143,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.523492",
+    "timestamp": "2026-10-08T09:02:55.134859",
     "input": "Thought was strange.",
     "stage1": {
       "process": "Psychological Verb + Null Subject",
@@ -122,34 +151,49 @@
       "agent": "I"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "I"
+      "process": "Event: State",
+      "decision": "No causal relation; Event classified: State",
+      "mapping": "I -> State -> strange",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "State",
+          "verb": null,
+          "actor": "I",
+          "patient": null,
+          "state": "strange"
+        },
+        "agent_particle_id": "p_agent_03e1521b86bc",
+        "event_particle_id": "p_event_958e2699971b"
+      },
+      "agent": "I",
+      "action": null
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "I"
     },
     "stage4": {
-      "process": "[Morphology: Base] → [Category: Action]",
-      "form": "Base",
-      "category": "Action",
-      "verb": "was",
-      "patient": "strange",
+      "process": "[State predicate] → [Category: State]",
+      "form": "State",
+      "category": "State",
+      "verb": null,
+      "patient": "Unspecified",
       "actor": "Unspecified",
       "receiver": "Unspecified",
       "subject": "Thought",
       "structure": {
-        "form": "Base",
-        "verb": "was",
+        "form": "State",
+        "state": "strange",
         "subject": "Thought",
-        "object": "strange",
-        "category": "Action",
-        "patient": "strange",
+        "object": null,
+        "psychological_verb": "thought",
+        "verb": null,
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "I"
       }
     },
@@ -167,7 +211,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.524612",
+    "timestamp": "2026-10-08T09:02:55.136336",
     "input": "Thought it was strange apparently.",
     "stage1": {
       "process": "Null Subject + Evidential / Attribution Marker",
@@ -175,34 +219,64 @@
       "agent": "He/She/They"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "He/She/They"
+      "process": "Event: State",
+      "decision": "No causal relation; Event classified: State",
+      "mapping": "He/She/They -> State -> strange",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "State",
+          "verb": null,
+          "actor": "He/She/They",
+          "patient": null,
+          "state": "strange"
+        },
+        "agent_particle_id": "p_agent_d6173fb42f11",
+        "event_particle_id": "p_event_0dc58a9c442e"
+      },
+      "agent": "He/She/They",
+      "action": null
     },
     "stage3": {
-      "process": "No modification structure found",
-      "decision": "Standard",
-      "structure": null,
+      "process": "Degree modifier",
+      "decision": "Supplementary",
+      "mapping": "Agent(He/She/They) -> Internal Eval -> State(Strange) -> How: Degree(Apparently)",
+      "target": "strange",
+      "modifier": "apparently",
+      "attribution": {
+        "target": "strange",
+        "modifier_agent": "strange",
+        "primary_agent": "He/She/They"
+      },
+      "structure": {
+        "type": "Supplementary",
+        "antecedent": "strange",
+        "target": "strange",
+        "clause": "apparently",
+        "kind": "Degree",
+        "classification": "Supplementary",
+        "modifier_kind": "Degree"
+      },
       "agent": "He/She/They"
     },
     "stage4": {
-      "process": "[Morphology: Base] → [Category: Action]",
-      "form": "Base",
-      "category": "Action",
-      "verb": "it",
-      "patient": "was strange apparently",
+      "process": "[State predicate] → [Category: State]",
+      "form": "State",
+      "category": "State",
+      "verb": null,
+      "patient": "Unspecified",
       "actor": "Unspecified",
       "receiver": "Unspecified",
-      "subject": "Thought",
+      "subject": "Thought it",
       "structure": {
-        "form": "Base",
-        "verb": "it",
-        "subject": "Thought",
-        "object": "was strange apparently",
-        "category": "Action",
-        "patient": "was strange apparently",
+        "form": "State",
+        "state": "strange",
+        "subject": "Thought it",
+        "object": "apparently",
+        "psychological_verb": "thought",
+        "verb": null,
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "He/She/They"
       }
     },
@@ -220,7 +294,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.526161",
+    "timestamp": "2026-10-08T09:02:55.138152",
     "input": "Went to the cafe yesterday.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
@@ -229,15 +303,31 @@
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "Clarification Required (Undetermined Agent)",
-      "mapping": "None",
-      "structure": null,
-      "agent": "Unknown"
+      "process": "Event: Action",
+      "decision": "Clarification Required (Undetermined Agent); Event classified: Action",
+      "mapping": "Unknown -> Action -> went",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Action",
+          "verb": "went",
+          "actor": "Unknown",
+          "patient": null
+        },
+        "agent_particle_id": "p_agent_8ed2c8d9fb74",
+        "event_particle_id": "p_event_270546f68f50"
+      },
+      "agent": "Unknown",
+      "action": {
+        "verb": "went",
+        "actor": "Unknown",
+        "patient": null
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "Unknown"
     },
@@ -245,18 +335,18 @@
       "process": "[Morphology: Base] → [Category: Action]",
       "form": "Base",
       "category": "Action",
-      "verb": "to",
-      "patient": "the cafe yesterday",
+      "verb": "went",
+      "patient": "Unspecified",
       "actor": "Unspecified",
       "receiver": "Unspecified",
       "subject": "Went",
       "structure": {
         "form": "Base",
-        "verb": "to",
+        "verb": "went",
         "subject": "Went",
-        "object": "the cafe yesterday",
+        "object": null,
         "category": "Action",
-        "patient": "the cafe yesterday",
+        "patient": "Unspecified",
         "agent": "Unknown"
       }
     },
@@ -274,7 +364,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.527288",
+    "timestamp": "2026-10-08T09:02:55.139334",
     "input": "It is required that you submit the form.",
     "stage1": {
       "process": "Formal Subject Detected (It ... that)",
@@ -283,40 +373,50 @@
       "structure": "It is [required] that [you submit the form]"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
+      "process": "Event: Action",
+      "decision": "No causal relation; Event classified: Action",
+      "mapping": "you -> Action -> submit the form",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Action",
+          "verb": "submit",
+          "actor": "you",
+          "patient": "the form"
+        },
+        "agent_particle_id": "p_agent_03b8a6a878ad",
+        "event_particle_id": "p_event_d71370d3de61"
+      },
+      "agent": "you",
+      "action": {
+        "verb": "submit",
+        "actor": "you",
+        "patient": "the form"
+      }
+    },
+    "stage3": {
+      "process": "No modification structure found",
+      "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "you"
     },
-    "stage3": {
-      "process": "Defining clause",
-      "decision": "Essential",
-      "target": "It is required",
-      "modifier": "you submit the form",
-      "structure": {
-        "type": "Defining",
-        "antecedent": "It is required",
-        "clause": "you submit the form"
-      },
-      "agent": "you"
-    },
     "stage4": {
-      "process": "[Passive: be + V-en + by]",
-      "form": "Passive",
+      "process": "[Morphology: Base] → [Category: Action]",
+      "form": "Base",
       "category": "Action",
-      "verb": "required",
-      "patient": "It",
-      "actor": "Unknown",
-      "receiver": "It",
-      "subject": "Unspecified",
+      "verb": "submit",
+      "patient": "the form",
+      "actor": "Unspecified",
+      "receiver": "Unspecified",
+      "subject": "you",
       "structure": {
-        "form": "Passive",
-        "verb": "required",
-        "actor": "Unknown",
-        "receiver": "It",
+        "form": "Base",
+        "verb": "submit",
+        "subject": "you",
+        "object": "the form",
         "category": "Action",
-        "patient": "It",
+        "patient": "the form",
         "agent": "you"
       }
     },
@@ -324,7 +424,7 @@
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
         "who": "you",
-        "what": "required It",
+        "what": "submit the form",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -334,7 +434,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.528377",
+    "timestamp": "2026-10-08T09:02:55.140516",
     "input": "I submitted the form yesterday.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -342,15 +442,31 @@
       "agent": "I"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "I"
+      "process": "Event: Action",
+      "decision": "No causal relation; Event classified: Action",
+      "mapping": "I -> Action -> submitted the form",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Action",
+          "verb": "submitted",
+          "actor": "I",
+          "patient": "the form"
+        },
+        "agent_particle_id": "p_agent_dd2834cd78c2",
+        "event_particle_id": "p_event_a1f965dabc43"
+      },
+      "agent": "I",
+      "action": {
+        "verb": "submitted",
+        "actor": "I",
+        "patient": "the form"
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "I"
     },
@@ -359,7 +475,7 @@
       "form": "Base",
       "category": "Action",
       "verb": "submitted",
-      "patient": "the form yesterday",
+      "patient": "the form",
       "actor": "Unspecified",
       "receiver": "Unspecified",
       "subject": "I",
@@ -367,9 +483,9 @@
         "form": "Base",
         "verb": "submitted",
         "subject": "I",
-        "object": "the form yesterday",
+        "object": "the form",
         "category": "Action",
-        "patient": "the form yesterday",
+        "patient": "the form",
         "agent": "I"
       }
     },
@@ -387,7 +503,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.529560",
+    "timestamp": "2026-10-08T09:02:55.141816",
     "input": "I wrote the report at the office.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -395,15 +511,31 @@
       "agent": "I"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "I"
+      "process": "Event: Action",
+      "decision": "No causal relation; Event classified: Action",
+      "mapping": "I -> Action -> wrote the report",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Action",
+          "verb": "wrote",
+          "actor": "I",
+          "patient": "the report"
+        },
+        "agent_particle_id": "p_agent_4961e9984436",
+        "event_particle_id": "p_event_44e4f79c2688"
+      },
+      "agent": "I",
+      "action": {
+        "verb": "wrote",
+        "actor": "I",
+        "patient": "the report"
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "I"
     },
@@ -412,7 +544,7 @@
       "form": "Base",
       "category": "Action",
       "verb": "wrote",
-      "patient": "the report at the office",
+      "patient": "the report",
       "actor": "Unspecified",
       "receiver": "Unspecified",
       "subject": "I",
@@ -420,9 +552,9 @@
         "form": "Base",
         "verb": "wrote",
         "subject": "I",
-        "object": "the report at the office",
+        "object": "the report",
         "category": "Action",
-        "patient": "the report at the office",
+        "patient": "the report",
         "agent": "I"
       }
     },
@@ -440,7 +572,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.530969",
+    "timestamp": "2026-10-08T09:02:55.143351",
     "input": "Succeeded because you helped.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
@@ -449,23 +581,36 @@
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
-      "process": "Causal Marker: because",
-      "decision": "Causal relation mapped",
-      "mapping": "you helped -> Causes -> Succeeded",
+      "process": "Causal Marker: because; Event: Action",
+      "decision": "Causal relation mapped; Event classified: Action",
+      "mapping": "you helped -> Cause -> Succeeded; Unknown -> Action -> succeeded",
       "structure": {
         "relation": "CauseEffect",
         "marker": "because",
         "cause": "you helped",
         "effect": "Succeeded",
-        "agent_particle_id": "p_agent_89f13e",
-        "cause_particle_id": "p_cause_1c493d",
-        "effect_particle_id": "p_effect_f679d2"
+        "event": {
+          "category": "Action",
+          "verb": "succeeded",
+          "actor": "Unknown",
+          "patient": null
+        },
+        "agent_particle_id": "p_agent_7c397ad5f93b",
+        "cause_particle_id": "p_cause_b8a647c50f12",
+        "effect_particle_id": "p_effect_e9e3b888b2e1",
+        "event_particle_id": "p_event_fc737bfd10f6"
       },
-      "agent": "Unknown"
+      "agent": "Unknown",
+      "action": {
+        "verb": "succeeded",
+        "actor": "Unknown",
+        "patient": null
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "Unknown"
     },
@@ -473,18 +618,18 @@
       "process": "[Morphology: Base] → [Category: Action]",
       "form": "Base",
       "category": "Action",
-      "verb": "because",
-      "patient": "you helped",
+      "verb": "succeeded",
+      "patient": "Unspecified",
       "actor": "Unspecified",
       "receiver": "Unspecified",
       "subject": "Succeeded",
       "structure": {
         "form": "Base",
-        "verb": "because",
+        "verb": "succeeded",
         "subject": "Succeeded",
-        "object": "you helped",
+        "object": null,
         "category": "Action",
-        "patient": "you helped",
+        "patient": "Unspecified",
         "agent": "Unknown"
       }
     },
@@ -502,7 +647,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.532329",
+    "timestamp": "2026-10-08T09:02:55.144950",
     "input": "Failed despite the effort.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
@@ -511,21 +656,34 @@
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
-      "process": "Concessive Marker: despite",
-      "decision": "Concessive relation mapped",
-      "mapping": "the effort -> Concession -> Failed",
+      "process": "Concessive Marker: despite; Event: Action",
+      "decision": "Concessive relation mapped; Event classified: Action",
+      "mapping": "the effort -> Concession -> Failed; Unknown -> Action -> failed",
       "structure": {
         "relation": "Concession",
         "marker": "despite",
         "concession": "the effort",
         "outcome": "Failed",
-        "agent_particle_id": "p_agent_b105b7"
+        "event": {
+          "category": "Action",
+          "verb": "failed",
+          "actor": "Unknown",
+          "patient": null
+        },
+        "agent_particle_id": "p_agent_7116ebff47a6",
+        "event_particle_id": "p_event_a8e9b75454e0"
       },
-      "agent": "Unknown"
+      "agent": "Unknown",
+      "action": {
+        "verb": "failed",
+        "actor": "Unknown",
+        "patient": null
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "Unknown"
     },
@@ -533,18 +691,18 @@
       "process": "[Morphology: Base] → [Category: Action]",
       "form": "Base",
       "category": "Action",
-      "verb": "despite",
-      "patient": "the effort",
+      "verb": "failed",
+      "patient": "Unspecified",
       "actor": "Unspecified",
       "receiver": "Unspecified",
       "subject": "Failed",
       "structure": {
         "form": "Base",
-        "verb": "despite",
+        "verb": "failed",
         "subject": "Failed",
-        "object": "the effort",
+        "object": null,
         "category": "Action",
-        "patient": "the effort",
+        "patient": "Unspecified",
         "agent": "Unknown"
       }
     },
@@ -552,7 +710,7 @@
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
         "who": "Unknown",
-        "what": "failed despite the effort",
+        "what": "failed",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -562,7 +720,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.533775",
+    "timestamp": "2026-10-08T09:02:55.146565",
     "input": "Required further investigation.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
@@ -571,15 +729,31 @@
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "Clarification Required (Undetermined Agent)",
-      "mapping": "None",
-      "structure": null,
-      "agent": "Unknown"
+      "process": "Event: Action",
+      "decision": "Clarification Required (Undetermined Agent); Event classified: Action",
+      "mapping": "Unknown -> Action -> further investigation",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Action",
+          "verb": "further",
+          "actor": "Unknown",
+          "patient": "investigation"
+        },
+        "agent_particle_id": "p_agent_c01bbff54828",
+        "event_particle_id": "p_event_4cf8914770bb"
+      },
+      "agent": "Unknown",
+      "action": {
+        "verb": "further",
+        "actor": "Unknown",
+        "patient": "investigation"
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "Unknown"
     },
@@ -616,7 +790,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.535299",
+    "timestamp": "2026-10-08T09:02:55.148250",
     "input": "Submitted the form yesterday.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
@@ -625,15 +799,31 @@
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "Clarification Required (Undetermined Agent)",
-      "mapping": "None",
-      "structure": null,
-      "agent": "Unknown"
+      "process": "Event: Action",
+      "decision": "Clarification Required (Undetermined Agent); Event classified: Action",
+      "mapping": "Unknown -> Action -> submitted the form",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Action",
+          "verb": "submitted",
+          "actor": "Unknown",
+          "patient": "the form"
+        },
+        "agent_particle_id": "p_agent_28048229b7e7",
+        "event_particle_id": "p_event_6e7d09fcb43a"
+      },
+      "agent": "Unknown",
+      "action": {
+        "verb": "submitted",
+        "actor": "Unknown",
+        "patient": "the form"
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "Unknown"
     },
@@ -641,18 +831,18 @@
       "process": "[Morphology: Base] → [Category: Action]",
       "form": "Base",
       "category": "Action",
-      "verb": "the",
-      "patient": "form yesterday",
+      "verb": "submitted",
+      "patient": "the form",
       "actor": "Unspecified",
       "receiver": "Unspecified",
       "subject": "Submitted",
       "structure": {
         "form": "Base",
-        "verb": "the",
+        "verb": "submitted",
         "subject": "Submitted",
-        "object": "form yesterday",
+        "object": "the form",
         "category": "Action",
-        "patient": "form yesterday",
+        "patient": "the form",
         "agent": "Unknown"
       }
     },
@@ -670,7 +860,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.536984",
+    "timestamp": "2026-10-08T09:02:55.150050",
     "input": "Succeeded in the meeting.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
@@ -679,15 +869,31 @@
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "Clarification Required (Undetermined Agent)",
-      "mapping": "None",
-      "structure": null,
-      "agent": "Unknown"
+      "process": "Event: Action",
+      "decision": "Clarification Required (Undetermined Agent); Event classified: Action",
+      "mapping": "Unknown -> Action -> succeeded",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Action",
+          "verb": "succeeded",
+          "actor": "Unknown",
+          "patient": null
+        },
+        "agent_particle_id": "p_agent_502465f203de",
+        "event_particle_id": "p_event_396327c97469"
+      },
+      "agent": "Unknown",
+      "action": {
+        "verb": "succeeded",
+        "actor": "Unknown",
+        "patient": null
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "Unknown"
     },
@@ -695,18 +901,18 @@
       "process": "[Morphology: Base] → [Category: Action]",
       "form": "Base",
       "category": "Action",
-      "verb": "in",
-      "patient": "the meeting",
+      "verb": "succeeded",
+      "patient": "Unspecified",
       "actor": "Unspecified",
       "receiver": "Unspecified",
       "subject": "Succeeded",
       "structure": {
         "form": "Base",
-        "verb": "in",
+        "verb": "succeeded",
         "subject": "Succeeded",
-        "object": "the meeting",
+        "object": null,
         "category": "Action",
-        "patient": "the meeting",
+        "patient": "Unspecified",
         "agent": "Unknown"
       }
     },
@@ -724,7 +930,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.538726",
+    "timestamp": "2026-10-08T09:02:55.151896",
     "input": "I'm stressed due to the project.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -732,42 +938,57 @@
       "agent": "I"
     },
     "stage2": {
-      "process": "Causal Marker: due to",
-      "decision": "Causal relation mapped",
-      "mapping": "the project -> Causes -> I'm stressed",
+      "process": "Causal Marker: due to; Event: State",
+      "decision": "Causal relation mapped; Event classified: State",
+      "mapping": "the project -> Cause -> I'm stressed; I -> State -> stressed",
       "structure": {
         "relation": "CauseEffect",
         "marker": "due to",
         "cause": "the project",
         "effect": "I'm stressed",
-        "agent_particle_id": "p_agent_f1af76",
-        "cause_particle_id": "p_cause_2adc09",
-        "effect_particle_id": "p_effect_8b5f33"
+        "event": {
+          "category": "State",
+          "verb": "stressed",
+          "actor": "I",
+          "patient": null,
+          "state": "stressed"
+        },
+        "agent_particle_id": "p_agent_c26f459ef844",
+        "cause_particle_id": "p_cause_df4bc21dcf80",
+        "effect_particle_id": "p_effect_ae83b8187416",
+        "event_particle_id": "p_event_25e224f7391b"
       },
-      "agent": "I"
+      "agent": "I",
+      "action": {
+        "verb": "stressed",
+        "actor": "I",
+        "patient": null
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "I"
     },
     "stage4": {
-      "process": "[Morphology: Base] → [Category: Action]",
-      "form": "Base",
-      "category": "Action",
+      "process": "[State predicate] → [Category: State]",
+      "form": "State",
+      "category": "State",
       "verb": "stressed",
-      "patient": "due to the project",
+      "patient": "Unspecified",
       "actor": "Unspecified",
       "receiver": "Unspecified",
-      "subject": "I'm",
+      "subject": "I",
       "structure": {
-        "form": "Base",
-        "verb": "stressed",
-        "subject": "I'm",
+        "form": "State",
+        "state": "stressed",
+        "subject": "I",
         "object": "due to the project",
-        "category": "Action",
-        "patient": "due to the project",
+        "verb": "stressed",
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "I"
       }
     },
@@ -775,9 +996,9 @@
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
         "who": "I",
-        "what": "'m stressed due",
+        "what": "stressed",
         "when": "Unspecified",
-        "where": "project",
+        "where": "Unspecified",
         "why": "due to the project",
         "how": "Unspecified"
       },
@@ -785,7 +1006,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.540360",
+    "timestamp": "2026-10-08T09:02:55.153782",
     "input": "I succeeded because you helped.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -793,23 +1014,36 @@
       "agent": "I"
     },
     "stage2": {
-      "process": "Causal Marker: because",
-      "decision": "Causal relation mapped",
-      "mapping": "you helped -> Causes -> I succeeded",
+      "process": "Causal Marker: because; Event: Action",
+      "decision": "Causal relation mapped; Event classified: Action",
+      "mapping": "you helped -> Cause -> I succeeded; I -> Action -> succeeded",
       "structure": {
         "relation": "CauseEffect",
         "marker": "because",
         "cause": "you helped",
         "effect": "I succeeded",
-        "agent_particle_id": "p_agent_2a9c29",
-        "cause_particle_id": "p_cause_8c4992",
-        "effect_particle_id": "p_effect_0134c5"
+        "event": {
+          "category": "Action",
+          "verb": "succeeded",
+          "actor": "I",
+          "patient": null
+        },
+        "agent_particle_id": "p_agent_72bc868676c5",
+        "cause_particle_id": "p_cause_890fa1ac310a",
+        "effect_particle_id": "p_effect_33b62c54a945",
+        "event_particle_id": "p_event_01929f764805"
       },
-      "agent": "I"
+      "agent": "I",
+      "action": {
+        "verb": "succeeded",
+        "actor": "I",
+        "patient": null
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "I"
     },
@@ -818,7 +1052,7 @@
       "form": "Base",
       "category": "Action",
       "verb": "succeeded",
-      "patient": "because you helped",
+      "patient": "Unspecified",
       "actor": "Unspecified",
       "receiver": "Unspecified",
       "subject": "I",
@@ -826,9 +1060,9 @@
         "form": "Base",
         "verb": "succeeded",
         "subject": "I",
-        "object": "because you helped",
+        "object": null,
         "category": "Action",
-        "patient": "because you helped",
+        "patient": "Unspecified",
         "agent": "I"
       }
     },
@@ -846,7 +1080,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.542068",
+    "timestamp": "2026-10-08T09:02:55.156327",
     "input": "He succeeded by working hard.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -854,16 +1088,57 @@
       "agent": "He"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "He"
+      "process": "Event: Action",
+      "decision": "No causal relation; Event classified: Action",
+      "mapping": "He -> Action -> succeeded",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Action",
+          "verb": "succeeded",
+          "actor": "He",
+          "patient": null
+        },
+        "agent_particle_id": "p_agent_fefa59f1d4a7",
+        "event_particle_id": "p_event_effdf1fc840c"
+      },
+      "agent": "He",
+      "action": {
+        "verb": "succeeded",
+        "actor": "He",
+        "patient": null
+      },
+      "context": {
+        "relation": "Manner",
+        "marker": "by",
+        "context": "working hard",
+        "event": "He succeeded"
+      }
     },
     "stage3": {
-      "process": "No modification structure found",
-      "decision": "Standard",
-      "structure": null,
+      "process": "Instrument phrase",
+      "decision": "Supplementary",
+      "mapping": "Agent(He) -> How: Instrument(Hard Work) -> State(Success)",
+      "target": "Success",
+      "modifier": "Hard Work",
+      "attribution": {
+        "target": "Success",
+        "modifier_agent": "Hard Work",
+        "primary_agent": "He"
+      },
+      "structure": {
+        "type": "Supplementary",
+        "antecedent": "He succeeded",
+        "target": "Success",
+        "clause": "Hard Work",
+        "kind": "Instrument",
+        "actor": "He",
+        "outcome": "Success",
+        "outcome_kind": "State",
+        "instrument": "Hard Work",
+        "classification": "Supplementary",
+        "modifier_kind": "Instrument"
+      },
       "agent": "He"
     },
     "stage4": {
@@ -871,7 +1146,7 @@
       "form": "Base",
       "category": "Action",
       "verb": "succeeded",
-      "patient": "by working hard",
+      "patient": "Unspecified",
       "actor": "Unspecified",
       "receiver": "Unspecified",
       "subject": "He",
@@ -879,9 +1154,9 @@
         "form": "Base",
         "verb": "succeeded",
         "subject": "He",
-        "object": "by working hard",
+        "object": null,
         "category": "Action",
-        "patient": "by working hard",
+        "patient": "Unspecified",
         "agent": "He"
       }
     },
@@ -893,13 +1168,13 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "by working hard"
+        "how": "Hard Work"
       },
       "status": "Ready for Particle Encapsulation"
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.543847",
+    "timestamp": "2026-10-08T09:02:55.159388",
     "input": "I was stressed after the long meeting.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -907,34 +1182,73 @@
       "agent": "I"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "I"
+      "process": "Event: State",
+      "decision": "No causal relation; Event classified: State",
+      "mapping": "I -> State -> stressed",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "State",
+          "verb": "stressed",
+          "actor": "I",
+          "patient": null,
+          "state": "stressed"
+        },
+        "agent_particle_id": "p_agent_bd1fd846e495",
+        "event_particle_id": "p_event_da865492a5de"
+      },
+      "agent": "I",
+      "action": {
+        "verb": "stressed",
+        "actor": "I",
+        "patient": null
+      },
+      "context": {
+        "relation": "Temporal",
+        "marker": "after",
+        "context": "the long meeting",
+        "event": "I was stressed"
+      }
     },
     "stage3": {
-      "process": "No modification structure found",
-      "decision": "Standard",
-      "structure": null,
+      "process": "Adjectival modifier",
+      "decision": "Supplementary",
+      "mapping": "Node(meeting) -> Attribute -> State(Long)",
+      "target": "meeting",
+      "modifier": "long",
+      "attribution": {
+        "target": "meeting",
+        "modifier_agent": "meeting",
+        "primary_agent": "I"
+      },
+      "structure": {
+        "type": "Supplementary",
+        "antecedent": "meeting",
+        "target": "meeting",
+        "clause": "long",
+        "kind": "Adjective",
+        "classification": "Supplementary",
+        "modifier_kind": "Adjective"
+      },
       "agent": "I"
     },
     "stage4": {
-      "process": "[Passive: be + V-en + by]",
-      "form": "Passive",
-      "category": "Action",
+      "process": "[State predicate] → [Category: State]",
+      "form": "State",
+      "category": "State",
       "verb": "stressed",
-      "patient": "I",
-      "actor": "Unknown",
-      "receiver": "I",
-      "subject": "Unspecified",
+      "patient": "Unspecified",
+      "actor": "Unspecified",
+      "receiver": "Unspecified",
+      "subject": "I",
       "structure": {
-        "form": "Passive",
+        "form": "State",
+        "state": "stressed",
+        "subject": "I",
+        "object": "after the long meeting",
         "verb": "stressed",
-        "actor": "Unknown",
-        "receiver": "I",
-        "category": "Action",
-        "patient": "I",
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "I"
       }
     },
@@ -942,8 +1256,8 @@
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
         "who": "I",
-        "what": "stressed I",
-        "when": "Unspecified",
+        "what": "stressed",
+        "when": "after the long meeting",
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified"
@@ -952,7 +1266,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.545721",
+    "timestamp": "2026-10-08T09:02:55.163997",
     "input": "The report, which was long, is done.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -960,40 +1274,66 @@
       "agent": "The report"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "The report"
+      "process": "Event: State",
+      "decision": "No causal relation; Event classified: State",
+      "mapping": "The report -> State -> done",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "State",
+          "verb": "done",
+          "actor": "The report",
+          "patient": null,
+          "state": "done"
+        },
+        "agent_particle_id": "p_agent_c2a35e790a9d",
+        "event_particle_id": "p_event_00177b0f1304"
+      },
+      "agent": "The report",
+      "action": {
+        "verb": "done",
+        "actor": "The report",
+        "patient": null
+      }
     },
     "stage3": {
       "process": "Non-defining clause",
       "decision": "Supplementary",
+      "mapping": "Node(The report) -> Attribute -> State(Long)",
       "target": "The report",
       "modifier": "was long",
+      "attribution": {
+        "target": "The report",
+        "modifier_agent": "The report",
+        "primary_agent": "The report"
+      },
       "structure": {
         "type": "Non-defining",
         "antecedent": "The report",
-        "clause": "was long"
+        "target": "The report",
+        "clause": "was long",
+        "classification": "Supplementary",
+        "modifier_kind": "RelativeClause"
       },
       "agent": "The report"
     },
     "stage4": {
-      "process": "[Morphology: Base] → [Category: Action]",
-      "form": "Base",
-      "category": "Action",
-      "verb": "report,",
-      "patient": "which was long, is done",
+      "process": "[State predicate] → [Category: State]",
+      "form": "State",
+      "category": "State",
+      "verb": "done",
+      "patient": "Unspecified",
       "actor": "Unspecified",
       "receiver": "Unspecified",
-      "subject": "The",
+      "subject": "The report",
       "structure": {
-        "form": "Base",
-        "verb": "report,",
-        "subject": "The",
-        "object": "which was long, is done",
-        "category": "Action",
-        "patient": "which was long, is done",
+        "form": "State",
+        "state": "done",
+        "subject": "The report",
+        "object": null,
+        "verb": "done",
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "The report"
       }
     },
@@ -1001,7 +1341,7 @@
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
         "who": "The report",
-        "what": "which was long, is done",
+        "what": "done",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1011,7 +1351,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.547659",
+    "timestamp": "2026-10-08T09:02:55.169593",
     "input": "The report that I wrote is done.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1019,40 +1359,68 @@
       "agent": "The report"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "The report"
+      "process": "Event: State",
+      "decision": "No causal relation; Event classified: State",
+      "mapping": "The report -> State -> done",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "State",
+          "verb": "done",
+          "actor": "The report",
+          "patient": null,
+          "state": "done"
+        },
+        "agent_particle_id": "p_agent_6d2bf6cbedc2",
+        "event_particle_id": "p_event_06f0611046f9"
+      },
+      "agent": "The report",
+      "action": {
+        "verb": "done",
+        "actor": "The report",
+        "patient": null
+      }
     },
     "stage3": {
       "process": "Defining clause",
       "decision": "Essential",
+      "mapping": "Node(The report) -> Defining Attribute -> Clause(I wrote)",
       "target": "The report",
       "modifier": "I wrote",
+      "attribution": {
+        "target": "The report",
+        "modifier_agent": "I",
+        "primary_agent": "The report"
+      },
       "structure": {
         "type": "Defining",
         "antecedent": "The report",
-        "clause": "I wrote"
+        "target": "The report",
+        "clause": "I wrote",
+        "kind": "RelativeClause",
+        "relative_marker": "that",
+        "classification": "Essential",
+        "modifier_kind": "RelativeClause"
       },
       "agent": "The report"
     },
     "stage4": {
-      "process": "[Morphology: Base] → [Category: Action]",
-      "form": "Base",
-      "category": "Action",
-      "verb": "report",
-      "patient": "that I wrote is done",
+      "process": "[State predicate] → [Category: State]",
+      "form": "State",
+      "category": "State",
+      "verb": "done",
+      "patient": "Unspecified",
       "actor": "Unspecified",
       "receiver": "Unspecified",
-      "subject": "The",
+      "subject": "The report that I wrote",
       "structure": {
-        "form": "Base",
-        "verb": "report",
-        "subject": "The",
-        "object": "that I wrote is done",
-        "category": "Action",
-        "patient": "that I wrote is done",
+        "form": "State",
+        "state": "done",
+        "subject": "The report that I wrote",
+        "object": null,
+        "verb": "done",
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "The report"
       }
     },
@@ -1060,7 +1428,7 @@
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
         "who": "The report",
-        "what": "that I wrote is done",
+        "what": "done",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1070,7 +1438,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.549715",
+    "timestamp": "2026-10-08T09:02:55.173563",
     "input": "The office where I wrote the report was quiet.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1078,34 +1446,68 @@
       "agent": "The office"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "The office"
+      "process": "Event: State",
+      "decision": "No causal relation; Event classified: State",
+      "mapping": "The office -> State -> quiet",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "State",
+          "verb": "quiet",
+          "actor": "The office",
+          "patient": null,
+          "state": "quiet"
+        },
+        "agent_particle_id": "p_agent_3fcdc3ba7823",
+        "event_particle_id": "p_event_197a2a7b57e5"
+      },
+      "agent": "The office",
+      "action": {
+        "verb": "quiet",
+        "actor": "The office",
+        "patient": null
+      }
     },
     "stage3": {
-      "process": "No modification structure found",
-      "decision": "Standard",
-      "structure": null,
+      "process": "Defining clause",
+      "decision": "Essential",
+      "mapping": "Node(The office) -> Defining Attribute -> Clause(I wrote the report)",
+      "target": "The office",
+      "modifier": "I wrote the report",
+      "attribution": {
+        "target": "The office",
+        "modifier_agent": "I",
+        "primary_agent": "The office"
+      },
+      "structure": {
+        "type": "Defining",
+        "antecedent": "The office",
+        "target": "The office",
+        "clause": "I wrote the report",
+        "kind": "RelativeClause",
+        "relative_marker": "where",
+        "classification": "Essential",
+        "modifier_kind": "RelativeClause"
+      },
       "agent": "The office"
     },
     "stage4": {
-      "process": "[Passive: be + V-en + by]",
-      "form": "Passive",
-      "category": "Action",
+      "process": "[State predicate] → [Category: State]",
+      "form": "State",
+      "category": "State",
       "verb": "quiet",
-      "patient": "The office where I wrote the report",
-      "actor": "Unknown",
-      "receiver": "The office where I wrote the report",
-      "subject": "Unspecified",
+      "patient": "Unspecified",
+      "actor": "Unspecified",
+      "receiver": "Unspecified",
+      "subject": "The office where I wrote the report",
       "structure": {
-        "form": "Passive",
+        "form": "State",
+        "state": "quiet",
+        "subject": "The office where I wrote the report",
+        "object": null,
         "verb": "quiet",
-        "actor": "Unknown",
-        "receiver": "The office where I wrote the report",
-        "category": "Action",
-        "patient": "The office where I wrote the report",
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "The office"
       }
     },
@@ -1113,7 +1515,7 @@
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
         "who": "The office",
-        "what": "quiet the office where I wrote the report",
+        "what": "quiet",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1123,7 +1525,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.551881",
+    "timestamp": "2026-10-08T09:02:55.177552",
     "input": "The day where he succeeded was bright.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1131,34 +1533,68 @@
       "agent": "The day"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "The day"
+      "process": "Event: State",
+      "decision": "No causal relation; Event classified: State",
+      "mapping": "The day -> State -> bright",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "State",
+          "verb": "bright",
+          "actor": "The day",
+          "patient": null,
+          "state": "bright"
+        },
+        "agent_particle_id": "p_agent_e3b3bfc6c43b",
+        "event_particle_id": "p_event_34d203461e91"
+      },
+      "agent": "The day",
+      "action": {
+        "verb": "bright",
+        "actor": "The day",
+        "patient": null
+      }
     },
     "stage3": {
-      "process": "No modification structure found",
-      "decision": "Standard",
-      "structure": null,
+      "process": "Defining clause",
+      "decision": "Essential",
+      "mapping": "Node(The day) -> Defining Attribute -> Clause(he succeeded)",
+      "target": "The day",
+      "modifier": "he succeeded",
+      "attribution": {
+        "target": "The day",
+        "modifier_agent": "The day",
+        "primary_agent": "The day"
+      },
+      "structure": {
+        "type": "Defining",
+        "antecedent": "The day",
+        "target": "The day",
+        "clause": "he succeeded",
+        "kind": "RelativeClause",
+        "relative_marker": "where",
+        "classification": "Essential",
+        "modifier_kind": "RelativeClause"
+      },
       "agent": "The day"
     },
     "stage4": {
-      "process": "[Passive: be + V-en + by]",
-      "form": "Passive",
-      "category": "Action",
+      "process": "[State predicate] → [Category: State]",
+      "form": "State",
+      "category": "State",
       "verb": "bright",
-      "patient": "The day where he succeeded",
-      "actor": "Unknown",
-      "receiver": "The day where he succeeded",
-      "subject": "Unspecified",
+      "patient": "Unspecified",
+      "actor": "Unspecified",
+      "receiver": "Unspecified",
+      "subject": "The day where he succeeded",
       "structure": {
-        "form": "Passive",
+        "form": "State",
+        "state": "bright",
+        "subject": "The day where he succeeded",
+        "object": null,
         "verb": "bright",
-        "actor": "Unknown",
-        "receiver": "The day where he succeeded",
-        "category": "Action",
-        "patient": "The day where he succeeded",
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "The day"
       }
     },
@@ -1166,7 +1602,7 @@
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
         "who": "The day",
-        "what": "bright the day where he succeeded",
+        "what": "bright",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1176,7 +1612,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.553998",
+    "timestamp": "2026-10-08T09:02:55.181499",
     "input": "I have a car.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1184,15 +1620,31 @@
       "agent": "I"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "I"
+      "process": "Event: Stative",
+      "decision": "No causal relation; Event classified: Stative",
+      "mapping": "I -> Stative -> have a car",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Stative",
+          "verb": "have",
+          "actor": "I",
+          "patient": "a car"
+        },
+        "agent_particle_id": "p_agent_cb42c6fe0b4c",
+        "event_particle_id": "p_event_6172b0956d61"
+      },
+      "agent": "I",
+      "action": {
+        "verb": "have",
+        "actor": "I",
+        "patient": "a car"
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "I"
     },
@@ -1229,7 +1681,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.556130",
+    "timestamp": "2026-10-08T09:02:55.185540",
     "input": "I am having a party.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1237,15 +1689,31 @@
       "agent": "I"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "I"
+      "process": "Event: Action",
+      "decision": "No causal relation; Event classified: Action",
+      "mapping": "I -> Action -> having a party",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Action",
+          "verb": "having",
+          "actor": "I",
+          "patient": "a party"
+        },
+        "agent_particle_id": "p_agent_fa7aea582b4a",
+        "event_particle_id": "p_event_95c13bacd650"
+      },
+      "agent": "I",
+      "action": {
+        "verb": "having",
+        "actor": "I",
+        "patient": "a party"
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "I"
     },
@@ -1272,7 +1740,7 @@
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
         "who": "I",
-        "what": "am having a party",
+        "what": "having a party",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1282,7 +1750,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.558414",
+    "timestamp": "2026-10-08T09:02:55.189767",
     "input": "I was told by him.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1290,15 +1758,31 @@
       "agent": "I"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "I"
+      "process": "Event: Action",
+      "decision": "No causal relation; Event classified: Action",
+      "mapping": "him -> Action -> told me",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Action",
+          "verb": "told",
+          "actor": "him",
+          "patient": "I"
+        },
+        "agent_particle_id": "p_agent_c0f2be59e500",
+        "event_particle_id": "p_event_d7332f3324f5"
+      },
+      "agent": "I",
+      "action": {
+        "verb": "told",
+        "actor": "him",
+        "patient": "I"
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "I"
     },
@@ -1325,7 +1809,7 @@
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
         "who": "him",
-        "what": "told I",
+        "what": "told me",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1335,7 +1819,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.560759",
+    "timestamp": "2026-10-08T09:02:55.194521",
     "input": "The report was completed quickly.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1343,16 +1827,48 @@
       "agent": "The report"
     },
     "stage2": {
-      "process": "No causal relation found",
-      "decision": "No causal relation found",
-      "mapping": "None",
-      "structure": null,
-      "agent": "The report"
+      "process": "Event: Action",
+      "decision": "No causal relation; Event classified: Action",
+      "mapping": "Unknown -> Action -> completed The report",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Action",
+          "verb": "completed",
+          "actor": "Unknown",
+          "patient": "The report"
+        },
+        "agent_particle_id": "p_agent_2eb6806094ee",
+        "event_particle_id": "p_event_7a9740834db3"
+      },
+      "agent": "The report",
+      "action": {
+        "verb": "completed",
+        "actor": "Unknown",
+        "patient": "The report"
+      }
     },
     "stage3": {
-      "process": "No modification structure found",
-      "decision": "Standard",
-      "structure": null,
+      "process": "Manner adverb",
+      "decision": "Supplementary",
+      "mapping": "Node(The report) -> Action(Complete) -> How: Manner(Quickly)",
+      "target": "The report",
+      "modifier": "quickly",
+      "attribution": {
+        "target": "The report",
+        "modifier_agent": "The report",
+        "primary_agent": "The report"
+      },
+      "structure": {
+        "type": "Supplementary",
+        "antecedent": "The report",
+        "target": "The report",
+        "clause": "quickly",
+        "kind": "Manner",
+        "action": "Complete",
+        "classification": "Supplementary",
+        "modifier_kind": "Manner"
+      },
       "agent": "The report"
     },
     "stage4": {
@@ -1388,7 +1904,7 @@
     }
   },
   {
-    "timestamp": "2026-10-05T10:23:28.563340",
+    "timestamp": "2026-10-08T09:02:55.199294",
     "input": "Failed the exam because of bad luck.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
@@ -1397,23 +1913,36 @@
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
-      "process": "Causal Marker: because of",
-      "decision": "Causal relation mapped",
-      "mapping": "bad luck -> Causes -> Failed the exam",
+      "process": "Causal Marker: because of; Event: Action",
+      "decision": "Causal relation mapped; Event classified: Action",
+      "mapping": "bad luck -> Cause -> Failed the exam; Unknown -> Action -> failed the exam",
       "structure": {
         "relation": "CauseEffect",
         "marker": "because of",
         "cause": "bad luck",
         "effect": "Failed the exam",
-        "agent_particle_id": "p_agent_75beda",
-        "cause_particle_id": "p_cause_d5dc47",
-        "effect_particle_id": "p_effect_ad3f58"
+        "event": {
+          "category": "Action",
+          "verb": "failed",
+          "actor": "Unknown",
+          "patient": "the exam"
+        },
+        "agent_particle_id": "p_agent_d3abadd7a771",
+        "cause_particle_id": "p_cause_d60c15c13a01",
+        "effect_particle_id": "p_effect_d3e5e4086fd9",
+        "event_particle_id": "p_event_f60a5fd8dfb1"
       },
-      "agent": "Unknown"
+      "agent": "Unknown",
+      "action": {
+        "verb": "failed",
+        "actor": "Unknown",
+        "patient": "the exam"
+      }
     },
     "stage3": {
       "process": "No modification structure found",
       "decision": "Standard",
+      "mapping": null,
       "structure": null,
       "agent": "Unknown"
     },
@@ -1421,18 +1950,18 @@
       "process": "[Morphology: Base] → [Category: Action]",
       "form": "Base",
       "category": "Action",
-      "verb": "the",
-      "patient": "exam because of bad luck",
+      "verb": "failed",
+      "patient": "the exam",
       "actor": "Unspecified",
       "receiver": "Unspecified",
       "subject": "Failed",
       "structure": {
         "form": "Base",
-        "verb": "the",
+        "verb": "failed",
         "subject": "Failed",
-        "object": "exam because of bad luck",
+        "object": "the exam",
         "category": "Action",
-        "patient": "exam because of bad luck",
+        "patient": "the exam",
         "agent": "Unknown"
       }
     },
@@ -1444,6 +1973,175 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "because of bad luck",
+        "how": "Unspecified"
+      },
+      "status": "Ready for Particle Encapsulation"
+    }
+  },
+  {
+    "timestamp": "2026-10-08T09:02:55.203876",
+    "input": "I talked to the manager who was frustrated with the deadline.",
+    "stage1": {
+      "process": "Explicit Subject Present",
+      "decision": "Priority: Explicit Subject",
+      "agent": "I"
+    },
+    "stage2": {
+      "process": "Event: Action",
+      "decision": "No causal relation; Event classified: Action",
+      "mapping": "I -> Action -> talked to the manager",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Action",
+          "verb": "talked",
+          "actor": "I",
+          "patient": "to the manager"
+        },
+        "agent_particle_id": "p_agent_3d7ff9c47476",
+        "event_particle_id": "p_event_2010b448fd4d"
+      },
+      "agent": "I",
+      "action": {
+        "verb": "talked",
+        "actor": "I",
+        "patient": "to the manager"
+      }
+    },
+    "stage3": {
+      "process": "Defining clause",
+      "decision": "Essential",
+      "mapping": "Node(manager) -> Attribute -> State(Frustrated) -> Cause -> Node(the deadline)",
+      "target": "manager",
+      "modifier": "was frustrated with the deadline",
+      "attribution": {
+        "target": "manager",
+        "modifier_agent": "manager",
+        "primary_agent": "I"
+      },
+      "structure": {
+        "type": "Defining",
+        "antecedent": "I talked to the manager",
+        "target": "manager",
+        "clause": "was frustrated with the deadline",
+        "kind": "RelativeClause",
+        "relative_marker": "who",
+        "classification": "Essential",
+        "modifier_kind": "RelativeClause"
+      },
+      "agent": "I"
+    },
+    "stage4": {
+      "process": "[Morphology: Base] → [Category: Action]",
+      "form": "Base",
+      "category": "Action",
+      "verb": "talked",
+      "patient": "to the manager",
+      "actor": "Unspecified",
+      "receiver": "Unspecified",
+      "subject": "I",
+      "structure": {
+        "form": "Base",
+        "verb": "talked",
+        "subject": "I",
+        "object": "to the manager",
+        "category": "Action",
+        "patient": "to the manager",
+        "agent": "I"
+      }
+    },
+    "stage5": {
+      "stage": "Stage 5 - 5W1H Synthesis",
+      "frame": {
+        "who": "I",
+        "what": "talked to the manager",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
+        "how": "Unspecified"
+      },
+      "status": "Ready for Particle Encapsulation"
+    }
+  },
+  {
+    "timestamp": "2026-10-08T09:02:55.208368",
+    "input": "Please review the long report.",
+    "stage1": {
+      "process": "Imperative / Direct Directive",
+      "decision": "Priority: Listener Address",
+      "agent": "You"
+    },
+    "stage2": {
+      "process": "Event: Action",
+      "decision": "No causal relation; Event classified: Action",
+      "mapping": "You -> Action -> review the long report",
+      "structure": {
+        "relation": "Event",
+        "event": {
+          "category": "Action",
+          "verb": "review",
+          "actor": "You",
+          "patient": "the long report"
+        },
+        "agent_particle_id": "p_agent_2f83f7acd5cb",
+        "event_particle_id": "p_event_1b1891140779"
+      },
+      "agent": "You",
+      "action": {
+        "verb": "review",
+        "actor": "You",
+        "patient": "the long report"
+      }
+    },
+    "stage3": {
+      "process": "Adjectival modifier",
+      "decision": "Supplementary",
+      "mapping": "Node(report) -> Attribute -> State(Long)",
+      "target": "report",
+      "modifier": "long",
+      "attribution": {
+        "target": "report",
+        "modifier_agent": "report",
+        "primary_agent": "You"
+      },
+      "structure": {
+        "type": "Supplementary",
+        "antecedent": "report",
+        "target": "report",
+        "clause": "long",
+        "kind": "Adjective",
+        "classification": "Supplementary",
+        "modifier_kind": "Adjective"
+      },
+      "agent": "You"
+    },
+    "stage4": {
+      "process": "[Morphology: Base] → [Category: Action]",
+      "form": "Base",
+      "category": "Action",
+      "verb": "review",
+      "patient": "the long report",
+      "actor": "Unspecified",
+      "receiver": "Unspecified",
+      "subject": "Please",
+      "structure": {
+        "form": "Base",
+        "verb": "review",
+        "subject": "Please",
+        "object": "the long report",
+        "category": "Action",
+        "patient": "the long report",
+        "agent": "You"
+      }
+    },
+    "stage5": {
+      "stage": "Stage 5 - 5W1H Synthesis",
+      "frame": {
+        "who": "You",
+        "what": "review the long report",
+        "when": "Unspecified",
+        "where": "Unspecified",
+        "why": "Unspecified",
         "how": "Unspecified"
       },
       "status": "Ready for Particle Encapsulation"

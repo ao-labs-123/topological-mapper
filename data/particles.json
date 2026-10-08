@@ -1,6 +1,6 @@
 [
   {
-    "id": "p_agent_eeb0ce",
+    "id": "p_agent_aac8eb0fdb9c",
     "label": "He",
     "entity_type": "Agent",
     "state": "determined",
@@ -12,40 +12,44 @@
     }
   },
   {
-    "id": "p_cause_9fb7a8",
+    "id": "p_event_3edbd3958741",
+    "label": "succeeded",
+    "entity_type": "Event",
+    "state": "determined",
+    "constraints": [
+      "Causal Marker: because; Event: Action"
+    ],
+    "properties": {
+      "event": {
+        "category": "Action",
+        "verb": "succeeded",
+        "actor": "He",
+        "patient": null
+      }
+    }
+  },
+  {
+    "id": "p_cause_cc942ad74fe1",
     "label": "I helped",
     "entity_type": "Cause",
     "state": "determined",
     "constraints": [
-      "Causal Marker: because"
+      "Causal Marker: because; Event: Action"
     ],
     "properties": {}
   },
   {
-    "id": "p_effect_8176d6",
+    "id": "p_effect_47b1de987abf",
     "label": "He succeeded",
     "entity_type": "Effect",
     "state": "determined",
     "constraints": [
-      "Causal Marker: because"
+      "Causal Marker: because; Event: Action"
     ],
     "properties": {}
   },
   {
-    "id": "p_relative_clause_676a21",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
-    "state": "determined",
-    "constraints": [
-      "No modification structure found"
-    ],
-    "properties": {
-      "decision": "Standard",
-      "result": null
-    }
-  },
-  {
-    "id": "p_morphology_193348",
+    "id": "p_morphology_87d3f8758d9a",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -57,15 +61,15 @@
         "form": "Base",
         "verb": "succeeded",
         "subject": "He",
-        "object": "because I helped",
+        "object": null,
         "category": "Action",
-        "patient": "because I helped",
+        "patient": "Unspecified",
         "agent": "He"
       }
     }
   },
   {
-    "id": "p_who_977b4a",
+    "id": "p_who_1f3726b10b24",
     "label": "He",
     "entity_type": "Who",
     "state": "determined",
@@ -75,7 +79,7 @@
     "properties": {}
   },
   {
-    "id": "p_what_dc839c",
+    "id": "p_what_36accd0c1631",
     "label": "succeeded",
     "entity_type": "What",
     "state": "determined",
@@ -85,7 +89,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_3b777c",
+    "id": "p_when_1a9a53044bf1",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -95,7 +99,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_97b726",
+    "id": "p_where_9845459a9755",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -105,7 +109,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_a3dabc",
+    "id": "p_why_3343eaeb980e",
     "label": "because I helped",
     "entity_type": "Why",
     "state": "determined",
@@ -115,7 +119,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_1c1a46",
+    "id": "p_how_08bd06e242ec",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -125,7 +129,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_1387db",
+    "id": "p_agent_0c8bfea52029",
     "label": "You",
     "entity_type": "Agent",
     "state": "determined",
@@ -137,20 +141,24 @@
     }
   },
   {
-    "id": "p_relative_clause_4933c7",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_e989aac88239",
+    "label": "review",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: Action"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "Action",
+        "verb": "review",
+        "actor": "You",
+        "patient": "the document"
+      }
     }
   },
   {
-    "id": "p_morphology_90dd07",
+    "id": "p_morphology_edb58e8e30ac",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -170,7 +178,7 @@
     }
   },
   {
-    "id": "p_who_4322c6",
+    "id": "p_who_338e7e180b30",
     "label": "You",
     "entity_type": "Who",
     "state": "determined",
@@ -180,7 +188,7 @@
     "properties": {}
   },
   {
-    "id": "p_what_e0d29b",
+    "id": "p_what_0e2ade2525bb",
     "label": "review the document",
     "entity_type": "What",
     "state": "determined",
@@ -190,7 +198,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_e47e29",
+    "id": "p_when_62478ed3af91",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -200,7 +208,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_5ffe74",
+    "id": "p_where_f88616946291",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -210,7 +218,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_30b88b",
+    "id": "p_why_df6baa9b6d7d",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -220,7 +228,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_f9a458",
+    "id": "p_how_a81e5b286fab",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -230,7 +238,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_68ed31",
+    "id": "p_agent_03e1521b86bc",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -242,40 +250,47 @@
     }
   },
   {
-    "id": "p_relative_clause_3c92fc",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_958e2699971b",
+    "label": "strange",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: State"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "State",
+        "verb": null,
+        "actor": "I",
+        "patient": null,
+        "state": "strange"
+      }
     }
   },
   {
-    "id": "p_morphology_1b839f",
-    "label": "[Morphology: Base] → [Category: Action]",
+    "id": "p_morphology_cbf670405fc9",
+    "label": "[State predicate] → [Category: State]",
     "entity_type": "Morphology",
     "state": "determined",
     "constraints": [
-      "[Morphology: Base] → [Category: Action]"
+      "[State predicate] → [Category: State]"
     ],
     "properties": {
       "result": {
-        "form": "Base",
-        "verb": "was",
+        "form": "State",
+        "state": "strange",
         "subject": "Thought",
-        "object": "strange",
-        "category": "Action",
-        "patient": "strange",
+        "object": null,
+        "psychological_verb": "thought",
+        "verb": null,
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "I"
       }
     }
   },
   {
-    "id": "p_who_656519",
+    "id": "p_who_df62f4d271a5",
     "label": "I",
     "entity_type": "Who",
     "state": "determined",
@@ -285,7 +300,7 @@
     "properties": {}
   },
   {
-    "id": "p_what_f7ec3a",
+    "id": "p_what_b61bc4a7f64a",
     "label": "thought was strange",
     "entity_type": "What",
     "state": "determined",
@@ -295,7 +310,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_12d8fc",
+    "id": "p_when_e09b692b56b7",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -305,7 +320,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_50d375",
+    "id": "p_where_fd5ce8ac4303",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -315,7 +330,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_799581",
+    "id": "p_why_b15d85d32f16",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -325,7 +340,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_b67363",
+    "id": "p_how_d55594854bf8",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -335,10 +350,10 @@
     "properties": {}
   },
   {
-    "id": "p_agent_b23d3f",
+    "id": "p_agent_d6173fb42f11",
     "label": "He/She/They",
     "entity_type": "Agent",
-    "state": "determined",
+    "state": "unspecified",
     "constraints": [
       "Null Subject + Evidential / Attribution Marker"
     ],
@@ -347,50 +362,78 @@
     }
   },
   {
-    "id": "p_relative_clause_eb00e8",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_0dc58a9c442e",
+    "label": "strange",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: State"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "State",
+        "verb": null,
+        "actor": "He/She/They",
+        "patient": null,
+        "state": "strange"
+      }
     }
   },
   {
-    "id": "p_morphology_ccc98c",
-    "label": "[Morphology: Base] → [Category: Action]",
+    "id": "p_modifier_6df8467908b1",
+    "label": "Degree modifier",
+    "entity_type": "Modifier",
+    "state": "determined",
+    "constraints": [
+      "Degree modifier"
+    ],
+    "properties": {
+      "decision": "Supplementary",
+      "result": {
+        "type": "Supplementary",
+        "antecedent": "strange",
+        "target": "strange",
+        "clause": "apparently",
+        "kind": "Degree",
+        "classification": "Supplementary",
+        "modifier_kind": "Degree"
+      }
+    }
+  },
+  {
+    "id": "p_morphology_359e8bd1215a",
+    "label": "[State predicate] → [Category: State]",
     "entity_type": "Morphology",
     "state": "determined",
     "constraints": [
-      "[Morphology: Base] → [Category: Action]"
+      "[State predicate] → [Category: State]"
     ],
     "properties": {
       "result": {
-        "form": "Base",
-        "verb": "it",
-        "subject": "Thought",
-        "object": "was strange apparently",
-        "category": "Action",
-        "patient": "was strange apparently",
+        "form": "State",
+        "state": "strange",
+        "subject": "Thought it",
+        "object": "apparently",
+        "psychological_verb": "thought",
+        "verb": null,
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "He/She/They"
       }
     }
   },
   {
-    "id": "p_who_57de5d",
+    "id": "p_who_c260e39453a0",
     "label": "He/She/They",
     "entity_type": "Who",
-    "state": "determined",
+    "state": "unspecified",
     "constraints": [
       "Stage 5 - 5W1H Synthesis"
     ],
     "properties": {}
   },
   {
-    "id": "p_what_ef032d",
+    "id": "p_what_bb283569ed6c",
     "label": "thought it was strange",
     "entity_type": "What",
     "state": "determined",
@@ -400,7 +443,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_25f4fc",
+    "id": "p_when_1dadfb694cd4",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -410,7 +453,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_50dfeb",
+    "id": "p_where_4d0f3082ab5e",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -420,7 +463,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_de29ce",
+    "id": "p_why_214b9ffb889d",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -430,7 +473,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_faa13b",
+    "id": "p_how_e2ee5b384fe2",
     "label": "apparently",
     "entity_type": "How",
     "state": "determined",
@@ -440,7 +483,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_a037ac",
+    "id": "p_agent_8ed2c8d9fb74",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "unspecified",
@@ -452,20 +495,24 @@
     }
   },
   {
-    "id": "p_relative_clause_ba7405",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_270546f68f50",
+    "label": "went",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: Action"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "Action",
+        "verb": "went",
+        "actor": "Unknown",
+        "patient": null
+      }
     }
   },
   {
-    "id": "p_morphology_ce4488",
+    "id": "p_morphology_964d33ba8a70",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -475,27 +522,27 @@
     "properties": {
       "result": {
         "form": "Base",
-        "verb": "to",
+        "verb": "went",
         "subject": "Went",
-        "object": "the cafe yesterday",
+        "object": null,
         "category": "Action",
-        "patient": "the cafe yesterday",
+        "patient": "Unspecified",
         "agent": "Unknown"
       }
     }
   },
   {
-    "id": "p_who_dd28dd",
+    "id": "p_who_3d673ba83ca0",
     "label": "Unknown",
     "entity_type": "Who",
-    "state": "determined",
+    "state": "unspecified",
     "constraints": [
       "Stage 5 - 5W1H Synthesis"
     ],
     "properties": {}
   },
   {
-    "id": "p_what_68cd48",
+    "id": "p_what_2b6e7f7bfece",
     "label": "went",
     "entity_type": "What",
     "state": "determined",
@@ -505,7 +552,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_d5ecb8",
+    "id": "p_when_9bfdfdafc4f8",
     "label": "yesterday",
     "entity_type": "When",
     "state": "determined",
@@ -515,7 +562,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_18ec85",
+    "id": "p_where_81737ac4e425",
     "label": "cafe",
     "entity_type": "Where",
     "state": "determined",
@@ -525,7 +572,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_330b05",
+    "id": "p_why_7d750df1b074",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -535,7 +582,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_a1d5a3",
+    "id": "p_how_8205a3fbcb74",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -545,7 +592,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_36e506",
+    "id": "p_agent_03b8a6a878ad",
     "label": "you",
     "entity_type": "Agent",
     "state": "determined",
@@ -557,44 +604,44 @@
     }
   },
   {
-    "id": "p_relative_clause_50ebb3",
-    "label": "Defining clause",
-    "entity_type": "RelativeClause",
+    "id": "p_event_d71370d3de61",
+    "label": "submit",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "Defining clause"
+      "Event: Action"
     ],
     "properties": {
-      "decision": "Essential",
-      "result": {
-        "type": "Defining",
-        "antecedent": "It is required",
-        "clause": "you submit the form"
+      "event": {
+        "category": "Action",
+        "verb": "submit",
+        "actor": "you",
+        "patient": "the form"
       }
     }
   },
   {
-    "id": "p_morphology_367d64",
-    "label": "[Passive: be + V-en + by]",
+    "id": "p_morphology_3f79e4ec9659",
+    "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
     "constraints": [
-      "[Passive: be + V-en + by]"
+      "[Morphology: Base] → [Category: Action]"
     ],
     "properties": {
       "result": {
-        "form": "Passive",
-        "verb": "required",
-        "actor": "Unknown",
-        "receiver": "It",
+        "form": "Base",
+        "verb": "submit",
+        "subject": "you",
+        "object": "the form",
         "category": "Action",
-        "patient": "It",
+        "patient": "the form",
         "agent": "you"
       }
     }
   },
   {
-    "id": "p_who_9a2106",
+    "id": "p_who_796bb5e30a4b",
     "label": "you",
     "entity_type": "Who",
     "state": "determined",
@@ -604,8 +651,8 @@
     "properties": {}
   },
   {
-    "id": "p_what_a1d2b5",
-    "label": "required It",
+    "id": "p_what_f1ce0e0a0925",
+    "label": "submit the form",
     "entity_type": "What",
     "state": "determined",
     "constraints": [
@@ -614,7 +661,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_2bf1ac",
+    "id": "p_when_84ac0c6f16ca",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -624,7 +671,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_500788",
+    "id": "p_where_7dd2599fcd99",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -634,7 +681,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_f9df86",
+    "id": "p_why_72b2f2d8f81a",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -644,7 +691,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_3ddd28",
+    "id": "p_how_9594e7ab9ad0",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -654,7 +701,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_21fc70",
+    "id": "p_agent_dd2834cd78c2",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -666,20 +713,24 @@
     }
   },
   {
-    "id": "p_relative_clause_351526",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_a1f965dabc43",
+    "label": "submitted",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: Action"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "Action",
+        "verb": "submitted",
+        "actor": "I",
+        "patient": "the form"
+      }
     }
   },
   {
-    "id": "p_morphology_371f71",
+    "id": "p_morphology_e314885a3c0d",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -691,15 +742,15 @@
         "form": "Base",
         "verb": "submitted",
         "subject": "I",
-        "object": "the form yesterday",
+        "object": "the form",
         "category": "Action",
-        "patient": "the form yesterday",
+        "patient": "the form",
         "agent": "I"
       }
     }
   },
   {
-    "id": "p_who_75e8f3",
+    "id": "p_who_080801ba2ffb",
     "label": "I",
     "entity_type": "Who",
     "state": "determined",
@@ -709,7 +760,7 @@
     "properties": {}
   },
   {
-    "id": "p_what_aa189e",
+    "id": "p_what_ffaa9f75a1c8",
     "label": "submitted the form",
     "entity_type": "What",
     "state": "determined",
@@ -719,7 +770,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_b4eab0",
+    "id": "p_when_d3c739012b22",
     "label": "yesterday",
     "entity_type": "When",
     "state": "determined",
@@ -729,7 +780,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_be1ee2",
+    "id": "p_where_599722cc495c",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -739,7 +790,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_1f0f65",
+    "id": "p_why_8a4392c807ad",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -749,7 +800,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_2e89e4",
+    "id": "p_how_992fa61cb2da",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -759,7 +810,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_332746",
+    "id": "p_agent_4961e9984436",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -771,20 +822,24 @@
     }
   },
   {
-    "id": "p_relative_clause_6db775",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_44e4f79c2688",
+    "label": "wrote",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: Action"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "Action",
+        "verb": "wrote",
+        "actor": "I",
+        "patient": "the report"
+      }
     }
   },
   {
-    "id": "p_morphology_e452a3",
+    "id": "p_morphology_ef1477af8241",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -796,15 +851,15 @@
         "form": "Base",
         "verb": "wrote",
         "subject": "I",
-        "object": "the report at the office",
+        "object": "the report",
         "category": "Action",
-        "patient": "the report at the office",
+        "patient": "the report",
         "agent": "I"
       }
     }
   },
   {
-    "id": "p_who_06dea5",
+    "id": "p_who_3e70ebd3d003",
     "label": "I",
     "entity_type": "Who",
     "state": "determined",
@@ -814,7 +869,7 @@
     "properties": {}
   },
   {
-    "id": "p_what_25c51a",
+    "id": "p_what_f80f175c3205",
     "label": "wrote the report",
     "entity_type": "What",
     "state": "determined",
@@ -824,7 +879,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_9d9439",
+    "id": "p_when_721cb87a673c",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -834,7 +889,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_c3bc91",
+    "id": "p_where_d51e436e88b3",
     "label": "at the office",
     "entity_type": "Where",
     "state": "determined",
@@ -844,7 +899,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_8818f8",
+    "id": "p_why_ce67a0a7056b",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -854,7 +909,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_dd1350",
+    "id": "p_how_7485ae0fb797",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -864,7 +919,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_89f13e",
+    "id": "p_agent_7c397ad5f93b",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "unspecified",
@@ -876,40 +931,44 @@
     }
   },
   {
-    "id": "p_cause_1c493d",
+    "id": "p_event_fc737bfd10f6",
+    "label": "succeeded",
+    "entity_type": "Event",
+    "state": "determined",
+    "constraints": [
+      "Causal Marker: because; Event: Action"
+    ],
+    "properties": {
+      "event": {
+        "category": "Action",
+        "verb": "succeeded",
+        "actor": "Unknown",
+        "patient": null
+      }
+    }
+  },
+  {
+    "id": "p_cause_b8a647c50f12",
     "label": "you helped",
     "entity_type": "Cause",
     "state": "determined",
     "constraints": [
-      "Causal Marker: because"
+      "Causal Marker: because; Event: Action"
     ],
     "properties": {}
   },
   {
-    "id": "p_effect_f679d2",
+    "id": "p_effect_e9e3b888b2e1",
     "label": "Succeeded",
     "entity_type": "Effect",
     "state": "determined",
     "constraints": [
-      "Causal Marker: because"
+      "Causal Marker: because; Event: Action"
     ],
     "properties": {}
   },
   {
-    "id": "p_relative_clause_92b639",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
-    "state": "determined",
-    "constraints": [
-      "No modification structure found"
-    ],
-    "properties": {
-      "decision": "Standard",
-      "result": null
-    }
-  },
-  {
-    "id": "p_morphology_5f1ed2",
+    "id": "p_morphology_a0f41039a3a6",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -919,27 +978,27 @@
     "properties": {
       "result": {
         "form": "Base",
-        "verb": "because",
+        "verb": "succeeded",
         "subject": "Succeeded",
-        "object": "you helped",
+        "object": null,
         "category": "Action",
-        "patient": "you helped",
+        "patient": "Unspecified",
         "agent": "Unknown"
       }
     }
   },
   {
-    "id": "p_who_9d0da6",
+    "id": "p_who_4fa1bfc2df57",
     "label": "Unknown",
     "entity_type": "Who",
-    "state": "determined",
+    "state": "unspecified",
     "constraints": [
       "Stage 5 - 5W1H Synthesis"
     ],
     "properties": {}
   },
   {
-    "id": "p_what_056a52",
+    "id": "p_what_720e59ad3ace",
     "label": "succeeded",
     "entity_type": "What",
     "state": "determined",
@@ -949,7 +1008,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_b8b98b",
+    "id": "p_when_28806183ecea",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -959,7 +1018,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_e84087",
+    "id": "p_where_8ec8b7fd17a7",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -969,7 +1028,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_cd9de9",
+    "id": "p_why_3591fa3b011b",
     "label": "because you helped",
     "entity_type": "Why",
     "state": "determined",
@@ -979,7 +1038,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_f09adc",
+    "id": "p_how_919a7282d98c",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -989,7 +1048,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_b105b7",
+    "id": "p_agent_7116ebff47a6",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "unspecified",
@@ -1001,20 +1060,44 @@
     }
   },
   {
-    "id": "p_relative_clause_14a936",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_a8e9b75454e0",
+    "label": "failed",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Concessive Marker: despite; Event: Action"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "Action",
+        "verb": "failed",
+        "actor": "Unknown",
+        "patient": null
+      }
     }
   },
   {
-    "id": "p_morphology_dce393",
+    "id": "p_concession_3a9d93a7a26d",
+    "label": "the effort",
+    "entity_type": "Concession",
+    "state": "determined",
+    "constraints": [
+      "Concessive Marker: despite; Event: Action"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_outcome_820cf6016842",
+    "label": "Failed",
+    "entity_type": "Outcome",
+    "state": "determined",
+    "constraints": [
+      "Concessive Marker: despite; Event: Action"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_morphology_ef49b45f90f2",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -1024,28 +1107,28 @@
     "properties": {
       "result": {
         "form": "Base",
-        "verb": "despite",
+        "verb": "failed",
         "subject": "Failed",
-        "object": "the effort",
+        "object": null,
         "category": "Action",
-        "patient": "the effort",
+        "patient": "Unspecified",
         "agent": "Unknown"
       }
     }
   },
   {
-    "id": "p_who_a5749c",
+    "id": "p_who_2d69cff0b35a",
     "label": "Unknown",
     "entity_type": "Who",
-    "state": "determined",
+    "state": "unspecified",
     "constraints": [
       "Stage 5 - 5W1H Synthesis"
     ],
     "properties": {}
   },
   {
-    "id": "p_what_1bff0c",
-    "label": "failed despite the effort",
+    "id": "p_what_65123466e813",
+    "label": "failed",
     "entity_type": "What",
     "state": "determined",
     "constraints": [
@@ -1054,7 +1137,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_d17335",
+    "id": "p_when_4ab27e885f86",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -1064,7 +1147,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_3e65d1",
+    "id": "p_where_266bf4c21a3c",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -1074,7 +1157,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_8b6e1c",
+    "id": "p_why_0200a967a780",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -1084,7 +1167,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_a1a106",
+    "id": "p_how_f9d5a0876450",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -1094,7 +1177,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_7c2520",
+    "id": "p_agent_c01bbff54828",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "unspecified",
@@ -1106,20 +1189,24 @@
     }
   },
   {
-    "id": "p_relative_clause_6c6e08",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_4cf8914770bb",
+    "label": "further",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: Action"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "Action",
+        "verb": "further",
+        "actor": "Unknown",
+        "patient": "investigation"
+      }
     }
   },
   {
-    "id": "p_morphology_d79567",
+    "id": "p_morphology_563fbf657f4c",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -1139,17 +1226,17 @@
     }
   },
   {
-    "id": "p_who_a74596",
+    "id": "p_who_5c97c10b025b",
     "label": "Unknown",
     "entity_type": "Who",
-    "state": "determined",
+    "state": "unspecified",
     "constraints": [
       "Stage 5 - 5W1H Synthesis"
     ],
     "properties": {}
   },
   {
-    "id": "p_what_de811a",
+    "id": "p_what_71ea1328aaf8",
     "label": "required further investigation",
     "entity_type": "What",
     "state": "determined",
@@ -1159,7 +1246,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_21c613",
+    "id": "p_when_72ba6cd4df28",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -1169,7 +1256,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_568d79",
+    "id": "p_where_47d413d79955",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -1179,7 +1266,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_45ca66",
+    "id": "p_why_7ac0e3c51ff5",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -1189,7 +1276,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_19704c",
+    "id": "p_how_a3cc057cec5e",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -1199,7 +1286,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_23cdd0",
+    "id": "p_agent_28048229b7e7",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "unspecified",
@@ -1211,20 +1298,24 @@
     }
   },
   {
-    "id": "p_relative_clause_673ac0",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_6e7d09fcb43a",
+    "label": "submitted",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: Action"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "Action",
+        "verb": "submitted",
+        "actor": "Unknown",
+        "patient": "the form"
+      }
     }
   },
   {
-    "id": "p_morphology_fb4200",
+    "id": "p_morphology_00d4e30e9e1c",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -1234,27 +1325,27 @@
     "properties": {
       "result": {
         "form": "Base",
-        "verb": "the",
+        "verb": "submitted",
         "subject": "Submitted",
-        "object": "form yesterday",
+        "object": "the form",
         "category": "Action",
-        "patient": "form yesterday",
+        "patient": "the form",
         "agent": "Unknown"
       }
     }
   },
   {
-    "id": "p_who_b7aa9f",
+    "id": "p_who_aa6663d6401e",
     "label": "Unknown",
     "entity_type": "Who",
-    "state": "determined",
+    "state": "unspecified",
     "constraints": [
       "Stage 5 - 5W1H Synthesis"
     ],
     "properties": {}
   },
   {
-    "id": "p_what_e54352",
+    "id": "p_what_0c594ff04213",
     "label": "submitted the form",
     "entity_type": "What",
     "state": "determined",
@@ -1264,7 +1355,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_628ec0",
+    "id": "p_when_2f1ff9b9763e",
     "label": "yesterday",
     "entity_type": "When",
     "state": "determined",
@@ -1274,7 +1365,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_b119a7",
+    "id": "p_where_304d8fcf9b68",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -1284,7 +1375,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_f63004",
+    "id": "p_why_96e2f8c02df6",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -1294,7 +1385,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_b769e4",
+    "id": "p_how_d18824203662",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -1304,7 +1395,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_afeeb6",
+    "id": "p_agent_502465f203de",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "unspecified",
@@ -1316,20 +1407,24 @@
     }
   },
   {
-    "id": "p_relative_clause_d46c64",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_396327c97469",
+    "label": "succeeded",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: Action"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "Action",
+        "verb": "succeeded",
+        "actor": "Unknown",
+        "patient": null
+      }
     }
   },
   {
-    "id": "p_morphology_02e7b5",
+    "id": "p_morphology_b3c965ed4131",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -1339,27 +1434,27 @@
     "properties": {
       "result": {
         "form": "Base",
-        "verb": "in",
+        "verb": "succeeded",
         "subject": "Succeeded",
-        "object": "the meeting",
+        "object": null,
         "category": "Action",
-        "patient": "the meeting",
+        "patient": "Unspecified",
         "agent": "Unknown"
       }
     }
   },
   {
-    "id": "p_who_364693",
+    "id": "p_who_18cd2bd1fde6",
     "label": "Unknown",
     "entity_type": "Who",
-    "state": "determined",
+    "state": "unspecified",
     "constraints": [
       "Stage 5 - 5W1H Synthesis"
     ],
     "properties": {}
   },
   {
-    "id": "p_what_29a705",
+    "id": "p_what_2597e0d39bef",
     "label": "succeeded",
     "entity_type": "What",
     "state": "determined",
@@ -1369,7 +1464,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_63bce4",
+    "id": "p_when_09b1ddcffac6",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -1379,7 +1474,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_448082",
+    "id": "p_where_5999c6a7c1cb",
     "label": "in the meeting",
     "entity_type": "Where",
     "state": "determined",
@@ -1389,7 +1484,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_afee17",
+    "id": "p_why_2e28dfe17625",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -1399,7 +1494,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_0d3581",
+    "id": "p_how_fd683abbe5fb",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -1409,7 +1504,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_f1af76",
+    "id": "p_agent_c26f459ef844",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -1421,60 +1516,66 @@
     }
   },
   {
-    "id": "p_cause_2adc09",
+    "id": "p_event_25e224f7391b",
+    "label": "stressed",
+    "entity_type": "Event",
+    "state": "determined",
+    "constraints": [
+      "Causal Marker: due to; Event: State"
+    ],
+    "properties": {
+      "event": {
+        "category": "State",
+        "verb": "stressed",
+        "actor": "I",
+        "patient": null,
+        "state": "stressed"
+      }
+    }
+  },
+  {
+    "id": "p_cause_df4bc21dcf80",
     "label": "the project",
     "entity_type": "Cause",
     "state": "determined",
     "constraints": [
-      "Causal Marker: due to"
+      "Causal Marker: due to; Event: State"
     ],
     "properties": {}
   },
   {
-    "id": "p_effect_8b5f33",
+    "id": "p_effect_ae83b8187416",
     "label": "I'm stressed",
     "entity_type": "Effect",
     "state": "determined",
     "constraints": [
-      "Causal Marker: due to"
+      "Causal Marker: due to; Event: State"
     ],
     "properties": {}
   },
   {
-    "id": "p_relative_clause_4e0153",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
-    "state": "determined",
-    "constraints": [
-      "No modification structure found"
-    ],
-    "properties": {
-      "decision": "Standard",
-      "result": null
-    }
-  },
-  {
-    "id": "p_morphology_b0dfa3",
-    "label": "[Morphology: Base] → [Category: Action]",
+    "id": "p_morphology_a496e77fe095",
+    "label": "[State predicate] → [Category: State]",
     "entity_type": "Morphology",
     "state": "determined",
     "constraints": [
-      "[Morphology: Base] → [Category: Action]"
+      "[State predicate] → [Category: State]"
     ],
     "properties": {
       "result": {
-        "form": "Base",
-        "verb": "stressed",
-        "subject": "I'm",
+        "form": "State",
+        "state": "stressed",
+        "subject": "I",
         "object": "due to the project",
-        "category": "Action",
-        "patient": "due to the project",
+        "verb": "stressed",
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "I"
       }
     }
   },
   {
-    "id": "p_who_d93a8a",
+    "id": "p_who_beafbf530fb0",
     "label": "I",
     "entity_type": "Who",
     "state": "determined",
@@ -1484,8 +1585,8 @@
     "properties": {}
   },
   {
-    "id": "p_what_4040d9",
-    "label": "'m stressed due",
+    "id": "p_what_27cd0c203166",
+    "label": "stressed",
     "entity_type": "What",
     "state": "determined",
     "constraints": [
@@ -1494,7 +1595,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_ca07ec",
+    "id": "p_when_185407c204f8",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -1504,17 +1605,17 @@
     "properties": {}
   },
   {
-    "id": "p_where_6e4a03",
-    "label": "project",
+    "id": "p_where_0f6e4c96b75e",
+    "label": "Unspecified",
     "entity_type": "Where",
-    "state": "determined",
+    "state": "unspecified",
     "constraints": [
       "Stage 5 - 5W1H Synthesis"
     ],
     "properties": {}
   },
   {
-    "id": "p_why_7b5777",
+    "id": "p_why_1246fa89f0e5",
     "label": "due to the project",
     "entity_type": "Why",
     "state": "determined",
@@ -1524,7 +1625,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_838e13",
+    "id": "p_how_2531fac55261",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -1534,7 +1635,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_2a9c29",
+    "id": "p_agent_72bc868676c5",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -1546,40 +1647,44 @@
     }
   },
   {
-    "id": "p_cause_8c4992",
+    "id": "p_event_01929f764805",
+    "label": "succeeded",
+    "entity_type": "Event",
+    "state": "determined",
+    "constraints": [
+      "Causal Marker: because; Event: Action"
+    ],
+    "properties": {
+      "event": {
+        "category": "Action",
+        "verb": "succeeded",
+        "actor": "I",
+        "patient": null
+      }
+    }
+  },
+  {
+    "id": "p_cause_890fa1ac310a",
     "label": "you helped",
     "entity_type": "Cause",
     "state": "determined",
     "constraints": [
-      "Causal Marker: because"
+      "Causal Marker: because; Event: Action"
     ],
     "properties": {}
   },
   {
-    "id": "p_effect_0134c5",
+    "id": "p_effect_33b62c54a945",
     "label": "I succeeded",
     "entity_type": "Effect",
     "state": "determined",
     "constraints": [
-      "Causal Marker: because"
+      "Causal Marker: because; Event: Action"
     ],
     "properties": {}
   },
   {
-    "id": "p_relative_clause_10e5d2",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
-    "state": "determined",
-    "constraints": [
-      "No modification structure found"
-    ],
-    "properties": {
-      "decision": "Standard",
-      "result": null
-    }
-  },
-  {
-    "id": "p_morphology_8a7486",
+    "id": "p_morphology_f7ca524406d7",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -1591,15 +1696,15 @@
         "form": "Base",
         "verb": "succeeded",
         "subject": "I",
-        "object": "because you helped",
+        "object": null,
         "category": "Action",
-        "patient": "because you helped",
+        "patient": "Unspecified",
         "agent": "I"
       }
     }
   },
   {
-    "id": "p_who_4f020d",
+    "id": "p_who_2f19e9560ec8",
     "label": "I",
     "entity_type": "Who",
     "state": "determined",
@@ -1609,7 +1714,7 @@
     "properties": {}
   },
   {
-    "id": "p_what_0ae5bc",
+    "id": "p_what_acf5f6ec62c4",
     "label": "succeeded",
     "entity_type": "What",
     "state": "determined",
@@ -1619,7 +1724,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_b81096",
+    "id": "p_when_6e172001a1e7",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -1629,7 +1734,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_af2bf8",
+    "id": "p_where_81cbb3e08b42",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -1639,7 +1744,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_dbf0d8",
+    "id": "p_why_f974d2b167cf",
     "label": "because you helped",
     "entity_type": "Why",
     "state": "determined",
@@ -1649,7 +1754,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_f61467",
+    "id": "p_how_38251c32213c",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -1659,7 +1764,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_0d7bc1",
+    "id": "p_agent_fefa59f1d4a7",
     "label": "He",
     "entity_type": "Agent",
     "state": "determined",
@@ -1671,20 +1776,49 @@
     }
   },
   {
-    "id": "p_relative_clause_d442c8",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_effdf1fc840c",
+    "label": "succeeded",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: Action"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "Action",
+        "verb": "succeeded",
+        "actor": "He",
+        "patient": null
+      }
     }
   },
   {
-    "id": "p_morphology_6985df",
+    "id": "p_modifier_600fee5db06e",
+    "label": "Instrument phrase",
+    "entity_type": "Modifier",
+    "state": "determined",
+    "constraints": [
+      "Instrument phrase"
+    ],
+    "properties": {
+      "decision": "Supplementary",
+      "result": {
+        "type": "Supplementary",
+        "antecedent": "He succeeded",
+        "target": "Success",
+        "clause": "Hard Work",
+        "kind": "Instrument",
+        "actor": "He",
+        "outcome": "Success",
+        "outcome_kind": "State",
+        "instrument": "Hard Work",
+        "classification": "Supplementary",
+        "modifier_kind": "Instrument"
+      }
+    }
+  },
+  {
+    "id": "p_morphology_82a5abdcbfd1",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -1696,15 +1830,15 @@
         "form": "Base",
         "verb": "succeeded",
         "subject": "He",
-        "object": "by working hard",
+        "object": null,
         "category": "Action",
-        "patient": "by working hard",
+        "patient": "Unspecified",
         "agent": "He"
       }
     }
   },
   {
-    "id": "p_who_84afdb",
+    "id": "p_who_56e7ab9c7729",
     "label": "He",
     "entity_type": "Who",
     "state": "determined",
@@ -1714,7 +1848,7 @@
     "properties": {}
   },
   {
-    "id": "p_what_344396",
+    "id": "p_what_0dbfc1918e58",
     "label": "succeeded",
     "entity_type": "What",
     "state": "determined",
@@ -1724,7 +1858,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_94c9cd",
+    "id": "p_when_7502395baf51",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -1734,7 +1868,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_72ce4f",
+    "id": "p_where_f1b700ad3aa8",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -1744,7 +1878,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_5d3432",
+    "id": "p_why_962abe269ba0",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -1754,8 +1888,8 @@
     "properties": {}
   },
   {
-    "id": "p_how_7c2917",
-    "label": "by working hard",
+    "id": "p_how_7ea991fd7cd3",
+    "label": "Hard Work",
     "entity_type": "How",
     "state": "determined",
     "constraints": [
@@ -1764,7 +1898,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_0c8699",
+    "id": "p_agent_bd1fd846e495",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -1776,40 +1910,67 @@
     }
   },
   {
-    "id": "p_relative_clause_d3d6cc",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_da865492a5de",
+    "label": "stressed",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: State"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "State",
+        "verb": "stressed",
+        "actor": "I",
+        "patient": null,
+        "state": "stressed"
+      }
     }
   },
   {
-    "id": "p_morphology_9f1c9c",
-    "label": "[Passive: be + V-en + by]",
+    "id": "p_modifier_54982de81e0a",
+    "label": "Adjectival modifier",
+    "entity_type": "Modifier",
+    "state": "determined",
+    "constraints": [
+      "Adjectival modifier"
+    ],
+    "properties": {
+      "decision": "Supplementary",
+      "result": {
+        "type": "Supplementary",
+        "antecedent": "meeting",
+        "target": "meeting",
+        "clause": "long",
+        "kind": "Adjective",
+        "classification": "Supplementary",
+        "modifier_kind": "Adjective"
+      }
+    }
+  },
+  {
+    "id": "p_morphology_21ed98cbd5e8",
+    "label": "[State predicate] → [Category: State]",
     "entity_type": "Morphology",
     "state": "determined",
     "constraints": [
-      "[Passive: be + V-en + by]"
+      "[State predicate] → [Category: State]"
     ],
     "properties": {
       "result": {
-        "form": "Passive",
+        "form": "State",
+        "state": "stressed",
+        "subject": "I",
+        "object": "after the long meeting",
         "verb": "stressed",
-        "actor": "Unknown",
-        "receiver": "I",
-        "category": "Action",
-        "patient": "I",
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "I"
       }
     }
   },
   {
-    "id": "p_who_8785fe",
+    "id": "p_who_96c66f799b5c",
     "label": "I",
     "entity_type": "Who",
     "state": "determined",
@@ -1819,8 +1980,8 @@
     "properties": {}
   },
   {
-    "id": "p_what_b1ef10",
-    "label": "stressed I",
+    "id": "p_what_96649e8b1f59",
+    "label": "stressed",
     "entity_type": "What",
     "state": "determined",
     "constraints": [
@@ -1829,17 +1990,17 @@
     "properties": {}
   },
   {
-    "id": "p_when_9005b6",
-    "label": "Unspecified",
+    "id": "p_when_2657fd2c2e70",
+    "label": "after the long meeting",
     "entity_type": "When",
-    "state": "unspecified",
+    "state": "determined",
     "constraints": [
       "Stage 5 - 5W1H Synthesis"
     ],
     "properties": {}
   },
   {
-    "id": "p_where_514686",
+    "id": "p_where_45b9576b458b",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -1849,7 +2010,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_443e83",
+    "id": "p_why_a0767f2a2f56",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -1859,7 +2020,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_81c15d",
+    "id": "p_how_799809fed85e",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -1869,7 +2030,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_b24231",
+    "id": "p_agent_c2a35e790a9d",
     "label": "The report",
     "entity_type": "Agent",
     "state": "determined",
@@ -1881,7 +2042,25 @@
     }
   },
   {
-    "id": "p_relative_clause_4248a2",
+    "id": "p_event_00177b0f1304",
+    "label": "done",
+    "entity_type": "Event",
+    "state": "determined",
+    "constraints": [
+      "Event: State"
+    ],
+    "properties": {
+      "event": {
+        "category": "State",
+        "verb": "done",
+        "actor": "The report",
+        "patient": null,
+        "state": "done"
+      }
+    }
+  },
+  {
+    "id": "p_relativeclause_27a8a099b2b1",
     "label": "Non-defining clause",
     "entity_type": "RelativeClause",
     "state": "determined",
@@ -1893,32 +2072,36 @@
       "result": {
         "type": "Non-defining",
         "antecedent": "The report",
-        "clause": "was long"
+        "target": "The report",
+        "clause": "was long",
+        "classification": "Supplementary",
+        "modifier_kind": "RelativeClause"
       }
     }
   },
   {
-    "id": "p_morphology_3ccf07",
-    "label": "[Morphology: Base] → [Category: Action]",
+    "id": "p_morphology_74d39e1e0d68",
+    "label": "[State predicate] → [Category: State]",
     "entity_type": "Morphology",
     "state": "determined",
     "constraints": [
-      "[Morphology: Base] → [Category: Action]"
+      "[State predicate] → [Category: State]"
     ],
     "properties": {
       "result": {
-        "form": "Base",
-        "verb": "report,",
-        "subject": "The",
-        "object": "which was long, is done",
-        "category": "Action",
-        "patient": "which was long, is done",
+        "form": "State",
+        "state": "done",
+        "subject": "The report",
+        "object": null,
+        "verb": "done",
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "The report"
       }
     }
   },
   {
-    "id": "p_who_76d913",
+    "id": "p_who_4bade7fc2942",
     "label": "The report",
     "entity_type": "Who",
     "state": "determined",
@@ -1928,8 +2111,8 @@
     "properties": {}
   },
   {
-    "id": "p_what_ece1fe",
-    "label": "which was long, is done",
+    "id": "p_what_ca8fe20d7dc1",
+    "label": "done",
     "entity_type": "What",
     "state": "determined",
     "constraints": [
@@ -1938,7 +2121,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_f9d14a",
+    "id": "p_when_f1bcd8f49346",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -1948,7 +2131,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_326958",
+    "id": "p_where_ed490f260981",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -1958,7 +2141,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_89d75b",
+    "id": "p_why_9dab8af69216",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -1968,7 +2151,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_401ae5",
+    "id": "p_how_29fa9472b010",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -1978,7 +2161,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_9a1b85",
+    "id": "p_agent_6d2bf6cbedc2",
     "label": "The report",
     "entity_type": "Agent",
     "state": "determined",
@@ -1990,7 +2173,25 @@
     }
   },
   {
-    "id": "p_relative_clause_8da737",
+    "id": "p_event_06f0611046f9",
+    "label": "done",
+    "entity_type": "Event",
+    "state": "determined",
+    "constraints": [
+      "Event: State"
+    ],
+    "properties": {
+      "event": {
+        "category": "State",
+        "verb": "done",
+        "actor": "The report",
+        "patient": null,
+        "state": "done"
+      }
+    }
+  },
+  {
+    "id": "p_relativeclause_4571ff419e2a",
     "label": "Defining clause",
     "entity_type": "RelativeClause",
     "state": "determined",
@@ -2002,32 +2203,38 @@
       "result": {
         "type": "Defining",
         "antecedent": "The report",
-        "clause": "I wrote"
+        "target": "The report",
+        "clause": "I wrote",
+        "kind": "RelativeClause",
+        "relative_marker": "that",
+        "classification": "Essential",
+        "modifier_kind": "RelativeClause"
       }
     }
   },
   {
-    "id": "p_morphology_47d50e",
-    "label": "[Morphology: Base] → [Category: Action]",
+    "id": "p_morphology_f8ad0d8a2016",
+    "label": "[State predicate] → [Category: State]",
     "entity_type": "Morphology",
     "state": "determined",
     "constraints": [
-      "[Morphology: Base] → [Category: Action]"
+      "[State predicate] → [Category: State]"
     ],
     "properties": {
       "result": {
-        "form": "Base",
-        "verb": "report",
-        "subject": "The",
-        "object": "that I wrote is done",
-        "category": "Action",
-        "patient": "that I wrote is done",
+        "form": "State",
+        "state": "done",
+        "subject": "The report that I wrote",
+        "object": null,
+        "verb": "done",
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "The report"
       }
     }
   },
   {
-    "id": "p_who_7b7bb8",
+    "id": "p_who_b7f359ffb141",
     "label": "The report",
     "entity_type": "Who",
     "state": "determined",
@@ -2037,8 +2244,8 @@
     "properties": {}
   },
   {
-    "id": "p_what_c62f34",
-    "label": "that I wrote is done",
+    "id": "p_what_4fa6ac52c1d4",
+    "label": "done",
     "entity_type": "What",
     "state": "determined",
     "constraints": [
@@ -2047,7 +2254,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_ad633d",
+    "id": "p_when_fe66a4c1da3e",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -2057,7 +2264,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_b20112",
+    "id": "p_where_34189be382f6",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -2067,7 +2274,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_bdc3ac",
+    "id": "p_why_59356d01e5b0",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -2077,7 +2284,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_e008de",
+    "id": "p_how_ed4939da3604",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -2087,7 +2294,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_7a81c2",
+    "id": "p_agent_3fcdc3ba7823",
     "label": "The office",
     "entity_type": "Agent",
     "state": "determined",
@@ -2099,40 +2306,68 @@
     }
   },
   {
-    "id": "p_relative_clause_be2d74",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_197a2a7b57e5",
+    "label": "quiet",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: State"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "State",
+        "verb": "quiet",
+        "actor": "The office",
+        "patient": null,
+        "state": "quiet"
+      }
     }
   },
   {
-    "id": "p_morphology_af5b1a",
-    "label": "[Passive: be + V-en + by]",
+    "id": "p_relativeclause_52fa5704f901",
+    "label": "Defining clause",
+    "entity_type": "RelativeClause",
+    "state": "determined",
+    "constraints": [
+      "Defining clause"
+    ],
+    "properties": {
+      "decision": "Essential",
+      "result": {
+        "type": "Defining",
+        "antecedent": "The office",
+        "target": "The office",
+        "clause": "I wrote the report",
+        "kind": "RelativeClause",
+        "relative_marker": "where",
+        "classification": "Essential",
+        "modifier_kind": "RelativeClause"
+      }
+    }
+  },
+  {
+    "id": "p_morphology_e276f5d81a91",
+    "label": "[State predicate] → [Category: State]",
     "entity_type": "Morphology",
     "state": "determined",
     "constraints": [
-      "[Passive: be + V-en + by]"
+      "[State predicate] → [Category: State]"
     ],
     "properties": {
       "result": {
-        "form": "Passive",
+        "form": "State",
+        "state": "quiet",
+        "subject": "The office where I wrote the report",
+        "object": null,
         "verb": "quiet",
-        "actor": "Unknown",
-        "receiver": "The office where I wrote the report",
-        "category": "Action",
-        "patient": "The office where I wrote the report",
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "The office"
       }
     }
   },
   {
-    "id": "p_who_95f477",
+    "id": "p_who_712c835b7750",
     "label": "The office",
     "entity_type": "Who",
     "state": "determined",
@@ -2142,8 +2377,8 @@
     "properties": {}
   },
   {
-    "id": "p_what_bea574",
-    "label": "quiet the office where I wrote the report",
+    "id": "p_what_52de838b8273",
+    "label": "quiet",
     "entity_type": "What",
     "state": "determined",
     "constraints": [
@@ -2152,7 +2387,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_a076bd",
+    "id": "p_when_6c997f955bdf",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -2162,7 +2397,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_ce25cb",
+    "id": "p_where_aedd4bf8e330",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -2172,7 +2407,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_a1e93a",
+    "id": "p_why_c8d275076311",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -2182,7 +2417,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_bd26fd",
+    "id": "p_how_3db0714c7ee2",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -2192,7 +2427,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_5ab13e",
+    "id": "p_agent_e3b3bfc6c43b",
     "label": "The day",
     "entity_type": "Agent",
     "state": "determined",
@@ -2204,40 +2439,68 @@
     }
   },
   {
-    "id": "p_relative_clause_942947",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_34d203461e91",
+    "label": "bright",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: State"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "State",
+        "verb": "bright",
+        "actor": "The day",
+        "patient": null,
+        "state": "bright"
+      }
     }
   },
   {
-    "id": "p_morphology_8dea87",
-    "label": "[Passive: be + V-en + by]",
+    "id": "p_relativeclause_7293daa16f94",
+    "label": "Defining clause",
+    "entity_type": "RelativeClause",
+    "state": "determined",
+    "constraints": [
+      "Defining clause"
+    ],
+    "properties": {
+      "decision": "Essential",
+      "result": {
+        "type": "Defining",
+        "antecedent": "The day",
+        "target": "The day",
+        "clause": "he succeeded",
+        "kind": "RelativeClause",
+        "relative_marker": "where",
+        "classification": "Essential",
+        "modifier_kind": "RelativeClause"
+      }
+    }
+  },
+  {
+    "id": "p_morphology_4acdb8929bbb",
+    "label": "[State predicate] → [Category: State]",
     "entity_type": "Morphology",
     "state": "determined",
     "constraints": [
-      "[Passive: be + V-en + by]"
+      "[State predicate] → [Category: State]"
     ],
     "properties": {
       "result": {
-        "form": "Passive",
+        "form": "State",
+        "state": "bright",
+        "subject": "The day where he succeeded",
+        "object": null,
         "verb": "bright",
-        "actor": "Unknown",
-        "receiver": "The day where he succeeded",
-        "category": "Action",
-        "patient": "The day where he succeeded",
+        "category": "State",
+        "patient": "Unspecified",
         "agent": "The day"
       }
     }
   },
   {
-    "id": "p_who_b8c657",
+    "id": "p_who_6a81bcb806a1",
     "label": "The day",
     "entity_type": "Who",
     "state": "determined",
@@ -2247,8 +2510,8 @@
     "properties": {}
   },
   {
-    "id": "p_what_b2da8d",
-    "label": "bright the day where he succeeded",
+    "id": "p_what_a3d44d5af782",
+    "label": "bright",
     "entity_type": "What",
     "state": "determined",
     "constraints": [
@@ -2257,7 +2520,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_041454",
+    "id": "p_when_3e9351cd926b",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -2267,7 +2530,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_0135ff",
+    "id": "p_where_4524928b99cb",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -2277,7 +2540,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_2cb18a",
+    "id": "p_why_137fa1600b5f",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -2287,7 +2550,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_f23e86",
+    "id": "p_how_6be777773da1",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -2297,7 +2560,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_25e65e",
+    "id": "p_agent_cb42c6fe0b4c",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -2309,20 +2572,24 @@
     }
   },
   {
-    "id": "p_relative_clause_7ae7d9",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_6172b0956d61",
+    "label": "have",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: Stative"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "Stative",
+        "verb": "have",
+        "actor": "I",
+        "patient": "a car"
+      }
     }
   },
   {
-    "id": "p_morphology_e14d8f",
+    "id": "p_morphology_8066074220fa",
     "label": "[Morphology: Base] → [Category: Stative]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -2342,7 +2609,7 @@
     }
   },
   {
-    "id": "p_who_00d44f",
+    "id": "p_who_64bf3cbcb687",
     "label": "I",
     "entity_type": "Who",
     "state": "determined",
@@ -2352,7 +2619,7 @@
     "properties": {}
   },
   {
-    "id": "p_what_d6f183",
+    "id": "p_what_dba7e29d9a25",
     "label": "have a car",
     "entity_type": "What",
     "state": "determined",
@@ -2362,7 +2629,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_780687",
+    "id": "p_when_ed1b50e2fa8c",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -2372,7 +2639,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_e45b13",
+    "id": "p_where_fcd475a51fdc",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -2382,7 +2649,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_cd547a",
+    "id": "p_why_575e64fa901a",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -2392,7 +2659,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_f3170c",
+    "id": "p_how_dcc94723b64d",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -2402,7 +2669,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_f93bf8",
+    "id": "p_agent_fa7aea582b4a",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -2414,20 +2681,24 @@
     }
   },
   {
-    "id": "p_relative_clause_89d72e",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_95c13bacd650",
+    "label": "having",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: Action"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "Action",
+        "verb": "having",
+        "actor": "I",
+        "patient": "a party"
+      }
     }
   },
   {
-    "id": "p_morphology_5e033f",
+    "id": "p_morphology_00cb9defdb24",
     "label": "[Morphology: be + V-ing] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -2447,7 +2718,7 @@
     }
   },
   {
-    "id": "p_who_923d8e",
+    "id": "p_who_49d196bfbaaa",
     "label": "I",
     "entity_type": "Who",
     "state": "determined",
@@ -2457,8 +2728,8 @@
     "properties": {}
   },
   {
-    "id": "p_what_072b23",
-    "label": "am having a party",
+    "id": "p_what_c7ca8afaebb5",
+    "label": "having a party",
     "entity_type": "What",
     "state": "determined",
     "constraints": [
@@ -2467,7 +2738,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_c66fca",
+    "id": "p_when_c109469932bd",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -2477,7 +2748,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_a17589",
+    "id": "p_where_944fd4418c35",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -2487,7 +2758,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_05bc44",
+    "id": "p_why_0551f879a7d7",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -2497,7 +2768,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_e4dbc1",
+    "id": "p_how_be2c480dabd2",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -2507,7 +2778,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_42307a",
+    "id": "p_agent_c0f2be59e500",
     "label": "I",
     "entity_type": "Agent",
     "state": "determined",
@@ -2519,20 +2790,24 @@
     }
   },
   {
-    "id": "p_relative_clause_fcb966",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_d7332f3324f5",
+    "label": "told",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: Action"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "Action",
+        "verb": "told",
+        "actor": "him",
+        "patient": "I"
+      }
     }
   },
   {
-    "id": "p_morphology_eb6e9e",
+    "id": "p_morphology_6c85bcb3ffa4",
     "label": "[Passive: be + V-en + by]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -2552,7 +2827,7 @@
     }
   },
   {
-    "id": "p_who_39b798",
+    "id": "p_who_76ead8f4e3c5",
     "label": "him",
     "entity_type": "Who",
     "state": "determined",
@@ -2562,8 +2837,8 @@
     "properties": {}
   },
   {
-    "id": "p_what_297e98",
-    "label": "told I",
+    "id": "p_what_bb7613b2c9ed",
+    "label": "told me",
     "entity_type": "What",
     "state": "determined",
     "constraints": [
@@ -2572,7 +2847,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_36764d",
+    "id": "p_when_4ca00920d3fd",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -2582,7 +2857,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_012d64",
+    "id": "p_where_7aa43756f102",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -2592,7 +2867,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_c21267",
+    "id": "p_why_c87cd2c36719",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -2602,7 +2877,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_642e7d",
+    "id": "p_how_4b5d01cec1b0",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
@@ -2612,7 +2887,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_679a1e",
+    "id": "p_agent_2eb6806094ee",
     "label": "The report",
     "entity_type": "Agent",
     "state": "determined",
@@ -2624,20 +2899,46 @@
     }
   },
   {
-    "id": "p_relative_clause_8f23b4",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
+    "id": "p_event_7a9740834db3",
+    "label": "completed",
+    "entity_type": "Event",
     "state": "determined",
     "constraints": [
-      "No modification structure found"
+      "Event: Action"
     ],
     "properties": {
-      "decision": "Standard",
-      "result": null
+      "event": {
+        "category": "Action",
+        "verb": "completed",
+        "actor": "Unknown",
+        "patient": "The report"
+      }
     }
   },
   {
-    "id": "p_morphology_c0c9c6",
+    "id": "p_modifier_922ca0b59876",
+    "label": "Manner adverb",
+    "entity_type": "Modifier",
+    "state": "determined",
+    "constraints": [
+      "Manner adverb"
+    ],
+    "properties": {
+      "decision": "Supplementary",
+      "result": {
+        "type": "Supplementary",
+        "antecedent": "The report",
+        "target": "The report",
+        "clause": "quickly",
+        "kind": "Manner",
+        "action": "Complete",
+        "classification": "Supplementary",
+        "modifier_kind": "Manner"
+      }
+    }
+  },
+  {
+    "id": "p_morphology_28eeb5ffc2d0",
     "label": "[Passive: be + V-en + by]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -2657,7 +2958,7 @@
     }
   },
   {
-    "id": "p_who_99a32b",
+    "id": "p_who_864a1db9b3b5",
     "label": "The report",
     "entity_type": "Who",
     "state": "determined",
@@ -2667,7 +2968,7 @@
     "properties": {}
   },
   {
-    "id": "p_what_9f15ac",
+    "id": "p_what_76ca185b8c33",
     "label": "completed the report",
     "entity_type": "What",
     "state": "determined",
@@ -2677,7 +2978,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_bdd3e1",
+    "id": "p_when_b8e55904a5fb",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -2687,7 +2988,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_bc43cb",
+    "id": "p_where_03b43c3426d4",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -2697,7 +2998,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_aacdac",
+    "id": "p_why_95f660f5413e",
     "label": "Unspecified",
     "entity_type": "Why",
     "state": "unspecified",
@@ -2707,7 +3008,7 @@
     "properties": {}
   },
   {
-    "id": "p_how_618999",
+    "id": "p_how_ea8363a4b95c",
     "label": "quickly",
     "entity_type": "How",
     "state": "determined",
@@ -2717,7 +3018,7 @@
     "properties": {}
   },
   {
-    "id": "p_agent_75beda",
+    "id": "p_agent_d3abadd7a771",
     "label": "Unknown",
     "entity_type": "Agent",
     "state": "unspecified",
@@ -2729,40 +3030,44 @@
     }
   },
   {
-    "id": "p_cause_d5dc47",
+    "id": "p_event_f60a5fd8dfb1",
+    "label": "failed",
+    "entity_type": "Event",
+    "state": "determined",
+    "constraints": [
+      "Causal Marker: because of; Event: Action"
+    ],
+    "properties": {
+      "event": {
+        "category": "Action",
+        "verb": "failed",
+        "actor": "Unknown",
+        "patient": "the exam"
+      }
+    }
+  },
+  {
+    "id": "p_cause_d60c15c13a01",
     "label": "bad luck",
     "entity_type": "Cause",
     "state": "determined",
     "constraints": [
-      "Causal Marker: because of"
+      "Causal Marker: because of; Event: Action"
     ],
     "properties": {}
   },
   {
-    "id": "p_effect_ad3f58",
+    "id": "p_effect_d3e5e4086fd9",
     "label": "Failed the exam",
     "entity_type": "Effect",
     "state": "determined",
     "constraints": [
-      "Causal Marker: because of"
+      "Causal Marker: because of; Event: Action"
     ],
     "properties": {}
   },
   {
-    "id": "p_relative_clause_730212",
-    "label": "No modification structure found",
-    "entity_type": "RelativeClause",
-    "state": "determined",
-    "constraints": [
-      "No modification structure found"
-    ],
-    "properties": {
-      "decision": "Standard",
-      "result": null
-    }
-  },
-  {
-    "id": "p_morphology_3828ca",
+    "id": "p_morphology_bbbefc70d82b",
     "label": "[Morphology: Base] → [Category: Action]",
     "entity_type": "Morphology",
     "state": "determined",
@@ -2772,27 +3077,27 @@
     "properties": {
       "result": {
         "form": "Base",
-        "verb": "the",
+        "verb": "failed",
         "subject": "Failed",
-        "object": "exam because of bad luck",
+        "object": "the exam",
         "category": "Action",
-        "patient": "exam because of bad luck",
+        "patient": "the exam",
         "agent": "Unknown"
       }
     }
   },
   {
-    "id": "p_who_f532d5",
+    "id": "p_who_4cd460add97e",
     "label": "Unknown",
     "entity_type": "Who",
-    "state": "determined",
+    "state": "unspecified",
     "constraints": [
       "Stage 5 - 5W1H Synthesis"
     ],
     "properties": {}
   },
   {
-    "id": "p_what_b5ef97",
+    "id": "p_what_0ed63bf795cf",
     "label": "failed the exam",
     "entity_type": "What",
     "state": "determined",
@@ -2802,7 +3107,7 @@
     "properties": {}
   },
   {
-    "id": "p_when_f23371",
+    "id": "p_when_8f260e31a895",
     "label": "Unspecified",
     "entity_type": "When",
     "state": "unspecified",
@@ -2812,7 +3117,7 @@
     "properties": {}
   },
   {
-    "id": "p_where_88d6c8",
+    "id": "p_where_61f842741362",
     "label": "Unspecified",
     "entity_type": "Where",
     "state": "unspecified",
@@ -2822,7 +3127,7 @@
     "properties": {}
   },
   {
-    "id": "p_why_defc12",
+    "id": "p_why_67b43746da11",
     "label": "because of bad luck",
     "entity_type": "Why",
     "state": "determined",
@@ -2832,7 +3137,268 @@
     "properties": {}
   },
   {
-    "id": "p_how_13b915",
+    "id": "p_how_68bc8b212176",
+    "label": "Unspecified",
+    "entity_type": "How",
+    "state": "unspecified",
+    "constraints": [
+      "Stage 5 - 5W1H Synthesis"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_agent_3d7ff9c47476",
+    "label": "I",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Explicit Subject Present"
+    ],
+    "properties": {
+      "decision": "Priority: Explicit Subject"
+    }
+  },
+  {
+    "id": "p_event_2010b448fd4d",
+    "label": "talked",
+    "entity_type": "Event",
+    "state": "determined",
+    "constraints": [
+      "Event: Action"
+    ],
+    "properties": {
+      "event": {
+        "category": "Action",
+        "verb": "talked",
+        "actor": "I",
+        "patient": "to the manager"
+      }
+    }
+  },
+  {
+    "id": "p_relativeclause_c7d30f1d74f5",
+    "label": "Defining clause",
+    "entity_type": "RelativeClause",
+    "state": "determined",
+    "constraints": [
+      "Defining clause"
+    ],
+    "properties": {
+      "decision": "Essential",
+      "result": {
+        "type": "Defining",
+        "antecedent": "I talked to the manager",
+        "target": "manager",
+        "clause": "was frustrated with the deadline",
+        "kind": "RelativeClause",
+        "relative_marker": "who",
+        "classification": "Essential",
+        "modifier_kind": "RelativeClause"
+      }
+    }
+  },
+  {
+    "id": "p_morphology_bd5f6964ac01",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": {
+        "form": "Base",
+        "verb": "talked",
+        "subject": "I",
+        "object": "to the manager",
+        "category": "Action",
+        "patient": "to the manager",
+        "agent": "I"
+      }
+    }
+  },
+  {
+    "id": "p_who_0a6411d2008c",
+    "label": "I",
+    "entity_type": "Who",
+    "state": "determined",
+    "constraints": [
+      "Stage 5 - 5W1H Synthesis"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_what_02955a0d6a5b",
+    "label": "talked to the manager",
+    "entity_type": "What",
+    "state": "determined",
+    "constraints": [
+      "Stage 5 - 5W1H Synthesis"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_when_bab993882206",
+    "label": "Unspecified",
+    "entity_type": "When",
+    "state": "unspecified",
+    "constraints": [
+      "Stage 5 - 5W1H Synthesis"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_where_8a3935044963",
+    "label": "Unspecified",
+    "entity_type": "Where",
+    "state": "unspecified",
+    "constraints": [
+      "Stage 5 - 5W1H Synthesis"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_why_5f50f22c9f00",
+    "label": "Unspecified",
+    "entity_type": "Why",
+    "state": "unspecified",
+    "constraints": [
+      "Stage 5 - 5W1H Synthesis"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_how_37ac44380881",
+    "label": "Unspecified",
+    "entity_type": "How",
+    "state": "unspecified",
+    "constraints": [
+      "Stage 5 - 5W1H Synthesis"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_agent_2f83f7acd5cb",
+    "label": "You",
+    "entity_type": "Agent",
+    "state": "determined",
+    "constraints": [
+      "Imperative / Direct Directive"
+    ],
+    "properties": {
+      "decision": "Priority: Listener Address"
+    }
+  },
+  {
+    "id": "p_event_1b1891140779",
+    "label": "review",
+    "entity_type": "Event",
+    "state": "determined",
+    "constraints": [
+      "Event: Action"
+    ],
+    "properties": {
+      "event": {
+        "category": "Action",
+        "verb": "review",
+        "actor": "You",
+        "patient": "the long report"
+      }
+    }
+  },
+  {
+    "id": "p_modifier_331788f2fed5",
+    "label": "Adjectival modifier",
+    "entity_type": "Modifier",
+    "state": "determined",
+    "constraints": [
+      "Adjectival modifier"
+    ],
+    "properties": {
+      "decision": "Supplementary",
+      "result": {
+        "type": "Supplementary",
+        "antecedent": "report",
+        "target": "report",
+        "clause": "long",
+        "kind": "Adjective",
+        "classification": "Supplementary",
+        "modifier_kind": "Adjective"
+      }
+    }
+  },
+  {
+    "id": "p_morphology_9d9cf3715857",
+    "label": "[Morphology: Base] → [Category: Action]",
+    "entity_type": "Morphology",
+    "state": "determined",
+    "constraints": [
+      "[Morphology: Base] → [Category: Action]"
+    ],
+    "properties": {
+      "result": {
+        "form": "Base",
+        "verb": "review",
+        "subject": "Please",
+        "object": "the long report",
+        "category": "Action",
+        "patient": "the long report",
+        "agent": "You"
+      }
+    }
+  },
+  {
+    "id": "p_who_503450b96552",
+    "label": "You",
+    "entity_type": "Who",
+    "state": "determined",
+    "constraints": [
+      "Stage 5 - 5W1H Synthesis"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_what_75ad75bc9a9b",
+    "label": "review the long report",
+    "entity_type": "What",
+    "state": "determined",
+    "constraints": [
+      "Stage 5 - 5W1H Synthesis"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_when_2f75932c7541",
+    "label": "Unspecified",
+    "entity_type": "When",
+    "state": "unspecified",
+    "constraints": [
+      "Stage 5 - 5W1H Synthesis"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_where_9075d2cdb37f",
+    "label": "Unspecified",
+    "entity_type": "Where",
+    "state": "unspecified",
+    "constraints": [
+      "Stage 5 - 5W1H Synthesis"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_why_eb11def5cd91",
+    "label": "Unspecified",
+    "entity_type": "Why",
+    "state": "unspecified",
+    "constraints": [
+      "Stage 5 - 5W1H Synthesis"
+    ],
+    "properties": {}
+  },
+  {
+    "id": "p_how_b35b4d983fcd",
     "label": "Unspecified",
     "entity_type": "How",
     "state": "unspecified",
