@@ -90,6 +90,37 @@ def test_visualizer_shows_stage5_details_in_tooltip_not_node_label(tmp_path):
     assert "stage5_result" not in html
 
 
+def test_visualizer_includes_constraint_edges(tmp_path):
+    graph_path = tmp_path / "graph.json"
+    output_path = tmp_path / "index.html"
+    graph_path.write_text(
+        json.dumps(
+            {
+                "nodes": [
+                    {"id": "agent-1", "label": "I", "category": "Entity"},
+                    {"id": "event-1", "label": "submit the form", "category": "Event"},
+                ],
+                "edges": [
+                    {
+                        "source": "agent-1",
+                        "target": "event-1",
+                        "morphism_type": "Constraint",
+                        "constraint_type": "ClauseCondition",
+                        "detail": "Agent: I",
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    visualize_topological_graph(str(graph_path), str(output_path))
+    html = output_path.read_text(encoding="utf-8")
+
+    assert "Type: Constraint" in html
+    assert "Agent: I" in html
+
+
 def test_upstream_stage_data_is_normalized_for_stage3_4_5():
     upstream_payload = {
         "particles": [
@@ -217,6 +248,35 @@ def test_particle_repo_directory_loads_root_log_json(tmp_path):
 
     assert particle_data == []
     assert log_data[0]["input"] == "I submitted the form"
+
+
+def test_stage2_state_mapping_creates_state_edge():
+    particle_data = [
+        {"id": "agent-1", "label": "I", "entity_type": "Agent"},
+        {"id": "event-1", "label": "strange", "entity_type": "Event"},
+    ]
+    log_data = [
+        {
+            "input": "Thought was strange.",
+            "stage1": {"agent": "I"},
+            "stage2": {
+                "mapping": "I -> State -> strange",
+                "structure": {
+                    "relation": "Event",
+                    "event": {"category": "State", "state": "strange"},
+                    "agent_particle_id": "agent-1",
+                    "event_particle_id": "event-1",
+                },
+            },
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    assert any(
+        edge.morphism_type == "State" and edge.source == "agent-1" and edge.target == "event-1"
+        for edge in graph.edges
+    )
 
 
 def test_stage4_without_explicit_target_does_not_create_constraint_edge():

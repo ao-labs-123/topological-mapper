@@ -1877,7 +1877,34 @@
       }
     },
     {
-      "id": "context_temporal_134",
+      "id": "context_state_134",
+      "label": "strange",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "what": "strange"
+      }
+    },
+    {
+      "id": "context_state_135",
+      "label": "strange",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "what": "strange"
+      }
+    },
+    {
+      "id": "context_state_136",
+      "label": "stressed",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "what": "stressed"
+      }
+    },
+    {
+      "id": "context_temporal_137",
       "label": "the long meeting",
       "category": "Event",
       "resolution_state": "Determined",
@@ -1886,12 +1913,57 @@
       }
     },
     {
-      "id": "context_temporalevent_135",
+      "id": "context_temporalevent_138",
       "label": "stressed",
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
         "what": "stressed"
+      }
+    },
+    {
+      "id": "context_state_139",
+      "label": "stressed",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "what": "stressed"
+      }
+    },
+    {
+      "id": "context_state_140",
+      "label": "done",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "what": "done"
+      }
+    },
+    {
+      "id": "context_state_141",
+      "label": "done",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "what": "done"
+      }
+    },
+    {
+      "id": "p_what_52de838b8273",
+      "label": "quiet",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "what": "quiet"
+      }
+    },
+    {
+      "id": "p_what_a3d44d5af782",
+      "label": "bright",
+      "category": "Event",
+      "resolution_state": "Determined",
+      "attributes": {
+        "what": "bright"
       }
     }
   ],
@@ -1902,6 +1974,22 @@
       "target": "p_effect_47b1de987abf",
       "morphism_type": "Cause",
       "detail": "Primary Cause",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_state_p_agent_03e1521b86bc_context_state_134",
+      "source": "p_agent_03e1521b86bc",
+      "target": "context_state_134",
+      "morphism_type": "State",
+      "detail": "I -> State -> strange",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_state_p_agent_d6173fb42f11_context_state_135",
+      "source": "p_agent_d6173fb42f11",
+      "target": "context_state_135",
+      "morphism_type": "State",
+      "detail": "He/She/They -> State -> strange",
       "constraint_type": ""
     },
     {
@@ -1929,6 +2017,14 @@
       "constraint_type": ""
     },
     {
+      "id": "e_state_p_agent_c26f459ef844_context_state_136",
+      "source": "p_agent_c26f459ef844",
+      "target": "context_state_136",
+      "morphism_type": "State",
+      "detail": "the project -> Cause -> I'm stressed; I -> State -> stressed",
+      "constraint_type": ""
+    },
+    {
       "id": "e_cause_p_cause_890fa1ac310a_p_effect_33b62c54a945",
       "source": "p_cause_890fa1ac310a",
       "target": "p_effect_33b62c54a945",
@@ -1937,11 +2033,51 @@
       "constraint_type": ""
     },
     {
-      "id": "e_temporal_context_temporal_134_context_temporalevent_135",
-      "source": "context_temporal_134",
-      "target": "context_temporalevent_135",
+      "id": "e_temporal_context_temporal_137_context_temporalevent_138",
+      "source": "context_temporal_137",
+      "target": "context_temporalevent_138",
       "morphism_type": "Temporal",
       "detail": "Temporal relation (after)",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_state_p_agent_bd1fd846e495_context_state_139",
+      "source": "p_agent_bd1fd846e495",
+      "target": "context_state_139",
+      "morphism_type": "State",
+      "detail": "I -> State -> stressed",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_state_p_agent_c2a35e790a9d_context_state_140",
+      "source": "p_agent_c2a35e790a9d",
+      "target": "context_state_140",
+      "morphism_type": "State",
+      "detail": "The report -> State -> done",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_state_p_agent_6d2bf6cbedc2_context_state_141",
+      "source": "p_agent_6d2bf6cbedc2",
+      "target": "context_state_141",
+      "morphism_type": "State",
+      "detail": "The report -> State -> done",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_state_p_agent_3fcdc3ba7823_p_what_52de838b8273",
+      "source": "p_agent_3fcdc3ba7823",
+      "target": "p_what_52de838b8273",
+      "morphism_type": "State",
+      "detail": "The office -> State -> quiet",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_state_p_agent_e3b3bfc6c43b_p_what_a3d44d5af782",
+      "source": "p_agent_e3b3bfc6c43b",
+      "target": "p_what_a3d44d5af782",
+      "morphism_type": "State",
+      "detail": "The day -> State -> bright",
       "constraint_type": ""
     },
     {

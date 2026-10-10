@@ -600,6 +600,61 @@ class GraphBuilder:
                             )
                         )
 
+            # --- 2-C. State relation (log.json の mapping / event.category == "State") ---
+            stage2 = log_item.get("stage2") or {}
+            if isinstance(stage2, dict):
+                structure = stage2.get("structure")
+                if isinstance(structure, dict):
+                    event = structure.get("event") if isinstance(structure.get("event"), dict) else {}
+                    if event.get("category") == "State":
+                        source = cls._resolve_particle_node(
+                            graph,
+                            particle_map,
+                            structure.get("agent_particle_id"),
+                            "Agent",
+                        )
+                        if source is None:
+                            stage1 = log_item.get("stage1") or {}
+                            stage1_agent = stage1.get("agent") if isinstance(stage1, dict) else None
+                            if isinstance(stage1_agent, str) and stage1_agent.strip():
+                                matches = [
+                                    node for node in graph.nodes
+                                    if particle_map.get(node.id, {}).get("entity_type") == "Agent"
+                                    and str(particle_map[node.id].get("label", "")).strip().casefold()
+                                    == stage1_agent.strip().casefold()
+                                ]
+                                if len(matches) == 1:
+                                    source = matches[0]
+
+                        target = cls._resolve_particle_node(
+                            graph,
+                            particle_map,
+                            structure.get("event_particle_id"),
+                            "Effect",
+                        )
+                        if target is None:
+                            target_label = event.get("state") or stage2.get("mapping")
+                            target = cls._ensure_context_node(
+                                graph,
+                                particle_data,
+                                target_label,
+                                "State",
+                                {"What", "Effect"},
+                            )
+
+                        if source and target and source.id != target.id:
+                            edge_id = f"e_state_{source.id}_{target.id}"
+                            if not any(edge.id == edge_id for edge in graph.edges):
+                                graph.edges.append(
+                                    Edge(
+                                        id=edge_id,
+                                        source=source.id,
+                                        target=target.id,
+                                        morphism_type="State",
+                                        detail=stage2.get("mapping") or f"State relation ({event.get('state', '')})",
+                                    )
+                                )
+
         # ---------------------------------------------------------
         # 3. 明示的な Stage 4/5 ID 参照から Constraint 射を結線
         # ---------------------------------------------------------

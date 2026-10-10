@@ -151,9 +151,6 @@ def visualize_topological_graph(
     edges = data.get("edges", [])
     displayed_edges = set()
     for edge in edges:
-        if edge.get("morphism_type") == "Constraint":
-            continue
-
         src = node_id_map.get(edge.get("source"))
         tgt = node_id_map.get(edge.get("target"))
         if src is None or tgt is None or src == tgt:
@@ -172,15 +169,21 @@ def visualize_topological_graph(
             edge_title += f"<br>Detail: {detail}"
         if how:
             edge_title += f"<br>How: {how}"
+        if m_type == "Constraint":
+            constraint_type = edge.get("constraint_type", "")
+            if constraint_type:
+                edge_title += f"<br>Constraint Type: {constraint_type}"
 
         # Morphism ごとの色分け
         color_map = {
             "Action": "#2ECC71",      # 緑: 動作・作用
             "Cause": "#E74C3C",       # 赤: 因果関係
+            "State": "#00C2A8",       # 緑系: 状態
             "Relation": "#9B59B6",    # 紫: 一般関係
             "Manner": "#3498DB",
             "Temporal": "#E67E22",
             "Concession": "#F1C40F",
+            "Constraint": "#FFD166",
         }
         constraint_colors = {
             "ClauseCondition": "#FFD166",
@@ -188,7 +191,7 @@ def visualize_topological_graph(
             "PassiveState": "#C084FC",
         }
         edge_color = (
-            constraint_colors.get(edge.get("constraint_type"), color_map["Constraint"])
+            constraint_colors.get(edge.get("constraint_type"), color_map.get("Constraint", "#FFD166"))
             if m_type == "Constraint"
             else color_map.get(m_type, "#AAAAAA")
         )
