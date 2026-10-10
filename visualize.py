@@ -68,11 +68,11 @@ def visualize_topological_graph(
     for node in nodes:
         node_id = node.get("id")
         base_label = node.get("label", node_id)
-        if base_label in constraint_labels:
+        attrs = node.get("attributes", {})
+        if base_label in constraint_labels and not attrs.get("stage3_mapping"):
             continue
 
         category = node.get("category", "Entity")
-        attrs = node.get("attributes", {})
 
         # when や where があればラベルの後ろに括弧書きで追記する
         context_text = []
@@ -97,8 +97,12 @@ def visualize_topological_graph(
 
 
         # ツールチップ（マウスホバー時の表示）に 5W1H 属性を整形
+        mapping_labels = {
+            "stage2_mapping": "Stage 2 Mapping",
+            "stage3_mapping": "Stage 3 Mapping",
+        }
         attr_lines = [
-            f"<b>{k}</b>: {v}"
+            f"<b>{mapping_labels.get(k, k)}</b>: {v}"
             for k, v in attrs.items()
             if k not in {"agent", "stage5_process", "stage5_result"}
             and v

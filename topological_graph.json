@@ -25,7 +25,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "I helped -> Cause -> He succeeded; He -> Action -> succeeded"
       }
     },
     {
@@ -109,7 +110,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "You -> Action -> review the document"
       }
     },
     {
@@ -165,7 +167,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "I -> State -> strange"
       }
     },
     {
@@ -221,7 +224,9 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "He/She/They -> State -> strange",
+        "stage3_mapping": "Agent(He/She/They) -> Internal Eval -> State(Strange) -> How: Degree(Apparently)"
       }
     },
     {
@@ -235,7 +240,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage3_mapping": "Agent(He/She/They) -> Internal Eval -> State(Strange) -> How: Degree(Apparently)"
       }
     },
     {
@@ -291,7 +297,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "Unknown -> Action -> went"
       }
     },
     {
@@ -347,7 +354,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "you -> Action -> submit the form"
       }
     },
     {
@@ -403,7 +411,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "I -> Action -> submitted the form"
       }
     },
     {
@@ -459,7 +468,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "I -> Action -> wrote the report"
       }
     },
     {
@@ -515,7 +525,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "you helped -> Cause -> Succeeded; Unknown -> Action -> succeeded"
       }
     },
     {
@@ -599,7 +610,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "the effort -> Concession -> Failed; Unknown -> Action -> failed"
       }
     },
     {
@@ -683,7 +695,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "Unknown -> Action -> further investigation"
       }
     },
     {
@@ -739,7 +752,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "Unknown -> Action -> submitted the form"
       }
     },
     {
@@ -795,7 +809,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "Unknown -> Action -> succeeded"
       }
     },
     {
@@ -851,7 +866,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "the project -> Cause -> I'm stressed; I -> State -> stressed"
       }
     },
     {
@@ -935,7 +951,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "you helped -> Cause -> I succeeded; I -> Action -> succeeded"
       }
     },
     {
@@ -1019,7 +1036,9 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "He -> Action -> succeeded",
+        "stage3_mapping": "Agent(He) -> How: Instrument(Hard Work) -> State(Success)"
       }
     },
     {
@@ -1033,7 +1052,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage3_mapping": "Agent(He) -> How: Instrument(Hard Work) -> State(Success)"
       }
     },
     {
@@ -1089,7 +1109,9 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "I -> State -> stressed",
+        "stage3_mapping": "Node(meeting) -> Attribute -> State(Long)"
       }
     },
     {
@@ -1103,7 +1125,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage3_mapping": "Node(meeting) -> Attribute -> State(Long)"
       }
     },
     {
@@ -1159,7 +1182,9 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "The report -> State -> done",
+        "stage3_mapping": "Node(The report) -> Attribute -> State(Long)"
       }
     },
     {
@@ -1173,7 +1198,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage3_mapping": "Node(The report) -> Attribute -> State(Long)"
       }
     },
     {
@@ -1229,7 +1255,9 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "The report -> State -> done",
+        "stage3_mapping": "Node(The report) -> Defining Attribute -> Clause(I wrote)"
       }
     },
     {
@@ -1243,7 +1271,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage3_mapping": "Node(The report) -> Defining Attribute -> Clause(I wrote)"
       }
     },
     {
@@ -1299,7 +1328,9 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "The office -> State -> quiet",
+        "stage3_mapping": "Node(The office) -> Defining Attribute -> Clause(I wrote the report)"
       }
     },
     {
@@ -1313,7 +1344,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage3_mapping": "Node(The office) -> Defining Attribute -> Clause(I wrote the report)"
       }
     },
     {
@@ -1369,7 +1401,9 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "The day -> State -> bright",
+        "stage3_mapping": "Node(The day) -> Defining Attribute -> Clause(he succeeded)"
       }
     },
     {
@@ -1383,7 +1417,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage3_mapping": "Node(The day) -> Defining Attribute -> Clause(he succeeded)"
       }
     },
     {
@@ -1439,7 +1474,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "I -> Stative -> have a car"
       }
     },
     {
@@ -1495,7 +1531,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "I -> Action -> having a party"
       }
     },
     {
@@ -1551,7 +1588,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "him -> Action -> told me"
       }
     },
     {
@@ -1607,7 +1645,9 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "Unknown -> Action -> completed The report",
+        "stage3_mapping": "Node(The report) -> Action(Complete) -> How: Manner(Quickly)"
       }
     },
     {
@@ -1621,7 +1661,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage3_mapping": "Node(The report) -> Action(Complete) -> How: Manner(Quickly)"
       }
     },
     {
@@ -1677,7 +1718,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "bad luck -> Cause -> Failed the exam; Unknown -> Action -> failed the exam"
       }
     },
     {
@@ -1761,7 +1803,9 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "I -> Action -> talked to the manager",
+        "stage3_mapping": "Node(manager) -> Attribute -> State(Frustrated) -> Cause -> Node(the deadline)"
       }
     },
     {
@@ -1775,7 +1819,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage3_mapping": "Node(manager) -> Attribute -> State(Frustrated) -> Cause -> Node(the deadline)"
       }
     },
     {
@@ -1831,7 +1876,9 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "You -> Action -> review the long report",
+        "stage3_mapping": "Node(report) -> Attribute -> State(Long)"
       }
     },
     {
@@ -1845,7 +1892,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage3_mapping": "Node(report) -> Attribute -> State(Long)"
       }
     },
     {
@@ -1877,34 +1925,7 @@
       }
     },
     {
-      "id": "context_state_134",
-      "label": "strange",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "what": "strange"
-      }
-    },
-    {
-      "id": "context_state_135",
-      "label": "strange",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "what": "strange"
-      }
-    },
-    {
-      "id": "context_state_136",
-      "label": "stressed",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "what": "stressed"
-      }
-    },
-    {
-      "id": "context_temporal_137",
+      "id": "context_temporal_134",
       "label": "the long meeting",
       "category": "Event",
       "resolution_state": "Determined",
@@ -1913,57 +1934,12 @@
       }
     },
     {
-      "id": "context_temporalevent_138",
+      "id": "context_temporalevent_135",
       "label": "stressed",
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
         "what": "stressed"
-      }
-    },
-    {
-      "id": "context_state_139",
-      "label": "stressed",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "what": "stressed"
-      }
-    },
-    {
-      "id": "context_state_140",
-      "label": "done",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "what": "done"
-      }
-    },
-    {
-      "id": "context_state_141",
-      "label": "done",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "what": "done"
-      }
-    },
-    {
-      "id": "p_what_52de838b8273",
-      "label": "quiet",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "what": "quiet"
-      }
-    },
-    {
-      "id": "p_what_a3d44d5af782",
-      "label": "bright",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "what": "bright"
       }
     }
   ],
@@ -1973,23 +1949,31 @@
       "source": "p_cause_cc942ad74fe1",
       "target": "p_effect_47b1de987abf",
       "morphism_type": "Cause",
-      "detail": "Primary Cause",
+      "detail": "I helped -> Cause -> He succeeded; He -> Action -> succeeded",
       "constraint_type": ""
     },
     {
-      "id": "e_state_p_agent_03e1521b86bc_context_state_134",
+      "id": "e_state_p_agent_03e1521b86bc_p_event_958e2699971b",
       "source": "p_agent_03e1521b86bc",
-      "target": "context_state_134",
+      "target": "p_event_958e2699971b",
       "morphism_type": "State",
       "detail": "I -> State -> strange",
       "constraint_type": ""
     },
     {
-      "id": "e_state_p_agent_d6173fb42f11_context_state_135",
+      "id": "e_state_p_agent_d6173fb42f11_p_event_0dc58a9c442e",
       "source": "p_agent_d6173fb42f11",
-      "target": "context_state_135",
+      "target": "p_event_0dc58a9c442e",
       "morphism_type": "State",
       "detail": "He/She/They -> State -> strange",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_relation_p_modifier_6df8467908b1_p_event_0dc58a9c442e",
+      "source": "p_modifier_6df8467908b1",
+      "target": "p_event_0dc58a9c442e",
+      "morphism_type": "Relation",
+      "detail": "Agent(He/She/They) -> Internal Eval -> State(Strange) -> How: Degree(Apparently)",
       "constraint_type": ""
     },
     {
@@ -1997,7 +1981,7 @@
       "source": "p_cause_b8a647c50f12",
       "target": "p_effect_e9e3b888b2e1",
       "morphism_type": "Cause",
-      "detail": "Primary Cause",
+      "detail": "you helped -> Cause -> Succeeded; Unknown -> Action -> succeeded",
       "constraint_type": ""
     },
     {
@@ -2005,7 +1989,7 @@
       "source": "p_concession_3a9d93a7a26d",
       "target": "p_what_65123466e813",
       "morphism_type": "Concession",
-      "detail": "Concession relation (despite)",
+      "detail": "the effort -> Concession -> Failed; Unknown -> Action -> failed",
       "constraint_type": ""
     },
     {
@@ -2013,13 +1997,13 @@
       "source": "p_cause_df4bc21dcf80",
       "target": "p_effect_ae83b8187416",
       "morphism_type": "Cause",
-      "detail": "Primary Cause",
+      "detail": "the project -> Cause -> I'm stressed; I -> State -> stressed",
       "constraint_type": ""
     },
     {
-      "id": "e_state_p_agent_c26f459ef844_context_state_136",
+      "id": "e_state_p_agent_c26f459ef844_p_event_25e224f7391b",
       "source": "p_agent_c26f459ef844",
-      "target": "context_state_136",
+      "target": "p_event_25e224f7391b",
       "morphism_type": "State",
       "detail": "the project -> Cause -> I'm stressed; I -> State -> stressed",
       "constraint_type": ""
@@ -2029,55 +2013,111 @@
       "source": "p_cause_890fa1ac310a",
       "target": "p_effect_33b62c54a945",
       "morphism_type": "Cause",
-      "detail": "Primary Cause",
+      "detail": "you helped -> Cause -> I succeeded; I -> Action -> succeeded",
       "constraint_type": ""
     },
     {
-      "id": "e_temporal_context_temporal_137_context_temporalevent_138",
-      "source": "context_temporal_137",
-      "target": "context_temporalevent_138",
+      "id": "e_relation_p_modifier_600fee5db06e_p_event_effdf1fc840c",
+      "source": "p_modifier_600fee5db06e",
+      "target": "p_event_effdf1fc840c",
+      "morphism_type": "Relation",
+      "detail": "Agent(He) -> How: Instrument(Hard Work) -> State(Success)",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_temporal_context_temporal_134_context_temporalevent_135",
+      "source": "context_temporal_134",
+      "target": "context_temporalevent_135",
       "morphism_type": "Temporal",
       "detail": "Temporal relation (after)",
       "constraint_type": ""
     },
     {
-      "id": "e_state_p_agent_bd1fd846e495_context_state_139",
+      "id": "e_state_p_agent_bd1fd846e495_p_event_da865492a5de",
       "source": "p_agent_bd1fd846e495",
-      "target": "context_state_139",
+      "target": "p_event_da865492a5de",
       "morphism_type": "State",
       "detail": "I -> State -> stressed",
       "constraint_type": ""
     },
     {
-      "id": "e_state_p_agent_c2a35e790a9d_context_state_140",
+      "id": "e_relation_p_modifier_54982de81e0a_p_event_da865492a5de",
+      "source": "p_modifier_54982de81e0a",
+      "target": "p_event_da865492a5de",
+      "morphism_type": "Relation",
+      "detail": "Node(meeting) -> Attribute -> State(Long)",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_state_p_agent_c2a35e790a9d_p_event_00177b0f1304",
       "source": "p_agent_c2a35e790a9d",
-      "target": "context_state_140",
+      "target": "p_event_00177b0f1304",
       "morphism_type": "State",
       "detail": "The report -> State -> done",
       "constraint_type": ""
     },
     {
-      "id": "e_state_p_agent_6d2bf6cbedc2_context_state_141",
+      "id": "e_relation_p_relativeclause_27a8a099b2b1_p_event_00177b0f1304",
+      "source": "p_relativeclause_27a8a099b2b1",
+      "target": "p_event_00177b0f1304",
+      "morphism_type": "Relation",
+      "detail": "Node(The report) -> Attribute -> State(Long)",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_state_p_agent_6d2bf6cbedc2_p_event_06f0611046f9",
       "source": "p_agent_6d2bf6cbedc2",
-      "target": "context_state_141",
+      "target": "p_event_06f0611046f9",
       "morphism_type": "State",
       "detail": "The report -> State -> done",
       "constraint_type": ""
     },
     {
-      "id": "e_state_p_agent_3fcdc3ba7823_p_what_52de838b8273",
+      "id": "e_constraint_p_relativeclause_4571ff419e2a_p_event_06f0611046f9",
+      "source": "p_relativeclause_4571ff419e2a",
+      "target": "p_event_06f0611046f9",
+      "morphism_type": "Constraint",
+      "detail": "Node(The report) -> Defining Attribute -> Clause(I wrote)",
+      "constraint_type": "ClauseCondition"
+    },
+    {
+      "id": "e_state_p_agent_3fcdc3ba7823_p_event_197a2a7b57e5",
       "source": "p_agent_3fcdc3ba7823",
-      "target": "p_what_52de838b8273",
+      "target": "p_event_197a2a7b57e5",
       "morphism_type": "State",
       "detail": "The office -> State -> quiet",
       "constraint_type": ""
     },
     {
-      "id": "e_state_p_agent_e3b3bfc6c43b_p_what_a3d44d5af782",
+      "id": "e_constraint_p_relativeclause_52fa5704f901_p_event_197a2a7b57e5",
+      "source": "p_relativeclause_52fa5704f901",
+      "target": "p_event_197a2a7b57e5",
+      "morphism_type": "Constraint",
+      "detail": "Node(The office) -> Defining Attribute -> Clause(I wrote the report)",
+      "constraint_type": "ClauseCondition"
+    },
+    {
+      "id": "e_state_p_agent_e3b3bfc6c43b_p_event_34d203461e91",
       "source": "p_agent_e3b3bfc6c43b",
-      "target": "p_what_a3d44d5af782",
+      "target": "p_event_34d203461e91",
       "morphism_type": "State",
       "detail": "The day -> State -> bright",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_constraint_p_relativeclause_7293daa16f94_p_event_34d203461e91",
+      "source": "p_relativeclause_7293daa16f94",
+      "target": "p_event_34d203461e91",
+      "morphism_type": "Constraint",
+      "detail": "Node(The day) -> Defining Attribute -> Clause(he succeeded)",
+      "constraint_type": "ClauseCondition"
+    },
+    {
+      "id": "e_relation_p_modifier_922ca0b59876_p_event_7a9740834db3",
+      "source": "p_modifier_922ca0b59876",
+      "target": "p_event_7a9740834db3",
+      "morphism_type": "Relation",
+      "detail": "Node(The report) -> Action(Complete) -> How: Manner(Quickly)",
       "constraint_type": ""
     },
     {
@@ -2085,47 +2125,183 @@
       "source": "p_cause_d60c15c13a01",
       "target": "p_effect_d3e5e4086fd9",
       "morphism_type": "Cause",
-      "detail": "Primary Cause",
+      "detail": "bad luck -> Cause -> Failed the exam; Unknown -> Action -> failed the exam",
       "constraint_type": ""
     },
     {
-      "id": "e_action_p_agent_aac8eb0fdb9c_p_effect_47b1de987abf",
+      "id": "e_constraint_p_relativeclause_c7d30f1d74f5_p_event_2010b448fd4d",
+      "source": "p_relativeclause_c7d30f1d74f5",
+      "target": "p_event_2010b448fd4d",
+      "morphism_type": "Constraint",
+      "detail": "Node(manager) -> Attribute -> State(Frustrated) -> Cause -> Node(the deadline)",
+      "constraint_type": "ClauseCondition"
+    },
+    {
+      "id": "e_relation_p_modifier_331788f2fed5_p_event_1b1891140779",
+      "source": "p_modifier_331788f2fed5",
+      "target": "p_event_1b1891140779",
+      "morphism_type": "Relation",
+      "detail": "Node(report) -> Attribute -> State(Long)",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_aac8eb0fdb9c_p_event_3edbd3958741",
       "source": "p_agent_aac8eb0fdb9c",
-      "target": "p_effect_47b1de987abf",
+      "target": "p_event_3edbd3958741",
       "morphism_type": "Action",
-      "detail": "Agent of Action",
+      "detail": "I helped -> Cause -> He succeeded; He -> Action -> succeeded",
       "constraint_type": ""
     },
     {
-      "id": "e_action_p_agent_7c397ad5f93b_p_effect_e9e3b888b2e1",
+      "id": "e_action_p_agent_0c8bfea52029_p_event_e989aac88239",
+      "source": "p_agent_0c8bfea52029",
+      "target": "p_event_e989aac88239",
+      "morphism_type": "Action",
+      "detail": "You -> Action -> review the document",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_8ed2c8d9fb74_p_event_270546f68f50",
+      "source": "p_agent_8ed2c8d9fb74",
+      "target": "p_event_270546f68f50",
+      "morphism_type": "Action",
+      "detail": "Unknown -> Action -> went",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_03b8a6a878ad_p_event_d71370d3de61",
+      "source": "p_agent_03b8a6a878ad",
+      "target": "p_event_d71370d3de61",
+      "morphism_type": "Action",
+      "detail": "you -> Action -> submit the form",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_dd2834cd78c2_p_event_a1f965dabc43",
+      "source": "p_agent_dd2834cd78c2",
+      "target": "p_event_a1f965dabc43",
+      "morphism_type": "Action",
+      "detail": "I -> Action -> submitted the form",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_4961e9984436_p_event_44e4f79c2688",
+      "source": "p_agent_4961e9984436",
+      "target": "p_event_44e4f79c2688",
+      "morphism_type": "Action",
+      "detail": "I -> Action -> wrote the report",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_7c397ad5f93b_p_event_fc737bfd10f6",
       "source": "p_agent_7c397ad5f93b",
-      "target": "p_effect_e9e3b888b2e1",
+      "target": "p_event_fc737bfd10f6",
       "morphism_type": "Action",
-      "detail": "Agent of Action",
+      "detail": "you helped -> Cause -> Succeeded; Unknown -> Action -> succeeded",
       "constraint_type": ""
     },
     {
-      "id": "e_action_p_agent_c26f459ef844_p_effect_ae83b8187416",
-      "source": "p_agent_c26f459ef844",
-      "target": "p_effect_ae83b8187416",
+      "id": "e_action_p_agent_7116ebff47a6_p_event_a8e9b75454e0",
+      "source": "p_agent_7116ebff47a6",
+      "target": "p_event_a8e9b75454e0",
       "morphism_type": "Action",
-      "detail": "Agent of Action",
+      "detail": "the effort -> Concession -> Failed; Unknown -> Action -> failed",
       "constraint_type": ""
     },
     {
-      "id": "e_action_p_agent_72bc868676c5_p_effect_33b62c54a945",
+      "id": "e_action_p_agent_c01bbff54828_p_event_4cf8914770bb",
+      "source": "p_agent_c01bbff54828",
+      "target": "p_event_4cf8914770bb",
+      "morphism_type": "Action",
+      "detail": "Unknown -> Action -> further investigation",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_28048229b7e7_p_event_6e7d09fcb43a",
+      "source": "p_agent_28048229b7e7",
+      "target": "p_event_6e7d09fcb43a",
+      "morphism_type": "Action",
+      "detail": "Unknown -> Action -> submitted the form",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_502465f203de_p_event_396327c97469",
+      "source": "p_agent_502465f203de",
+      "target": "p_event_396327c97469",
+      "morphism_type": "Action",
+      "detail": "Unknown -> Action -> succeeded",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_72bc868676c5_p_event_01929f764805",
       "source": "p_agent_72bc868676c5",
-      "target": "p_effect_33b62c54a945",
+      "target": "p_event_01929f764805",
       "morphism_type": "Action",
-      "detail": "Agent of Action",
+      "detail": "you helped -> Cause -> I succeeded; I -> Action -> succeeded",
       "constraint_type": ""
     },
     {
-      "id": "e_action_p_agent_d3abadd7a771_p_effect_d3e5e4086fd9",
-      "source": "p_agent_d3abadd7a771",
-      "target": "p_effect_d3e5e4086fd9",
+      "id": "e_action_p_agent_fefa59f1d4a7_p_event_effdf1fc840c",
+      "source": "p_agent_fefa59f1d4a7",
+      "target": "p_event_effdf1fc840c",
       "morphism_type": "Action",
-      "detail": "Agent of Action",
+      "detail": "He -> Action -> succeeded",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_cb42c6fe0b4c_p_event_6172b0956d61",
+      "source": "p_agent_cb42c6fe0b4c",
+      "target": "p_event_6172b0956d61",
+      "morphism_type": "Action",
+      "detail": "I -> Stative -> have a car",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_fa7aea582b4a_p_event_95c13bacd650",
+      "source": "p_agent_fa7aea582b4a",
+      "target": "p_event_95c13bacd650",
+      "morphism_type": "Action",
+      "detail": "I -> Action -> having a party",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_c0f2be59e500_p_event_d7332f3324f5",
+      "source": "p_agent_c0f2be59e500",
+      "target": "p_event_d7332f3324f5",
+      "morphism_type": "Action",
+      "detail": "him -> Action -> told me",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_2eb6806094ee_p_event_7a9740834db3",
+      "source": "p_agent_2eb6806094ee",
+      "target": "p_event_7a9740834db3",
+      "morphism_type": "Action",
+      "detail": "Unknown -> Action -> completed The report",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_d3abadd7a771_p_event_f60a5fd8dfb1",
+      "source": "p_agent_d3abadd7a771",
+      "target": "p_event_f60a5fd8dfb1",
+      "morphism_type": "Action",
+      "detail": "bad luck -> Cause -> Failed the exam; Unknown -> Action -> failed the exam",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_3d7ff9c47476_p_event_2010b448fd4d",
+      "source": "p_agent_3d7ff9c47476",
+      "target": "p_event_2010b448fd4d",
+      "morphism_type": "Action",
+      "detail": "I -> Action -> talked to the manager",
+      "constraint_type": ""
+    },
+    {
+      "id": "e_action_p_agent_2f83f7acd5cb_p_event_1b1891140779",
+      "source": "p_agent_2f83f7acd5cb",
+      "target": "p_event_1b1891140779",
+      "morphism_type": "Action",
+      "detail": "You -> Action -> review the long report",
       "constraint_type": ""
     }
   ]

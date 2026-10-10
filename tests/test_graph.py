@@ -279,6 +279,76 @@ def test_stage2_state_mapping_creates_state_edge():
     )
 
 
+def test_stage2_action_mapping_uses_event_particle_and_preserves_mapping():
+    particle_data = [
+        {"id": "agent-1", "label": "I", "entity_type": "Agent"},
+        {"id": "event-1", "label": "submitted", "entity_type": "Event"},
+    ]
+    mapping = "I -> Action -> submitted the form"
+    log_data = [
+        {
+            "stage1": {"agent": "I"},
+            "stage2": {
+                "mapping": mapping,
+                "structure": {
+                    "event": {"category": "Action"},
+                    "agent_particle_id": "agent-1",
+                    "event_particle_id": "event-1",
+                },
+            },
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    action_edge = next(edge for edge in graph.edges if edge.morphism_type == "Action")
+    assert (action_edge.source, action_edge.target) == ("agent-1", "event-1")
+    assert action_edge.detail == mapping
+    assert next(node for node in graph.nodes if node.id == "event-1").attributes["stage2_mapping"] == mapping
+
+
+def test_stage3_mapping_links_matching_feature_particle_to_event():
+    structure = {
+        "type": "Supplementary",
+        "antecedent": "the report",
+        "target": "the report",
+        "clause": "quickly",
+        "kind": "Manner",
+        "classification": "Supplementary",
+        "modifier_kind": "Manner",
+    }
+    mapping = "Node(the report) -> Action(Complete) -> How: Manner(Quickly)"
+    particle_data = [
+        {"id": "event-1", "label": "completed", "entity_type": "Event"},
+        {
+            "id": "modifier-1",
+            "label": "Manner adverb",
+            "entity_type": "Modifier",
+            "properties": {"result": structure},
+        },
+    ]
+    log_data = [
+        {
+            "stage2": {
+                "structure": {"event_particle_id": "event-1"},
+            },
+            "stage3": {
+                "decision": "Supplementary",
+                "mapping": mapping,
+                "structure": structure,
+            },
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+
+    relation_edge = next(edge for edge in graph.edges if edge.source == "modifier-1")
+    assert relation_edge.morphism_type == "Relation"
+    assert relation_edge.target == "event-1"
+    assert relation_edge.detail == mapping
+    assert next(node for node in graph.nodes if node.id == "event-1").attributes["stage3_mapping"] == mapping
+
+
 def test_visualizer_renders_edge_color_legend(tmp_path):
     graph_path = tmp_path / "graph.json"
     output_path = tmp_path / "index.html"
