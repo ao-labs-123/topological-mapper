@@ -227,6 +227,30 @@ def visualize_topological_graph(
 
     # HTML出力
     net.write_html(output_html)
+
+    legend_html = """
+    <div id="morphism-legend" style="position: fixed; right: 18px; bottom: 18px; z-index: 9999; max-width: 260px; background: rgba(34, 34, 34, 0.92); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; padding: 10px 12px; box-shadow: 0 4px 18px rgba(0,0,0,0.35); color: #ffffff; font-family: sans-serif; font-size: 12px;">
+      <div style="margin: 0 0 8px 0; font-weight: 700; letter-spacing: 0.04em; color: #FFFFFF;">Morphism legend</div>
+      <div style="display: grid; gap: 6px;">
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="display:inline-block; width: 18px; height: 3px; background: #2ECC71; border-radius: 2px;"></span>Action</div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="display:inline-block; width: 18px; height: 3px; background: #E74C3C; border-radius: 2px;"></span>Cause</div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="display:inline-block; width: 18px; height: 3px; background: #00C2A8; border-radius: 2px;"></span>State</div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="display:inline-block; width: 18px; height: 3px; background: #9B59B6; border-radius: 2px;"></span>Relation</div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="display:inline-block; width: 18px; height: 3px; background: #3498DB; border-radius: 2px;"></span>Manner</div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="display:inline-block; width: 18px; height: 3px; background: #E67E22; border-radius: 2px;"></span>Temporal</div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="display:inline-block; width: 18px; height: 3px; background: #F1C40F; border-radius: 2px;"></span>Concession</div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="display:inline-block; width: 18px; height: 3px; background: #FFD166; border-radius: 2px; border-style: dashed; border-width: 1.5px;"></span>Constraint</div>
+      </div>
+    </div>
+    """
+
+    with open(output_html, "r", encoding="utf-8") as f:
+        html = f.read()
+    if "Morphism legend" not in html:
+        html = html.replace("</body>", f"{legend_html}\n</body>", 1)
+        with open(output_html, "w", encoding="utf-8") as f:
+            f.write(html)
+
     print(f"可視化完了: '{output_html}' を出力しました。")
     print("ブラウザで開いて確認してください（例: open index.html または ダブルクリック）。")
 

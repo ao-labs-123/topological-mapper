@@ -279,6 +279,34 @@ def test_stage2_state_mapping_creates_state_edge():
     )
 
 
+def test_visualizer_renders_edge_color_legend(tmp_path):
+    graph_path = tmp_path / "graph.json"
+    output_path = tmp_path / "index.html"
+    graph_path.write_text(
+        json.dumps(
+            {
+                "nodes": [
+                    {"id": "agent-1", "label": "I", "category": "Entity"},
+                    {"id": "event-1", "label": "submit the form", "category": "Event"},
+                ],
+                "edges": [
+                    {"source": "agent-1", "target": "event-1", "morphism_type": "Action", "detail": "Agent of Action"},
+                    {"source": "agent-1", "target": "event-1", "morphism_type": "State", "detail": "State relation"},
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    visualize_topological_graph(str(graph_path), str(output_path))
+    html = output_path.read_text(encoding="utf-8")
+
+    assert "Morphism legend" in html
+    assert "Action" in html
+    assert "State" in html
+    assert "Constraint" in html
+
+
 def test_stage4_without_explicit_target_does_not_create_constraint_edge():
     particle_data = [
         {"id": "agent-1", "label": "I", "entity_type": "Agent"},
