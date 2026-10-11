@@ -93,7 +93,7 @@ Each reference must equal the target particle's existing `id`, for example:
 ## Quick Start
 ### 1. Execution
 
-Ingest ⁠`particle.json⁠` (local or via automated fetch) and generate the topological graph network:
+Ingest ⁠`particles.json⁠` (local or via automated fetch) and generate the topological graph network:
 
 ```bash
 python -m src.main
