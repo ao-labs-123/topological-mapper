@@ -91,16 +91,37 @@ Each reference must equal the target particle's existing `id`, for example:
 
 
 ## Quick Start
-### 1. Execution
-
-Ingest ⁠`particles.json⁠` (local or via automated fetch) and generate the topological graph network:
+### 1. Install dependencies
 
 ```bash
-python -m src.main
+python -m pip install -r requirements.txt
+```
+
+### 2. Generate the graph
+
+Use local data in the repo, or pull remote data from upstream repositories:
+
+```bash
+# Local repo data
+python -m src.main --upstream-dir .
+
+# Optional: explicitly use upstream repos
+python -m src.main --upstream-particle-dir /path/to/particle-encapsulation \
+  --upstream-log-dir /path/to/particle-encapsulation
+
+# Optional: save to a custom output path
+python -m src.main --upstream-dir . --output ./topological_graph.json
+```
+
+### 3. Visualize
+
+```bash
 python visualize.py
 ```
 
-### 2. Output Example (⁠topological_graph.json⁠)
+This reads `topological_graph.json` and writes an HTML graph to `index.html`.
+
+### 4. Output Example (⁠topological_graph.json⁠)
 ```topological_graph.json
 {
    "nodes": [
@@ -151,13 +172,28 @@ python visualize.py
 ```text
 topological-mapping/
 ├── README.md               # Project documentation
+├── requirements.txt        # Python dependency list
 ├── data/
 │   ├── log.json            # Input log data
 │   └── particles.json      # Ingested particle objects
 ├── topological_graph.json  # Exported topological network graph
-├── visualize.py
-├── index.html
-└── src/
-  ├── main.py             # Pipeline execution script
-  └── graph.py            # Graph data structures and GraphBuilder logic
+├── visualize.py            # HTML network visualization entry point
+├── index.html             # Generated visualization output
+├── src/
+│   ├── __init__.py
+│   ├── main.py            # Pipeline execution script
+│   ├── graph.py           # Graph data structures and GraphBuilder logic
+│   └── upstream_adapter.py # Upstream payload / repo normalization
+├── tests/
+│   └── test_graph.py      # Regression and behavior tests
+└── lib/                   # Static assets used for visualization
+```
+
+### Typical Development Flow
+
+```bash
+python -m pip install -r requirements.txt
+python -m pytest -q
+python -m src.main --upstream-dir .
+python visualize.py
 ```
