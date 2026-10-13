@@ -41,14 +41,14 @@ It ingests discrete `Particle` objects, maps them into **Entities** or **Events*
 
 ### 1. Architectural Diagram
 ```text
-  [ Category of Entities ]                  [ Category of Events ]
-  ( Who / Subject / Agent )                 ( What / Cause / Effect )
-   └── 5W1H: Who                             └── 5W1H: What
-              │                                         │
-              ├────────────── [ Morphisms ] ────────────┤
+  [ Category of Entities ]                         [ Category of Events ]
+  ( Who / Subject / Agent )                       ( What / Cause / Effect )
+   └── 5W1H: Who                                    └── 5W1H: What
+              │                                                  │
+              ├─────────────────────────── [ Morphisms ] ─────────────────────────┤
               │( Action / Cause / State / Relation / Manner / Temporal / Concession / Constraint )     │
-              │                                         │
-              └───────── [ Context Attributes ] ────────┘
+              │                                                  │
+              └────────────────────── [ Context Attributes ] ─────────────────────┘
                       ( When / Where / Why / How )
 
 ```
