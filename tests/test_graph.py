@@ -52,6 +52,31 @@ def test_graph_builder_maps_who_to_entity_and_keeps_context_as_attributes():
     assert not {"when-1", "where-1", "why-1", "how-1"} & nodes_by_id.keys()
 
 
+def test_graph_builder_merges_who_only_when_it_matches_record_agent():
+    particle_data = [
+        {"id": "agent-1", "label": "I", "entity_type": "Agent"},
+        {"id": "who-1", "label": "I", "entity_type": "Who"},
+        {"id": "agent-2", "label": "I", "entity_type": "Agent"},
+        {"id": "who-2", "label": "him", "entity_type": "Who"},
+    ]
+    log_data = [
+        {
+            "stage2": {"structure": {"agent_particle_id": "agent-1"}},
+            "stage5": {"frame": {"who": "I"}},
+        },
+        {
+            "stage2": {"structure": {"agent_particle_id": "agent-2"}},
+            "stage5": {"frame": {"who": "him"}},
+        },
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+    node_ids = {node.id for node in graph.nodes}
+
+    assert "who-1" not in node_ids
+    assert "who-2" in node_ids
+
+
 def test_visualizer_shows_stage5_details_in_tooltip_not_node_label(tmp_path):
     graph_path = tmp_path / "graph.json"
     output_path = tmp_path / "index.html"

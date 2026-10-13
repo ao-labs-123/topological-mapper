@@ -235,9 +235,51 @@ class GraphBuilder:
                 )
             )
 
+    @staticmethod
+    def _matched_who_particle_ids(
+        particle_data: List[Dict[str, Any]], log_data: List[Dict[str, Any]]
+    ) -> set[str]:
+        who_particles = [p for p in particle_data if p.get("entity_type") == "Who"]
+        if len(who_particles) != len(log_data):
+            return set()
+
+        def normalized(value: Any) -> str:
+            return value.strip().casefold() if isinstance(value, str) else ""
+
+        # Who particles have no log reference, so only use their order when every
+        # label validates against the corresponding Stage 5 frame.
+        frames = []
+        for log_item, who_particle in zip(log_data, who_particles):
+            stage5 = log_item.get("stage5") or {}
+            frame = stage5.get("frame") if isinstance(stage5, dict) else None
+            who = frame.get("who") if isinstance(frame, dict) else None
+            if not normalized(who) or normalized(who) != normalized(who_particle.get("label")):
+                return set()
+            frames.append(who)
+
+        agents_by_id = {
+            p.get("id"): p
+            for p in particle_data
+            if p.get("entity_type") == "Agent" and p.get("id")
+        }
+        matched_ids = set()
+        for log_item, who_particle, frame_who in zip(log_data, who_particles, frames):
+            stage2 = log_item.get("stage2") or {}
+            structure = stage2.get("structure") if isinstance(stage2, dict) else None
+            agent_id = structure.get("agent_particle_id") if isinstance(structure, dict) else None
+            agent = agents_by_id.get(agent_id)
+            if (
+                agent
+                and normalized(agent.get("label")) == normalized(frame_who)
+                and who_particle.get("id")
+            ):
+                matched_ids.add(who_particle["id"])
+        return matched_ids
+
     @classmethod
     def build_graph(cls, particle_data: List[Dict[str, Any]], log_data: List[Dict[str, Any]]) -> TopologicalGraph:
         graph = TopologicalGraph()
+        matched_who_ids = cls._matched_who_particle_ids(particle_data, log_data)
         
         # 粒子データのインデックス化（IDベース）
         particle_map = {p.get("id"): p for p in particle_data}
@@ -250,6 +292,9 @@ class GraphBuilder:
             p_label = p.get("label", "")
             p_type = p.get("entity_type", "")
             properties = p.get("properties") or {}
+
+            if p_id in matched_who_ids:
+                continue
 
             if (
                 p_type == "Morphology"
