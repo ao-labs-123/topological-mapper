@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-10-08T09:02:55.132514",
+    "timestamp": "2026-10-13T11:26:28.800267",
     "input": "He succeeded because I helped.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -22,10 +22,10 @@
           "actor": "He",
           "patient": null
         },
-        "agent_particle_id": "p_agent_aac8eb0fdb9c",
-        "cause_particle_id": "p_cause_cc942ad74fe1",
-        "effect_particle_id": "p_effect_47b1de987abf",
-        "event_particle_id": "p_event_3edbd3958741"
+        "agent_particle_id": "p_agent_0520d73d3ccc",
+        "event_particle_id": "p_event_9faf6dd6fc2b",
+        "cause_particle_id": "p_cause_d452fea9db1b",
+        "effect_particle_id": "p_effect_808a9c8f40ae"
       },
       "agent": "He",
       "action": {
@@ -74,7 +74,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.133744",
+    "timestamp": "2026-10-13T11:26:28.801619",
     "input": "Please review the document.",
     "stage1": {
       "process": "Imperative / Direct Directive",
@@ -93,8 +93,8 @@
           "actor": "You",
           "patient": "the document"
         },
-        "agent_particle_id": "p_agent_0c8bfea52029",
-        "event_particle_id": "p_event_e989aac88239"
+        "agent_particle_id": "p_agent_66701c013f50",
+        "event_particle_id": "p_event_aa28c4293a0b"
       },
       "agent": "You",
       "action": {
@@ -118,11 +118,11 @@
       "patient": "the document",
       "actor": "Unspecified",
       "receiver": "Unspecified",
-      "subject": "Please",
+      "subject": "You",
       "structure": {
         "form": "Base",
         "verb": "review",
-        "subject": "Please",
+        "subject": "You",
         "object": "the document",
         "category": "Action",
         "patient": "the document",
@@ -143,7 +143,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.134859",
+    "timestamp": "2026-10-13T11:26:28.802858",
     "input": "Thought was strange.",
     "stage1": {
       "process": "Psychological Verb + Null Subject",
@@ -163,8 +163,8 @@
           "patient": null,
           "state": "strange"
         },
-        "agent_particle_id": "p_agent_03e1521b86bc",
-        "event_particle_id": "p_event_958e2699971b"
+        "agent_particle_id": "p_agent_eae1a5ebeee4",
+        "event_particle_id": "p_event_d7114036910f"
       },
       "agent": "I",
       "action": null
@@ -211,7 +211,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.136336",
+    "timestamp": "2026-10-13T11:26:28.804494",
     "input": "Thought it was strange apparently.",
     "stage1": {
       "process": "Null Subject + Evidential / Attribution Marker",
@@ -231,8 +231,8 @@
           "patient": null,
           "state": "strange"
         },
-        "agent_particle_id": "p_agent_d6173fb42f11",
-        "event_particle_id": "p_event_0dc58a9c442e"
+        "agent_particle_id": "p_agent_d8de13d6ba9c",
+        "event_particle_id": "p_event_9351a50972a9"
       },
       "agent": "He/She/They",
       "action": null
@@ -294,33 +294,33 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.138152",
+    "timestamp": "2026-10-13T11:26:28.806481",
     "input": "Went to the cafe yesterday.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
       "decision": "Fallback: Undetermined Agent",
-      "agent": "Unknown",
+      "agent": "Unspecified",
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
       "process": "Event: Action",
       "decision": "Clarification Required (Undetermined Agent); Event classified: Action",
-      "mapping": "Unknown -> Action -> went",
+      "mapping": "Unspecified -> Action -> went",
       "structure": {
         "relation": "Event",
         "event": {
           "category": "Action",
           "verb": "went",
-          "actor": "Unknown",
+          "actor": "Unspecified",
           "patient": null
         },
-        "agent_particle_id": "p_agent_8ed2c8d9fb74",
-        "event_particle_id": "p_event_270546f68f50"
+        "agent_particle_id": "p_agent_1148288f30b0",
+        "event_particle_id": "p_event_85ef8600654e"
       },
-      "agent": "Unknown",
+      "agent": "Unspecified",
       "action": {
         "verb": "went",
-        "actor": "Unknown",
+        "actor": "Unspecified",
         "patient": null
       }
     },
@@ -329,7 +329,7 @@
       "decision": "Standard",
       "mapping": null,
       "structure": null,
-      "agent": "Unknown"
+      "agent": "Unspecified"
     },
     "stage4": {
       "process": "[Morphology: Base] → [Category: Action]",
@@ -347,13 +347,13 @@
         "object": null,
         "category": "Action",
         "patient": "Unspecified",
-        "agent": "Unknown"
+        "agent": "Unspecified"
       }
     },
     "stage5": {
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
-        "who": "Unknown",
+        "who": "Unspecified",
         "what": "went",
         "when": "yesterday",
         "where": "cafe",
@@ -364,7 +364,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.139334",
+    "timestamp": "2026-10-13T11:26:28.807710",
     "input": "It is required that you submit the form.",
     "stage1": {
       "process": "Formal Subject Detected (It ... that)",
@@ -384,8 +384,8 @@
           "actor": "you",
           "patient": "the form"
         },
-        "agent_particle_id": "p_agent_03b8a6a878ad",
-        "event_particle_id": "p_event_d71370d3de61"
+        "agent_particle_id": "p_agent_91d510e01871",
+        "event_particle_id": "p_event_e7a691f87f38"
       },
       "agent": "you",
       "action": {
@@ -434,7 +434,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.140516",
+    "timestamp": "2026-10-13T11:26:28.808994",
     "input": "I submitted the form yesterday.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -453,8 +453,8 @@
           "actor": "I",
           "patient": "the form"
         },
-        "agent_particle_id": "p_agent_dd2834cd78c2",
-        "event_particle_id": "p_event_a1f965dabc43"
+        "agent_particle_id": "p_agent_605af38b027a",
+        "event_particle_id": "p_event_b6f30004a7cc"
       },
       "agent": "I",
       "action": {
@@ -503,7 +503,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.141816",
+    "timestamp": "2026-10-13T11:26:28.810458",
     "input": "I wrote the report at the office.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -522,8 +522,8 @@
           "actor": "I",
           "patient": "the report"
         },
-        "agent_particle_id": "p_agent_4961e9984436",
-        "event_particle_id": "p_event_44e4f79c2688"
+        "agent_particle_id": "p_agent_31cd2dbae9c1",
+        "event_particle_id": "p_event_b03c96326b69"
       },
       "agent": "I",
       "action": {
@@ -572,18 +572,18 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.143351",
+    "timestamp": "2026-10-13T11:26:28.812077",
     "input": "Succeeded because you helped.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
       "decision": "Fallback: Undetermined Agent",
-      "agent": "Unknown",
+      "agent": "Unspecified",
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
       "process": "Causal Marker: because; Event: Action",
       "decision": "Causal relation mapped; Event classified: Action",
-      "mapping": "you helped -> Cause -> Succeeded; Unknown -> Action -> succeeded",
+      "mapping": "you helped -> Cause -> Succeeded; Unspecified -> Action -> succeeded",
       "structure": {
         "relation": "CauseEffect",
         "marker": "because",
@@ -592,18 +592,18 @@
         "event": {
           "category": "Action",
           "verb": "succeeded",
-          "actor": "Unknown",
+          "actor": "Unspecified",
           "patient": null
         },
-        "agent_particle_id": "p_agent_7c397ad5f93b",
-        "cause_particle_id": "p_cause_b8a647c50f12",
-        "effect_particle_id": "p_effect_e9e3b888b2e1",
-        "event_particle_id": "p_event_fc737bfd10f6"
+        "agent_particle_id": "p_agent_2c695ab7ee29",
+        "event_particle_id": "p_event_c6c4635a1cb8",
+        "cause_particle_id": "p_cause_6332939e7b94",
+        "effect_particle_id": "p_effect_c9302f7d21a4"
       },
-      "agent": "Unknown",
+      "agent": "Unspecified",
       "action": {
         "verb": "succeeded",
-        "actor": "Unknown",
+        "actor": "Unspecified",
         "patient": null
       }
     },
@@ -612,7 +612,7 @@
       "decision": "Standard",
       "mapping": null,
       "structure": null,
-      "agent": "Unknown"
+      "agent": "Unspecified"
     },
     "stage4": {
       "process": "[Morphology: Base] → [Category: Action]",
@@ -630,13 +630,13 @@
         "object": null,
         "category": "Action",
         "patient": "Unspecified",
-        "agent": "Unknown"
+        "agent": "Unspecified"
       }
     },
     "stage5": {
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
-        "who": "Unknown",
+        "who": "Unspecified",
         "what": "succeeded",
         "when": "Unspecified",
         "where": "Unspecified",
@@ -647,18 +647,18 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.144950",
+    "timestamp": "2026-10-13T11:26:28.814980",
     "input": "Failed despite the effort.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
       "decision": "Fallback: Undetermined Agent",
-      "agent": "Unknown",
+      "agent": "Unspecified",
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
       "process": "Concessive Marker: despite; Event: Action",
       "decision": "Concessive relation mapped; Event classified: Action",
-      "mapping": "the effort -> Concession -> Failed; Unknown -> Action -> failed",
+      "mapping": "the effort -> Concession -> Failed; Unspecified -> Action -> failed",
       "structure": {
         "relation": "Concession",
         "marker": "despite",
@@ -667,16 +667,16 @@
         "event": {
           "category": "Action",
           "verb": "failed",
-          "actor": "Unknown",
+          "actor": "Unspecified",
           "patient": null
         },
-        "agent_particle_id": "p_agent_7116ebff47a6",
-        "event_particle_id": "p_event_a8e9b75454e0"
+        "agent_particle_id": "p_agent_cecd48c3ed7d",
+        "event_particle_id": "p_event_f140f3aa8492"
       },
-      "agent": "Unknown",
+      "agent": "Unspecified",
       "action": {
         "verb": "failed",
-        "actor": "Unknown",
+        "actor": "Unspecified",
         "patient": null
       }
     },
@@ -685,7 +685,7 @@
       "decision": "Standard",
       "mapping": null,
       "structure": null,
-      "agent": "Unknown"
+      "agent": "Unspecified"
     },
     "stage4": {
       "process": "[Morphology: Base] → [Category: Action]",
@@ -703,13 +703,13 @@
         "object": null,
         "category": "Action",
         "patient": "Unspecified",
-        "agent": "Unknown"
+        "agent": "Unspecified"
       }
     },
     "stage5": {
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
-        "who": "Unknown",
+        "who": "Unspecified",
         "what": "failed",
         "when": "Unspecified",
         "where": "Unspecified",
@@ -720,33 +720,33 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.146565",
+    "timestamp": "2026-10-13T11:26:28.817943",
     "input": "Required further investigation.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
       "decision": "Fallback: Undetermined Agent",
-      "agent": "Unknown",
+      "agent": "Unspecified",
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
       "process": "Event: Action",
       "decision": "Clarification Required (Undetermined Agent); Event classified: Action",
-      "mapping": "Unknown -> Action -> further investigation",
+      "mapping": "Unspecified -> Action -> further investigation",
       "structure": {
         "relation": "Event",
         "event": {
           "category": "Action",
           "verb": "further",
-          "actor": "Unknown",
+          "actor": "Unspecified",
           "patient": "investigation"
         },
-        "agent_particle_id": "p_agent_c01bbff54828",
-        "event_particle_id": "p_event_4cf8914770bb"
+        "agent_particle_id": "p_agent_36dc7c18d025",
+        "event_particle_id": "p_event_bfcc0ff31474"
       },
-      "agent": "Unknown",
+      "agent": "Unspecified",
       "action": {
         "verb": "further",
-        "actor": "Unknown",
+        "actor": "Unspecified",
         "patient": "investigation"
       }
     },
@@ -755,7 +755,7 @@
       "decision": "Standard",
       "mapping": null,
       "structure": null,
-      "agent": "Unknown"
+      "agent": "Unspecified"
     },
     "stage4": {
       "process": "[Morphology: Base] → [Category: Action]",
@@ -773,13 +773,13 @@
         "object": "investigation",
         "category": "Action",
         "patient": "investigation",
-        "agent": "Unknown"
+        "agent": "Unspecified"
       }
     },
     "stage5": {
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
-        "who": "Unknown",
+        "who": "Unspecified",
         "what": "required further investigation",
         "when": "Unspecified",
         "where": "Unspecified",
@@ -790,33 +790,33 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.148250",
+    "timestamp": "2026-10-13T11:26:28.820779",
     "input": "Submitted the form yesterday.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
       "decision": "Fallback: Undetermined Agent",
-      "agent": "Unknown",
+      "agent": "Unspecified",
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
       "process": "Event: Action",
       "decision": "Clarification Required (Undetermined Agent); Event classified: Action",
-      "mapping": "Unknown -> Action -> submitted the form",
+      "mapping": "Unspecified -> Action -> submitted the form",
       "structure": {
         "relation": "Event",
         "event": {
           "category": "Action",
           "verb": "submitted",
-          "actor": "Unknown",
+          "actor": "Unspecified",
           "patient": "the form"
         },
-        "agent_particle_id": "p_agent_28048229b7e7",
-        "event_particle_id": "p_event_6e7d09fcb43a"
+        "agent_particle_id": "p_agent_b02be8b1a200",
+        "event_particle_id": "p_event_1e5de928020f"
       },
-      "agent": "Unknown",
+      "agent": "Unspecified",
       "action": {
         "verb": "submitted",
-        "actor": "Unknown",
+        "actor": "Unspecified",
         "patient": "the form"
       }
     },
@@ -825,7 +825,7 @@
       "decision": "Standard",
       "mapping": null,
       "structure": null,
-      "agent": "Unknown"
+      "agent": "Unspecified"
     },
     "stage4": {
       "process": "[Morphology: Base] → [Category: Action]",
@@ -843,13 +843,13 @@
         "object": "the form",
         "category": "Action",
         "patient": "the form",
-        "agent": "Unknown"
+        "agent": "Unspecified"
       }
     },
     "stage5": {
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
-        "who": "Unknown",
+        "who": "Unspecified",
         "what": "submitted the form",
         "when": "yesterday",
         "where": "Unspecified",
@@ -860,33 +860,33 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.150050",
+    "timestamp": "2026-10-13T11:26:28.823801",
     "input": "Succeeded in the meeting.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
       "decision": "Fallback: Undetermined Agent",
-      "agent": "Unknown",
+      "agent": "Unspecified",
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
       "process": "Event: Action",
       "decision": "Clarification Required (Undetermined Agent); Event classified: Action",
-      "mapping": "Unknown -> Action -> succeeded",
+      "mapping": "Unspecified -> Action -> succeeded",
       "structure": {
         "relation": "Event",
         "event": {
           "category": "Action",
           "verb": "succeeded",
-          "actor": "Unknown",
+          "actor": "Unspecified",
           "patient": null
         },
-        "agent_particle_id": "p_agent_502465f203de",
-        "event_particle_id": "p_event_396327c97469"
+        "agent_particle_id": "p_agent_da37e426d9fd",
+        "event_particle_id": "p_event_17b6cf76e552"
       },
-      "agent": "Unknown",
+      "agent": "Unspecified",
       "action": {
         "verb": "succeeded",
-        "actor": "Unknown",
+        "actor": "Unspecified",
         "patient": null
       }
     },
@@ -895,7 +895,7 @@
       "decision": "Standard",
       "mapping": null,
       "structure": null,
-      "agent": "Unknown"
+      "agent": "Unspecified"
     },
     "stage4": {
       "process": "[Morphology: Base] → [Category: Action]",
@@ -913,13 +913,13 @@
         "object": null,
         "category": "Action",
         "patient": "Unspecified",
-        "agent": "Unknown"
+        "agent": "Unspecified"
       }
     },
     "stage5": {
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
-        "who": "Unknown",
+        "who": "Unspecified",
         "what": "succeeded",
         "when": "Unspecified",
         "where": "in the meeting",
@@ -930,7 +930,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.151896",
+    "timestamp": "2026-10-13T11:26:28.826792",
     "input": "I'm stressed due to the project.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -953,10 +953,10 @@
           "patient": null,
           "state": "stressed"
         },
-        "agent_particle_id": "p_agent_c26f459ef844",
-        "cause_particle_id": "p_cause_df4bc21dcf80",
-        "effect_particle_id": "p_effect_ae83b8187416",
-        "event_particle_id": "p_event_25e224f7391b"
+        "agent_particle_id": "p_agent_bb9fa1735494",
+        "event_particle_id": "p_event_5b17259fa239",
+        "cause_particle_id": "p_cause_1cbfce827926",
+        "effect_particle_id": "p_effect_463c9bebc2c5"
       },
       "agent": "I",
       "action": {
@@ -1006,7 +1006,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.153782",
+    "timestamp": "2026-10-13T11:26:28.829655",
     "input": "I succeeded because you helped.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1028,10 +1028,10 @@
           "actor": "I",
           "patient": null
         },
-        "agent_particle_id": "p_agent_72bc868676c5",
-        "cause_particle_id": "p_cause_890fa1ac310a",
-        "effect_particle_id": "p_effect_33b62c54a945",
-        "event_particle_id": "p_event_01929f764805"
+        "agent_particle_id": "p_agent_fea2568ef1d5",
+        "event_particle_id": "p_event_ce8e617207d6",
+        "cause_particle_id": "p_cause_92946bcb8caa",
+        "effect_particle_id": "p_effect_1c7d504bd18f"
       },
       "agent": "I",
       "action": {
@@ -1080,7 +1080,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.156327",
+    "timestamp": "2026-10-13T11:26:28.832967",
     "input": "He succeeded by working hard.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1099,8 +1099,8 @@
           "actor": "He",
           "patient": null
         },
-        "agent_particle_id": "p_agent_fefa59f1d4a7",
-        "event_particle_id": "p_event_effdf1fc840c"
+        "agent_particle_id": "p_agent_917aef0aef4f",
+        "event_particle_id": "p_event_380252dd4189"
       },
       "agent": "He",
       "action": {
@@ -1174,7 +1174,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.159388",
+    "timestamp": "2026-10-13T11:26:28.835942",
     "input": "I was stressed after the long meeting.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1194,8 +1194,8 @@
           "patient": null,
           "state": "stressed"
         },
-        "agent_particle_id": "p_agent_bd1fd846e495",
-        "event_particle_id": "p_event_da865492a5de"
+        "agent_particle_id": "p_agent_d313d7998a03",
+        "event_particle_id": "p_event_74925654b84e"
       },
       "agent": "I",
       "action": {
@@ -1266,7 +1266,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.163997",
+    "timestamp": "2026-10-13T11:26:28.839007",
     "input": "The report, which was long, is done.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1286,8 +1286,8 @@
           "patient": null,
           "state": "done"
         },
-        "agent_particle_id": "p_agent_c2a35e790a9d",
-        "event_particle_id": "p_event_00177b0f1304"
+        "agent_particle_id": "p_agent_f68a1fa4d5d6",
+        "event_particle_id": "p_event_369797f302ae"
       },
       "agent": "The report",
       "action": {
@@ -1351,7 +1351,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.169593",
+    "timestamp": "2026-10-13T11:26:28.841466",
     "input": "The report that I wrote is done.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1371,8 +1371,8 @@
           "patient": null,
           "state": "done"
         },
-        "agent_particle_id": "p_agent_6d2bf6cbedc2",
-        "event_particle_id": "p_event_06f0611046f9"
+        "agent_particle_id": "p_agent_4d4ee5fe2988",
+        "event_particle_id": "p_event_c185f8719227"
       },
       "agent": "The report",
       "action": {
@@ -1438,7 +1438,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.173563",
+    "timestamp": "2026-10-13T11:26:28.844063",
     "input": "The office where I wrote the report was quiet.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1458,8 +1458,8 @@
           "patient": null,
           "state": "quiet"
         },
-        "agent_particle_id": "p_agent_3fcdc3ba7823",
-        "event_particle_id": "p_event_197a2a7b57e5"
+        "agent_particle_id": "p_agent_ad0e53673670",
+        "event_particle_id": "p_event_6b2d1ccdf3be"
       },
       "agent": "The office",
       "action": {
@@ -1525,7 +1525,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.177552",
+    "timestamp": "2026-10-13T11:26:28.846841",
     "input": "The day where he succeeded was bright.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1545,8 +1545,8 @@
           "patient": null,
           "state": "bright"
         },
-        "agent_particle_id": "p_agent_e3b3bfc6c43b",
-        "event_particle_id": "p_event_34d203461e91"
+        "agent_particle_id": "p_agent_fd4f86bfbeed",
+        "event_particle_id": "p_event_47689b5b2fc9"
       },
       "agent": "The day",
       "action": {
@@ -1612,7 +1612,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.181499",
+    "timestamp": "2026-10-13T11:26:28.849521",
     "input": "I have a car.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1631,8 +1631,8 @@
           "actor": "I",
           "patient": "a car"
         },
-        "agent_particle_id": "p_agent_cb42c6fe0b4c",
-        "event_particle_id": "p_event_6172b0956d61"
+        "agent_particle_id": "p_agent_ec0e6b47120c",
+        "event_particle_id": "p_event_1dbd40acff3d"
       },
       "agent": "I",
       "action": {
@@ -1681,7 +1681,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.185540",
+    "timestamp": "2026-10-13T11:26:28.852294",
     "input": "I am having a party.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1700,8 +1700,8 @@
           "actor": "I",
           "patient": "a party"
         },
-        "agent_particle_id": "p_agent_fa7aea582b4a",
-        "event_particle_id": "p_event_95c13bacd650"
+        "agent_particle_id": "p_agent_152d0ea1c17f",
+        "event_particle_id": "p_event_0f69793257fe"
       },
       "agent": "I",
       "action": {
@@ -1750,7 +1750,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.189767",
+    "timestamp": "2026-10-13T11:26:28.855349",
     "input": "I was told by him.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1769,8 +1769,8 @@
           "actor": "him",
           "patient": "I"
         },
-        "agent_particle_id": "p_agent_c0f2be59e500",
-        "event_particle_id": "p_event_d7332f3324f5"
+        "agent_particle_id": "p_agent_beb709d70026",
+        "event_particle_id": "p_event_1a17eb5ef27c"
       },
       "agent": "I",
       "action": {
@@ -1819,7 +1819,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.194521",
+    "timestamp": "2026-10-13T11:26:28.859781",
     "input": "The report was completed quickly.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1829,22 +1829,22 @@
     "stage2": {
       "process": "Event: Action",
       "decision": "No causal relation; Event classified: Action",
-      "mapping": "Unknown -> Action -> completed The report",
+      "mapping": "Unspecified -> Action -> completed The report",
       "structure": {
         "relation": "Event",
         "event": {
           "category": "Action",
           "verb": "completed",
-          "actor": "Unknown",
+          "actor": "Unspecified",
           "patient": "The report"
         },
-        "agent_particle_id": "p_agent_2eb6806094ee",
-        "event_particle_id": "p_event_7a9740834db3"
+        "agent_particle_id": "p_agent_25e25932f14f",
+        "event_particle_id": "p_event_beda054eadfb"
       },
       "agent": "The report",
       "action": {
         "verb": "completed",
-        "actor": "Unknown",
+        "actor": "Unspecified",
         "patient": "The report"
       }
     },
@@ -1877,13 +1877,13 @@
       "category": "Action",
       "verb": "completed",
       "patient": "The report",
-      "actor": "Unknown",
+      "actor": "Unspecified",
       "receiver": "The report",
       "subject": "Unspecified",
       "structure": {
         "form": "Passive",
         "verb": "completed",
-        "actor": "Unknown",
+        "actor": "Unspecified",
         "receiver": "The report",
         "category": "Action",
         "patient": "The report",
@@ -1904,18 +1904,18 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.199294",
+    "timestamp": "2026-10-13T11:26:28.863096",
     "input": "Failed the exam because of bad luck.",
     "stage1": {
       "process": "Null Subject + No Core Markers Detected",
       "decision": "Fallback: Undetermined Agent",
-      "agent": "Unknown",
+      "agent": "Unspecified",
       "action_required": "Trigger Stage 1 Clarification / Context Resolution"
     },
     "stage2": {
       "process": "Causal Marker: because of; Event: Action",
       "decision": "Causal relation mapped; Event classified: Action",
-      "mapping": "bad luck -> Cause -> Failed the exam; Unknown -> Action -> failed the exam",
+      "mapping": "bad luck -> Cause -> Failed the exam; Unspecified -> Action -> failed the exam",
       "structure": {
         "relation": "CauseEffect",
         "marker": "because of",
@@ -1924,18 +1924,18 @@
         "event": {
           "category": "Action",
           "verb": "failed",
-          "actor": "Unknown",
+          "actor": "Unspecified",
           "patient": "the exam"
         },
-        "agent_particle_id": "p_agent_d3abadd7a771",
-        "cause_particle_id": "p_cause_d60c15c13a01",
-        "effect_particle_id": "p_effect_d3e5e4086fd9",
-        "event_particle_id": "p_event_f60a5fd8dfb1"
+        "agent_particle_id": "p_agent_9a377e844b3c",
+        "event_particle_id": "p_event_b1019b80435c",
+        "cause_particle_id": "p_cause_a98de6faf41e",
+        "effect_particle_id": "p_effect_c262e174b581"
       },
-      "agent": "Unknown",
+      "agent": "Unspecified",
       "action": {
         "verb": "failed",
-        "actor": "Unknown",
+        "actor": "Unspecified",
         "patient": "the exam"
       }
     },
@@ -1944,7 +1944,7 @@
       "decision": "Standard",
       "mapping": null,
       "structure": null,
-      "agent": "Unknown"
+      "agent": "Unspecified"
     },
     "stage4": {
       "process": "[Morphology: Base] → [Category: Action]",
@@ -1962,13 +1962,13 @@
         "object": "the exam",
         "category": "Action",
         "patient": "the exam",
-        "agent": "Unknown"
+        "agent": "Unspecified"
       }
     },
     "stage5": {
       "stage": "Stage 5 - 5W1H Synthesis",
       "frame": {
-        "who": "Unknown",
+        "who": "Unspecified",
         "what": "failed the exam",
         "when": "Unspecified",
         "where": "Unspecified",
@@ -1979,7 +1979,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.203876",
+    "timestamp": "2026-10-13T11:26:28.866819",
     "input": "I talked to the manager who was frustrated with the deadline.",
     "stage1": {
       "process": "Explicit Subject Present",
@@ -1998,8 +1998,8 @@
           "actor": "I",
           "patient": "to the manager"
         },
-        "agent_particle_id": "p_agent_3d7ff9c47476",
-        "event_particle_id": "p_event_2010b448fd4d"
+        "agent_particle_id": "p_agent_de1a71eb3250",
+        "event_particle_id": "p_event_c000be03edde"
       },
       "agent": "I",
       "action": {
@@ -2064,7 +2064,7 @@
     }
   },
   {
-    "timestamp": "2026-10-08T09:02:55.208368",
+    "timestamp": "2026-10-13T11:26:28.872013",
     "input": "Please review the long report.",
     "stage1": {
       "process": "Imperative / Direct Directive",
@@ -2083,8 +2083,8 @@
           "actor": "You",
           "patient": "the long report"
         },
-        "agent_particle_id": "p_agent_2f83f7acd5cb",
-        "event_particle_id": "p_event_1b1891140779"
+        "agent_particle_id": "p_agent_28f16e6728c5",
+        "event_particle_id": "p_event_21c4a03c1db3"
       },
       "agent": "You",
       "action": {
@@ -2123,11 +2123,11 @@
       "patient": "the long report",
       "actor": "Unspecified",
       "receiver": "Unspecified",
-      "subject": "Please",
+      "subject": "You",
       "structure": {
         "form": "Base",
         "verb": "review",
-        "subject": "Please",
+        "subject": "You",
         "object": "the long report",
         "category": "Action",
         "patient": "the long report",
