@@ -202,7 +202,7 @@ def visualize_topological_graph(
         edge_options = {
             "color": edge_color,
             "width": 2,
-            "arrows": {"to": {"enabled": True, "scaleFactor": 0.8}},
+            "arrows": {"to": {"enabled": True, "scaleFactor": 1.2}},
             "font": {"size": 10, "color": "#EEEEEE", "align": "middle"},
         }
         if m_type == "Constraint":
