@@ -41,9 +41,8 @@ It ingests discrete `Particle` objects, maps them into **Entities** or **Events*
 
 ### 1. Architectural Diagram
 ```text
-  [ Category of Entities ]                                                                    [ Category of Events ]
-  ( Who / Subject / Agent )                                                                   ( What / Cause / Effect )
-   └── 5W1H: Who                                                                                 └── 5W1H: What
+  [ Entity nodes (graph category) ]                                                           [ Event nodes (graph category) ]
+  ( Primary 5W1H role: Who )                                                                   ( Primary 5W1H role: What )
               │                                                                                             │
               ├──────────────────────────────────────── [ Morphisms ] ──────────────────────────────────────┤
               │     ( Action / Cause / State / Relation / Manner / Temporal / Concession / Constraint )     │
@@ -56,10 +55,12 @@ It ingests discrete `Particle` objects, maps them into **Entities** or **Events*
 ### 2. Node & Edge Definitions
 
 #### Nodes (Objects)
-* **Entity**: Agents, Subjects, and Nouns (`He`, `I`, `you`, etc.)  
-  * *Primary 5W1H Role*: `Who`
-* **Event**: Actions, Causes, and Contextual Events (`the project`, `i succeeded`, etc.)  
-  * *Primary 5W1H Role*: `What` (and contextual occurrences)
+* **Entity**: Graph category for agents, subjects, and nouns (`He`, `I`, `you`, etc.).
+  * *Primary 5W1H role*: `Who`
+* **Event**: Graph category for actions, causes, and contextual occurrences (`the project`, `i succeeded`, etc.).
+  * *Primary 5W1H role*: `What`
+
+`Entity` / `Event` describe graph node categories; `Who` / `What` describe their primary 5W1H roles. They are related labels, not interchangeable types.
 
 #### Edges (Morphisms / Wires)
 * **`source`**: Domain object ID (始点オブジェクト)

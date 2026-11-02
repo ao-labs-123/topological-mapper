@@ -85,6 +85,12 @@ def test_visualizer_shows_stage5_details_in_tooltip_not_node_label(tmp_path):
             {
                 "nodes": [
                     {
+                        "id": "entity-1",
+                        "label": "I",
+                        "category": "Entity",
+                        "attributes": {},
+                    },
+                    {
                         "id": "event-1",
                         "label": "he succeeded",
                         "category": "Event",
@@ -109,6 +115,10 @@ def test_visualizer_shows_stage5_details_in_tooltip_not_node_label(tmp_path):
     )
 
     assert "he succeeded [S5: Action]" not in html
+    assert "Graph category:</b> Entity" in html
+    assert "Primary 5W1H role:</b> Who" in html
+    assert "Graph category:</b> Event" in html
+    assert "Primary 5W1H role:</b> What" in html
     assert "Category</b>: Action" in html
     assert "Interpretation</b>: General action statement." in html
     assert "stage5_process" not in html

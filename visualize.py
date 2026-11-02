@@ -73,6 +73,8 @@ def visualize_topological_graph(
             continue
 
         category = node.get("category", "Entity")
+        role_labels = {"Entity": "Who", "Event": "What"}
+        role_label = role_labels.get(category)
 
         # when や where があればラベルの後ろに括弧書きで追記する
         context_text = []
@@ -114,9 +116,13 @@ def visualize_topological_graph(
         if stage5_result and stage5_result != "Unspecified":
             attr_lines.append(f"<b>Interpretation</b>: {stage5_result}")
         attr_html = "<br>".join(attr_lines)
+        category_html = f"<b>Graph category:</b> {category}"
+        if role_label:
+            category_html += f"<br><b>Primary 5W1H role:</b> {role_label}"
         title_html = (
             f"<div style='font-family: sans-serif;'>"
-            f"<b>{base_label}</b> <i>({category})</i><br>"
+            f"<b>{base_label}</b><br>"
+            f"{category_html}<br>"
             f"<hr style='margin: 4px 0; border-color: #555;'>"
             f"{attr_html if attr_html else 'No extra context'}"
             f"</div>"
