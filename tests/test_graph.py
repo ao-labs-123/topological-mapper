@@ -361,13 +361,22 @@ def test_passive_action_edge_uses_event_actor_instead_of_grammatical_subject():
                 },
             },
             "stage5": {"frame": {"who": "him", "what": "told me"}},
+            "stage4": {
+                "form": "Passive",
+                "receiver": "I",
+                "structure": {"form": "Passive", "receiver": "I"},
+            },
         }
     ]
 
     graph = GraphBuilder.build_graph(particle_data, log_data)
     action_edge = next(edge for edge in graph.edges if edge.morphism_type == "Action")
+    recipient_edge = next(
+        edge for edge in graph.edges if edge.morphism_type == "Recipient"
+    )
 
     assert (action_edge.source, action_edge.target) == ("who-1", "event-1")
+    assert (recipient_edge.source, recipient_edge.target) == ("agent-1", "event-1")
 
 
 def test_stage5_what_merges_into_its_action_event_without_merging_other_records():
@@ -572,6 +581,7 @@ def test_visualizer_renders_edge_color_legend(tmp_path):
                 ],
                 "edges": [
                     {"source": "agent-1", "target": "event-1", "morphism_type": "Action", "detail": "Agent of Action"},
+                    {"source": "agent-1", "target": "event-1", "morphism_type": "Recipient", "detail": "Recipient: I"},
                     {"source": "agent-1", "target": "event-1", "morphism_type": "State", "detail": "State relation"},
                 ],
             }
@@ -584,6 +594,7 @@ def test_visualizer_renders_edge_color_legend(tmp_path):
 
     assert "Morphism legend" in html
     assert "Action" in html
+    assert "Recipient" in html
     assert "State" in html
     assert "Constraint" in html
 

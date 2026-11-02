@@ -967,4 +967,56 @@ class GraphBuilder:
                         ) or "Agent of Action",
                     )
                 )
+
+            stage4 = log_item.get("stage4") or {}
+            stage4_structure = (
+                stage4.get("structure") if isinstance(stage4, dict) else None
+            )
+            if not isinstance(stage4_structure, dict):
+                stage4_structure = {}
+            stage4_form = (
+                stage4.get("form") if isinstance(stage4, dict) else None
+            ) or stage4_structure.get("form")
+            receiver_label = (
+                stage4.get("receiver") if isinstance(stage4, dict) else None
+            ) or stage4_structure.get("receiver")
+            if stage4_form == "Passive" and isinstance(receiver_label, str):
+                recipient_node = cls._resolve_particle_node(
+                    graph, particle_map, structure.get("agent_particle_id"), "Agent"
+                )
+                if (
+                    recipient_node is None
+                    or recipient_node.label.strip().casefold()
+                    != receiver_label.strip().casefold()
+                ):
+                    recipient_candidates = [
+                        node
+                        for node in graph.nodes
+                        if particle_map.get(node.id, {}).get("entity_type")
+                        in {"Agent", "Who"}
+                        and str(particle_map[node.id].get("label", "")).strip().casefold()
+                        == receiver_label.strip().casefold()
+                    ]
+                    recipient_node = (
+                        recipient_candidates[0]
+                        if len(recipient_candidates) == 1
+                        else None
+                    )
+
+                if (
+                    recipient_node is not None
+                    and recipient_node.id != entity_node.id
+                    and recipient_node.id != event_node.id
+                ):
+                    recipient_edge_id = f"e_recipient_{recipient_node.id}_{event_node.id}"
+                    if not any(edge.id == recipient_edge_id for edge in graph.edges):
+                        graph.edges.append(
+                            Edge(
+                                id=recipient_edge_id,
+                                source=recipient_node.id,
+                                target=event_node.id,
+                                morphism_type="Recipient",
+                                detail=f"Recipient: {receiver_label}",
+                            )
+                        )
         return graph

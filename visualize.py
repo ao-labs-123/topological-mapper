@@ -187,6 +187,7 @@ def visualize_topological_graph(
         # Morphism ごとの色分け
         color_map = {
             "Action": "#2ECC71",      # 緑: 動作・作用
+            "Recipient": "#E84393",
             "Cause": "#E74C3C",       # 赤: 因果関係
             "State": "#00C2A8",       # 緑系: 状態
             "Relation": "#9B59B6",    # 紫: 一般関係
@@ -243,6 +244,7 @@ def visualize_topological_graph(
       <div style="margin: 0 0 8px 0; font-weight: 700; letter-spacing: 0.04em; color: #FFFFFF;">Morphism legend</div>
       <div style="display: grid; gap: 6px;">
         <div style="display: flex; align-items: center; gap: 8px;"><span style="display:inline-block; width: 18px; height: 3px; background: #2ECC71; border-radius: 2px;"></span>Action</div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="display:inline-block; width: 18px; height: 3px; background: #E84393; border-radius: 2px;"></span>Recipient</div>
         <div style="display: flex; align-items: center; gap: 8px;"><span style="display:inline-block; width: 18px; height: 3px; background: #E74C3C; border-radius: 2px;"></span>Cause</div>
         <div style="display: flex; align-items: center; gap: 8px;"><span style="display:inline-block; width: 18px; height: 3px; background: #00C2A8; border-radius: 2px;"></span>State</div>
         <div style="display: flex; align-items: center; gap: 8px;"><span style="display:inline-block; width: 18px; height: 3px; background: #9B59B6; border-radius: 2px;"></span>Relation</div>

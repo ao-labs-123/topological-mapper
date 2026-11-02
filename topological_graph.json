@@ -1480,6 +1480,14 @@
       "constraint_type": ""
     },
     {
+      "id": "e_recipient_p_agent_beb709d70026_p_event_1a17eb5ef27c",
+      "source": "p_agent_beb709d70026",
+      "target": "p_event_1a17eb5ef27c",
+      "morphism_type": "Recipient",
+      "detail": "Recipient: I",
+      "constraint_type": ""
+    },
+    {
       "id": "e_action_p_agent_25e25932f14f_p_event_beda054eadfb",
       "source": "p_agent_25e25932f14f",
       "target": "p_event_beda054eadfb",
