@@ -377,20 +377,6 @@
       }
     },
     {
-      "id": "p_outcome_f2f55ee1af6c",
-      "label": "Failed",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "Failed",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_36dc7c18d025",
       "label": "Unspecified",
       "category": "Entity",
@@ -1155,7 +1141,7 @@
       }
     },
     {
-      "id": "context_temporal_79",
+      "id": "context_temporal_78",
       "label": "the long meeting",
       "category": "Event",
       "resolution_state": "Determined",
@@ -1246,8 +1232,8 @@
       "constraint_type": ""
     },
     {
-      "id": "e_temporal_context_temporal_79_p_event_74925654b84e",
-      "source": "context_temporal_79",
+      "id": "e_temporal_context_temporal_78_p_event_74925654b84e",
+      "source": "context_temporal_78",
       "target": "p_event_74925654b84e",
       "morphism_type": "Temporal",
       "detail": "Temporal relation (after)",

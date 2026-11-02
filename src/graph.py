@@ -315,12 +315,47 @@ class GraphBuilder:
                 matched[index] = (what_id, event_id)
         return matched
 
+    @staticmethod
+    def _matched_concession_outcome_particle_ids(
+        particle_data: List[Dict[str, Any]], log_data: List[Dict[str, Any]]
+    ) -> set[str]:
+        def normalized(value: Any) -> str:
+            return value.strip().casefold() if isinstance(value, str) else ""
+
+        outcome_records: Dict[str, List[Dict[str, Any]]] = {}
+        for log_item in log_data:
+            stage2 = log_item.get("stage2") or {}
+            structure = stage2.get("structure") if isinstance(stage2, dict) else None
+            if not isinstance(structure, dict) or structure.get("relation") != "Concession":
+                continue
+            outcome_label = normalized(structure.get("outcome"))
+            if outcome_label:
+                outcome_records.setdefault(outcome_label, []).append(structure)
+
+        outcome_particles: Dict[str, List[Dict[str, Any]]] = {}
+        for particle in particle_data:
+            if particle.get("entity_type") != "Outcome":
+                continue
+            label = normalized(particle.get("label"))
+            if label:
+                outcome_particles.setdefault(label, []).append(particle)
+
+        matched_ids = set()
+        for label, records in outcome_records.items():
+            particles = outcome_particles.get(label, [])
+            if len(records) == 1 and len(particles) == 1 and particles[0].get("id"):
+                matched_ids.add(particles[0]["id"])
+        return matched_ids
+
     @classmethod
     def build_graph(cls, particle_data: List[Dict[str, Any]], log_data: List[Dict[str, Any]]) -> TopologicalGraph:
         graph = TopologicalGraph()
         matched_who_ids = cls._matched_who_particle_ids(particle_data, log_data)
         matched_what_by_log = cls._matched_stage5_what_particles(particle_data, log_data)
         matched_what_ids = {what_id for what_id, _ in matched_what_by_log.values()}
+        matched_outcome_ids = cls._matched_concession_outcome_particle_ids(
+            particle_data, log_data
+        )
         
         # 粒子データのインデックス化（IDベース）
         particle_map = {p.get("id"): p for p in particle_data}
@@ -334,7 +369,11 @@ class GraphBuilder:
             p_type = p.get("entity_type", "")
             properties = p.get("properties") or {}
 
-            if p_id in matched_who_ids or p_id in matched_what_ids:
+            if (
+                p_id in matched_who_ids
+                or p_id in matched_what_ids
+                or p_id in matched_outcome_ids
+            ):
                 continue
 
             if (

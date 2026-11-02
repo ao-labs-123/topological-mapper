@@ -454,6 +454,42 @@ def test_stage5_what_merges_into_stative_event():
     )
 
 
+def test_concession_outcome_particle_merges_into_matching_event():
+    particle_data = [
+        {"id": "agent-1", "label": "Unspecified", "entity_type": "Agent"},
+        {"id": "event-1", "label": "failed", "entity_type": "Event"},
+        {"id": "concession-1", "label": "the effort", "entity_type": "Concession"},
+        {"id": "outcome-1", "label": "Failed", "entity_type": "Outcome"},
+        {"id": "what-1", "label": "failed", "entity_type": "What"},
+    ]
+    log_data = [
+        {
+            "stage2": {
+                "structure": {
+                    "relation": "Concession",
+                    "concession": "the effort",
+                    "outcome": "Failed",
+                    "event": {"category": "Action"},
+                    "agent_particle_id": "agent-1",
+                    "event_particle_id": "event-1",
+                }
+            },
+            "stage5": {"frame": {"what": "failed"}},
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+    nodes_by_id = {node.id: node for node in graph.nodes}
+
+    assert "outcome-1" not in nodes_by_id
+    assert any(
+        edge.morphism_type == "Concession"
+        and edge.source == "concession-1"
+        and edge.target == "event-1"
+        for edge in graph.edges
+    )
+
+
 def test_stage3_mapping_links_matching_feature_particle_to_event():
     structure = {
         "type": "Supplementary",
