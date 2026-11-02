@@ -1472,8 +1472,8 @@
       "constraint_type": ""
     },
     {
-      "id": "e_action_p_agent_beb709d70026_p_event_1a17eb5ef27c",
-      "source": "p_agent_beb709d70026",
+      "id": "e_action_p_who_5ff223baa118_p_event_1a17eb5ef27c",
+      "source": "p_who_5ff223baa118",
       "target": "p_event_1a17eb5ef27c",
       "morphism_type": "Action",
       "detail": "him -> Action -> told me",

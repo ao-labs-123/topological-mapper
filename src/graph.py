@@ -909,6 +909,17 @@ class GraphBuilder:
             entity_node = cls._resolve_particle_node(
                 graph, particle_map, structure.get("agent_particle_id"), "Agent"
             )
+            event_actor = event.get("actor")
+            if isinstance(event_actor, str) and event_actor.strip():
+                actor_candidates = [
+                    node
+                    for node in graph.nodes
+                    if particle_map.get(node.id, {}).get("entity_type") in {"Agent", "Who"}
+                    and str(particle_map[node.id].get("label", "")).strip().casefold()
+                    == event_actor.strip().casefold()
+                ]
+                if len(actor_candidates) == 1:
+                    entity_node = actor_candidates[0]
             if entity_node is None and isinstance(stage1_agent, str):
                 agent_candidates = [
                     node

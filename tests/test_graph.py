@@ -342,6 +342,34 @@ def test_stage2_action_mapping_uses_event_particle_and_preserves_mapping():
     assert next(node for node in graph.nodes if node.id == "event-1").attributes["stage2_mapping"] == mapping
 
 
+def test_passive_action_edge_uses_event_actor_instead_of_grammatical_subject():
+    particle_data = [
+        {"id": "agent-1", "label": "I", "entity_type": "Agent"},
+        {"id": "event-1", "label": "told", "entity_type": "Event"},
+        {"id": "who-1", "label": "him", "entity_type": "Who"},
+        {"id": "what-1", "label": "told me", "entity_type": "What"},
+    ]
+    log_data = [
+        {
+            "stage1": {"agent": "I"},
+            "stage2": {
+                "mapping": "him -> Action -> told me",
+                "structure": {
+                    "event": {"category": "Action", "actor": "him", "patient": "I"},
+                    "agent_particle_id": "agent-1",
+                    "event_particle_id": "event-1",
+                },
+            },
+            "stage5": {"frame": {"who": "him", "what": "told me"}},
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+    action_edge = next(edge for edge in graph.edges if edge.morphism_type == "Action")
+
+    assert (action_edge.source, action_edge.target) == ("who-1", "event-1")
+
+
 def test_stage5_what_merges_into_its_action_event_without_merging_other_records():
     particle_data = [
         {"id": "agent-1", "label": "I", "entity_type": "Agent"},
