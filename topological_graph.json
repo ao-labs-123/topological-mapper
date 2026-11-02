@@ -877,21 +877,6 @@
     },
     {
       "id": "p_event_1dbd40acff3d",
-      "label": "have",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "have",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified",
-        "stage2_mapping": "I -> Stative -> have a car"
-      }
-    },
-    {
-      "id": "p_what_5166b0be0d43",
       "label": "have a car",
       "category": "Event",
       "resolution_state": "Determined",
@@ -901,7 +886,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "I -> Stative -> have a car"
       }
     },
     {
@@ -1169,7 +1155,7 @@
       }
     },
     {
-      "id": "context_temporal_80",
+      "id": "context_temporal_79",
       "label": "the long meeting",
       "category": "Event",
       "resolution_state": "Determined",
@@ -1260,8 +1246,8 @@
       "constraint_type": ""
     },
     {
-      "id": "e_temporal_context_temporal_80_p_event_74925654b84e",
-      "source": "context_temporal_80",
+      "id": "e_temporal_context_temporal_79_p_event_74925654b84e",
+      "source": "context_temporal_79",
       "target": "p_event_74925654b84e",
       "morphism_type": "Temporal",
       "detail": "Temporal relation (after)",

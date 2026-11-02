@@ -307,7 +307,7 @@ class GraphBuilder:
             what_id = what_particle.get("id")
             if (
                 isinstance(event, dict)
-                and event.get("category") in {"Action", "State"}
+                and event.get("category") in {"Action", "State", "Stative"}
                 and isinstance(what_id, str)
                 and event_particle
                 and event_particle.get("entity_type") == "Event"

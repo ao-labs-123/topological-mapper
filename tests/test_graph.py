@@ -421,6 +421,39 @@ def test_stage5_what_merges_into_state_event():
     )
 
 
+def test_stage5_what_merges_into_stative_event():
+    particle_data = [
+        {"id": "agent-1", "label": "I", "entity_type": "Agent"},
+        {"id": "event-1", "label": "have", "entity_type": "Event"},
+        {"id": "what-1", "label": "have a car", "entity_type": "What"},
+    ]
+    log_data = [
+        {
+            "stage2": {
+                "mapping": "I -> Stative -> have a car",
+                "structure": {
+                    "event": {"category": "Stative", "verb": "have"},
+                    "agent_particle_id": "agent-1",
+                    "event_particle_id": "event-1",
+                },
+            },
+            "stage5": {"frame": {"what": "have a car"}},
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+    nodes_by_id = {node.id: node for node in graph.nodes}
+
+    assert "what-1" not in nodes_by_id
+    assert nodes_by_id["event-1"].label == "have a car"
+    assert any(
+        edge.morphism_type == "Action"
+        and edge.source == "agent-1"
+        and edge.target == "event-1"
+        for edge in graph.edges
+    )
+
+
 def test_stage3_mapping_links_matching_feature_particle_to_event():
     structure = {
         "type": "Supplementary",
