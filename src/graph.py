@@ -276,10 +276,51 @@ class GraphBuilder:
                 matched_ids.add(who_particle["id"])
         return matched_ids
 
+    @staticmethod
+    def _matched_action_what_particles(
+        particle_data: List[Dict[str, Any]], log_data: List[Dict[str, Any]]
+    ) -> Dict[int, tuple[str, str]]:
+        what_particles = [p for p in particle_data if p.get("entity_type") == "What"]
+        if len(what_particles) != len(log_data):
+            return {}
+
+        def normalized(value: Any) -> str:
+            return value.strip().casefold() if isinstance(value, str) else ""
+
+        pairs = []
+        for log_item, what_particle in zip(log_data, what_particles):
+            stage5 = log_item.get("stage5") or {}
+            frame = stage5.get("frame") if isinstance(stage5, dict) else None
+            frame_what = frame.get("what") if isinstance(frame, dict) else None
+            if not normalized(frame_what) or normalized(frame_what) != normalized(what_particle.get("label")):
+                return {}
+            pairs.append((log_item, what_particle))
+
+        particles_by_id = {p.get("id"): p for p in particle_data}
+        matched = {}
+        for index, (log_item, what_particle) in enumerate(pairs):
+            stage2 = log_item.get("stage2") or {}
+            structure = stage2.get("structure") if isinstance(stage2, dict) else None
+            event = structure.get("event") if isinstance(structure, dict) else None
+            event_id = structure.get("event_particle_id") if isinstance(structure, dict) else None
+            event_particle = particles_by_id.get(event_id)
+            what_id = what_particle.get("id")
+            if (
+                isinstance(event, dict)
+                and event.get("category") == "Action"
+                and isinstance(what_id, str)
+                and event_particle
+                and event_particle.get("entity_type") == "Event"
+            ):
+                matched[index] = (what_id, event_id)
+        return matched
+
     @classmethod
     def build_graph(cls, particle_data: List[Dict[str, Any]], log_data: List[Dict[str, Any]]) -> TopologicalGraph:
         graph = TopologicalGraph()
         matched_who_ids = cls._matched_who_particle_ids(particle_data, log_data)
+        matched_what_by_log = cls._matched_action_what_particles(particle_data, log_data)
+        matched_what_ids = {what_id for what_id, _ in matched_what_by_log.values()}
         
         # 粒子データのインデックス化（IDベース）
         particle_map = {p.get("id"): p for p in particle_data}
@@ -293,7 +334,7 @@ class GraphBuilder:
             p_type = p.get("entity_type", "")
             properties = p.get("properties") or {}
 
-            if p_id in matched_who_ids:
+            if p_id in matched_who_ids or p_id in matched_what_ids:
                 continue
 
             if (
@@ -351,7 +392,7 @@ class GraphBuilder:
         # ---------------------------------------------------------
         # 2. 文脈（log_data）ごとの局所評価と Edge (Morphism) 結線
         # ---------------------------------------------------------
-        for log_item in log_data:
+        for log_index, log_item in enumerate(log_data):
             input_text = log_item.get("input", "")
 
             # --- 2-A. Stage 3 が明示するイベントに文脈属性を付与 ---
@@ -391,7 +432,9 @@ class GraphBuilder:
             stage5 = log_item.get("stage5") or {}
             stage5_event = None
             if isinstance(stage5, dict):
+                matched_what = matched_what_by_log.get(log_index)
                 stage5_target_ids = (
+                    matched_what[1] if matched_what else None,
                     stage5.get("target_particle_id"),
                     stage2_structure.get("effect_particle_id"),
                     stage3_structure.get("effect_particle_id"),
@@ -426,6 +469,8 @@ class GraphBuilder:
                     if len(what_candidates) == 1:
                         stage5_event = what_candidates[0]
                 if stage5_event:
+                    if matched_what:
+                        stage5_event.label = particle_map[matched_what[0]]["label"]
                     process = stage5.get("process")
                     result = stage5.get("result")
                     if isinstance(process, str) and process.strip():

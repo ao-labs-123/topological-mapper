@@ -20,11 +20,11 @@
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
+        "who": "He",
         "what": "succeeded",
         "when": "Unspecified",
         "where": "Unspecified",
-        "why": "Unspecified",
+        "why": "because I helped",
         "how": "Unspecified",
         "stage2_mapping": "I helped -> Cause -> He succeeded; He -> Action -> succeeded"
       }
@@ -49,22 +49,8 @@
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "He",
-        "what": "succeeded",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "because I helped",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_what_4223574029c6",
-      "label": "succeeded",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
         "who": "Unspecified",
-        "what": "succeeded",
+        "what": "He succeeded",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -87,21 +73,6 @@
     },
     {
       "id": "p_event_aa28c4293a0b",
-      "label": "review",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "review",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified",
-        "stage2_mapping": "You -> Action -> review the document"
-      }
-    },
-    {
-      "id": "p_what_e67f8c9ebf6d",
       "label": "review the document",
       "category": "Event",
       "resolution_state": "Determined",
@@ -111,7 +82,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "You -> Action -> review the document"
       }
     },
     {
@@ -238,25 +210,11 @@
       "attributes": {
         "who": "Unspecified",
         "what": "went",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified",
-        "stage2_mapping": "Unspecified -> Action -> went"
-      }
-    },
-    {
-      "id": "p_what_8d9d2c7ada99",
-      "label": "went",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "went",
         "when": "yesterday",
         "where": "cafe",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "Unspecified -> Action -> went"
       }
     },
     {
@@ -275,21 +233,6 @@
     },
     {
       "id": "p_event_e7a691f87f38",
-      "label": "submit",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "submit",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified",
-        "stage2_mapping": "you -> Action -> submit the form"
-      }
-    },
-    {
-      "id": "p_what_5b5381711d76",
       "label": "submit the form",
       "category": "Event",
       "resolution_state": "Determined",
@@ -299,7 +242,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "you -> Action -> submit the form"
       }
     },
     {
@@ -318,31 +262,17 @@
     },
     {
       "id": "p_event_b6f30004a7cc",
-      "label": "submitted",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "submitted",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified",
-        "stage2_mapping": "I -> Action -> submitted the form"
-      }
-    },
-    {
-      "id": "p_what_9cac8ff07ffd",
       "label": "submitted the form",
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
+        "who": "I",
         "what": "submitted the form",
-        "when": "Unspecified",
+        "when": "yesterday",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "I -> Action -> submitted the form"
       }
     },
     {
@@ -361,21 +291,6 @@
     },
     {
       "id": "p_event_b03c96326b69",
-      "label": "wrote",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "wrote",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified",
-        "stage2_mapping": "I -> Action -> wrote the report"
-      }
-    },
-    {
-      "id": "p_what_ab64d7fa386d",
       "label": "wrote the report",
       "category": "Event",
       "resolution_state": "Determined",
@@ -385,7 +300,8 @@
         "when": "Unspecified",
         "where": "at the office",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "I -> Action -> wrote the report"
       }
     },
     {
@@ -412,7 +328,7 @@
         "what": "succeeded",
         "when": "Unspecified",
         "where": "Unspecified",
-        "why": "Unspecified",
+        "why": "because you helped",
         "how": "Unspecified",
         "stage2_mapping": "you helped -> Cause -> Succeeded; Unspecified -> Action -> succeeded"
       }
@@ -438,21 +354,7 @@
       "resolution_state": "Determined",
       "attributes": {
         "who": "Unspecified",
-        "what": "succeeded",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "because you helped",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_what_9e26f01f17bd",
-      "label": "succeeded",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "succeeded",
+        "what": "Succeeded",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -517,20 +419,6 @@
       }
     },
     {
-      "id": "p_what_65ed3b498e8c",
-      "label": "failed",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "failed",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_36dc7c18d025",
       "label": "Unspecified",
       "category": "Entity",
@@ -546,21 +434,6 @@
     },
     {
       "id": "p_event_bfcc0ff31474",
-      "label": "further",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "further",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified",
-        "stage2_mapping": "Unspecified -> Action -> further investigation"
-      }
-    },
-    {
-      "id": "p_what_50159992cbd8",
       "label": "required further investigation",
       "category": "Event",
       "resolution_state": "Determined",
@@ -570,7 +443,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "Unspecified -> Action -> further investigation"
       }
     },
     {
@@ -589,31 +463,17 @@
     },
     {
       "id": "p_event_1e5de928020f",
-      "label": "submitted",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "submitted",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified",
-        "stage2_mapping": "Unspecified -> Action -> submitted the form"
-      }
-    },
-    {
-      "id": "p_what_988c3e756f88",
       "label": "submitted the form",
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
         "who": "Unspecified",
         "what": "submitted the form",
-        "when": "Unspecified",
+        "when": "yesterday",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "Unspecified -> Action -> submitted the form"
       }
     },
     {
@@ -639,24 +499,10 @@
         "who": "Unspecified",
         "what": "succeeded",
         "when": "Unspecified",
-        "where": "Unspecified",
+        "where": "in the meeting",
         "why": "Unspecified",
         "how": "Unspecified",
         "stage2_mapping": "Unspecified -> Action -> succeeded"
-      }
-    },
-    {
-      "id": "p_what_88e46f554087",
-      "label": "succeeded",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "succeeded",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
       }
     },
     {
@@ -750,11 +596,11 @@
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
+        "who": "I",
         "what": "succeeded",
         "when": "Unspecified",
         "where": "Unspecified",
-        "why": "Unspecified",
+        "why": "because you helped",
         "how": "Unspecified",
         "stage2_mapping": "you helped -> Cause -> I succeeded; I -> Action -> succeeded"
       }
@@ -779,22 +625,8 @@
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "I",
-        "what": "succeeded",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "because you helped",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_what_17baa655e6a9",
-      "label": "succeeded",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
         "who": "Unspecified",
-        "what": "succeeded",
+        "what": "I succeeded",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -821,12 +653,12 @@
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
+        "who": "He",
         "what": "succeeded",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified",
+        "how": "Hard Work",
         "stage2_mapping": "He -> Action -> succeeded",
         "stage3_mapping": "Agent(He) -> How: Instrument(Hard Work) -> State(Success)"
       }
@@ -844,20 +676,6 @@
         "why": "Unspecified",
         "how": "Unspecified",
         "stage3_mapping": "Agent(He) -> How: Instrument(Hard Work) -> State(Success)"
-      }
-    },
-    {
-      "id": "p_what_9b2c5c0f74fb",
-      "label": "succeeded",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "succeeded",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
       }
     },
     {
@@ -1214,21 +1032,6 @@
     },
     {
       "id": "p_event_0f69793257fe",
-      "label": "having",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "having",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified",
-        "stage2_mapping": "I -> Action -> having a party"
-      }
-    },
-    {
-      "id": "p_what_bd5a3d2529fc",
       "label": "having a party",
       "category": "Event",
       "resolution_state": "Determined",
@@ -1238,7 +1041,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "I -> Action -> having a party"
       }
     },
     {
@@ -1257,12 +1061,12 @@
     },
     {
       "id": "p_event_1a17eb5ef27c",
-      "label": "told",
+      "label": "told me",
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "told",
+        "who": "him",
+        "what": "told me",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1285,20 +1089,6 @@
       }
     },
     {
-      "id": "p_what_beff0c2271e8",
-      "label": "told me",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "him",
-        "what": "told me",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_25e25932f14f",
       "label": "The report",
       "category": "Entity",
@@ -1314,16 +1104,16 @@
     },
     {
       "id": "p_event_beda054eadfb",
-      "label": "completed",
+      "label": "completed the report",
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "completed",
+        "who": "The report",
+        "what": "completed the report",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified",
+        "how": "quickly",
         "stage2_mapping": "Unspecified -> Action -> completed The report",
         "stage3_mapping": "Node(The report) -> Action(Complete) -> How: Manner(Quickly)"
       }
@@ -1344,20 +1134,6 @@
       }
     },
     {
-      "id": "p_what_cff18375f204",
-      "label": "completed the report",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "The report",
-        "what": "completed the report",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "quickly"
-      }
-    },
-    {
       "id": "p_agent_9a377e844b3c",
       "label": "Unspecified",
       "category": "Entity",
@@ -1373,15 +1149,15 @@
     },
     {
       "id": "p_event_b1019b80435c",
-      "label": "failed",
+      "label": "failed the exam",
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
         "who": "Unspecified",
-        "what": "failed",
+        "what": "failed the exam",
         "when": "Unspecified",
         "where": "Unspecified",
-        "why": "Unspecified",
+        "why": "because of bad luck",
         "how": "Unspecified",
         "stage2_mapping": "bad luck -> Cause -> Failed the exam; Unspecified -> Action -> failed the exam"
       }
@@ -1407,21 +1183,7 @@
       "resolution_state": "Determined",
       "attributes": {
         "who": "Unspecified",
-        "what": "failed the exam",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "because of bad luck",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_what_4ea9f1f16a76",
-      "label": "failed the exam",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "failed the exam",
+        "what": "Failed the exam",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1444,12 +1206,12 @@
     },
     {
       "id": "p_event_c000be03edde",
-      "label": "talked",
+      "label": "talked to the manager",
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "talked",
+        "who": "I",
+        "what": "talked to the manager",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1474,20 +1236,6 @@
       }
     },
     {
-      "id": "p_what_918cd65a0bcd",
-      "label": "talked to the manager",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "I",
-        "what": "talked to the manager",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_28f16e6728c5",
       "label": "You",
       "category": "Entity",
@@ -1503,12 +1251,12 @@
     },
     {
       "id": "p_event_21c4a03c1db3",
-      "label": "review",
+      "label": "review the long report",
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "review",
+        "who": "You",
+        "what": "review the long report",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -1533,21 +1281,7 @@
       }
     },
     {
-      "id": "p_what_c1eac8e692fc",
-      "label": "review the long report",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "You",
-        "what": "review the long report",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "context_temporal_107",
+      "id": "context_temporal_88",
       "label": "the long meeting",
       "category": "Event",
       "resolution_state": "Determined",
@@ -1556,7 +1290,7 @@
       }
     },
     {
-      "id": "context_temporalevent_108",
+      "id": "context_temporalevent_89",
       "label": "stressed",
       "category": "Event",
       "resolution_state": "Determined",
@@ -1607,9 +1341,9 @@
       "constraint_type": ""
     },
     {
-      "id": "e_concession_p_concession_55c9430515c1_p_what_65ed3b498e8c",
+      "id": "e_concession_p_concession_55c9430515c1_p_event_f140f3aa8492",
       "source": "p_concession_55c9430515c1",
-      "target": "p_what_65ed3b498e8c",
+      "target": "p_event_f140f3aa8492",
       "morphism_type": "Concession",
       "detail": "the effort -> Concession -> Failed; Unspecified -> Action -> failed",
       "constraint_type": ""
@@ -1647,9 +1381,9 @@
       "constraint_type": ""
     },
     {
-      "id": "e_temporal_context_temporal_107_context_temporalevent_108",
-      "source": "context_temporal_107",
-      "target": "context_temporalevent_108",
+      "id": "e_temporal_context_temporal_88_context_temporalevent_89",
+      "source": "context_temporal_88",
+      "target": "context_temporalevent_89",
       "morphism_type": "Temporal",
       "detail": "Temporal relation (after)",
       "constraint_type": ""

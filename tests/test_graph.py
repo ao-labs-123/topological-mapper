@@ -342,6 +342,52 @@ def test_stage2_action_mapping_uses_event_particle_and_preserves_mapping():
     assert next(node for node in graph.nodes if node.id == "event-1").attributes["stage2_mapping"] == mapping
 
 
+def test_stage5_what_merges_into_its_action_event_without_merging_other_records():
+    particle_data = [
+        {"id": "agent-1", "label": "I", "entity_type": "Agent"},
+        {"id": "event-1", "label": "review", "entity_type": "Event"},
+        {"id": "what-1", "label": "review the report", "entity_type": "What"},
+        {"id": "agent-2", "label": "You", "entity_type": "Agent"},
+        {"id": "event-2", "label": "review", "entity_type": "Event"},
+        {"id": "what-2", "label": "review the contract", "entity_type": "What"},
+    ]
+    log_data = [
+        {
+            "stage2": {
+                "structure": {
+                    "event": {"category": "Action"},
+                    "agent_particle_id": "agent-1",
+                    "event_particle_id": "event-1",
+                }
+            },
+            "stage5": {"frame": {"what": "review the report"}},
+        },
+        {
+            "stage2": {
+                "structure": {
+                    "event": {"category": "Action"},
+                    "agent_particle_id": "agent-2",
+                    "event_particle_id": "event-2",
+                }
+            },
+            "stage5": {"frame": {"what": "review the contract"}},
+        },
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    action_edges = [edge for edge in graph.edges if edge.morphism_type == "Action"]
+
+    assert "what-1" not in nodes_by_id
+    assert "what-2" not in nodes_by_id
+    assert nodes_by_id["event-1"].label == "review the report"
+    assert nodes_by_id["event-2"].label == "review the contract"
+    assert {(edge.source, edge.target) for edge in action_edges} == {
+        ("agent-1", "event-1"),
+        ("agent-2", "event-2"),
+    }
+
+
 def test_stage3_mapping_links_matching_feature_particle_to_event():
     structure = {
         "type": "Supplementary",
