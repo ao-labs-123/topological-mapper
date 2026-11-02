@@ -277,7 +277,7 @@ class GraphBuilder:
         return matched_ids
 
     @staticmethod
-    def _matched_action_what_particles(
+    def _matched_stage5_what_particles(
         particle_data: List[Dict[str, Any]], log_data: List[Dict[str, Any]]
     ) -> Dict[int, tuple[str, str]]:
         what_particles = [p for p in particle_data if p.get("entity_type") == "What"]
@@ -307,7 +307,7 @@ class GraphBuilder:
             what_id = what_particle.get("id")
             if (
                 isinstance(event, dict)
-                and event.get("category") == "Action"
+                and event.get("category") in {"Action", "State"}
                 and isinstance(what_id, str)
                 and event_particle
                 and event_particle.get("entity_type") == "Event"
@@ -319,7 +319,7 @@ class GraphBuilder:
     def build_graph(cls, particle_data: List[Dict[str, Any]], log_data: List[Dict[str, Any]]) -> TopologicalGraph:
         graph = TopologicalGraph()
         matched_who_ids = cls._matched_who_particle_ids(particle_data, log_data)
-        matched_what_by_log = cls._matched_action_what_particles(particle_data, log_data)
+        matched_what_by_log = cls._matched_stage5_what_particles(particle_data, log_data)
         matched_what_ids = {what_id for what_id, _ in matched_what_by_log.values()}
         
         # 粒子データのインデックス化（IDベース）

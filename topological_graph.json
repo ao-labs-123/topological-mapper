@@ -102,21 +102,6 @@
     },
     {
       "id": "p_event_d7114036910f",
-      "label": "strange",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "strange",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified",
-        "stage2_mapping": "I -> State -> strange"
-      }
-    },
-    {
-      "id": "p_what_6c16fe2f5697",
       "label": "thought was strange",
       "category": "Event",
       "resolution_state": "Determined",
@@ -126,7 +111,8 @@
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified"
+        "how": "Unspecified",
+        "stage2_mapping": "I -> State -> strange"
       }
     },
     {
@@ -145,16 +131,16 @@
     },
     {
       "id": "p_event_9351a50972a9",
-      "label": "strange",
+      "label": "thought it was strange",
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
-        "what": "strange",
+        "who": "He/She/They",
+        "what": "thought it was strange",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
-        "how": "Unspecified",
+        "how": "apparently",
         "stage2_mapping": "He/She/They -> State -> strange",
         "stage3_mapping": "Agent(He/She/They) -> Internal Eval -> State(Strange) -> How: Degree(Apparently)"
       }
@@ -172,20 +158,6 @@
         "why": "Unspecified",
         "how": "Unspecified",
         "stage3_mapping": "Agent(He/She/They) -> Internal Eval -> State(Strange) -> How: Degree(Apparently)"
-      }
-    },
-    {
-      "id": "p_what_16617dc7fe59",
-      "label": "thought it was strange",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "He/She/They",
-        "what": "thought it was strange",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "apparently"
       }
     },
     {
@@ -525,11 +497,11 @@
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
+        "who": "I",
         "what": "stressed",
         "when": "Unspecified",
         "where": "Unspecified",
-        "why": "Unspecified",
+        "why": "due to the project",
         "how": "Unspecified",
         "stage2_mapping": "the project -> Cause -> I'm stressed; I -> State -> stressed"
       }
@@ -554,22 +526,8 @@
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "I",
-        "what": "stressed",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "due to the project",
-        "how": "Unspecified"
-      }
-    },
-    {
-      "id": "p_what_c2c6721e83a9",
-      "label": "stressed",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
         "who": "Unspecified",
-        "what": "stressed",
+        "what": "I'm stressed",
         "when": "Unspecified",
         "where": "Unspecified",
         "why": "Unspecified",
@@ -698,9 +656,9 @@
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
+        "who": "I",
         "what": "stressed",
-        "when": "Unspecified",
+        "when": "after the long meeting",
         "where": "Unspecified",
         "why": "Unspecified",
         "how": "Unspecified",
@@ -724,20 +682,6 @@
       }
     },
     {
-      "id": "p_what_70763d99ddcc",
-      "label": "stressed",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "stressed",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_f68a1fa4d5d6",
       "label": "The report",
       "category": "Entity",
@@ -757,7 +701,7 @@
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
+        "who": "The report",
         "what": "done",
         "when": "Unspecified",
         "where": "Unspecified",
@@ -783,20 +727,6 @@
       }
     },
     {
-      "id": "p_what_6855418ab2ed",
-      "label": "done",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "done",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_4d4ee5fe2988",
       "label": "The report",
       "category": "Entity",
@@ -816,7 +746,7 @@
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
+        "who": "The report",
         "what": "done",
         "when": "Unspecified",
         "where": "Unspecified",
@@ -842,20 +772,6 @@
       }
     },
     {
-      "id": "p_what_4d3ec4c037af",
-      "label": "done",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "Unspecified",
-        "what": "done",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_ad0e53673670",
       "label": "The office",
       "category": "Entity",
@@ -875,7 +791,7 @@
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
+        "who": "The office",
         "what": "quiet",
         "when": "Unspecified",
         "where": "Unspecified",
@@ -901,20 +817,6 @@
       }
     },
     {
-      "id": "p_what_6bcd5c5275e1",
-      "label": "quiet",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "The office",
-        "what": "quiet",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
-      }
-    },
-    {
       "id": "p_agent_fd4f86bfbeed",
       "label": "The day",
       "category": "Entity",
@@ -934,7 +836,7 @@
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
-        "who": "Unspecified",
+        "who": "The day",
         "what": "bright",
         "when": "Unspecified",
         "where": "Unspecified",
@@ -957,20 +859,6 @@
         "why": "Unspecified",
         "how": "Unspecified",
         "stage3_mapping": "Node(The day) -> Defining Attribute -> Clause(he succeeded)"
-      }
-    },
-    {
-      "id": "p_what_d68e5ab57f4d",
-      "label": "bright",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "who": "The day",
-        "what": "bright",
-        "when": "Unspecified",
-        "where": "Unspecified",
-        "why": "Unspecified",
-        "how": "Unspecified"
       }
     },
     {
@@ -1281,21 +1169,12 @@
       }
     },
     {
-      "id": "context_temporal_88",
+      "id": "context_temporal_80",
       "label": "the long meeting",
       "category": "Event",
       "resolution_state": "Determined",
       "attributes": {
         "what": "the long meeting"
-      }
-    },
-    {
-      "id": "context_temporalevent_89",
-      "label": "stressed",
-      "category": "Event",
-      "resolution_state": "Determined",
-      "attributes": {
-        "what": "stressed"
       }
     }
   ],
@@ -1381,9 +1260,9 @@
       "constraint_type": ""
     },
     {
-      "id": "e_temporal_context_temporal_88_context_temporalevent_89",
-      "source": "context_temporal_88",
-      "target": "context_temporalevent_89",
+      "id": "e_temporal_context_temporal_80_p_event_74925654b84e",
+      "source": "context_temporal_80",
+      "target": "p_event_74925654b84e",
       "morphism_type": "Temporal",
       "detail": "Temporal relation (after)",
       "constraint_type": ""

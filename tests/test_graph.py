@@ -388,6 +388,39 @@ def test_stage5_what_merges_into_its_action_event_without_merging_other_records(
     }
 
 
+def test_stage5_what_merges_into_state_event():
+    particle_data = [
+        {"id": "agent-1", "label": "The office", "entity_type": "Agent"},
+        {"id": "event-1", "label": "quiet", "entity_type": "Event"},
+        {"id": "what-1", "label": "quiet", "entity_type": "What"},
+    ]
+    log_data = [
+        {
+            "stage2": {
+                "mapping": "The office -> State -> quiet",
+                "structure": {
+                    "event": {"category": "State", "state": "quiet"},
+                    "agent_particle_id": "agent-1",
+                    "event_particle_id": "event-1",
+                },
+            },
+            "stage5": {"frame": {"what": "quiet"}},
+        }
+    ]
+
+    graph = GraphBuilder.build_graph(particle_data, log_data)
+    nodes_by_id = {node.id: node for node in graph.nodes}
+
+    assert "what-1" not in nodes_by_id
+    assert nodes_by_id["event-1"].label == "quiet"
+    assert any(
+        edge.morphism_type == "State"
+        and edge.source == "agent-1"
+        and edge.target == "event-1"
+        for edge in graph.edges
+    )
+
+
 def test_stage3_mapping_links_matching_feature_particle_to_event():
     structure = {
         "type": "Supplementary",
