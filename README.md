@@ -1,4 +1,5 @@
-## CCA Pipeline Architecture
+## CCA Architecture
+![alt text](image-2.jpeg)
 
 1. [input-parser](https://github.com/ao-labs-123/input-parser)
 2. [particle-encapsulation](https://github.com/ao-labs-123/particle-encapsulation)
