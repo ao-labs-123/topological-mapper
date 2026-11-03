@@ -1,11 +1,11 @@
 ## CCA Pipeline Architecture
-<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/4f05a191-cefe-45bd-8b2b-ca36afca9018" />
 
 1. [input-parser](https://github.com/ao-labs-123/input-parser)
 2. [particle-encapsulation](https://github.com/ao-labs-123/particle-encapsulation)
 3. [topological-mapper](https://github.com/ao-labs-123/topological-mapper)※Current Position
 
 # Current Phase: topological-mapper
+![alt text](image.jpeg)
 ![alt text](image-1.jpeg)
 
 ## Stage 2 of the Cognitive OS Pipeline
