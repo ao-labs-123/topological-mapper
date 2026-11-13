@@ -1,4 +1,4 @@
-# topological-mapper
+# Topological Mapper
 ![alt text](image.jpeg)
 
 ## Stage 2 of the Cognitive OS Pipeline
