@@ -1,6 +1,5 @@
 # topological-mapper
 ![alt text](image.jpeg)
-![alt text](image-1.jpeg)
 
 ## Stage 2 of the Cognitive OS Pipeline
 Constructs category-theoretic graph networks [topological_graph.json](https://github.com/ao-labs-123/topological-mapper/blob/main/topological_graph.json) from encapsulated particle objects [data/particles.json](https://github.com/ao-labs-123/topological-mapper/blob/main/data/particles.json).
